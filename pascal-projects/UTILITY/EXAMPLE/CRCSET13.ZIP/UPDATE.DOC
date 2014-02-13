@@ -1,0 +1,26 @@
+Changes to version 1.0:
+
+        The algorithm used to calculate the initial CRC matrix has been 
+optimized to run in logarithmic time instead of linear time, the practical 
+upshot of which is that calculations that previously took up to a minute now 
+take less than two seconds.
+
+        Supporting C and Turbo Pascal code have been modified to support DOS 
+versions below 3.0.
+
+
+Changes to version 1.2:
+
+        The previous version of the C code had a minor bug that manifested 
+itself only under Microsoft C; the bug has been fixed and conditional 
+compilation directives have been introduced to recognize Turbo C (which uses 
+searchpath()) or Microsoft C and Quick C (which use _searchenv()) when looking 
+for the program name under DOS versions below 3.0.
+
+        The C function isvalidcrc() and the Turbo Pascal function IsValidCRC 
+have been replaced with validatecrc() and ValidateCRC respectively.  The new 
+functions are essentially the same as the old, but return the reason for the 
+failure (no memory, file not found, etc) instead of just a success or failure 
+code.  For compatibility with earlier releases, isvalidcrc() and IsValidCRC 
+are still available.
+

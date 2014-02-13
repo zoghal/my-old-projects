@@ -1,0 +1,24 @@
+
+       лл   лл млллллм мллллллм млллллл ллллллм млллллм млллллм млллллл
+       ллмммлл лл   лл лл лл лл ллмммм  ллмммлл ллмммлл лл  ммм ллмммм
+       ллппплл лл   лл лл лл лл ллпппп  ллпппп  ллппплл лл   лл ллпппп
+       лл   лл плллллп лл лл лл плллллл лл      лл   лл плллллп плллллл
+
+                  ! VISIT THE VIRTECH DEVELOPMENT HOMEPAGE !
+
+               HTTP://WWW.INFORMATIK.UNI-OLDENBURG.DE/~VIRTECH/
+
+               You get the following stuff there:
+
+               - our latest software tools
+               - previews of our upcoming games
+               - impressive DEMOS
+               - FULL SOURCE CODE of our games (some of them)
+               - We support JAVA !!!
+                 Credit card and ISBN validator written in JAVA
+               - hottest LINKS to other game development sites
+	       - a tribute Page to Amtrad/Schneider CPC
+               - and lots more ...
+
+               E-Mail us at: J.GELHAUS@FLIGHT.GUN.DE
+                         or: SCHERP.ANSGAR@INFORMATIK.UNI-OLDENBURG.DE

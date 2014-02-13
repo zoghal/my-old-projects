@@ -1,0 +1,8 @@
+vAR I:BYTE;
+BEGIN
+FOR I:= 0 TO 63 DO
+ BEGIN
+  PORT[$70] :=I;
+  PORT[$71] :=0;
+ END;
+END.

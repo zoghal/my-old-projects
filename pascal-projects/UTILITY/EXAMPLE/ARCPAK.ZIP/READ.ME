@@ -1,0 +1,254 @@
+The Arcpak unit and FV for OS/2 are SHAREWARE!
+It's neither public domain nor freeware!
+After a trial period of 30 day's you have to register!
+For registration please fill out the register.doc and send
+this with the money to the noted address.
+Tnx and please support the shareware concept, PSi.
+----------------------------------------------------
+I don't make any warranty to anything, except that your grandfather wasn't
+a snowman and I don't rape dogs in the public.
+----------------------------------------------------
+PSI is a unregistred inofficial trademark, with no liability or warranty
+to anything and anyone. PSI resided in Vienna/Austria and is just a
+shortening of my fore- and familyname.
+The source of any program is not available!
+For registration see Register.doc!
+----------------------------------------------------
+This package should include:
+    ARCPAK2.TPU   For TP 7.0
+    ARCPAK2.TPP   For BP 7.0 (protected mode)
+    ARCPAK2.TPW   For BP 7.0 (windows mode)
+    ARCPAK2.TPO   For BP 7.0 ('OS/2 mode' patched version of c't magazine)
+    ARCPAK2.TP6   For TP 6.0 (rename it to arcpak2.tpu, last Version 4.3)
+                             (TP6 will not be longer supported!)
+        This is a Unit for TP 6.0 / BP 7.0 and requires just the DOS
+        unit. FV.EXE is writtem with it. It should help you to write
+        application software for archive compression files. Read
+        ARCPAK.DOC about the function and procedures availabel and which
+        parameters you have to pass. The constant PVers shows you always
+        the actual version of the Unit.  Just write in a Turbo Pascal program:
+              writeln (Pvers);
+        Current version should be 4.8. Some ideas are used from the
+        TurboProfessional toolbox.
+    ARCPAK2.DOC
+        Read this for information on procedures, function and further
+        enhancements. This is the interface part of the source code of
+        the unit.
+    FV.EXE  {FV.OS2: rename this to FV.exe if you run OS/2}
+        FV is required by 'LIST' to view arc, pak, zip ,lzh or arj files.
+        But you can also use it on the DOS command line. Simply type one
+        of the following:
+                  FV .      { for current directory}
+                  FV *.*    { for current directory}
+                  FV ..     { for parent directory }
+                  FV a:\.   { for root directory on drive A}
+                  FV a:\*.* { for root directory on drive A}
+                  FV *.pak  { to show only PAK files }
+                  FV *.pak  /C { to show comments of PAK files }
+                  FV /S.com  { searches through all files and file
+                             names and comments stored in archives
+                             for the string '.COM'. With the /S switch
+                             you don't HAVE TO specify a drive or path.
+                             It DON'T search through the Zip or Pak -
+                             comment! }
+                 FV a: /Sdoc { looks on drive A: for anything with the
+                             string 'DOC'}
+                             { The /S will skip all pathnames during
+                             search stored in archiv files }
+                 FV a: /Sdoc /A { looks on drive A: and checking all files
+                                 for the string 'DOC'}
+                 FV *.* /D*.exe { checking all files in archives and DOS
+                                  if they match *.EXE}
+                 FV *.SDN /d*.doc /A { looks in all SDN files, if they
+                                     are archives and if they match *.DOC}
+                 FV *.* /sdoc /x   { search in all arc, pak, zip,lzh and
+                                     exe (if they are selfextracting)
+                                     files, if it find DOC}
+                 FV *.* /G   { Displays resolution on GIF, LBM, PCX and
+                               BMP files }
+        FV don't shell to any program. It will be extended with any new
+        version of the arcpak unit. I'd rewrite it!! Get a short help by
+        passing any of the following: -?, /?, -h, /h, -Help, /help. It's
+        not case sensitive!
+    READ.ME
+        Hey! - You read it now!
+    REGISTER.DOC
+        Registration order form.
+
+***************** C A U T I O N **************************
+FV for OS/2 is currently not very well tested (only on FAT system).
+It's only limited tested on HPFS drives, there may be bucks!!
+
+----------------------------------------------------------
+    FV will be soon enhanced with the following features:
+       /T  to show ONLY a short statistic of:
+           number of files, sum of original size of each file,
+           sum of all compressed files.
+       /SUB or /R  Searches recursive from the current directoty
+           downward.
+    And now I end my terrible description in worsest english.
+    (Ey dhount speek eenglesh wery whel!)
+
+--------------------------------------------------------------
+About 'Bugs' and releases:
+What says 'Webster's Dictionary about bug:
+   bug, n.[ME. bugge; W. bwg, bwgan, a specter.]
+        1. any crawling insect with sucking mouth parts and
+           forewings thickened toward the base, as a water bug,
+           squash bug, etc.
+        2. any insect or similar animal.
+        3. any microscopic organism, especially one causing
+           disease; germ; bacterium. [Colloq.]
+        4. a tiny microphone hidden to record conversation
+           secretly. [Slang.]
+        5. a defect, as in a machine. [Slang.]
+        6. (a) an enthusiast or devotee
+           (b) a particular enthuisiasm or obsession. [Slang.]
+        7. a small, compact, automobile. [Slang.]
+   bug, n.[ME. bugge; from W. bwg, bwgan.]
+        bugbear; a hobgoblin. [Obs.]
+
+So let me tell you about some hobgoblins in my programm who drive with a
+small, tiny automobil from one devotee to the next to meet that insect whom
+programmed with obsession this microphone.
+
+1st)  F V :
+      o First release unnumbered. It was the first version, which shell's to
+        the different programms.
+      o Version 1.2. The first version with the new ArcPak-Unit. Since here
+        also the version of the unit can be a newer one, without changing
+        the version of FV itself. Type 'FV -?' to get a small help with
+        version numbers to both.
+      o Version 1.2a. Setup the version number due to several changes in
+        the unit.
+      o Version 1.3. Fixed a runtime error which occures when a subdirectory
+        with the name 'PAK', 'ACR', 'LZH' or 'ZIP' exists.
+      o Version 1.5. Updated the version with the link list version of
+        the ArcPak-Unit.  * Not realized for public
+      o Version 2.0. Added the '/C' option to show the comments for .arc,
+        .pak and .zip files. Lzh-files don't have currently any coments.
+      o Version 2.4 Added the '/S' option to search for a specified string
+        with the syntax: FV /Sxxxx, FV a: /S'xxx' or FV e: /S"xx".
+        You have to define at LEAST 2 search characters!!!
+        It's currently the only switch, where you don't have to pass a
+        drive or directory as a parameter.
+      o Version 2.5 Added the '/D' option to search for a specified
+        wildcard filename in Dos and archives and display them. With
+        this Version you have to define at least one parameter OR switch.
+        If no paramter for files is given '*.*' will be used when any
+        switch is used. Syntax: FV /Dyyyy , FV *.pak /Dyyyy, but NOT (!!)
+        FV /D'yyyy' or FV /D"yyyy"!
+      o Version 2.6 Added the '/A' option to scan through all files if they
+        propably are archives or not. Excluded from the search are
+        Dos reserved names like: EXE, COM, OVL, SYS and BAT.
+        If you don't use the '/A'switch but define an extension (like:
+        FV *.SDN) all files with the extension .SDN will be checked if they
+        are archives. You don't have to use the '/A' in this or similar
+        cases.
+      o Version 2.7 Fixing several bugs with /A switch. Vers. 2.6 never
+        published. Fixes also bugs like 'FV a:.' etc.
+      o Version 2.7A Making changes in the ZipComment record which result
+        rewriting output procedure for comments. See arcpak 2.57
+      o Version 3.0 Added support for ARJ files and added some stuff in
+        '/D' switch.
+      o Version 3.2 Displays resolution of GIF, LBM, PCX and BMP files.
+        The new switch is '/G'. Errorlevel support is added for this
+        files: GIF...128, PCX...130, LBM...132, BMP... 134.
+      o Version 3.3 Added support for New PkZip 2.0x. Changes are re-
+        required to display the correct deflating method, such as 'n',
+        'x', 'f', 's' which ist stored in the general purpose bit flag.
+      o Version 3.4 Added support for OS/2. Cleaner code now. Fixes /A
+        bug which sometimes don't check all files for archives. Recognition
+        of broken zip files. Accept LHA as an other default fileextension for
+        lzh-files.
+
+2nd) A r c P a k  :
+      1.00 1st Version released
+      1.02 fixed a small bug in DispAll_lzh
+      1.03 Checks if .ARC or .PAK is probably not a compressed file and
+           make a small change in DispAll_Pak
+      1.04 Fixed a small bug (division by zero) in function 'Ratio'. Make
+           some small changes in DispAll_Zip and DispAll_Lzh (Similar to 1.03
+           change)
+      1.54 (internal) linked lists realized for zip-files. Rewriten all zip
+           procedures.
+      1.84 (internal) linked lists relized for pak-files. Rewritten all pak
+           procedures. I had to rewrite several zip procedures one more time
+           and some additional procedures like 'Dispose_xxx' and 'Release_xxx'.
+      2.00 (internal) Rewritten all zip procedures and 'Dispose_xxx'
+           and 'Release_xxx'.
+      2.30 (internal) Realized linked lists for arc files, reading also
+           the comments added by PKarc (PKpak).
+      2.50 Realized linked lists for lzh files. No comment field
+           appears in the header! DispAll_xxx is now in an extra unit called
+           DispAll and is not for the public.
+      2.51 Fixed a bug which only occurs on zip files. Forgott
+           to close the file handles. (sorry!)
+      2.52 If file-extension (DOS) is less then three characters spaces will
+           be inserted.
+      2.53 ExpandName added to unit for public access.
+      2.54 Fixed a major bug which occurs on some older .arc files
+           ==> the machine hangs up
+      2.55 Function added 'IsArchiv' checks if a file is probably an archiv.
+           EXE, COM, OVL, SYS and BAT will be skipped because they are Dos-
+           reserved!
+      2.56 Adding extended lzh-file header (especially for pathnames!).
+           Exact meaning of some extendings are unknown.
+      2.57 Adding handling of large ZipFile comment > 255 Bytes
+           Changing record format of ZipEnd! Using now a pointer
+           instead of ^string.
+      3.00 Adding handling of selfextracting files of PAK, ZIP,
+           ARC and LZH (only EXE) files.
+      3.01 Fixes Bug, which occurs by Lzh files made by Unix
+           machines w/o extended header
+      4.00 Added Arj support including checking for Arj-archiv and
+           self-extracting.
+      4.20 Added some Graphic info support (Gif, Lbm, Pcx and bmp)
+      4.30 Added support for new PkZip 2.0x: new compression method,
+           small changes in selfectracting recognition.
+      4.40 Some Minor changes to support window units .TPW
+      4.50 Several fixes, especially on Zip files
+      4.60 Fixes Arj 2.41 self extracting recognition
+      4.7  Several changes required for OS/2 porting
+           Code is now _cleaner_
+      4.8  Don't hang on corrupted Zip files
+           eg. if Pointer(First) = nil then writeln('corrupted');
+           Fixed some currently unknown lzh behavior
+
+
+--------------------------------------------------------------
+Last updates in one of these box's available:
+
+'Schnuffi's Box' (Erich Varga)
+Data: ++43-1-769-31-32, 9600/8/N/1 (Zyxel)
+'LaBamba BBS' (Werner Baar)
+Data: ++43-1-68-89-71,  9600/8/N/1 (SupraFax)
+'Just 4 Fun' (Gerhard Lustig)
+Data: ++43-1-714-94-50, 9600/8/N/1 (Zyxel)
+Location :   Austria, Vienna
+Schnuffi's Box:   2:310/13@fidonet.eur
+LaBamba BBS:      2:310/14@fidonet.eur
+Just 4 Fun:       2:310/15@fidonet.eur
+
+CIS: Forum: BPASCAL, Library 4 'Vintage Pascal'
+
+For bug comments, please send a message and/or the compressed file to
+via netmail to 'Peter Singer 2:310/14.13@fidonet.eur' or via CIS E-Mail to
+'Peter Singer: 100024,1603'.
+The programm FV is public domain, anyone can put it in her/his BBS system
+but without (!!) changing the contents of this or the other files included
+in this package.
+Registered User's will get always the newest version.
+--------------------------------------------------------------
+Turbo Pascal is a trademark by Borland International.
+      One of the best tollboxes for TP 6.0/BP 7.0 is Turbo Professional
+      by TurboPower Software!!!
+Arc is Trademark by SEA Corp. (UrgH!!)
+PkPak is a trademark of Pkware
+PkZip is a trademark by Pkware
+PAK is trademark by NoGate consulting
+Lharc is a trademark of Haruyasu Yoshizaki
+ARJ ist a trademark of Robert K Jung
+List is a trademark of Vernon D. Buerg
+PSI is a trademark of mine! (isn't it?)
+

@@ -1,0 +1,6 @@
+Hello!
+
+This is just a testfile to demonstrate the powerfull facilities
+of our BigLoad - Toolkit.
+
+Bye

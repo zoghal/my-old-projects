@@ -1,0 +1,398 @@
+                     ษออออออออออออออออออออออออออออออออออป
+                     บ      Complete documentation      บ
+                     บ                                  บ
+                     บ   to CDRom Pascal Unit v1.0 by   บ
+                     บ                                  บ
+                     บ           XTREME 1994            บ
+                     บ                                  บ
+                     บ         XTM:0001-63-001          บ
+                     ศออออออออออออออออออออออออออออออออออผ
+
+CD_Init :
+=========
+
+ Internal procedure to initialize CD-ROM available and CD-ROM drive letter
+
+IOCTL_CONVERSE :
+================
+
+ Call with :
+
+  CD_IOCTL_Device_Status
+  ----------------------
+
+   Returns :
+    r[1] : bit 0 - 7
+           0 - 0=door closed 1=door open
+           1 - 0=door locked 1=door unlocked
+           2 - 0=supports only cooked reading
+               1=supports cooked and raw reading
+           3 - 0=read only 1=read/write
+           4 - 0=data read only 1=data read and plays audio/video tracks
+           5 - 0=no interleaving 1=supports interleaving
+           6 - reserved
+           7 - 0=no prefetching 1=supports prefetching requests
+    r[2] : bit 0 - 7
+           0 - 0=no audio channel manipulation
+               1=supports audio channel manipulation
+           1 - 0=supports HSG addressing mode
+               1=supports HSG and red book addressing modes
+           2 - reserved
+           3 -    "
+           4 -    "
+           5 -    "
+           6 -    "
+           7 -    "
+    r[3] : bit 0 - 7
+           0 - reserved
+           1 -    "
+           2 -    "
+           3 -    "
+           4 -    "
+           5 -    "
+           6 -    "
+           7 -    "
+    r[4] : bit 0 - 7
+           0 - reserved
+           1 -    "
+           2 -    "
+           3 -    "
+           4 -    "
+           5 -    "
+           6 -    "
+           7 -    "
+
+  CD_IOCTLI_Media_Changed
+  -----------------------
+
+   Returns :
+    r[1]   : Media byte : 0   - Don't know if changed
+                          1   - Media not changed
+                          255 - Media changed
+
+  CD_IOCTLI_Audio_Disk_Info
+  -------------------------
+
+   Returns :
+    r[1]   : lowest tracknumber
+    r[2]   : highest tracknumber
+    r[3-6] : starting point of the lead-out track
+
+  CD_IOCTLI_Audio_Track_Info
+  --------------------------
+
+   Returns :
+    r[1]   : Track number
+    r[2-5] : Starting point of the track
+    r[6]   : Track control information
+
+  CD_IOCTLI_Audio_QChannel_Info
+  -----------------------------
+
+   Returns :
+    r[1]   : CONTROL and ADR byte
+    r[2]   : Tracknumber
+    r[3]   : (POINT) or Index (X)
+             Running time within a track
+    r[4]   : Min
+    r[5]   : Sec
+    r[6]   : Frame
+    r[7]   : Zero
+             Running time on the disk
+    r[8]   : (AMin) or (PMin)
+    r[9]   : (ASec) or (PSec)
+    r[10]  : (AFrame) or (PFrame)
+
+  CD_IOCTLI_UPC_Code
+  ------------------
+
+   Returns :
+    r[1]   : CONTROL and ADR byte
+    r[2-8] : UPC/EAN Code (Last 4 bits are zero; the low-order nibble of r[8])
+    r[9]   : Zero
+    r[10]  : AFrame
+
+  CD_IOCTLI_Audio_Status_Info
+  ---------------------------
+
+   Returns :
+    r[1-2] : bit 0 - 15
+             0  - Audio Paused Bit
+             1  - Reserved
+             ...
+             15 - Reserved
+    r[3-6] : Startting location of last play or for next resume
+    r[7-10]: Ending location for last play or for next resume
+
+  CD_IOCTLO_Eject_Disk
+  --------------------
+
+   Unlock the drive and eject the CD-ROM disk from the drive unit
+
+  CD_IOCTLO_Lock_Unlock_Door
+  --------------------------
+
+  Call with :
+   r[1]   : 0= unlock door 1=lock door
+
+  CD_IOCTLO_Reset_Drive
+  ---------------------
+
+   This function directs the device driver to reset and reinitialize the drive
+
+  CD_IOCTLO_Close_Tray
+  --------------------
+
+   This command will instuct drives that can do so to close the door or tray
+
+CD_IOCTLO_Play_Audio :
+======================
+
+ Call with :
+  SectorStart, NumberToRead
+
+CD_IOCTLO_Stop_Audio :
+======================
+
+ Causes the CD-ROM to stop playing
+
+CD_IOCTLO_Resume_Audio :
+========================
+
+ Causes the CD-ROM to resume playing at the same location it stopped
+
+BCD2LongInt :
+=============
+
+ Call with :
+  BCD number
+
+ Returns :
+  LongInt number
+
+LongInt2BCD :
+=============
+
+ Call with :
+  LongInt number
+
+ Returns :
+  BCD number
+
+Red2HSG :
+=========
+
+ Call with :
+  Red book addressingmode pointer
+
+ Returns :
+  HSG addressingmode pointer
+
+CD_Volume_Size :
+================
+
+ Returns :
+  Number of frames (1) on current CD
+
+CD_Tray_Open :
+==============
+
+ Returns :
+  True  if the CD-ROM Tray is open
+  False if the CD-ROM Tray is closed
+
+CD_Open_Tray :
+==============
+
+ Causes the CD-ROM Tray to open
+
+CD_Close_Tray :
+===============
+
+ Causes the CD-ROM Tray to close
+
+CD_Lock_Tray :
+==============
+
+ Locks the CD-ROM tray so that the user can't open it with the open-button
+
+CD_Unlock_Tray :
+================
+
+ Unlocks the CD_ROM tray so that the user can open it with the open-button
+
+CD_Playing :
+============
+
+ Returns :
+  True  if an audio track is playing
+  False if no audio track is playing
+
+CD_Play :
+=========
+
+ Causes the CD-ROM to start playing an audio track even if one is playing
+
+ Call with :
+  Track number (in the range of CD_First_Track to CD_Last_Track)
+  Length to play (one tracklength is estimated by CD_Track_Length)
+
+CD_Stop :
+=========
+
+ Causes the CD-ROM to stop playing any audio track
+
+CD_Resume :
+===========
+
+ Causes the CD-ROM to resume playing whereever the CD_Stop command was used
+
+CD_Media_Changed :
+==================
+
+ Returns :
+  True  if the media has changed
+  False if the media has not been changed
+
+ This function is not yet reliable, so do NOT use it to check wheter the user
+ has changed the CD or not
+
+CD_Track_Start :
+================
+
+ Call with :
+  Track number (in the range of CD_First_Track to CD_Last_Track)
+
+ Returns :
+  The start address of the track selected
+
+CD_Track_Stop :
+===============
+
+ Call with :
+  Track number (in the range of CD_First_Track to CD_Last_Track)
+
+ Returns :
+  The stop address of the track selected
+
+CD_Track_Length :
+=================
+
+ Call with :
+  Track number (in the range of CD_First_Track to CD_Last_Track)
+
+ Returns :
+  Length of track in frames (1)
+
+ This function can be used for passing information to CD_Play if you only
+ want to play one track
+
+CD_Track_Time :
+===============
+
+ Call with :
+  Track number (in the range of CD_First_Track to CD_Last_Track)
+
+ Returns :
+  Length of track in seconds (2)
+
+CD_First_Track :
+================
+
+ Returns :
+  The first audio track on the current CD
+
+ Number of tracks can be evaluated by using CD_Last_Track - CD_First_Track + 1
+
+CD_Last_Track :
+===============
+
+ Returns :
+  The last audio track on the current CD
+
+ Number of tracks can be evaluated by using CD_Last_Track - CD_First_Track + 1
+
+CD_Current_Track :
+==================
+
+ Returns :
+  The current tracknumber
+
+ Before using this you should check wether the CD-ROM is playing or not by using
+ the CD_Playing function
+
+CD_Current_Track_Time :
+=======================
+
+ Returns :
+  Position in seconds of the current track that is playing
+
+ You can check if a track is being played by using CD_Playing
+
+CD_Current_Disk_Time :
+======================
+
+ Returns :
+  Position in seconds of the whole CD when playing
+
+ You can check if the CD-ROM is playing by using CD_Playing
+
+CD_Available :
+==============
+
+ This is a boolean variable that is true if a CD-ROM-player is available and
+ false if not
+
+CD_Error :
+==========
+
+ After each call to any of the CD-ROM routines, an error code is returned in
+the global word CD_Error.  Its contents are as follows :
+
+      bit 15 - error bit 0=ok 1=error
+      bit 14 - reserved
+      bit 13 - reserved
+      bit 12 - reserved
+      bit 11 - reserved
+      bit 10 - reserved
+      bit 9  - busy bit 0=not busy 1=busy
+      bit 8  - done bit 0=not done 1=done
+      bit 7  - \
+      bit 6  -  \
+      bit 5  -   \
+      bit 4  -    > error code (see below) if error bit=1 (see above)
+      bit 3  -   /
+      bit 2  -  /
+      bit 1  - /
+
+      Errorcodes :
+        0  - write-protect violation
+        1  - unknown unit
+        2  - drive not ready
+        3  - unknown command
+        4  - CRC error
+        5  - bad drive request structure length
+        6  - seek error
+        7  - unknown media
+        8  - sector not found
+        9  - printer out of paper
+        10 - write fault
+        11 - read fault
+        12 - general failure
+        13 - reserved
+        14 - reserved
+        15 - invalid disk change
+
+CD_Drive :
+==========
+
+ This is a byte variable that contains the letter of the CD-ROM-player if
+ available (0=A, 1=B etc).  You should check wheter CD_Available is true
+ before you use this
+
+(1) : A frame is a 1/75 of a second.  To calculate number of seconds, use
+      x*75, where x is number of frames.
+
+(2) : A timestring can be evaluated by taking (sec div 60)+':'+(sec mod 60)
+      Here you must make (sec div 60) and (sec mod 60) into a string first
+      with the STR command.

@@ -1,0 +1,21 @@
+The following files should be present in the archive:
+
+BOGEY.PAS          Demo program
+CONWRITE.ASM       Write to Console routine using DOS call 6
+CONWRITE.OBJ
+GETBOGEY.EXE       Writes BOGEY.BIN to disk
+GETBOGEY.PAS
+VGABIOS.ASM        VGA support routines, used by program BOGEY
+VGABIOS.OBJ
+VGABIOS.PAS
+XZIP.PAS           Explodes IMPLODED data
+ZIP2OBJ.DOC        Documentation on how to use ZIP2OBJ and XZIP
+ZIP2OBJ.EXE        Converts an IMPLODED file to an .OBJ file
+
+To run the demo, follow the steps as described in the .DOC file
+You need Turbo Pascal 6.0 to compile the demo; PKZIP 1.01 or later to
+compress BOGEY.BIN, and last but not least, a VGA display to see the
+output of the demo.  Note that the usefullness of ZIP2OBJ or XZIP does
+not depend on the presence of a VGA display adapter; it's just the demo
+that graphically displays the qualities of the ZIP2OBJ/XZIP combo.
+

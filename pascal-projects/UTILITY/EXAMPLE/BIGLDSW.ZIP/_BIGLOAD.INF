@@ -1,0 +1,127 @@
+{
+  _BIGLOAD.PAS : Shareware-version.
+
+         -  put all files in a huge one
+         -  Supports Real Mode and Protected Mode.
+         -  easy to use
+         -  handles each type of file
+         -  supports seek on text files
+
+  (c) vIRTUAL tECHNOLOGIES 1996
+
+  Version 1.9
+
+  Registered version includes BigFileSupport and Spritescaling!
+
+  Distribition via any media is explicit allowed.
+
+  DISCLAIMER:
+  We give no warranty for this code, because it was firstly coded for us,
+  and not for the public.
+  But after lot of people asking us for releasing the source, we decided,
+  to make it as unit avialable.
+  But however, I really don't think that there is a bug in this unit.
+  We use this videosystem in our own productions for years without
+  any problems.
+
+  for more information, questions and register contact us:
+
+    Ansgar Scherp
+    scherp.ansgar@informatik.uni-oldenburg.de
+
+    Joachim Gelhaus
+    j.gelhaus@flight.gun.de
+
+    http://www.informatik.uni-oldenburg.de/~virtech/
+
+    Mailbox : + 49 (0) 4441 / 851887
+    Hotline : + 49 (0) 4441 / 851717 (english, german)
+
+  Use : Just put before the normal I/O-Functions like Reset, BlockRead,
+        Close,... the word "Big".
+        Reset will than be BigReset and BlockRead will be BigBlockRead.
+        You have also to specify a input stream number for each opened
+        file of the BigFile.
+
+  Examples :
+    BigAssign( 1, 'HALLO.TXT' );
+    BigReset( 1, 0 );
+    BigReadB( 1, b );
+
+}
+
+unit _BigLoad;
+
+interface
+
+const
+  { maximum number of opened files }
+  MaxOpenedFiles =   2; { four should be enoguh for everyone :-) }
+
+  MaxFiles       =  25; { maximum Number of files when index
+                          shall be loaded into memory }
+  MaxNameLength  =  40; { maximum length of the filenames, like
+                          ".\LEVEL\DESIGN\DATA.OUT" }
+
+type
+  { shall the index read from disk or loaded into memory? }
+  THandleIndex = ( IndexFromMemory, IndexFromDisk );
+  { maximum length of filename plus path }
+  FileString = String[MaxNameLength];
+
+{ *** PROCEDURES, TO READ FROM A BIGFILE *** }
+
+{ Attention:
+  The variable filenr must have a value between 1 and MaxOpenedFiles and
+  spezifies the stream-number you want to read from }
+
+{ use this procedure to initialises the BigFile; HI has the value
+  IndexFromMemory or IndexFromDisk }
+procedure BigFileInit( name: FileString; HI : THandleIndex );
+{ use this procedure to close the BigFile }
+procedure BigFileClose;
+
+{ checks if a file with the specified name exists in the opened BigFile }
+function  BigFileExists( Name:FileString ):boolean;
+{ returns the size of the currently openend file of stream filenr }
+function  BigFileSize( filenr:byte ):longint;
+{ like the pascal command Assign, but requires a stream number filenr;
+  opens a file for reading }
+procedure BigAssign(filenr:byte;Name:FileString );
+{ sets the fileposition-pointer of the file opened with BigAssign to the
+  beginning of the file }
+procedure BigReset( filenr:byte; size : longint );
+{ reads from stream number filenr to the buffer (2nd parameter; pointer) a
+  specified number of bytes (3rd parameter; length). In the 4th parameter
+  (wordl) you'll find the number of bytes really read from file. }
+procedure BigBlockRead( filenr:byte; var pointer; length : longint;
+                                                  var wordl : word );
+{ checks, if we have already reached the file end }
+function  BigEOF( filenr:byte ):boolean;
+{ seek in the current stream at position BigSeek_i }
+procedure BigSeek( filenr:byte ; BigSeek_i:longint);
+{ reads a byte from specified input stream }
+procedure BigReadB( filenr:byte; var byte );
+{ reads a string from specified input stream }
+procedure BigReadS( filenr:byte; var BigReadSs : String );
+{ closes a file of the BigFile by closing its input stram filenr }
+procedure BigClose( filenr:byte );
+
+{ *** PROCEDURE TO CREATE A BIGFILE *** }
+{ open a file with the name filename for creating a new BigFile }
+procedure BigFileCreateOpen( FileName : FileString );
+{ closes the file containing a BigFile }
+procedure BigFileCreateClose;
+{ adds the files specified by the directory and file name to the
+  BigFile; also allows wildcards }
+procedure Add2BigFile( DirName, FileName : FileString );
+{ adds the temporary indexfile to the bigfile }
+procedure AddIndex2BigFile;
+
+{ For detailed information have a look at the online manual of your
+  Turbo/Borland Pascal. }
+
+implementation
+
+{ you want more? than please contact us }
+

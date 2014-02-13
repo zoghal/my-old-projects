@@ -1,0 +1,730 @@
+
+
+
+
+
+
+                                  DXFTOOLS 1.0
+
+                        Copyright (c) 1992 Dennis W. Webb
+
+
+DXFTOOLS is a shareware product.  You may feel free to make copies of these
+utilities and pass them on to friends for their evaluation.  If you make use
+of this software you are expected to pay a registration fee of $50 to:
+
+                                Dennis W. Webb
+                                 1801 Edna Dr.
+                              Vicksburg, MS  39180
+
+Checks are accepted.  Purchase Orders are accepted from most companies,
+schools, and government agencies.
+
+Your registration fee entitles you to use this software on a single computer
+and to make as many copies of this software as you wish for backup purposes. 
+Site licenses are available, call (601)636-7202.
+
+DXFTOOLS is a complete product containing the functions and procedures
+required to read or write the DXF code for most 2D entities.  Upon receipt of
+your registration fee you will be upgraded to DXFTOOLS PLUS which includes
+TEXT, and BLOCK support, 3D entities, and additional 2D entities not included
+with DXFTOOLS.  You will also receive a printed manual for DXFTOOLS PLUS, and
+notice of future upgrades.
+
+I will be able to offer telephone support of this product evenings and
+weekends.  You may call me in the evening between 5:00 and 9:00 CST.  If I am
+not home, leave a message and I will return your call.
+
+                                  INVOICE
+
+Remit to:                                                  From
+
+Dennis W. Webb                _________________________________
+1801 Edna Dr.                 _________________________________
+Vicksburg, MS  39180          _________________________________
+(601)636-7202                 _________________________________
+
+                                            Contact Individual:
+
+                              _________________________________
+                              _________________________________
+
+
+
+Qyt                        Unit Price          Total
+
+____ DXFTOOLS PLUS 1.0       $50.00
+
+
+
+
+I use ____5 1/4"   ____ 3 1/2" disks
+
+For your convenience units compiled with earlier version of Turbo Pascal are
+available at no additional charge. 
+  
+                                    ____ Turbo Pascal 4.0
+
+                                    ____ Turbo Pascal 5.0
+ INTRODUCTION
+
+In order for AutoCAD to exchange drawing files with other Computer-Aided
+Design/Drafting (CAD) packages, the "Drawing Interchange" file format (DXF)
+was developed.  DXF files are standard ASCII text files.  They contain an
+ASCII representation of the same information in the drawing database (.dwg
+file). AutoCAD has the ability to read and write DXF files through the DXFIN
+and DXFOUT commands.  In order to assist in the development of applications
+utilizing these DXF files, the DXF TOOLBOX has been developed.
+
+The DXF TOOLBOX for Turbo Pascal consists of two Turbo Pascal units (.TPU
+files).  Each of these two units is a library of the necessary procedures and
+functions to output to and input from DXF files.  This manual assumes that
+you have a working knowledge of Turbo Pascal, the ability to link Turbo
+Pascal units with the USES command, and a basic understanding of AutoCAD.
+
+The first unit DXFWRITE.TPU is a library of procedures and functions allowing
+your Turbo Pascal program to  create and wire output to a DXF file.  This
+feature is extremely powerful for any program that requires graphical output. 
+By creating a DXF file, you can load graphical results directly into AutoCAD,
+use AutoCAD to edit the figure, and produce a hard copy via any of AutoCAD's
+supported output devices.  Or, you could use AutoCAD to create a slide show
+of your graphics.  As a programmer, you no longer need to concern yourself
+with device drivers for video cards, plotters, and printer plotters.
+
+The second unit DXFREAD.TPU is the library of procedures and functions that
+allows your program to read information stored in a drawing created in
+AutoCAD.  You can read the location, size, and orientation of AutoCAD
+entities.  This can be used to calculate a bill of materials for house plans,
+calculate volume, or any number of engineering or architectural applications.
+
+These units have been developed for pc-compatibles using the MS-DOS operating
+systems.  They were compiled with Turbo Pascal versions 6.0.  For those still
+using Turbo Pascal versions 4 and 5, the units compatible with those versions
+are available at no additional charge if requested on the registration form.
+
+We warrant that the software will function as described in this documentation
+for a period of 30 days from receipt.  If you encounter a bug or deficiency,
+a problem report will be required for us to fix the problem.  If you properly
+notify us of such a software problem within the warranty period, we will
+update the defective software at no cost.  Failing that we will refund the
+full purchase price of the software upon receipt of the original program
+diskette and documentation in undamaged condition.  We also warranty the
+original program diskette and documentation for a period of 30 days from
+receipt.
+
+We do not assume any liability for the use of the DXF TOOLBOX beyond the
+original purchase price of the software.  In no event will we be liable for
+additional damages included lost profits, lost data, or any other damages out
+of the use or inability to use DXF TOOLBOX.
+
+No royalties are required for any programs using the procedures and functions
+contained within DXF TOOLBOX provided that the fact that DXF TOOLBOX was used
+is contained in the program documentation.DXFWRITE
+
+The unit DXFWRITE contains the procedures required to open and initialize a
+DXF output file, write the DXF code for 2D and 3D entities, and close the
+file.  Entities supported include lines, circles, points, arcs, polylines,
+meshes, and text.
+
+Note concerning DXF2D_entity.  These procedures will write the DXF text to
+draw entity at the default elevation and thickness of 0.  If the programmer
+wishes to draw entities in two dimensions, but in a plane other than z=0, the
+global variable dxfelev may be set to the desired elevation.  Likewise, the
+global variable dxfthick may be set to a thickness other than 0.  You do not
+need to initialize these variables to 0.
+
+To input your DXF file into AutoCAD, use AutoCAD's DXFIN command from the
+AutoCAD command line, and enter the name of the file you created in your
+Turbo Pascal program.  Your program's output will become part of an AutoCAD
+drawing.
+
+An example using DXFWRITE, EXAMPLE1.PAS is included with the shareware
+version of this program.
+
+-----------------------------------------------------------------------------
+
+PROCEDURE INIT_DXFFILE(filename : string);
+
+Purpose
+Assigns Filename to a TEXT variable, opens the file, and writes the DXF
+initialization records to the file.  This procedure must be called before any
+of the other DXF procedures are used.  You can only have one DXF file open at
+time. Therefore you must call the procedure CLOSE_DXFFILE before initializing
+a second DXF file in your program.
+
+WARNING!  INIT_DXFFILE will not check to make sure that the DXF output file
+does not already exist.  Any existing filenames passed to INIT_DXFFILE will
+be overwritten.  It is up to the user to make certain that this does not
+happen, unless filename is intended to be overwritten.
+
+-----------------------------------------------------------------------------
+
+PROCEDURE CLOSE_DXFFILE;
+
+Purpose
+Writes the closing records to the DXF file opened in the previous
+INIT_DXFFILE procedure and closes the file.
+DXF2D_POINT
+
+Declaration
+PROCEDURE DXF2D_POINT(x,y:real;layer:string);
+
+Definition of variables
+x,y => coordinates for point.
+layer  => AutoCAD layer for point.
+
+Purpose
+Writes the DXF code to place a point at x,y in the assigned layer.  The point
+will be drawn at the default thickness and elevation.  The default thickness
+and elevation are both 0 unless the global variables dxfelev and dxfthick are
+changed.
+
+Example
+Draw two points x=1 and y=2 in layer "POINTS".  Draw the second point at an
+elevation of 5.
+
+   var
+      x,y : real;
+      filename:string[12];
+      layer : string[30];
+
+    begin
+      x:=1;
+      y:=2;
+      filename:='output.dxf';
+      layer:='POINTS';
+      INIT_DXFFILE(filename);
+      DXF2D_POINT(x,y,layer);
+      dxfelev:=5.0;     {Change the default elevation to 5.0}
+      DXF2D_POINT(x,y,layer);
+      CLOSE_DXFFILE;
+    end;
+PROCEDURE DXF2D_LINE(x1,y1,x2,y2 real;layer:string);
+
+Definition of variables
+x1,y1 => coordinates for beginning of line.
+x2,y2 => coordinates for ending of line.
+layer  => AutoCAD layer for line.
+
+Purpose
+Writes the DXF code to draw a line from x1,y1 to x2,y2 in the appropriate
+layer.  The line will be drawn at the default thickness and elevation.  The
+default thickness and elevation are both 0 unless the global variables
+dxfelev and dxfthick are changed.
+
+Example
+Draw a line at coordinate 1,2 to coordinate 11,21 in layer "LINES".  Draw a
+second line from 4,5 to 8,6 with a thickness of 1.5.  Place the second line a
+layer called "THICK-LINES".
+
+
+  var
+    x1,y1,x2,y2 : real;
+
+  begin
+    x1:=1;
+    y1:=2;
+    x2:=11;
+    y2:=21;
+    INIT_DXFFILE('outfile.dxf');
+    DXF2D_LINE(x1,y1,x2,y2,'LINES');
+    dxfthick:=1.5;  {Change the default thickness to 1.5}
+    x1:=4;
+    y1:=5;
+    x2:=8;
+    y2:=6;
+    DXF2D_LINE(x1,y1,x2,y2,'THICK-LINES');
+    CLOSE_DXFFILE;
+  end;
+PROCEDURE DXF2D_ARC(x,y,radius,start_ang,end_ang:real;layer:string);
+
+Definition of variables
+x,y => coordinates for center of arc.
+radius => length of radius.
+start_ang => starting angle of arc.
+end_ang => ending angle of arc.
+layer => AutoCAD layer for arc.
+
+Purpose
+Writes the appropriate DXF text to draw an arc of a given radius from center
+point x,y in the appropriate layer.  The arc will begin at start_angle and
+terminate at end_angle.  Angles should be in agreement with the angle format
+selected via the AutoCAD UNITS command.  The arc will be drawn at the default
+thickness and elevation.  The default thickness and elevation are both 0
+unless the global variables dxfelev and dxfthick are changed.
+
+Example
+Draw an angle of radius 2 from 45 to 90 degrees at location 5,6 in layer
+"ARC".
+
+   var
+     x,y,rad,ang1,ang2 : real;
+     layer : string[30];
+
+   begin
+     x:=5;
+     y:=6;
+     rad:=2;
+     ang1:=45;
+     ang2:=90;
+     layer:='ARC';
+     INIT_DXFFILE('outfile.dxf');
+     DXF2D_ARC(x,y,rad,ang1,ang2,layer);
+     CLOSE_DXFFILE;
+   end;
+
+PROCEDURE DXF2D_CIRCLE(x,y,radius:real;layer:string);
+
+Definition of variables
+x,y => coordinates for center point of the circle.
+radius => length of radius.
+layer  => AutoCAD layer for circle.
+
+Purpose
+Writes the DXF code to draw a circle of a given radius from center point x,y
+in the appropriate layer.  The circle will be drawn at the default thickness
+and elevation.  The default thickness and elevation are both 0 unless the
+global variables dxfelev and dxfthick are changed.
+
+Example
+Draw a circle of radius 8 at location 4,2 in layer "CIRCLES" with an
+elevation of 6.12.  The circles's thickness is 0.
+
+    var
+     x,y,rad : real;
+     layer : string[30];
+   begin
+     x:=4;
+     y:=2;
+     rad:=8;
+     layer:='CIRCLES';
+     dxfelev:=6.12;
+     INIT_DXFFILE('outfile.dxf');
+     DXF2D_CIRCLE(x,y,rad,layer);
+     CLOSE_DXFFILE;
+   end;
+
+-----------------------------------------------------------------------------
+2D-POLYLINES
+
+     Drawing polylines is accomplished by calling three different
+procedures.  The first BEGIN_2DPLINE is called to initialize the
+polyline, it is called once per polyline.  The second DXF2D_PLINE
+is called for each vertex to be included in the polyline.  The
+last END_PLINE is called to close the polyline, it is called once
+per polyline. 
+
+-----------------------------------------------------------------------------
+
+PROCEDURE BEGIN_2DPLINE(layer:string;closed:boolean);
+
+Definition of variables
+layer => AutoCAD layer for polyline.
+closed => TRUE if polyline is closed, FALSE if open.
+PROCEDURE DXF2D_PLINE(x,y,w1,w2:real)
+
+Definition of variables
+x,y => coordinates for vertex of polyline.
+layer => AutoCAD layer for polyline.
+w1 => beginning width for polyline.
+w2 => ending width for polyline.
+
+-----------------------------------------------------------------------------
+
+PROCEDURE END_PLINE;
+
+Definition of variables
+No variables are required for this procedure.
+
+Example
+Draw an open polyline representing the function Y=X2 from X=1 to X=10 in
+layer Function.  For this example all widths, the thickness, and elevation
+are 0.
+
+    var
+      x,y,begin_width,end_width : real;
+      closed:boolean;
+      layer : string[30];
+      I:integer;
+
+    begin
+      layer:='Function';
+      closed:=FALSE;
+      thick:=0.0;
+      elev:=0.0;
+      begin_width:=0.0;
+      end_width:=0.0;
+      INIT_DXFFILE('outfile.dxf');
+      begin2d_pline(layer,closed);
+      for I:=1 to 10 do
+      begin
+        x:=I;
+        y:=I*I;
+        dxf2d_pline(x,y,begin_width,end_width);
+      end;
+      end_pline;
+      close_dxfile;
+    end;
+DXFREAD
+
+The unit DXFREAD contains the procedures required to open DXF file for input,
+read the DXF code for layer names, block names, and entities.  Entities
+supported include lines, circles, points, arcs, polylines, meshes, and text.
+
+For the most part, the same procedures are used for reading 2D and 3D
+entities.  This is because the programmer may not know which to expect.  For
+2D entities, the Z coordinates will be returned as 0.
+
+In order to create the DXF file, enter DXFOUT from the AutoCAD command line. 
+Enter a new filename, or take the default.  DXFREAD will use the file you
+created (which contains all information concering the drawing) as your
+programs input file.
+
+An example using DXFWRITE, EXAMPLE2.PAS is included with the shareware
+version of this program.
+
+-----------------------------------------------------------------------------
+
+PROCEDURE OPEN_DXF(filename:string);
+
+Definition of variables
+filename => DXF file to be used for input.
+
+Purpose
+Opens a DXF file for input and initializes certain variables required by
+DXFREAD.  ASSIGN_DXF must be called before any other procedures in the
+DXFREAD unit. 
+
+-----------------------------------------------------------------------------
+
+PROCEDURE CLOSE_DXF;
+
+Definition of variables
+No variables are required for this procedure.
+
+Purpose
+Closes the DXF file previously opened for input with the
+OPEN_DXF procedure.
+
+FUNCTION GET_LAYER:string;
+
+Definition of variables
+No parameters are passed to this function.
+
+Purpose
+Returns all layer names used in the drawing that the DXF file was generated
+from.  The layer names will be returned in the order that they were created
+in the drawing.  When no more layer names are listed in the DXF file,
+GET_LAYER will return a null string ('').
+
+Example
+Read all of the layer names in a DXF file into an array. 
+
+PROGRAM TEST_DXFREAD;
+
+USES DXFREAD;
+
+const
+  maxlayers = 50;
+
+var
+  layer : array [1..maxlayers] of string;
+  i,
+  numlayers : integer;
+  filename : string;
+
+BEGIN
+  writeln('Enter name of input DXF file .');
+  readln(filename);
+  OPEN_DXF(filename);
+  numlayers:=0;
+  repeat;
+    numlayers:=numlayers+1;
+    layer[numlayers]:=GET_LAYER;
+  until layer[numlayers]='';
+  numlayers:=numlayers-1;
+  for i:=1 to numlayers do writeln(layer[i]);
+  CLOSE_DXF;
+end.
+
+
+PROCEDURE GET_ENT(var entid:byte;var enttype,layer:string);
+
+Definition of variables
+entid => value is determined by type of entity.  This is useful if you use
+the Pascal CASE statement to control program branching.  The value of entid
+will be one of the following:  
+
+     0 => No more entities in DXF file.
+     1 => Point.
+     2 => Line.
+     3 => 3DLine.
+     4 => Arc.
+     5 => Circle.
+     6 => Trace.
+     7 => Solid.
+     8 => 3DFace.
+     9 => Polyline or Mesh.
+    10 => Vertex.
+    11 => Seqend.
+ 
+enttype => name of entity. Such as line, circle, etc.
+layer => layer that the entity resides in.
+
+Purpose
+Returns the names and layers of all entities in drawing that the DXF file was
+generated from.  The entities will be returned in the order that they were
+drawn. Enttype will be one of the following type of entities:  POINT, LINE,
+3DLINE, ARC, CIRCLE, TRACE, SOLID, 3DFACE, PLINE, or VERTEX.  After all
+entities have been returned, GET_ENT will return a null string ('') for both
+enttype, and layer.
+
+Example
+List all the entities and their layers in a DXF file on the screen.
+  
+PROGRAM TEST_DXFREAD;
+
+USES DXFREAD;
+
+var
+  entid:byte;
+  entname,layer : string;
+  filename : string;
+
+BEGIN
+  writeln('Enter name of input DXF file .');
+  readln(filename);
+  OPEN_DXF(filename);
+  repeat;
+    GET_ENT(entid,entname,layer);
+    WRITELN('ENTID=',entid,'     ENTITY=',entname,'     LAYER=',layer);
+  until entname='';
+  CLOSE_DXF;
+end.
+PROCEDURE GET_POINT(var x,y,z,elev,thick:real);
+
+Definition of variables
+x,y,z => coordinates for point.
+elev => elevation of point.
+thick => thickness of point.
+
+Example
+List the properties of all POINTS in a DXF file that were drawn in the layer
+"MYPOINTS".
+
+PROGRAM TEST_DXFREAD;
+
+USES DXFREAD;
+
+var
+  entid:byte;
+  entname,layer,matchlayer : string;
+  x,y,z,elev,thick:real;
+  filename : string;
+
+BEGIN
+  matchlayer:='MYPOINTS';
+  writeln('Enter name of input DXF file .');
+  readln(filename);
+  OPEN_DXF(filename);
+  repeat;
+    GET_ENT(entid,entname,layer);
+    if (entid=1) and (layer=matchlayer) then
+    begin
+      GET_POINT(x,y,z,elev,thick);
+      writeln('Point is ',x,',',y,',',z);
+      writeln('The elevation is ',elev,' and the thickness is',thick);
+    end;
+  until entid=0;
+  CLOSE_DXF;
+end.
+
+PROCEDURE GET_LINE(var x1,y1,z1,x2,y2,z2,elev,thick:real);
+
+Definition of variables
+x1,y1,z1 => coordinates for starting point of line.
+x2,y2,z2 => coordinates for ending point of line.
+elev => elevation of line.
+thick => thickness of line.
+
+Example
+List the properties of all LINES in a DXF file regardless of their layer.
+
+PROGRAM TEST_DXFREAD;
+
+USES DXFREAD;
+
+var
+  entid:byte;
+  entname,layer : string;
+  x1,y1,z1,x2,y2,z2,elev,thick:real;
+  filename : string;
+
+BEGIN
+  writeln('Enter name of input DXF file .');
+  readln(filename);
+  OPEN_DXF(filename);
+  repeat;
+    GET_ENT(entid,entname,layer);
+    if (entid=2) then
+    begin
+      GET_LINE(x1,y1,z1,x2,y2,z2,elev,thick);
+      writeln('The line is from',x1,',',y1,',',z1,' to',x2,',',y2,',',z2);
+      writeln('The line was created in layer ',layer);
+      writeln('The elevation is ',elev,' and the thickness is ',thick);
+    end;
+  until entid=0;
+  CLOSE_DXF;
+end.
+
+PROCEDURE  GET_ARC(var x,y,z,rad,ang1,ang2,elev,thick:real);
+
+Definition of variables
+x,y,z => coordinate for the center point of the arc.
+rad => Radius of the arc.
+ang1 => starting angle of the arc.
+ang2 => ending angle of the arc.
+elev => elevation of arc.
+thick => thickness of arc.
+
+Example
+List the center point, radius, and layer of all arcs in a DXF file.
+
+PROGRAM TEST_DXFREAD;
+
+USES DXFREAD;
+
+var
+  entid:byte;
+  entname,layer : string;
+  x,y,z,rad,ang1,ang2,elev,thick:real;
+  filename : string;
+
+BEGIN
+  writeln('Enter name of input DXF file .');
+  readln(filename);
+  OPEN_DXF(filename);
+  repeat;
+    GET_ENT(entid,entname,layer);
+    if (entid=4) then
+    begin
+      GET_ARC(x,y,z,rad,ang1,ang2,elev,thick);
+      writeln('The center point of the arc is ',x,',',y,',',z);
+      writeln('It was created in layer ',layer,' and has a radius of ',rad);
+    end;
+  until entid=0;
+  CLOSE_DXF;
+end.
+
+
+PROCEDURE  GET_CIRCLE(var x,y,z,rad,elev,thick:real);
+
+Definition of variables
+x,y,z => coordinate for the center point of the circle.
+rad => Radius of the circle
+elev => elevation of circle
+thick => thickness of circle.
+
+Example
+List the properties of all CIRCLES in a DXF file regardless of the layer.
+
+PROGRAM TEST_DXFREAD;
+
+USES DXFREAD;
+
+var
+  entid:byte;
+  entname,layer : string;
+  x,y,z,rad,elev,thick:real;
+  filename : string;
+
+BEGIN
+  writeln('Enter name of input DXF file .');
+  readln(filename);
+  OPEN_DXF(filename);
+  repeat;
+    GET_ENT(entid,entname,layer);
+    if (entid=5) then
+    begin
+      GET_CIRCLE(x,y,z,rad,elev,thick);
+      writeln('The center point of the circle is',x,',',y,',',z);
+      writeln('It was created in layer ',layer,' and has a radius of ',rad);
+      writeln('The elevation is ',elev,' and the thickness is ',thick);
+    end;
+  until entid=0;
+  CLOSE_DXF;
+end.
+
+PROCEDURE GET_PLINE(var mesh,mclosed,nclosed:boolean;
+                    var m,n:integer; var
+begin_width,end_width,elev,thick:real);        
+           
+
+Definition of variables
+mesh => returns TRUE if PLINE is a 3D polyline mesh.
+mclosed => returns TRUE if a polyline is closed,
+           or if a 3D mesh is closed in the m direction
+nclosed => returns TRUE if a 3D mesh is closed in the n direction
+m => the number of vertices in the m direction of a 3D mesh.
+n => the number of vertices in the n direction of a 3D mesh.
+begin_width => beginning width of polyline.
+end_width => ending width of polyline.
+elev => elevation of polyline.
+thick => thickness of polyline.
+
+Example
+Example will be shown with the procedure GET_VERTEX.
+
+-----------------------------------------------------------------------------
+
+GET_VERTEX
+
+PROCEDURE GET_VERTEX(var x,y,z,begin_width,end_width,elev,thick:real);
+
+Definition of variables
+x,y,z => coordinates for the vertex.
+begin_width => beginning of polyline segment.
+end_width => ending width of polyline segment.
+elev => elevation of vertex.
+thick => thickness of vertex.
+
+Example
+List the vertex points of all polylines in a DXF file. 
+PROGRAM TEST_DXFREAD;
+
+USES DXFREAD;
+
+var
+  entid:byte;
+  entname,layer : string;
+  x,y,z,begin_width,end_width,elev,thick : real;
+  mesh,mclosed,nclosed : boolean;
+  filename : string;
+  m,n:integer;
+
+BEGIN
+  writeln('Enter name of input DXF file .');
+  readln(filename);
+  OPEN_DXF(filename);
+  repeat;
+    GET_ENT(entid,entname,layer);
+    if (entid=9) then
+    begin
+     
+GET_PLINE(mesh,mclosed,nclosed,m,n,begin_width,end_width,elev,thick);
+      if not mesh then
+      begin
+        writeln('Beginning polyline in layer ',layer);
+        repeat;
+          GET_ENT(entid,entname,layer);
+          if (entid=10) then
+          begin
+            GET_VERTEX(x,y,z,begin_width,end_width,elev,thick);
+            writeln(x,',',y,',',z);
+          end;
+        until entid=11;  {End of polyline}
+      end;
+    end;
+  until entid=0;
+  CLOSE_DXF;
+end.

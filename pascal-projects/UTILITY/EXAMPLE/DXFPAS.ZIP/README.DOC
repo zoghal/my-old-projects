@@ -1,0 +1,30 @@
+                                    DXFTOOLS
+                                 COPYRIGHT 1992
+                                 DENNIS W. WEBB
+
+DXFTOOLS consists of two Turbo Pascal units designed to allow program to read
+and write DXF files.  DXF (Drawing Exchange Format) is used by AutoCAD and
+other CAD programs as an ASCII representation of the drawing file.
+
+DXFTOOLS provides allows the programmer to read and write many 2-D entities.
+By registering your copy, you will receive DXFTOOLS PLUS which as additional
+2_D procedures as well as 3-D.
+
+On this disk:
+
+    README.DOC => This file
+
+    INVOICE.DOC => Registration form. Type PRINT INVOICE.DOC from your DOS
+                   prompt, with your printer on line, for a hard copy.
+
+    MANUAL.DOC => Users Manual.  Type PRINT MANUAL.DOC from your DOS prompt,
+                  with your printer on line, for a hard copy.
+
+    DXFREAD.TPU => Turbo Pascal unit to read .DXF files.
+
+    DXFWRITE.TPU => Turbo Pascal unit to write .DXF files.
+
+    EXAMPLE1.PAS => Source for example using DXFWRITE.
+
+    EXAMPLE2.PAS => Source for example using DXFREAD.
+

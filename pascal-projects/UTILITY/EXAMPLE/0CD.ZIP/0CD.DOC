@@ -1,0 +1,529 @@
+                           0cd CD-Rom Emulator v7.1
+                        ---========================---
+
+1. The Problem!
+===============----------------------------------------------------------------
+Sometimes, a game comes along that looks to be the best game you've ever seen.
+Unfortunately, you have only a single-speed cd-rom, and no matter how fast
+your pentium 133 goes, the movies and animations looks like a beetle stuck in
+glue.
+
+Then you think of the possibility of copying the game into your harddisk, and
+playing it off of it, but alas, that probably won't work. The reason for this
+is that such games usually check to see if they are actually running from the
+cd-rom. The purpose of this check is to make sure that audio tracks on the
+cd-rom are available, but mostly it is used as a simple copy-protection check.
+
+It can take a lot of hard work to make it work from your harddisk, and some
+times it can't be done; but the main work is to make the program think it is
+really running on a cd-rom. So, how do you accomplish that? 0cd is the answer.
+
+2. Introduction to cd-rom emulators
+===================================--------------------------------------------
+So, what does a cd-rom emulator have to do? Well, the following list gives you
+a clue of the task it must fill:
+
+  þ Appear as a normal MSCDEX driver to any program
+  þ Make one or more drives appear as a cd-rom
+  þ Simulate or "Swallow" all functions that it cannot handle
+
+The simplest cd-rom emulators work by simply installing itself as a MSCDEX
+clone and when a program ask, it will answer with correct data to make it
+appear as some of your drives are really cd-rom drives instead of normal
+harddisks. This way, you can use SUBST to create a virtual drive in the
+directory the game is located in, and use the emulator to make it appear as a
+cd-rom drive.
+
+"Swallow" means that when a program tells the emulator to start playing an
+audio track (example), then the program will say "sure thing" and just go whop
+in the memory, doing essentially nothing. The program will be none the wiser
+and happy as a clam.
+
+But, some games does more than just tell the emulator to do stuff. Sometimes
+it even checks to make sure that the data the emulator is playing with is the
+correct ones. For instance, the game may check how many music tracks there is
+on the cd, and crash and burn if it is the wrong number. Simple emulators
+usually don't know this kind of information, and says "Ehmmm... 0?" or
+something like that.
+
+3. The answer - 0CD!
+====================-----------------------------------------------------------
+0CD is built to solve a lot of these problems, but unfortunately not all. 0CD
+is a small resident utility which emulates MSCDEX in a way I have not found in
+any other emulator. 0CD installs itself into memory, runs a program or a batch
+file, and then cleans up and exits, neat and tidy. 0CD does the following:
+
+  þ Appear as a normal MSCDEX driver to any program
+  þ Creates virtual drives from directories, making them appear as cd-rom
+    drives
+  þ Lets the virtual drives have their own volume label
+  þ Can write protect the cd-rom drive
+  þ Can make the cd-rom drive appear to have 0 bytes free
+  þ Simulates different speed of the cd-rom drives
+  þ Enables audio-through-put
+  þ Can co-exist with mscdex
+  þ Answers intelligently to the following function calls:
+    þ MSCDEX installation check
+    þ Get number of cd-rom drives
+    þ Get bibliographical filename                   *
+    þ Get abstract filename                          *
+    þ Get copyright filename                         *
+    þ Get drive list
+    þ Get device driver list
+    þ Get MSCDEX version
+    þ Get directory entry
+    þ Get descriptor preference
+    þ Get VTOC entry (Volume Table Of Contents)      *
+    þ Absolute sector read
+    þ Device driver requests
+      þ Play audio
+      þ Stop audio
+      þ Head position (chaning)
+      þ Audio channel info
+      þ Media changed
+      þ Get sector size                              *
+      þ Get volume size                              *
+      þ Get device status
+      þ Get audio disk info                          *
+      þ Get audio track info                         *
+      þ Get UPC code                                 *
+      þ Get audio status (playing/paused)
+
+The entries marked with * are saved by a program called RIPCD into a file.
+This file is then read back into memory when 0cd is installed. RIPCD reads the
+data off the original cd so the data will appear to be authentic.
+
+4. How to use 0CD
+=================--------------------------------------------------------------
+0CD works by way of command line parameters and is therefore best suited in
+a batch file. The format of the 0CD command line is as follows:
+
+   0CD [options] <directory> [<directory> ... ]
+
+Ignore the [options] part for now; we'll get back to it later. The important
+part is <directory>. You fill out the <directory> part with a valid directory.
+0CD will create a new drive and redirect this drive to the given directory.
+This drive will automatically look like a cd-rom to any program that checks
+this.
+
+Example:
+
+  0CD C:\TEMP
+
+This command line will tell 0CD to create a new drive. This drive will really
+lie in the C:\TEMP directory.
+
+On the 0CD command line shown above, you can also see that the parameter
+<directory> can be repeated. This is denoted with [<directory> ... ]. You can
+supply up to 8 such parameters at one time to 0CD, creating at most 8 cd-rom
+drives. The cd-rom drives can all be directed to different directories or the
+same as seem fit. Example follows:
+
+  0CD C:\CD1&2 C:\CD1&2 C:\CD3
+
+Here, 0CD will create 3 cd-rom drives. The first two will be redirected to the
+same directory, C:\CD1&2. The third cd-rom drive will be redirected to the
+directory C:\CD3.
+
+When 0CD has created all cd-rom drives, and settled into your computer, it
+does one of two things:
+
+  if a file called 0CDSTART.BAT (or a user-supplied program file) exists in
+  the current directory, 0CD starts it. When execution of this file is
+  finished, 0CD unloads itself from memory.
+
+  if the file doesn't exist, 0CD starts up your current command line shell
+  (usually COMMAND.COM or 4DOS.COM). When this shell exits, 0CD unloads itself
+  from memory.
+
+5. 0CD valid options
+====================-----------------------------------------------------------
+0CD can also respond to various options on the command line. The options can
+be given before all <directory> in between the <directory> parameters, or
+after the <directory> parameters, but note that they only take effect on the
+<directory> parameters which comes after the options. See the text below on
+the -q option to see how this works.
+
+Each option will get it's own subchapter here, for optimal clarity and easier
+reference later on.
+
+5.1. 0CD option: -Q
+===================------------------------------------------------------------
+The simplest option for 0CD is the -Q option. This option tells 0CD to not
+print any text on the screen (QUIET operation). Above it was explained that
+options only takes effect on any parameters which comes after them, and here
+are some examples on that:
+
+  0CD -Q C:\TEMP
+
+This example will not print any text on the screen.
+
+  0CD C:\TEMP1 -Q C:\TEMP2
+
+This example will print text on the screen up to the point it reaches -Q. This
+means that you will not notice that two drives has been created, only one
+(C:\TEMP1), and you will not see the uninstall message.
+
+5.2. 0CD option: -R
+===================------------------------------------------------------------
+Earlier, you was told that 0CD automatically starts the file called
+0CDSTART.BAT if the file exists in the current directory. If you would like
+some other program to be started, you can supply the name of this program to
+0CD with the -R option. Example:
+
+  0CD -RC:\NC50\NC.EXE C:\TEMP
+
+Here, 0CD will create a cd-rom drive, and run Norton Commander. When Norton
+Commander exits, 0CD will unload itself from memory. You can run .BAT, .COM or
+.EXE files or any other file types your current command line shell allows for
+(4DOS allows you to run .BTM files also for instance).
+
+5.3. 0CD options: -0 and -W
+===========================----------------------------------------------------
+If you examine a cd-rom, you will notice two things; the drive is write
+protected, and it has no bytes free. To simulate this behavior, 0CD has two
+options for this: -0 and -W. the -W option turns on the write protection, and
+-0 simulates the "disk full" behaviour of cd-rom drives.
+
+Unfortunately, DOS sometimes sees through the redirection that 0CD sets up,
+and when a program or command (like DIR) checks to see how many bytes the
+drive has free, it will look at the host drive for the emulated cd-rom drive.
+Example:
+
+  0CD C:\TEMP
+
+This will create a new cd-rom drive (like E:) and put it in the C:\TEMP
+directory. When a program checks to see how much available space E: has, DOS
+will sometimes check the C: drive. To simulate the "disk full" syndrome of
+cd-rom drives, 0CD has to make it appear that C: is full. This will in turn
+make it appear as E: is full. Also, the disk can be written to. Please note
+that even though 0CD will make it appear as the disk is full by reporting 0
+bytes free, you can still create files as normal. The "Disk full" messages
+comes when a program isn't able to find vacant space on your harddrive, not
+when the disk allegedly has 0 bytes free.
+
+If you use this command line:
+
+  0CD -W -0 C:\TEMP
+
+then 0CD will report 0 bytes free for all programs that check this. Also, the
+disk has been write protected. Note that drive C: will also report 0 bytes
+free, but will not be write protected.
+
+5.4. 0CD option: -S
+===================------------------------------------------------------------
+Also, if you need to simulate different speed of the cd-rom drives, use the
+-s option. After -s, you supply either s, 1, 2, 3, 4, 6 or 8 for the speed,
+denoting "Super", single, double, triple, quadra, sexa or octa speed. Super
+speed means that the read that the minimal amount of time, and on my P90 the
+speed of the cd-rom drive is approximately 9.1 MB/s in super mode.
+
+5.5. 0CD option: -F
+===================------------------------------------------------------------
+If a function call to the simulated cd-rom driver has no data to operate on,
+or no valid data to return, 0cd simply returns with all flags and values set
+to success, even though the data it returns may not be valid. If you want
+the driver to return failure codes instead, use the -F option.
+
+5.6. 0CD option: -A
+===================------------------------------------------------------------
+If you come across a really stubborn game, try using the -A option for
+alternate cd-rom driver simulation. In fact, the -A option will make 0CD work
+like another cd-rom emulater that is available, and that is called FAKECD 1.0.
+One game you must use -A with is Worms from Team 17. The -A option effectively
+disables some of the cd-rom driver functions, and ignores any cd-rom data which
+has been read into memory. Use this only as a last resort.
+
+5.7. 0CD option: -I
+===================------------------------------------------------------------
+By using the -I option you can instruct 0CD to simulate three different types
+of cd-rom drives. Physical (like a harddisk), substed, or remote (network
+and cd-rom drives). Default is to simulate a remote drive.
+
+The option is followed by a single digit which has to be 0, 1 or 2, like this:
+
+  0CD -I1
+
+The three different digits means the following:
+
+   -I0 = Physical
+   -I1 = Substed (like a subst and then a cd-rom emulator on top)
+   -I2 = Remote (network or cd-rom)
+
+5.8. 0CD option: -D
+===================------------------------------------------------------------
+If you have access to the cd-rom when you copy or start the game, use the -D
+option to read back data from a file. The file should contain valid cd-rom data
+and if you look in chapter 6, you will see a way to steal the data from the
+original cd-rom. This way, 0CD will emulate the original cd better than without
+the data.
+
+5.9. 0CD option: -M
+===================------------------------------------------------------------
+The -M option instructs 0CD to co-exist with mscdex the best way possible.
+The -M option needs a parameter, a single digit which can be 0, 1, 2 or 3.
+The different meanings of the digits are:
+
+   -M0 = 0CD will NOT co-exist with MSCDEX in any way (this is default)
+   -M1 = 0CD will enable audio through-put
+   -M2 = 0CD will co-exist with MSCDEX, but audio through-put is disabled
+   -M3 = -M1 + -M2
+
+Audio through-put means that the program can start and stop audio tracks on
+the first cd-rom attached to the system as normal. This means that for games
+that enables you to listen to music from the cd, you can just pop in any
+cd which you have lying about and listen to it. 0CD will take over and respond
+to any communication with the cd-rom drive, but will leave all the aspects of
+audio to the original MSCDEX driver.
+
+5.10. 0CD option: -V
+====================-----------------------------------------------------------
+The -V option shows version information about 0CD. This is primarily intended
+as an identification utility when you report bugs.
+
+6. Advanced
+===========--------------------------------------------------------------------
+If you have to copy a really tough game onto your harddisk, you need to use
+the supplied utility called RIPCD. RIPCD reads a small portion of the system
+information available from a cd and stores it in a file on your harddisk. When
+0CD later on loads itself into memory, you can instruct it to load the file.
+When a program then asks 0CD for some of this information 0CD can supply it
+with the same information that the original cd would have produced.
+
+RIPCD takes two parameters, and the command line format is as follows:
+
+  RIPCD <filename> [<cd-drive>]
+
+The <filename> parameter names the file to put the information in, and the
+<cd-drive> parameter identifies the cd-rom drive. You don't need to identify
+the cd-rom drive if you only have one drive in your system. If you have more
+than one drive, you need to supply this parameter.
+
+RIPCD will then read the data and put it in the file. Example:
+
+  RIPCD CARPET.DAT E:
+
+RIPCD will here read the system data from the cd-rom in drive E:, and put it
+in the file called CARPET.DAT.
+
+To make 0CD load the data back into memory, use the -D option. Example:
+
+  0CD -DCARPET.DAT D:\CARPET
+
+Notice that the -D option is supplied BEFORE the <directory> parameter. The -D
+option will then work for all such <directory> parameters which comes after
+it. To make a drive have no data, use an empty -D option. Example follows:
+
+  0CD -DCD1.DAT C:\TEMP C:\TEMP -D C:\TEMP
+
+Here, 0CD will create three cd-rom drives. The first two will have system data
+available from the file CD1.DAT, but the third cd-rom drive will have no
+system data available. You can supply different system data files for each
+drive if you want to.
+
+RIPCD needs the program CRUNCH.COM to be in the same directory as the
+RIPCD.EXE file itself, so don't move this file.
+
+If you for some reason need to make a cd-rom with a specific volume label,
+or you'd like to simulate how many audio tracks the cd has, but don't have the
+original cd nearby, use the MAKECD program. The MAKECD program will create a
+dummy cd with most normal values, but let you enter the volume label and how
+many audio tracks there is on the cd. MAKECD needs only the filename of the
+file to create.
+
+7. Known problems
+=================--------------------------------------------------------------
+0CD is far from perfect. Some problems are made to be so stubborn that 0CD
+will not be able to respond in a satisfactory way. One reason for this is that
+the ABSOLUTE READ SECTOR function call is off course not implemented in 0CD.
+If a program uses this function call to read system data and check for the
+original CD, 0CD will come up short. Usually, this problems crops up when you
+use cd-rom identification utilities.
+
+Here is a list of games and programs it has been tested and found to be
+working with:
+
+  MechWarrior 2
+  Magic Carpet 1
+  Magic Carpet 1: The Hidden Worlds
+  Magic Carpet 2: Netherworlds
+  Fade 2 Black
+  Command & Conquer
+  QCD (cd-player that comes with SB16 system)
+  Norton System Information
+  Worms (use the -A switch, and no cd-data, or use the audio through-put)
+  ScanCD from Corel Corporation
+
+Apart from these games, it hasn't been tested on any other products. As you
+can see for yourself, the list is far too short to say anything conclusive
+about the quality of 0CD. So far, it has worked fine, but there are probably
+some problems with it yet to be found.
+
+8. Disclaimer
+=============------------------------------------------------------------------
+In this document I have talked a lot about copying games onto harddisks, and
+avoiding copy protections and such stuff. As you already know, this is
+illegal, and I do not encourage such behaviour. The reason I made this utility
+was to make my computer able to smoothly play some of the newest games
+available, not to make it possible to rip and distribute pirated games. I hope
+that some people will enjoy this utility, and not blaim the "weapons" maker
+for the "deaths" it make.
+
+9. Who am I?
+============-------------------------------------------------------------------
+My name is Lasse V†gs‘ther Karlsen, and you can reach me on internet on the
+following email address:
+
+  lassek@tmih.no
+
+10. Why would you get in touch with me?
+=======================================----------------------------------------
+If for some reason you have a program 0CD doesn't run with, tell me about the
+problem. Give me your best shot at the reason for the failure, and a probable
+remedy for it. If I can fix the problem, you will get a 0CD that works with
+your software, and 0CD will get better. In the end, 0CD may be usable for a
+much larger range of software than it is today.
+
+11. The source code for 0CD
+===========================----------------------------------------------------
+As you can see, the source code for 0CD follows this package. Always when I
+get a new utility, I feel a lot safer when the person who wrote it supplies
+the source code as well. Because of this, I supply the source code as part of
+this package. It is the complete source code, with the exception of the source
+code to CRUNCH.COM. This program is part of another package I have created,
+and is available upon request (Package+Source code that is). So tinker around
+and look at the source code, or even modify it.
+
+12. Tips
+========-----------------------------------------------------------------------
+If you encounter a stubborn game, try combinations of the options. Sometimes,
+a game will not work when you feed it with original data from the cd-rom,
+but may instead work with a subset of the data and functions.
+
+13. Revision history for 0CD
+============================---------------------------------------------------
+; Revision 1.36  1995/12/04 00:56:07  Lasse
+; Version 6.6; Now works with worms too, and simulates the following new
+; device requests:
+;   Play
+;   Stop
+; also, the AudioStatus function has been augmented to react on the Play
+; and Stop functions, and the HeadLocation function will return different
+; values, as though the cd was playing or moving around.
+; Also, the -a option will make 0cd simulate FakeCD.
+;
+; Revision 1.35  1995/12/03 02:35:45  Lasse
+; Version 6.5; Fixed the root-directory subst problem which came back :(
+;
+; Revision 1.34  1995/11/26 09:46:54  Lasse
+; Version 6.4; Fixed several bugs with the DiskFree function
+;
+; Revision 1.33  1995/11/16 06:36:22  Lasse
+; Fixed a bug in the makecd program, and an inconsistency in 0cd
+;
+; Revision 1.32  1995/11/16 06:14:39  Lasse
+; Put Decrunch into 0cd.asm for maximum distributability
+;
+; Revision 1.31  1995/11/16 06:04:28  Lasse
+; Version 6.2
+;
+; Revision 1.30  1995/11/16 05:24:59  Lasse
+; Commented all code; Done some minor cosmetic changes, tidied up the
+; code a bit
+;
+; Revision 1.29  1995/11/14 22:04:22  Lasse
+; If last character in directory was \ then redirection failed; fixed!
+;
+; Revision 1.28  1995/11/14 21:57:59  Lasse
+; Removed the "Unmangling" of filename
+;
+; Revision 1.27  1995/11/14 21:46:19  Lasse
+; Version 6.2; Fixed so that magic carpet works; Fixed so that DiskFree(d:)
+; where d: is a cd-rom now returns correct data
+;
+; Revision 1.26  1995/11/14 19:50:33  Lasse
+; Bug in previous revision concerning the drive letter in speed messages;
+; fixed
+;
+; Revision 1.25  1995/11/14 19:48:43  Lasse
+; Fixed so that speed message included correct drive letter
+;
+; Revision 1.24  1995/11/14 19:29:30  Lasse
+; Version 6.1; Super speed emulation enabled
+;
+; Revision 1.23  1995/11/14 19:02:11  Lasse
+; Updated the usage message, and renamed VTC to data
+;
+; Revision 1.22  1995/11/14 18:51:36  Lasse
+; Version 6.0; Now simulates speed of cd-rom; Also read sector 16 (system
+; data)
+;
+; Revision 1.21  1995/11/12 21:52:52  Lasse
+; Version 5.0; fixed a couple of bugs with the audio track information
+;
+; Revision 1.20  1995/11/12 08:14:22  Lasse
+; Version 4.1
+;
+; Revision 1.19  1995/11/12 08:09:58  Lasse
+; Removed some old dummy-stuff
+;
+; Revision 1.18  1995/11/12 06:44:56  Lasse
+; Audio Status now responds music paused; fix necessary for MechWarrior 2
+;
+; Revision 1.17  1995/11/12 03:39:43  Lasse
+; Fixed the return to directory bug
+;
+; Revision 1.16  1995/11/12 03:24:55  Lasse
+; Bug-fix; couldn't supply more than name.ext, no dir to run
+;
+; Revision 1.15  1995/11/12 03:21:29  Lasse
+; Version 4; supply name of program to run
+;
+; Revision 1.14  1995/11/12 02:34:58  Lasse
+; Fixed so that it reads audio data also
+;
+; Revision 1.13  1995/11/11 22:51:03  Lasse
+; Fixed so cd-roms could be redirected to the root of a drive
+;
+; Revision 1.12  1995/11/11 22:48:52  Lasse
+; Fixed a bug which caused strange symbols in 'dir' listings
+;
+; Revision 1.11  1995/11/11 22:39:32  Lasse
+; Fixed so it didn't automatically write protect cd-roms unless the user
+; asked for it
+;
+; Revision 1.10  1995/11/11 20:50:50  Lasse
+; DiskFree function now clears carry flag
+;
+; Revision 1.9  1995/11/11 20:44:24  Lasse
+; Version 3.1; added option to supply name of .vtc file
+;
+; Revision 1.8  1995/11/11 20:15:29  Lasse
+; Returns dummy filenames, and uses CD0.VTC - CD7.VTC instead of DIR.VTC
+; so that the same directory may be used for different cd's.
+;
+; Revision 1.7  1995/11/11 05:55:23  Lasse
+; Fixed so it reads the VTOC into memory and returns it upon request.
+;
+; Revision 1.6  1995/11/10 23:14:47  Lasse
+; Fixed the volume label bug that appeared in the last revision.
+;
+; Revision 1.5  1995/11/10 23:05:40  Lasse
+; Fixed a bug when checking more than 8 drives past the first emulated
+; cd-rom drive.
+;
+; Revision 1.4  1995/11/07 22:15:01  Lasse
+; Version 2.0
+;
+; Revision 1.3  1995/11/07 22:13:19  Lasse
+; Now saves current drive and directory and restores them when the sub-
+; process exits. Also has self-installed check code now.
+;
+; Revision 1.2  1995/11/07 21:50:29  Lasse
+; Moved all string procedures into 0cd.asm itself. Tidied up some of the
+; code. Replace the uppercase functions. Fixed so that the GetDirEntry call
+; to MSCDEX will go through (possibly returning garbage, but...) and some
+; other stuff.
+;
+; Revision 1.1  1995/11/07 20:15:56  Lasse
+; Initial revision

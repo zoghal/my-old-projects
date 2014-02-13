@@ -1,0 +1,35 @@
+
+                                    BOOTLOOK
+
+        This is a little ditty I wrote one Sunday afternoon 'cuz I was curious
+    about the boot sector and the information I read that it contains.
+
+        BOOTLOOK reads track 0, sector 1 and prints a simple (and not real well
+    organized) report to the screen that tells you ...
+
+       1.  What version of DOS was used to format the disk.
+       2.  How many sectors and clusters.
+       3.  How many FAT tables, directory entries and reserved sectors.
+       4.  How many sectors the disk uses.
+       5.  How many cylinders (tracks) are on the disk.
+       6.  How many heads (sides) are used.
+       7.  Total disk capacity.
+
+        It works on floppy disks and hard drives.
+
+        It is simple to use and totally harmless.  It might even be useful!
+        The source code requires Turbo Professional 5.0 for one or two calls
+        which could be done from DOS functions without too much trouble.
+
+        Just type BOOTLOOK and press <ENTER> ...
+
+    Enjoy,
+
+    Written and copyright 1990 by William C. Scott
+
+    Coalgate BBS
+    (405) 927-3840  24hrs  no charge
+    -  USR HST 14.4/9600/2400/1200/300 baud
+    -  Supporting PmCat
+    -  D/L on first call
+

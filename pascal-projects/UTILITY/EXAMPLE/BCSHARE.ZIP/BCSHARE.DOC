@@ -1,0 +1,242 @@
+                          BCSHARE Beta Version 0.7
+                         Compliments of Mike Woltz
+                     Copyright (C) By Mike Woltz 1990
+                           Buffalo Creek Software    
+                                A Member Of
+                  The Association Of Shareware Professionals
+                   Home of SPITFIRE Bulletin Board System
+
+     BCSHARE is written by Mike Woltz (Buffalo Creek Software) to be used
+     to open files in a manner to provide the use of file sharing and
+     locking for multitasking and/or LAN systems.  BCSHARE is written
+     in Turbo Pascal and interfaced with assembler code (BCSFILE.OBJ) for
+     speed.  You are free to use BCSHARE within your programs written in
+     Turbo Pascal provided Buffalo Creek Software is given credit for this
+     code either in your program documentation or within your program
+     itself.  While you are free to use BCSHARE, you are NOT allowed to
+     alter this code.
+
+     FILE SHARING
+     ------------
+     Turbo Pascal uses a byte variable named FILEMODE to set the file access
+     mode when non-text files are opened for use.  The value of FILEMODE can
+     be changed for the purpose of opening non-text files in any mode your
+     application requires.  Unfortunately, FILEMODE is not used for opening
+     text files.  When text files are opened using the standard procedures,
+     the file access mode is totally controlled by Turbo Pascal.  BCSHARE
+     changes that for you.  BCSHARE opens text files and does all the file
+     I/O in a manner to allow file sharing.  There is really nothing to it.
+     Simply assign your text files using BCSHARE's AssignTxtFile procedure
+     and BCSHARE will do the rest.  For example...
+
+     Uses
+       BCSHARE,
+       DOS;
+     VAR
+       TF   : Text;
+       Line : String;
+
+     Begin;
+       AssignTxtFile(TF,'BCSHARE.DOC');
+       {$I-}Reset(TF);{$I+}
+       If IOResult<>0 Then Halt;
+       While Not EOF(TF) Do
+       Begin;
+         {$I-}Readln(TF,Line);{$I+}
+         If IOResult<>0 Then
+         Begin;
+           {$I-}Close(TF);{$I+}
+           If IOResult<>0 Then;
+           Halt;
+         End;
+         Writeln(Line);
+       End;
+       {$I-}Close(TF);{$I+}
+       If IOResult<>0 Then;
+     End.
+
+     As you will notice from the above example, once you have used
+     AssignTxtFile, you then use the Turbo Pascal 'Reset','Rewrite',
+     'Append' and 'Close' procedures as you normally would when working
+     with text files.  BCSHARE works hand in hand with Turbo Pascal so
+     these standard procedures can be used.
+
+     BCSHARE makes file sharing with non-text files very simple.  BCSHARE
+     has a procedure named SetFileMode which needs to be called just before
+     you 'Reset' or 'Rewrite' a non-text file.  SetFileMode is used to change
+     the value of Turbo Pascal's byte variable FileMode.  SetFileMode will
+     assign 5 different values to FileMode.
+
+     SetFileMode(ReadMode);       Setting FileMode to 'ReadMode' will allow
+                                  other programs to access the file for read
+                                  but not for write while the file is open
+                                  for read purposes.
+     SetFIleMode(WriteMode);      Setting FileMode to 'WriteMode' will allow
+                                  other programs to access the file for write
+                                  but not for read while the file is open for
+                                  write purposes.
+     SetFileMode(NormalMode);     Setting FileMode to 'NormalMode' (default)
+                                  will allow read or write access to the file
+                                  for one program only.
+     SetFileMode(ReadDenyNone);   Setting FileMode to 'ReadDenyNone' will allow
+                                  other programs to access the file for read
+                                  or for write while the file is open for read
+                                  purposes.
+     SetFileMode(WriteDenyNone);  Setting FileMode to 'WriteDenyNone' will
+                                  allow other programs to access the file for
+                                  read or for write purposes while the file is
+                                  open for write purposes.
+ 
+     SetFileMode is used as in the following example...
+
+     Uses
+       BCSHARE,
+       DOS;
+     TYPE
+       Example = Record
+                   ExStr : String;
+                 End;
+     VAR
+       EF   : File Of Example;
+       Exam : Example;
+
+     Begin;
+       Assign(EF,'EXAMPLE.DAT');
+       SetFileMode(ReadDenyNone);
+       {$I-}Reset(EF);{$I+}
+       If IOResult<>0 Then Halt;
+       SetFileMode(NormalMode);
+       While Not EOF(EF) Do
+       Begin;
+         {$I-}Read(EF,Exam);{$I+}
+         If IOResult<>0 Then
+         Begin;
+           {$I-}Close(EF);{$I+}
+           If IOResult<>0 Then;
+           Halt;
+         End;
+         Writeln(Exam.ExStr);
+       End;
+       {$I-}Close(EF);{$I+}
+       If IOResult<>0 Then;
+     End.
+
+     The above example demonstrates how simple BCSHARE makes it to utilize
+     non-text files in a file sharing manner.  Simply use SetFileMode to
+     set the file access mode (FileMode) before you 'Reset' or 'Rewrite' the
+     non-text file.  Please note that it is important to use SetFileMode to
+     set FileMode to default immediately after 'Reset' or 'Rewrite'.  You do
+     not have to use SetFileMode when working with text files, BCSHARE takes
+     care of that task for you.
+
+     FILE LOCKING
+     ------------
+     In the event your program is opening and working with files in a file
+     sharing manner as described above, then it becomes important to lock
+     all or part of a file before writing to the file.  This locking is done
+     to keep a second program from accessing the same portion of the file that
+     your program is writing to.  In other words, if two programs attempted to
+     write to the same place in a file at the same time undetermined results
+     would occur.  BCSHARE provides a procedure to lock and unlock all or part
+     of a file.  This procedure is named LockFile.  LockFile must know the
+     DOS filehandle, the mode (lock or unlock), the starting point of the lock
+     or unlock and the number of bytes to lock or unlock.  The declared
+     procedure is as listed below...
+
+     Procedure LockFile(Handle : Word; Mode : Byte; Start,Amount : LongInt);
+
+     You will notice that the DOS filehandle, the mode (lock or unlock), the
+     starting point of the lock or unlock and the number of bytes to lock or
+     unlock are passed to the procedure.  The below example demonstrates 
+     locking and unlocking a portion of a file...
+
+     Uses
+       BCSHARE,
+       DOS;
+     TYPE
+       Example = Record
+                   ExStr : String;
+                 End;
+     VAR
+       EF   : File Of Example;
+       Exam : Example;
+
+     Begin;
+       Assign(EF,'EXAMPLE.DAT');
+       SetFileMode(WriteDenyNone);
+       {$I-}Reset(EF);{$I+}
+       If IOResult<>0 Then Halt;
+       SetFileMode(NormalMode);
+       Seek(EF,12);
+       Exam.ExStr:='Buffalo Creek Software';
+       With FileRec Do LockFile(Handle,Lock,12*RecSize,RecSize);
+       {$I-}Write(EF,Exam);{$I+}
+       With FileRec Do LockFile(Handle,UnLock,12*RecSize,RecSize);
+       If IOResult<>0 Then
+       Begin;
+         {$I-}Close(EF);{$I+}
+         If IOResult<>0 Then;
+         Halt;
+       End;
+       {$I-}Close(EF);{$I+}
+       If IOResult<>0 Then;
+     End.
+
+     If you think that is simple then you are correct.  There is one rule
+     you must follow.  You must always unlock the identical portion of the
+     file that you locked before closing the file.  Failure to do so will
+     provide undetermined results.  NOTE: FileRec is a record type within
+     the Turbo Pascal DOS unit.  Handle and RecSize are variables of
+     FileRec.  Please refer to your Turbo Pascal manual for additional
+     information pertaining to the FileRec structure.  FileRec pertains
+     to non-text files while TextRec pertains to text files.
+ 
+     The below example demonstrates locking the end of a text file for the
+     purpose of appending text to the file.  The entire file could be locked,
+     however, this example simply locks the portion to be written to...
+
+     Uses
+       BCSHARE,
+       DOS;
+     VAR
+       TF      : Text;
+       Line    : String;
+       DirInfo : SearchRec;
+       IOError : Integer;
+
+     Begin;
+       AssignTxtFile(TF,'BCSHARE.DOC');
+       {$I-}Append(TF);{$I+}
+       If IOResult<>0 Then Halt;
+       FindFirst('BCSHARE.DOC',Archive,DirInfo);
+       Line:='Buffalo Creek Software';
+       With TextRec(TF) Do LockFile(Handle,Lock,DirInfo.Size-1,2147483647);
+       {$I-}Writeln(TF,Line);{$I+}
+       IOError:=IOResult;
+       With TextRec(TF) Do LockFile(Handle,UnLock,DirInfo.Size-1,2147483647);
+       If IOError<>0 Then
+       Begin;
+         {$I-}Close(TF);{$I+}
+         If IOResult<>0 Then;
+         Halt;
+       End;
+       {$I-}Close(TF);{$I+}
+       If IOResult<>0 Then;
+     End.
+
+     BCSHARE Beta Version 0.7 - Released 11-17-90 - Revision Notes
+
+     All previous versions of BCSHARE did not return the corresponding
+     error code when using the REWRITE procedure (text file).  The correct
+     error code is now returned in IOResult.
+
+     All previous versions of BCSHARE did not return the corresponding
+     error code when using the LOCKFILE procedure.  The correct error code
+     if now returned in the variable IO_Error.
+     
+
+     Hopefully you will find BCSHARE useful to you.  Your comments and
+     suggestions for improvement are welcome.  All questions, comments and/or
+     suggestions regarding BCSHARE should be left in a message on
+     Buffalo Creek's BBS at 515-225-8496 * 38400/19200/9600/2400/1200.
+

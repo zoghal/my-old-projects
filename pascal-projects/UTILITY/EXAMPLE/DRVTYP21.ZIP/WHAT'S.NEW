@@ -1,0 +1,7 @@
+Here is what's new in DrvTypes version 2:
+
+	- CD-ROM/Fixed drive detection bug fixed
+
+	- SuperStor drives detection implemented
+
+	- Norton Diskreet drives detection implemented

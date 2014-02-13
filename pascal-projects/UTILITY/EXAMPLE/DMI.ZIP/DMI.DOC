@@ -1,0 +1,56 @@
+
+
+
+
+                  ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+                  ³    Disk and Memory Information    ³
+                  ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+
+
+  Usage : The program will show 'graphically' the amount of free
+  ÄÄÄÄÄ   disk and memory space. Call the program with
+
+          DMI [Drive] [/M]
+
+          Drive is the disk drive for which you want information
+          /M will force monocrome display on a color/composite monitor. It
+             will check if you have a color or monocrome monitor.
+
+
+  Info  : The program will display info about
+  ÄÄÄÄ
+          - Total disk space
+          - Used free disk space
+          - Available disk space (pure arithmetic !!!)
+          - Total RAM
+          - Used RAM
+          - Available RAM (see above !!!)
+          - Initial extended memory
+          - total expanded memory
+          - available expanded memory
+
+
+  Files : DMI.EXE  -  the executable program
+  ÄÄÄÄÄ   DMI.PAS  -  the Pascal 5.5 source code
+          DMI.DOC  -  guess !!!!
+
+
+  Finally : I got the idea from Dwayne A. Melancon's ShowDisk v2.4, but
+  ÄÄÄÄÄÄÄ   felt that there was something missing (no memory info).
+            So I wrote my own version to fill out the gaps.
+            The source code is NOT very sophisticated, but I hope someone
+            will find some of it interesting.
+
+            If you feel like sending me some praise (very welcome),
+            complaints (not very welcome), money (YEEAAHHHH !!!!) :
+
+
+            email : thunem@kjemi.unit.no
+
+            Harald Thunem
+            Inst.for fysikalsk kjemi
+            7034 Trondheim-NTH
+            Norway
+
+

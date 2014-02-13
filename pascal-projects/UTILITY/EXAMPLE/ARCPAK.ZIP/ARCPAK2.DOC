@@ -1,0 +1,360 @@
+unit ArcPak2;
+interface
+uses
+  {$IFDEF Windows}
+  WinDos
+  {$ELSE}
+  DOS
+  {$ENDIF}
+;
+
+type
+BigStr = array [1..65535] of char;
+BigStrPtr = ^BigStr;
+
+Pak_point = ^Pak;
+Pak_Ext = record
+          Comment  : ^String;      { Remark (comments) }
+          Path     : ^String;      { Full Pathname }
+          Sec_Env  : ^String;      { Security Envelope, unknown structure }
+          Err_Corr : ^String;      { Error correction code, also unknown }
+     end;
+PakHead = record
+         Extend    : ^Pak_ext;
+         SDatime   : longint;
+  {$IFDEF Windows}
+         FDatime   : TDateTime;
+  {$ELSE}
+         FDatime   : DateTime;
+  {$ENDIF}
+    end;
+Pak = record
+          Marker  : byte;
+          CompVer : byte;       { Refers to const array PakCompVer }
+          Name    : ^string;
+          Size    : longint;    { compressed size }
+          Time    : word;
+          Date    : word;
+          CRC     : Integer;
+          Length  : longint;    { uncompressed size }
+          FilNumb : word;     { /* File Number to which the Pak extension revers */ }
+                                   { internal used only !}
+  {$IFDEF Windows}
+        FDatime   : TDateTime;
+  {$ELSE}
+        FDatime   : DateTime;
+  {$ENDIF}
+          NextPak : Pak_point;
+          Extend  : ^Pak_ext;     { pointer to next Pak-file, otherwise it's NIL }
+     end;
+Arc_point = ^Pak;
+Entr_ = record
+          Entry    : pointer;
+          Rel_mark : pointer;
+     end;
+ZCent_point = ^ZipCent;
+ZipEnd_point = ^ZipEnd;
+ZipLoc = record
+       Signa     : array[1..4] of char;
+       Vers      : word;
+       GenPur    : word;
+       CompVer   : word;
+       DaTime    : longint;
+       CRC       : longint;
+       Size      : longint;     { compressed size }
+       Length    : longint;     { uncompressed size }
+       NamLeng   : word;
+       ExtLeng   : word;
+       Name      : ^string;
+       ExtField  : ^string;
+  {$IFDEF Windows}
+       FDatime   : TDateTime;
+  {$ELSE}
+       FDatime   : DateTime;
+  {$ENDIF}
+    end;
+ZipCent = record
+       Signa     : array[1..4] of char;    { Always 'PK'+#1+#2 }
+       MadeVers  : word;         { Refers to const array VersionMade }
+       ExtVers   : word;         { Refers to const array VersionMade }
+       GenPur    : word;         { General purpose Bit-flag }
+       CompVer   : word;         { Refers to const array ZipCompVer }
+       DaTime    : longint;
+       CRC       : longint;
+       Size      : longint;     { compressed size }
+       Length    : longint;     { uncompressed size }
+       NamLeng   : word;        { Name length }
+       ExtLeng   : word;        { Extra field length }
+       ComtLeng  : word;        { Comment field length }
+       DiskNumb  : word;
+       IntAttr   : word;        { Internal file attributes }
+       ExteAttr  : Longint;     { External file attributes }
+       LocOffset : Longint;     { Relative offset of local file header }
+       Name      : ^string;
+       ExtField  : ^string;
+       Comment   : ^string;     { Comment }
+  {$IFDEF Windows}
+       FDatime   : TDateTime;
+  {$ELSE}
+       FDatime   : DateTime;
+  {$ENDIF}
+       NextZipl  : ZCent_point;  { pointer to next Zip-file, otherwise it's NIL }
+    end;
+ZipEnd = record
+       Signa         : array[1..4] of char;    { Always 'PK'+#5+#6 }
+       DiskNumb      : word;
+       DiskCentStart : word;  { Number of Disk with the start of central directory}
+       EnDiNumb      : word;  { total number of entries on this Disk }
+       EnToNumb      : word;  { total number of entries }
+       CentDirSize   : longint;  { size of the central directory }
+       OfCent        : longint;  { offset of the central directory from the first disk }
+       ZipComLeg     : word;     { Zip header comment field length }
+       ZipComt       : pointer;  { Zip header comment }
+  {$IFDEF Windows}
+       FDatime       : TDateTime;
+  {$ELSE}
+       FDatime       : DateTime;  { Date and Time of the Zip file }
+  {$ENDIF}
+    end;
+Lharc_point = ^Lharc;
+Lharc = record
+       HeadLen   : byte;           { Header length }
+       HeadSum   : byte;           { Header Checksum }
+       CompVer   : array[1..5] of char;   { Is either '-lh0-' or '-lh1-' }
+       Size      : longint;               { compressed size }
+       Length    : longint;               { uncompressed size }
+       Datime    : longint;
+       Atrb      : byte;
+       Level     : byte;
+       NamLeng   : byte;             { Name length, maximum 74 }
+       Name      : ^string;
+       CRC       : word;
+       Dos       : byte;
+       Extsize   : word;             { only for work, don't use this! }
+       Extkey    : byte;             { only for work, don't use this! }
+       PatLen    : byte;             { Path length, maximum 255 }
+       PatNam    : ^string;
+       FilLen    : byte;             { unknown usage, be careful!}
+       FilNam    : ^string;          { unknown usage, be careful!}
+       FilAtr    : word;             { unknown usage, be careful!}
+       FilCRC    : word;             { unknown usage, be careful!}
+       Attr      : word;
+  {$IFDEF Windows}
+       FDatime   : TDateTime;
+  {$ELSE}
+       FDatime   : DateTime;
+  {$ENDIF}
+       NextLzh   : Lharc_point;  { pointer to next lzh-file, otherwise it's NIL }
+    end;
+Arj_point = ^Arj;
+Arj = record
+      Head       : word;         { Header ID: 0xEA60 or 60000U }
+      BasHeadSiz : word;         { basic header size  }
+      FrsHeadSiz : byte;         { first header size  }
+      Vers       : byte;         { version number     }
+      MinVers    : byte;         { min. archive version to extract }
+      HostOS     : byte;         { operating system   }
+      Flags      : byte;         { Arj-Attribute: 0x01 Garbled,
+                                                  0x02 Reserved,
+                                                  0x04 Volume,
+                                                  0x08 Extfile,
+                                                  0x10 PathSym,
+                                                  0x20 Backup  }
+      CoMethod   : byte;         {0 stored, 1 compressed most ... 4 compressed fastest}
+      FlType     : byte;         {0 binary, 1 text, 2 comment, 3 directory, 4 volume }
+      Resv       : byte;         { reserved }
+      Datime     : longint;
+      Size       : longint;      { compressed size   }
+      Length     : longint;      { original size     }
+      CRC        : longint;      { original file CRC }
+      Entr       : word;         { entryname position in filename }
+      Attr       : word;         { file access mode  }
+      Data       : word;         { host data         }
+      ExtPos     : longint;      { extra data        }
+      Name       : ^string;      { filename          }
+      Comment    : ^BigStr;      { comment           }
+      HeadCRC    : longint;      { basic header CRC  }
+      _1stExtHSz  : word;         { 1st ext. heder size }
+      _1stExtH    : ^string;      { 1st ext. header   }
+      _1stExtHCRC : longint;      { 1st ext. header CRC }
+  {$IFDEF Windows}
+       FDatime   : TDateTime;
+  {$ELSE}
+       FDatime   : DateTime;     { date - time stamp }
+  {$ENDIF}
+      NamLeng    : word;         { Filename length }
+      ComtLeng   : word;         { Comment length }
+      NextArj    : Arj_point;    { pointer to next Arj-file, otherwise it's NIL }
+    end;
+GraphInfo = record
+      XRes    : word;
+      YRes    : word;
+      Colors  : longint;
+      Format  : ^string;
+      Comment : ^string;
+    end;
+const PVers = xxx;      { Version of ArcPak Unit}
+      PakCompVer  : array[0..11] of string[16] = ('End of File','Stored','Stored'
+                   ,'Packed','Squeezed','crunched','crunched','crunched',
+                   'Crunched','Squashed','Crushed','Distilled');
+      ZipCompVer  : array[0..9] of string[10] = ('Stored','Shrunk','Reduced1'
+                   ,'Reduced2','Reduced3','Reduced4','Imploded','*Token*','Deflate','*reserv*');
+      VersionMade : array[0..10] of string[18] = ('MS-Dos, OS/2 (FAT)','Amiga','VMS'
+                   ,'*NIX','VM/CMS','Atari-ST','OS/2 HPFS','MacIntosh'
+                   ,'Z-System','CP/M','unused');
+      Host_OS     : array[0..5] of string[6] = ('MSDOS','PRIMOS','UNIX','AMIGA','MACDOS','');
+
+function GetGraph_Info(Name : string; var InfoBlock : GraphInfo) : integer;
+         { Get Info about Graphic Format }
+         { Return Codes:    Gif...   128 }
+         {                  PCX...   130 }
+         {                  LBM...   132 }
+         {                  BMP...   134 }
+         {        reserved  BMP/OS2      }
+         {                  ICO...       }
+         {        reserved  ICO/OS2      }
+
+procedure GetAll_Zip(Name : string; var First : Entr_;
+                     var PCount: word; var EndOfCentZip : pointer);
+          { Get all files in a zipfile with comments, attrib., etc.}
+          { Name is the full name without wildcards of the zip-file }
+          { Where FirstEntry is a pointer to the first element in the list}
+          { and PCount is the number of Elements. EndOfCentZip is a pointer }
+          { to the type ZipCent (^ZipCent) }
+
+{$IFNDEF OS2}         {*Not for OS/2 currently available*}
+procedure Release_ (var First : Entr_);
+          { Releases the memory marked in First.Entry, all memory }
+          { allocations after this will be freed !! }
+{$ENDIF}
+
+procedure Dispose_Zip (var First : Entr_; var EndOfCentZip : pointer);
+                { Disposes all groups of the zip file to which }
+                { First.Entry and EndOfCentZip refers. The memory allocation }
+                { of other groups will not be touched. }
+
+procedure GetAll_Pak(Name : string; var First : Entr_;
+                     var PCount: word; var Head2 : pointer);
+                     { Head2 is a pointer to PakHead (^PakHead) }
+                     { Rest like above }
+
+procedure Dispose_Pak (var First : Entr_;var Head2 : pointer);
+
+procedure GetAll_Arc(Name : string; var First : Entr_;
+                     var PCount: word; var Head2 : pointer);
+
+procedure Dispose_Arc (var First : Entr_;var Head2 : pointer);
+
+
+procedure GetAll_Lzh(AName : string; var First : Entr_;
+                     var PCount: word; var Head2 : pointer);
+
+procedure Dispose_Lzh (var First : Entr_;var Head2 : pointer);
+
+procedure GetAll_Arj(Name : string; var First : Entr_; var PCount: word);
+
+procedure Dispose_Arj (var First : Entr_);
+
+function IsArchiv(Name : string): byte;
+         { Checks file if it's an Arc(Pak), Zip or Lzh file }
+         { returns:  0  ... it's not an archiv (or unknown)
+                     1  ... Arc (Pak)
+                     2  ... Zip
+                     4  ... Lzh
+                     16 ... Arj      }
+
+function Decide_Exe(Name : string): byte;
+{        Decide whether or not an Exe-file is a selfextracting arj,
+         arc, pak, zip, lzh archive:  0...None
+                                      1...Arc
+                                      2...Zip
+                                      3...Zip/2.0
+                                      4...Lzh
+                                      8...Pak
+                                     12...Arc?Pak
+                                     16...Arj
+                                     125... SomeOther  }
+
+function TwoDig(Arg: word): string;
+         { Converts numeric value in a two digit string, used in DispAll_*}
+
+function Ratio(Small : longint; Big : longint):real;
+         { Calculates the ratio of a compressed file, used in DispAll_*}
+
+function HexW(W : Word) : string;
+         { Converts Number of type word in a 4-digit string}
+
+function StUpCase(mixStr : string):string;
+         { Converts string to upper case, with international char.-set}
+
+function HexL(L : LongInt) : string;
+         { Converts Number of type Longint in a 8-digit string}
+
+function Atrib(Att : word):string;
+         { Calculates the Attributes, in a 5-Digit string don't handling }
+         { the volume- and directory-ID, used in DispAll_*}
+
+function Atri2(Att : word):string;
+         { Calculates the Attributes, in a 4-Digit string don't handling }
+         { the volume- and directory-ID, used in DispAll_arj}
+
+function CutYear(var Year : word) : word;
+         { Cuts the thousands and hundreds from a 4-Digit year, used in DispAll_*}
+
+function ExpandName(Name : string):string;
+         { Inserts blank if extension is missing or less then 3 chars}
+
+function Search(var Buffer; BufLength : Word;
+                var Match; MatLength : Word) : Word;
+
+
+{ /*****************  Revision History *******************/ }
+{ 1.00 1st Version released                                 }
+{ 1.02 fixed a small bug in DispAll_lzh                     }
+{ 1.03 Checks if .ARC or .PAK is probably a compressed file }
+{      and make a small change in DispAll_Pak               }
+{ 1.04 Fixed a small bug (division by zero) in function 'Ratio'}
+{      Make some small changes in DispAll_Zip and DispAll_Lzh  }
+{                                    (Similar to 1.03 change)  }
+{ 1.54 (internal) linked lists realized for zip-files        }
+{      rewriten all zip procedures.                          }
+{ 2.00 (internal) linked lists realized for pak-files,
+       rewriten all pak procedures, rewritten zip's procedures
+       one more time.                                        }
+{ 2.30 (internal) realized linked lists for Arc's and PKArc's
+       with comments                                         }
+{ 2.50 linked lists realized for lzh-files, DispAll-xxx moved to
+       another unit                                          }
+{ 2.51 Fixed bug, of not closing file handle by zip files    }
+{ 2.52 Adjust Filename if extension is missing or less then 3 chars.}
+{ 2.53 ExpandName added to unit.                             }
+{ 2.54 Fixed a major bug which occurs on some older .arc files      }
+{      ==> the machine hangs up!                             }
+{ 2.55 Support added for file-testing. If it's (with none-standard  }
+{      extension) is an archiv.                              }
+{      Additional check by extended header in .PAK files     }
+{ 2.56 Adding new kind of path storing in lzh files.         }
+{      And enhancing record for further usage.               }
+{ 2.57 Adding handling of large ZipFile comment > 255 Bytes  }
+{      Changing record format of ZipEnd!                     }
+{ 3.00 Adding handling of selfextracting files of PAK, ZIP,  }
+{      ARC and LZH (only EXE) files                          }
+{ 3.01 Fixes Bug, which occurs by Lzh files made by Unix     }
+{      machines w/o extended Header                          }
+{ 3.10 (internal) Added Graphic Format Info for Gif87a, Gif89a, PCX  }
+{ 4.1  (internal) Added ARJ Support                          }
+{ 4.2  Added Graphic Format Info for LBM, BMP                }
+{ 4.3  Added PkZip 2.0 Support including selfextracting      }
+{ 4.4  Some minor changes to support .TPW Units              }
+{ 4.5  Several fixes, especially on Zip files                }
+{ 4.6  Fixes Arj 2.41 self extracting recognition            }
+{ 4.7  Several changes required for OS/2 porting             }
+{      Code is now _cleaner_                                 }
+{ 4.8  Don't hang on corrupted Zip files                     }
+{      eg. if Pointer(First) = nil then writeln('corrupted');    }
+{      Fixed some currently unknown lzh behavior             }
+{ /**********  Future enhancments ************/ }
+{  Display comments on Gif89a pictures }
+{ /*******************************************/ }
+
+

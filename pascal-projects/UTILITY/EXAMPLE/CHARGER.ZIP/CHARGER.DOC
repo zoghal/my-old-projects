@@ -1,0 +1,176 @@
+BC - Backup Copy Routine
+        by Douglas E. MacLean
+
+BC is very similar to the standard DOS COPY routine. The important difference
+is that BC will first check the destination for a copy of the file to be
+transfered. If the destination file is more recent than the source the file
+will not be copied. If a wild card is used to copy files and a file will not
+fit on the disk, you will be prompted to insert a new formatted disk.
+
+If you enter BC without paramters, you wil be shown the command's format.
+
+The parameters for BC are the same as for COPY.
+
+BC a:*.exe b:
+
+will search for files with the extent 'exe' on the a: drive. If the files
+found are newer than those on b: (or a copy does not exist on b:) then it
+will be copied.
+
+An excellant use for BC is to keep your backup diskettes (you should be
+keeping a current backup, now there is no excuse) up to date. With BC
+copy time is cut down since only newer files are copied. It is also not
+possible to overwrite a latter version with a former one.
+
+If you find BC useful my family and I would appreciate a contribution. Any
+contribution of $15 (or more) will put you on my mailing list (unless you
+tell me not to) and entitle you to free updates and revisions. Write for a
+catalog of other Utilities or keep watching this BBS.
+            Thank you for your interest in my work!
+
+            Douglas E. MacLean
+            2200 Ocean Avenue Apt. 6B
+            Brooklyn, New York 11229
+            
+    
+                     T U R B O   S U P E R C H A R G E R 
+    
+                  b y   D o u g l a s   E .   M a c L e a n 
+    
+    
+                         S C R E E N   D I S P L A Y 
+    
+    FUNCTION AT(horiz,vert):char;
+           Provides GOTOXY from within a WRITE statement.
+           WRITE(AT(5,10),'TESTING');
+    
+    FUNCTION BRIGHT:CHAR; <IBM>   FUNCTION INVERSE:CHAR; <APPLE>
+           Selects  bright or inverse screen display from within a WRITE 
+    statement.
+    
+    FUNCTION DIM:CHAR; <IBM>      FUNCTION NORMAL:CHAR; <APPLE>
+           Selects  dim  or  normal mode of screen display from within a 
+    WRITE statement.
+           WRITE(DIM,'HIT ',BRIGHT,'RETURN',DIM,' TO CONTINUE');
+    
+                          S C R E E N   E R A S E S 
+    
+    PROCEDURE WIPEUP(T:INTEGER);
+           Erases  the  screen  bottom  to  top  with  a  delay  of  'T' 
+    milliseconds.
+    
+    PROCEDURE WIPEDOWN(T:INTEGER);
+           Erases  the  screen  top  to  bottom  with  a  delay  of  'T' 
+    milliseconds.
+    
+    PROCEDURE SCROLL(L,T:INTEGER);
+           Scrolls  the  screen  up  'L' number of lines with a delay of 
+    'T' milliseconds.
+    
+    
+                     S T R I N G   F O R M A T T I N G 
+    
+    FUNCTION PADLEFT(S:STR80;N:INTEGER):STR80;
+           Pads  the string 'S' with spaces upto a length of 'N'. If 'S' 
+    is  equal  to  or greater then 'N' characters in length no action is 
+    taken. The original string is not altered.
+    
+    FUNCTION PADRIGHT(S:STR80;N:INTEGER):STR80;
+           Same as PADLEFT only the spaces are padded to the right.
+    
+    FUNCTION LSTRING(S:STR80;N:INTEGER):STR80;
+           Isolates the 'N' most characters of the string 'S'. 
+    LSTRING('ABCDEFGH',3)  returns  ABC.  The  original  string  is  not 
+    altered.
+    
+    FUNCTION RSTRING(S:STR80;N:INTEGER):STR80;
+           The  same  as  LSTRING  only  the  rightmost  characters  are 
+    isolated.
+    
+                          S C R E E N   O U T P U T 
+    
+    PROCEDURE CENTER(LINE:INTEGER;S:STR80);
+           Centers the given string on the indicated line.
+    
+    PROCEDURE LPRINT(S:STR80;T,X,Y:INTEGER);
+           Slowly  prints  string 'S' from right to left with a delay of 
+    'T'  milliseconds. The first character (the last printed) will be at 
+    screen location 'X', 'Y'.
+    
+    PROCEDURE RPRINT(S:STR80;T,X,Y:INTEGER);
+           Same  as LPRINT only the direction is from left to right. The 
+    first  character  of  the string will be the first character printed 
+    and its location will be 'X','Y'.
+    
+    PROCEDURE FRAME(LINE:INTEGER;S:STR80);
+           Frames  the  given  string  with  '*'.  The first line of the 
+    frame will be line 'L' and all lines are centered.
+    
+    
+                         K E Y B O A R D   I N P U T 
+    
+    FUNCTION GETCHAR(OKSET:CHARSET;DISPLAY:BOOLEAN):CHAR;
+           Returns  a  string  composed of characters from OKSET. If any 
+    other  key  is  pressed  a  beep  is returned. Echo to the screen is 
+    controlled  by  the  boolean  'DISPLAY',  if true then the result is 
+    sent to the screen.
+    
+    FUNCTION GETSTRING(OKSET:CHARSET;MAXLEN:INTEGER):STR80;
+           Returns  a  string  composed  of characters from OKSET upto a 
+    maximum  of  'MAXLEN'  characters.  RETURN  terminates entry. A beep 
+    will  sound  if either an illegal character is entered of an attempt 
+    is  made  to  exceed  the  maximum length. Backspace erases the last 
+    character  and  CTRL-X  will  cancel  the  current input and restart 
+    entry.
+    
+                M E N U   S E L E C T I O N   R O U T I N E S 
+    
+    PROCEDURE POINTER(VAR CP:INTEGER;MAX,X,Y:INTEGER);
+           Places  a '>' next to a menu for selection. CP is the default 
+    and  starting  postion  of  the  arrow head. If 'ESC' is pressed the 
+    defalut  is  returned  no matter what the current value is. 'RETURN' 
+    will  return  the current position of the arrow head. The arrow head 
+    will start in column 'X' on line 'Y'. 
+           Setup  the menu so that the first letter of each selection is 
+    two  columns  to  the  rigth of the 'X' value passed to POINTER. For 
+    example,  if  you  use  Write(At(10,5)'ENTER  DATA');  as your first 
+    selection use POINTER(cp,max,8,5). Lines must be consectutive.
+           'CP'  is  the  item  number of the current pointer and may be 
+    used to select an option by means of a case statement.
+    
+    FUNCTION LETTER(S:STR80):CHAR;
+           Takes  a string and separates the first letter by a ')' and a 
+    space.  It  also  highlites  the  letter  that  is  separated.  This 
+    procedure  is  useful  when  listing  a  choice  for  selection. For 
+    example:
+                   WRITE(letter('Main Menu'));
+    
+    will result in the output:
+                   M) ain Menu
+    
+    Use in conjunction with the next procedure.
+    
+    FUNCTION CHOICES(S:STR80):CHAR;
+           This  routine  is  also  used  from within a write statement. 
+    This  routine  will prompt for various selections based upon letters 
+    given  in a string. Display the options with Letters, use GetChar to 
+    restrict  input  to  only  the  choices  given  and  prompt  for the 
+    choices. For example the prompt line may look like:
+    
+                  WRITE(choices('EADQ'));
+    
+    will result in the output:
+                 Please Select: E) A) D) Q)
+
+
+If you find this useful my family and I would appreciate a contribution. Any
+contribution of $25 (or more) will put you on my mailing list (unless you
+tell me not to) and entitle you to free updates and revisions. Write for a
+catalog of other Utilities or keep watching this BBS.
+            Thank you for your interest in my work!
+
+            Douglas E. MacLean
+            2200 Ocean Avenue Apt. 6B
+            Brooklyn, New York 11229
+            
+

@@ -1,0 +1,143 @@
+DBLOOK is implimented as a unit for Turbo Pascal 4.0, 5.0, or 5.5.
+
+Below is the definition section of the source file to assist in the
+calling constructs to use.  If you wish to put the source into your
+program file instead of a unit file, it may be easily extracted from the
+source code of the DBLOOK unit.
+
+unit dblook;
+{ DBLOOK is a Turbo Pascal Unit which reads Dbase III + .DBF files,
+  displays the structure information on the screen, converts from
+  Dbase format to various internal formats to assist gathering data
+  from Dbase data files.
+
+  The program was designed to provide simple routines to read dbase
+  files to generate reports.
+
+  Only one Dbase file may be open at one time (you may change it as
+  the source code is provided) and index files are not supported.
+
+  Each record will be placed in a character buffer dbbuf[4096] and
+  may be used directly or the functions in this package may be used
+  to extract data items of interest into more usable Pascal variables.
+
+  If you make major improvements to the program, let me know as
+  the ongoing effort to improve the performance of Dbase requires
+  more tools. 
+  
+  Turbo Pascal 5.5 was used to develope the program.
+
+  Gerald Rohr   RR#3    Anamosa, Iowa 52205
+
+                         Revision History
+  ----------------------------------------------------------------
+  Rev 1.0 26 Sep 87 Original Release                           gbr
+  Rev 2.0 29 Sep 89 Reworked to longints, records, TP5.5       gbr
+ }
+
+{ ----Globals for your program------ }
+interface
+type
+   rdef = record                  { Dbase record definitions we use }
+      name       :string[10];
+      rtype      :char;           { type of record - C,N,D,L,etc.         }
+      fld_addr   :longint;        { not used }
+      width      :byte;           { total field width of this record      }
+      decp       :byte;           { number of digits to right of decimal  }
+      multi_user :integer;        { reserved for multi user }
+      work_id    :byte;           { Work area ID }
+      m_user     :integer;        { reserved for multi_user }
+      set_fields :byte;           { SET_FIELDS flag }
+      resrvd     :array[1..8] of byte;      { 8 bytes reserved }
+      stloc      :integer;        { offset from start of field where this }
+   end;
+
+   db4head = record  { Dbase III + header definition        }
+      dbvno        :byte;  { version number (03h or 83h ) }
+      updyr        :byte;  { last update YY MM DD         }
+      updmo        :byte;
+      upddy        :byte;
+      no_rec       :longint; { number of record in database }
+      header_bytes :integer; { number of bytes in header }
+      rec_bytes    :integer; { number of bytes in records }
+      tmp          :array[1..20] of char;   { reserved bytes in header }
+   end;
+
+var
+   dbbuf    :array[1..4096] of char;{ Dbase record }
+   dbhead   :db4head;               { header of DBF file }
+   rstru    :array[1..30] of rdef;  { holds our representation of the database structure }
+   no_col   :integer;               { number of columns in database }
+
+
+procedure showstruc;
+          { displays the information found in the dbase header to the
+            screen, used primarily to check if the file definition is
+            correct. }
+
+function get_header(dbfilename:string):boolean;
+          { reads and stores header information on a Dbase III+ .dbf
+            file. Must be the first call in your program as it opens the
+            Dbase file name dbfilename.  Returns true if successfull,
+            else returns false.}
+
+procedure closedb;
+          { Call at end of your application to close the Dbase file.
+            For now there is only one file to close, if extended to use
+            multiple database files then this procedure would be
+            required. }
+
+procedure list_all_recs;
+         { List all records in the dbase file starting with record 1,
+           listing is in a SDF format. }
+
+function version_no:string;
+         { Returns the string representation of the version of the
+           dblook.pas package. }
+
+function dbfldno(fname:string):integer;
+         { Returns an integer which is the number in the rstru array
+           where fname is located.  Used to enable user to use field
+           names in functions to return data.  Returns 0 if fname not
+           found. }
+
+function dbstr(fldno:integer):string;
+         { Returns the string representation of any field of the
+           database.  This string is filled out to the full field length
+           by padding with spaces. }
+
+function dbint(fldno:integer):integer;
+         { Returns the integer representation of any field of the
+           database. }
+
+
+function dblong(fldno:integer):longint;
+         { Returns the long integer representation of any field of the
+           database. }
+
+
+function dbreal(fldno:integer):real;
+         { Returns the long integer representation of any field of the
+           database. }
+
+
+function dblogic(fldno:integer):boolean;
+         { Returns true or false representing the logical value of the
+           field. }
+
+
+function deleted:boolean;
+         { Returns true if record in dbbuf[] is marked as deleted, else
+           returns false. }
+
+function get_recno(rec_no:longint):boolean;
+          { Fills the dbbuf[] with data from rec_no record of the
+            database, returns true if successfull, else returns false
+            and dbbuf[] is undefined. }
+
+Multiple databases open at the same time may be in the future depending
+on the project requirements.
+
+Gerry Rohr
+RR#3
+Anamosa, Iowa 52205
