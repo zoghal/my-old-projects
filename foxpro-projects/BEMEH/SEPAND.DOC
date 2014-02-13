@@ -1,0 +1,70 @@
+		     SEPAND.BIN ü¤“ ù¢ª éþ¤ã— –¤ø—¨¢ –¨þó
+	      DBase ø FoxPro,FoxBase ü‘û¤¥êô¤÷ ¯þŸõ¤¢ öþõ¤ê öþ
+			       .–¨ ù¢‘ê—¨ ñ“‘ì
+
+		¤¥êô¤÷ ù“ ¢ø¤ø¥ ñ“ì ¢÷•¨ ùõ‘÷¤“¢þ‘“ ¢—“¤‘î ü¤“ -
+						¢ª‘“ ù¢ª ¤›¤à÷¢¤øõ
+
+		 ¤¤ì ùàê‘Ÿ¤¢ ¤  SEPAND.BIN  ùõ‘÷¤“ LOAD ¤ø—¨¢‘“ §•¨ -‚
+							     .ôþû¢üõ
+
+	      load SEPAND
+
+		(SEPAND.bin)ùõ‘÷¤“ öþ –¤ø—¨¢¥ ù¢‘ê—¨‘“ öø—üõ ñ‘Ÿ -ƒ
+		ù¢‘ê—¨ üóî ©ø¤Š¢¤î ñ¤—÷î ¤¢‹÷•‹¨ ü¨¤‘ê ùõ‘÷¤“ ñ‘õä
+					.¢ª‘“üõ¤þ¥ –¤ø¬“ ùõ‘÷¤“ öþ¥
+
+	      call SEPAND with [<expc>]
+
+		  ¢¤øõ¤ø—¨¢ ù¢÷÷î ö‘þ“ ùî –¨ ü¤—î¤‘î –¤‘“ä íþ [<expc>]
+								    .–¨
+
+								     ñ‘™õ
+		     ôþ÷îüõ ù¢‘ê—¨¤þ¥ ö‘õ¤ê¥ ¢¢ä ©þ‘õ÷ –ó‘Ÿ ¤þç— ü¤“
+
+	      call SEPAND with ' ü¨¤‘ê ¢¢ä ©þ‘õ÷'
+					     ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+					     ³	SEPAND.bin öþõ¤ê –¨þó ³
+					     ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+					     ³	      ü¨¤‘ê ¢¢ä ©þ‘õ÷³
+					     ³	       öþ—ò ¢¢ä ©þ‘õ÷³
+					     ³			¤•ø— ¯¡³
+					     ³		      ü¥—÷‘ê ¯¡³
+					     ³		      ù¥ø¤þ• ¯¡³
+					     ³			í¥‘÷ ¯¡³
+					     ³		    ¤Ÿ‘¨ íþê¤ð³
+					     ³	       ¢¤¢÷‘—¨ íþê¤ð³
+					     ³		     ©øõ‘¡ å¤³
+					     ³		      öªø¤ å¤³
+					     ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+					     ³		ü¨¤‘ê éø¤Ÿ ”þ‘—³
+					     ³		 öþ—ò éø¤Ÿ ”þ‘—³
+					     ³	       ü¨¤‘ê ¢¢ä ”þ‘—³
+					     ³		öþ—ò ¢¢ä ”þ‘—³
+					     ³	       öªø¤ ‘û¢þóî ü¢¬³
+					     ³	      ©øõ‘¡ ‘û¢þóî ü¢¬³
+					     ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+					     ³	       ñ‘ãê ü¨¤‘ê ¤ð•‘³
+					     ³	     ñ‘ãê¤þèü¨¤‘ê ¤ð•‘³
+					     ³		ü¨¤‘ê ¢¢ä ”‘³
+					     ³		 öþ—ò ¢¢ä ”‘³
+					     ³		 ù÷¥ø¨ ‚„ ¤ð•‘³
+					     ³		  ù÷¥ø¨  ‰¤ð•‘³
+					     ³	     ¤ð•‘ ñ‘¬— ù‘ð¤¢³
+					     ³	    ‚ ¤ð•‘ ñ‘¬— ù‘ð¤¢³
+					     ³	    ƒ ¤ð•‘ ñ‘¬— ù‘ð¤¢³
+					     ³	    „ ¤ð•‘ ñ‘¬— ù‘ð¤¢³
+					     ³	    ¤ð•‘ ù“ ôŽòä ñ‘¨¤³
+					     ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+					     ³	     öªø¤ ¤ðªþ‘õ÷ àê‘Ÿõ³
+					     ³	    ©øõ‘¡ ¤ðªþ‘õ÷ àê‘Ÿõ³
+					     ³		 âþ¤¨ ¢þóî ùŸê¬³
+					     ³	       üóøõãõ ¢þóî ùŸê¬³
+					     ³	       EGA ù“ VGA ñþ¢“—³
+					     ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+					     ³	     ©øõ‘¡ ¤ðªþ‘õ÷ ùŸê¬³
+					     ³	      öªø¤ ¤ðªþ‘õ÷ ùŸê¬³
+					     ³		      ñ‘ãê ¤Ÿ‘¨³
+					     ³		   ñ‘ãê¤þè ¤Ÿ‘¨³
+					     ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
