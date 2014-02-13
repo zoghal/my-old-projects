@@ -1,0 +1,199 @@
+;
+;-----------------------------------------------------------------------------
+;                          Epson Fx Series Printers
+;-----------------------------------------------------------------------------
+;FX.FNT       "Epson FX-80" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"
+FX.FON       "Epson FX-80" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+FX256.FNT    "Epson FX-80" "όκ¥ 256  ¨ώφυ  ªύ•" "Draft 255 Character""27,37,1" "27,37,0"
+;FX.FNT       "Epson FX-100" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"
+FX.FON       "Epson FX-100" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+FX256.FNT    "Epson FX-100" "όκ¥ 256  ¨ώφυ  ªύ•" "Draft 255 Character" "27,37,1" "27,37,0"
+;FX1000.FNT   "Epson FX-1000" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"
+FX1000.FON   "Epson FX-1000" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+FX1256.FNT   "Epson FX-1000" "όκ¥ 256  ¨ώφυ  ªύ•" "Draft 255 Character" "27,37,1" "27,37,0"
+;FX1000.FNT   "Epson FX-1050" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"
+FX1000.FON   "Epson FX-1050" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+FX1256.FNT   "Epson FX-1050" "όκ¥ 256  ¨ώφυ  ªύ•" "Draft 255 Character" "27,37,1" "27,37,0"
+;FX1000.FNT   "Epson FX-1060" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"
+FX1000.FON   "Epson FX-1060" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+FX1256.FNT   "Epson FX-1060" "όκ¥ 256  ¨ώφυ  ªύ•" "Draft 255 Character" "27,37,1" "27,37,0"
+;DFX.FNT      "Epson DFX-5000" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"
+DFX.FON      "Epson DFX-5000" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+;DFX.FNT      "Epson DFX-8000" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"
+DFX.FON      "Epson DFX-8000" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+;
+;-----------------------------------------------------------------------------
+;                        Epson LQ Series Printers
+;-----------------------------------------------------------------------------
+;Piroozeh.FNT "Epson LQ-500" "χ¦φ¥ύ•" "Piroozeh" "27,37,1" "27,37,0"
+;SHKASTEH.FNT "Epson LQ-500" "ψ—©ν«" "Shekasteh" "27,37,1" "27,37,0"
+;Traffic.FNT  "Epson LQ-500" "νύκ‹¥—" "Traffic" "27,37,1" "27,37,0"
+;LQD.FNT      "Epson LQ-500" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"
+Piroozeh.FON "Epson LQ-500" "χ¦φ¥ύ•" "Piroozeh" "νύ—σφ—‹" "νύ—σφ—‹"
+SHKASTEH.FON "Epson LQ-500" "ψ—©ν«" "Shekasteh" "νύ—σφ—‹" "νύ—σφ—‹"
+Traffic.FON  "Epson LQ-500" "νύκ‹¥—" "Traffic" "νύ—σφ—‹" "νύ—σφ—‹"
+LQD.FON      "Epson LQ-500" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+;Piroozeh.FNT "Epson LQ-1000" "χ¦φ¥ύ•" "Piroozeh" "27,37,1" "27,37,0"
+;SHKASTEH.FNT "Epson LQ-1000" "ψ—©ν«" "Shekasteh" "27,37,1" "27,37,0"
+;Traffic.FNT  "Epson LQ-1000" "νύκ‹¥—" "Traffic" "27,37,1" "27,37,0"
+;LQD.FNT      "Epson LQ-1000" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"
+Piroozeh.FON "Epson LQ-1000" "χ¦φ¥ύ•" "Piroozeh" "νύ—σφ—‹" "νύ—σφ—‹"
+SHKASTEH.FON "Epson LQ-1000" "ψ—©ν«" "Shekasteh" "νύ—σφ—‹" "νύ—σφ—‹"
+Traffic.FON  "Epson LQ-1000" "νύκ‹¥—" "Traffic" "νύ—σφ—‹" "νύ—σφ—‹"
+LQD.FON      "Epson LQ-1000" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+;Piroozeh.FNT "Epson LQ-1050" "χ¦φ¥ύ•" "Piroozeh" "27,37,1" "27,37,0"
+;SHKASTEH.FNT "Epson LQ-1050" "ψ—©ν«" "Shekasteh" "27,37,1" "27,37,0"
+;Traffic.FNT  "Epson LQ-1050" "νύκ‹¥—" "Traffic" "27,37,1" "27,37,0"
+;LQD.FNT      "Epson LQ-1050" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"
+Piroozeh.FON "Epson LQ-1050" "χ¦φ¥ύ•" "Piroozeh" "νύ—σφ—‹" "νύ—σφ—‹"
+SHKASTEH.FON "Epson LQ-1050" "ψ—©ν«" "Shekasteh" "νύ—σφ—‹" "νύ—σφ—‹"
+Traffic.FON  "Epson LQ-1050" "νύκ‹¥—" "Traffic" "νύ—σφ—‹" "νύ—σφ—‹"
+LQD.FON      "Epson LQ-1050" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+;Piroozeh.FNT "Epson LQ-2550" "χ¦φ¥ύ•" "Piroozeh" "27,37,1" "27,37,0"
+;SHKASTEH.FNT "Epson LQ-2550" "ψ—©ν«" "Shekasteh" "27,37,1" "27,37,0"
+;Traffic.FNT  "Epson LQ-2550" "νύκ‹¥—" "Traffic" "27,37,1" "27,37,0"
+;LQD.FNT      "Epson LQ-2550" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"
+Piroozeh.FON "Epson LQ-2550" "χ¦φ¥ύ•" "Piroozeh" "νύ—σφ—‹" "νύ—σφ—‹"
+SHKASTEH.FON "Epson LQ-2550" "ψ—©ν«" "Shekasteh" "νύ—σφ—‹" "νύ—σφ—‹"
+Traffic.FON  "Epson LQ-2550" "νύκ‹¥—" "Traffic" "νύ—σφ—‹" "νύ—σφ—‹"
+LQD.FON      "Epson LQ-2550" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+;-----------------------------------------------------------------------------
+;                        ALPS LQ Series Printers
+;-----------------------------------------------------------------------------
+;AlpsPiro.FNT "Alps LQ - [EPS]" "χ¦φ¥ύ•" "Piroozeh" "27,37,1" "27,37,0"
+;AlpsSHKA.FNT "Alps LQ - [EPS]" "ψ—©ν«" "Shekasteh" "27,37,1" "27,37,0"
+;AlpsTraf.FNT "Alps LQ - [EPS]" "νύκ‹¥—" "Traffic" "27,37,1" "27,37,0"
+;LQD.FNT      "Alps LQ - [EPS]" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"
+AlpsPiro.FON "Alps LQ - [EPS]" "χ¦φ¥ύ•" "Piroozeh" "νύ—σφ—‹" "νύ—σφ—‹"
+AlpsSHKA.FON "Alps LQ - [EPS]" "ψ—©ν«" "Shekasteh" "νύ—σφ—‹" "νύ—σφ—‹"
+AlpsTraf.FON "Alps LQ - [EPS]" "νύκ‹¥—" "Traffic" "νύ—σφ—‹" "νύ—σφ—‹"
+LQD.FON      "Alps LQ - [EPS]" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+;
+;-----------------------------------------------------------------------------
+;                            Genicom Line Printers
+;-----------------------------------------------------------------------------
+;G95-10.FNT "Genicom" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft, Pitch 10, 95 Character"         "27,91,57,59,49,57,109,27,91,49,50,48,59,55,50,32,71,27,91,48,59,57,53,48,52,115" "27,91,48,59,49,48,109,27,91,49,50,48,59,55,50,32,71,27,91,48,59,57,53,48,52,115"
+;G95-13.FNT "Genicom" "13 ςξ ‡όκ¥ 95  ¨ώφυ  ªύ•" "Draft, Pitch 13, 95 Character" "27,91,57,59,49,57,109,27,91,49,50,48,59,53,52,32,71,27,91,48,59,57,53,48,52,115" "27,91,48,59,49,48,109,27,91,49,50,48,59,53,52,32,71,27,91,48,59,57,53,48,52,115"
+G95-10.FON "Genicom" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft, Pitch 10, 95 Character"         "νύ—σφ—‹" "νύ—σφ—‹"
+G95-13.FON "Genicom" "13 ςξ ‡όκ¥ 95  ¨ώφυ  ªύ•" "Draft, Pitch 13, 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+;
+;-----------------------------------------------------------------------------
+;                             HP - Laser Printers
+;-----------------------------------------------------------------------------
+FL1-20.LSR    "HP-Laser" "ψΰμυ 20 τύ—πό©¥κ" "Farsi/Latin 20 Dot" "27,40,42,49,49,48,49,88" "27,40,42,49,50,48,49,88"
+FL2-21.LSR    "HP-Laser" "ψΰμυ 21 τύ—πό©¥κ" "Farsi/Latin 21 Dot" "27,40,42,49,49,48,54,88" "27,40,42,49,50,48,50,88"
+FL3-25.LSR    "HP-Laser" "ψΰμυ 25 τύ—πό©¥κ" "Farsi/Latin 25 Dot" "27,40,42,49,49,48,56,88" "27,40,42,49,50,48,51,88"
+FL4-25.LSR    "HP-Laser" "χύ© ψΰμυ 25 τύ—πό©¥κ" "Farsi/Latin 25 Dot - Bold" "27,40,42,49,49,48,57,88" "27,40,42,49,50,48,52,88"
+FL5-21.LSR    "HP-Laser" "νύρ—ώ‹ ψΰμυ 21 τύ—πό©¥κ" "Farsi/Latin 21 Dot - Italic" "27,40,42,49,49,49,48,88" "27,40,42,49,50,48,50,88"
+FL6-25.LSR    "HP-Laser" "νύρ—ώ‹ ψΰμυ 25 τύ—πό©¥κ" "Farsi/Latin 25 Dot - Italic" "27,40,42,49,49,49,49,88" "27,40,42,49,50,48,53,88"
+Piroozeh.LSR  "HP-Laser" "ψΰμυ 25 χ¦φ¥ύ•" "Piroozeh 25 Dot" "27,40,49,48,48,48,88" "27,40,49,48,85,27,40,115,48,112,49,50,46,48,48,104,49,48,46,48,118,48,115,48,98,51,84"
+;F1-20.LSR     "HP-Laser" "ψΰμυ 20 χ¦φ¥ύ•" "Piroozeh 20 Dot" "27,40,42,49,49,48,49,88" "27,40,42,49,50,48,49,88"
+;F2-50.LSR     "HP-Laser" "ψΰμυ 50 νύρ—ώ‹ χύ© χ¦φ¥ύ•" "Piroozeh, Bold, Italic, 50 Dot" "27,40,42,49,49,48,50,88" "Internal Font Not Identified"
+;F3-50.LSR     "HP-Laser" "ψΰμυ 50 χ¦φ¥ύ•" "Piroozeh 50 Dot" "27,40,42,49,49,48,51,88" "Internal Font Not Identified"
+;F4-50.LSR     "HP-Laser" "ψΰμυ 50 χύ© χ¦φ¥ύ•" "Piroozeh, Bold 50 Dot" "27,40,42,49,49,48,52,88" "Internal Font Not Identified"
+;F5-50.LSR     "HP-Laser" "ψΰμυ 50 νύρ—ώ‹ χ¦φ¥ύ•" "Piroozeh, Italic 50 Dot" "27,40,42,49,49,48,53,88" "Internal Font Not Identified"
+;F6-21.LSR     "HP-Laser" "ψΰμυ 21 χ¦φ¥ύ•" "Piroozeh 21 Dot" "27,40,42,49,49,48,54,88" "27,40,42,49,50,48,50,88"
+;F7-52.LSR     "HP-Laser" "ψΰμυ 52 όρΆφ— χ¦φ¥ύ•" "Piroozeh, Outline, 52 Dot" "27,40,42,49,49,48,55,88" "Internal Font Not Identified"
+;F8-25.LSR     "HP-Laser" "ψΰμυ 25 χ¦φ¥ύ•" "Piroozeh 25 Dot" "27,40,42,49,49,48,56,88" "27,40,42,49,50,48,51,88"
+;F9-25.LSR     "HP-Laser" "ψΰμυ 25 χύ© χ¦φ¥ύ•" "Piroozeh, Bold 25 Dot" "27,40,42,49,49,48,57,88" "27,40,42,49,50,48,52,88"
+;F10-21.LSR    "HP-Laser" "ψΰμυ 21 νύρ—ώ‹ χ¦φ¥ύ•" "Piroozeh, Italic 21 Dot" "27,40,42,49,49,49,48,88" "27,40,42,49,50,48,50,88"
+;F11-25.LSR    "HP-Laser" "ψΰμυ 25 νύρ—ώ‹ χ¦φ¥ύ•" "Piroozeh, Italic 251 Dot" "27,40,42,49,49,49,49,88" "27,40,42,49,50,48,53,88"
+;F12-50.LSR    "HP-Laser" "ψΰμυ 50 χύ© νύρ—ώ‹" "Bold, Italic 50 Dot" "27,40,42,49,49,49,50,88" "Internal Font Not Identified"
+;F13-50.LSR    "HP-Laser" "ψΰμυ 50 νύρ—ώ‹" "Italic 50 Dot" "27,40,42,49,49,49,51,88" "Internal Font Not Identified"
+;
+;-----------------------------------------------------------------------------
+;                             HP - InkJet Printers
+;-----------------------------------------------------------------------------
+FL1-20.Ink    "HP-InkJet" "ψΰμυ 20 τύ—πό©¥κ" "Farsi/Latin 20 Dot" "27,40,42,49,49,48,49,88" "27,40,42,49,50,48,49,88"
+FL2-21.Ink    "HP-InkJet" "ψΰμυ 21 τύ—πό©¥κ" "Farsi/Latin 21 Dot" "27,40,42,49,49,48,54,88" "27,40,42,49,50,48,50,88"
+FL3-25.Ink    "HP-InkJet" "ψΰμυ 25 τύ—πό©¥κ" "Farsi/Latin 25 Dot" "27,40,42,49,49,48,56,88" "27,40,42,49,50,48,51,88"
+FL4-25.Ink    "HP-InkJet" "χύ© ψΰμυ 25 τύ—πό©¥κ" "Farsi/Latin 25 Dot - Bold" "27,40,42,49,49,48,57,88" "27,40,42,49,50,48,52,88"
+FL5-21.Ink    "HP-InkJet" "νύρ—ώ‹ ψΰμυ 21 τύ—πό©¥κ" "Farsi/Latin 21 Dot - Italic" "27,40,42,49,49,49,48,88" "27,40,42,49,50,48,50,88"
+FL6-25.Ink    "HP-InkJet" "νύρ—ώ‹ ψΰμυ 25 τύ—πό©¥κ" "Farsi/Latin 25 Dot - Italic" "27,40,42,49,49,49,49,88" "27,40,42,49,50,48,53,88"
+;
+;-----------------------------------------------------------------------------
+;                                IBM Printers
+;-----------------------------------------------------------------------------
+;IBMPIROZ.Fnt "IBM XL24E"  "χ¦φ¥ύ•" "Piroozeh" "27,71,1" "27,72,0"
+;IBMSHKAS.Fnt "IBM XL24E"  "ψ—©ν«" "Shekasteh" "27,71,1" "27,72,0"
+;IBMTRAFF.Fnt "IBM XL24E"  "νύκ‹¥—" "Traffic" "27,71,1" "27,72,0"
+IBMPIROZ.Fon "IBM XL24E"  "χ¦φ¥ύ•" "Piroozeh" "νύ—σφ—‹" "νύ—σφ—‹"
+IBMSHKAS.Fon "IBM XL24E"  "ψ—©ν«" "Shekasteh" "νύ—σφ—‹" "νύ—σφ—‹"
+IBMTRAFF.Fon "IBM XL24E"  "νύκ‹¥—" "Traffic" "νύ—σφ—‹" "νύ—σφ—‹"
+;HYU.FNT      "IBM Pro II" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,71,1" "27,72,0"
+HYU.FON      "IBM Pro II" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+HYU256.FNT   "IBM Pro II" "όκ¥ 256  ¨ώφυ  ªύ•" "Draft 255 Character" "27,71,1" "27,72,0"
+;Piroozeh.FNT "IBM 2391 Ep Mode" "χ¦φ¥ύ•" "Piroozeh" "27,37,1" "27,37,0"
+;SHKASTEH.FNT "IBM 2391 Ep Mode" "ψ—©ν«" "Shekasteh" "27,37,1" "27,37,0"
+;Traffic.FNT  "IBM 2391 Ep Mode" "νύκ‹¥—" "Traffic" "27,37,1" "27,37,0"
+;LQD.FNT      "IBM 2391 Ep Mode" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"
+Piroozeh.FON "IBM 2391 Eps" "χ¦φ¥ύ•" "Piroozeh" "νύ—σφ—‹" "νύ—σφ—‹"
+SHKASTEH.FON "IBM 2391 Eps" "ψ—©ν«" "Shekasteh" "νύ—σφ—‹" "νύ—σφ—‹"
+Traffic.FON  "IBM 2391 Eps" "νύκ‹¥—" "Traffic" "νύ—σφ—‹" "νύ—σφ—‹"
+LQD.FON      "IBM 2391 Eps" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+;
+;-----------------------------------------------------------------------------
+;                                 NEC Printers
+;-----------------------------------------------------------------------------
+;Piroozeh.FNT "NEC P6" "χ¦φ¥ύ•" "Piroozeh" "27,37,1" "27,37,0"
+;SHKASTEH.FNT "NEC P6" "ψ—©ν«" "Shekasteh" "27,37,1" "27,37,0"
+;Traffic.FNT  "NEC P6" "νύκ‹¥—" "Traffic" "27,37,1" "27,37,0"
+;LQD.FNT      "NEC P6" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"
+Piroozeh.FON "NEC P6" "χ¦φ¥ύ•" "Piroozeh" "νύ—σφ—‹" "νύ—σφ—‹"
+SHKASTEH.FON "NEC P6" "ψ—©ν«" "Shekasteh" "νύ—σφ—‹" "νύ—σφ—‹"
+Traffic.FON  "NEC P6" "νύκ‹¥—" "Traffic" "νύ—σφ—‹" "νύ—σφ—‹"
+LQD.FON      "NEC P6" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+;Piroozeh.FNT "NEC P7" "χ¦φ¥ύ•" "Piroozeh" "27,37,1" "27,37,0"
+;SHKASTEH.FNT "NEC P7" "ψ—©ν«" "Shekasteh" "27,37,1" "27,37,0"
+;Traffic.FNT  "NEC P7" "νύκ‹¥—" "Traffic" "27,37,1" "27,37,0"
+;LQD.FNT      "NEC P7" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"
+Piroozeh.FON "NEC P7" "χ¦φ¥ύ•" "Piroozeh" "νύ—σφ—‹" "νύ—σφ—‹"
+SHKASTEH.FON "NEC P7" "ψ—©ν«" "Shekasteh" "νύ—σφ—‹" "νύ—σφ—‹"
+Traffic.FON  "NEC P7" "νύκ‹¥—" "Traffic" "νύ—σφ—‹" "νύ—σφ—‹"
+LQD.FON      "NEC P7" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+;Piroozeh.FNT "NEC P5200" "χ¦φ¥ύ•" "Piroozeh" "27,37,1" "27,37,0"
+;SHKASTEH.FNT "NEC P5200" "ψ—©ν«" "Shekasteh" "27,37,1" "27,37,0"
+;Traffic.FNT  "NEC P5200" "νύκ‹¥—" "Traffic" "27,37,1" "27,37,0"
+;LQD.FNT      "NEC P5200" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"
+Piroozeh.FON "NEC P5200" "χ¦φ¥ύ•" "Piroozeh" "νύ—σφ—‹" "νύ—σφ—‹"
+SHKASTEH.FON "NEC P5200" "ψ—©ν«" "Shekasteh" "νύ—σφ—‹" "νύ—σφ—‹"
+Traffic.FON  "NEC P5200" "νύκ‹¥—" "Traffic" "νύ—σφ—‹" "νύ—σφ—‹"
+LQD.FON      "NEC P5200" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+;Piroozeh.FNT "NEC P5300" "χ¦φ¥ύ•" "Piroozeh" "27,37,1" "27,37,0"
+;SHKASTEH.FNT "NEC P5300" "ψ—©ν«" "Shekasteh" "27,37,1" "27,37,0"
+;Traffic.FNT  "NEC P5300" "νύκ‹¥—" "Traffic" "27,37,1" "27,37,0"
+;LQD.FNT      "NEC P5300" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"
+Piroozeh.FON "NEC P5300" "χ¦φ¥ύ•" "Piroozeh" "νύ—σφ—‹" "νύ—σφ—‹"
+SHKASTEH.FON "NEC P5300" "ψ—©ν«" "Shekasteh" "νύ—σφ—‹" "νύ—σφ—‹"
+Traffic.FON  "NEC P5300" "νύκ‹¥—" "Traffic" "νύ—σφ—‹" "νύ—σφ—‹"
+LQD.FON      "NEC P5300" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+;Piroozeh.FNT "NEC P6200" "χ¦φ¥ύ•" "Piroozeh" "27,37,1" "27,37,0"
+;SHKASTEH.FNT "NEC P6200" "ψ—©ν«" "Shekasteh" "27,37,1" "27,37,0"
+;Traffic.FNT  "NEC P6200" "νύκ‹¥—" "Traffic" "27,37,1" "27,37,0"
+;LQD.FNT      "NEC P6200" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"
+Piroozeh.FON "NEC P6200" "χ¦φ¥ύ•" "Piroozeh" "νύ—σφ—‹" "νύ—σφ—‹"
+SHKASTEH.FON "NEC P6200" "ψ—©ν«" "Shekasteh" "νύ—σφ—‹" "νύ—σφ—‹"
+Traffic.FON  "NEC P6200" "νύκ‹¥—" "Traffic" "νύ—σφ—‹" "νύ—σφ—‹"
+LQD.FON      "NEC P6200" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+;Piroozeh.FNT "NEC P6300" "χ¦φ¥ύ•" "Piroozeh" "27,37,1" "27,37,0"
+;SHKASTEH.FNT "NEC P6300" "ψ—©ν«" "Shekasteh" "27,37,1" "27,37,0"
+;Traffic.FNT  "NEC P6300" "νύκ‹¥—" "Traffic" "27,37,1" "27,37,0"
+;LQD.FNT      "NEC P6300" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"
+Piroozeh.FON "NEC P6300" "χ¦φ¥ύ•" "Piroozeh" "νύ—σφ—‹" "νύ—σφ—‹"
+SHKASTEH.FON "NEC P6300" "ψ—©ν«" "Shekasteh" "νύ—σφ—‹" "νύ—σφ—‹"
+Traffic.FON  "NEC P6300" "νύκ‹¥—" "Traffic" "νύ—σφ—‹" "νύ—σφ—‹"
+LQD.FON      "NEC P6300" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+;
+;-----------------------------------------------------------------------------
+;                            Panasonic Printers
+;-----------------------------------------------------------------------------
+;PANNLQ.FNT      "Panasonic" "όκ¥ 95 ό‘ωυ" "NLQ 95 Character" "27,37,1,2" "27,37,0,2"
+PANNLQ.FON      "Panasonic" "όκ¥ 95 ό‘ωυ" "NLQ 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+;
+;-----------------------------------------------------------------------------
+;                              Start Printers
+;-----------------------------------------------------------------------------
+;FX.FNT       "Star NL" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"
+FX.FON       "Star NL" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "νύ—σφ—‹" "νύ—σφ—‹"
+FX256.FNT    "Star NL" "όκ¥ 256  ¨ώφυ  ªύ•" "Draft 255 Character" "27,37,1" "27,37,0"
+DELTA.FNT    "Star Delta 10" "όκ¥ 95  ¨ώφυ  ªύ•" "Draft 95 Character" "27,37,1" "27,37,0"

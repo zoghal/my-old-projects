@@ -1,0 +1,37 @@
+https://edit.client.yahoo.com/sbc/swh/get_id_hints?.partner=sbc-swh
+Provider=SQLOLEDB.1;
+Password="";
+Persist Security Info=True;
+User ID=sa;
+Initial Catalog=test;
+*
+Use Procedure for Prepare=1;
+Auto Translate=True;
+Packet Size=4096;
+Workstation ID=SERVER01;
+Use Encryption for Data=False;
+Tag with column collation when possible=False
+
+
+
+Provider=SQLOLEDB.1;
+Password=asasasasas;
+Persist Security Info=True;
+User ID=sa;
+Initial Catalog=test;
+*Data Source=server123;
+Use Procedure for Prepare=1;
+Auto Translate=True;
+Packet Size=4096;
+Workstation ID=SERVER01;
+Use Encryption for Data=False;
+Tag with column collation when possible=False
+
+
+
+
+
+
+http://forums.persianhacker.net/index.php?s=84c9f0a10513179c445fb0af53e43e01&act=Login&CODE=00
+http://www.hackerzhell.co.uk/indexmain.php?agree=0
+http://www.persiacracker.com/

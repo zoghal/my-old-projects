@@ -1,0 +1,190 @@
+unit list_S_r_u;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  Db, DBTables, Grids, DBGrids, Menus, StdCtrls, DBCtrls;
+
+type
+  TListsend = class(TForm)
+    PopupMenu1: TPopupMenu;
+    DBGrid1: TDBGrid;
+    N1: TMenuItem;
+    N2: TMenuItem;
+    N3: TMenuItem;
+    DataSource1: TDataSource;
+    SendTable1: TTable;
+    SendTable1SerialPage: TAutoIncField;
+    SendTable1Name: TStringField;
+    SendTable1Ss: TFloatField;
+    SendTable1Type_s: TStringField;
+    SendTable1Date_out: TStringField;
+    SendTable1Date_in: TStringField;
+    SendTable1Total_Time: TStringField;
+    SendTable1N_film: TStringField;
+    SendTable1Vadeyah: TStringField;
+    SendTable1Totol_m: TFloatField;
+    SendTable1Free_m: TFloatField;
+    SendTable1Tel: TFloatField;
+    SendTable1Adress: TStringField;
+    SendTable1Lsim: TBooleanField;
+    SendTable1Lrf: TBooleanField;
+    SendTable1Lpayeh: TBooleanField;
+    SendTable1Ltabdel: TBooleanField;
+    SendTable1Lcontrol: TBooleanField;
+    SendTable1Back: TBooleanField;
+    SendTable1TL_sim: TStringField;
+    SendTable1T_rf: TStringField;
+    SendTable1Tl_payeh: TStringField;
+    SendTable1tLtabdel: TStringField;
+    SendTable1TL_Control: TStringField;
+    SendTable1TBack: TStringField;
+    N4: TMenuItem;
+    SendTable1Time_out: TStringField;
+    procedure N1Click(Sender: TObject);
+    procedure N3Click(Sender: TObject);
+    procedure N2Click(Sender: TObject);
+    procedure SendTable1CalcFields(DataSet: TDataSet);
+    procedure N4Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Listsend: TListsend;
+
+implementation
+
+uses Send_u, Main_u, list_Sestem_u, system_u, Print_send;
+
+
+
+{$R *.DFM}
+
+procedure TListsend.N1Click(Sender: TObject);
+Var
+ I : Integer;
+ List1 : String;
+begin
+ List_system.SystemTable1.First;
+ SendForm.DBComboBox3.Clear;
+ For I := 1 To list_system.SystemTable1.RecordCount Do
+ If List_system.SystemTable1.FieldValues['Backed'] = False Then
+  Begin
+   List1 := list_system.SystemTable1.FieldByName('Type').AsString;
+   SendForm.DBComboBox3.Items.Add( list1 );
+   list_system.SystemTable1.Next;
+  End;
+ If SendForm.DBComboBox3.Items.Count = 0 Then
+  Begin
+   MessageDlg( '”Ì” „Ì »—«Ì ﬂ—«ÌÂ ÊÃÊœ ‰œ«—œ' , mtWarning,[mbOk],0);
+
+  End
+ Else
+  Begin
+   SendTable1.Insert;
+   SendTable1.FieldValues['Time_out'] := TimeToStr ( Time );
+   sendform.ShowModal;
+  End;
+end;
+
+procedure TListsend.N3Click(Sender: TObject);
+begin
+ SendTable1.Edit;
+ SendTable1.FieldValues['time_out'] := TimeToStr ( Time );
+ sendform.ShowModal;
+end;
+
+procedure TListsend.N2Click(Sender: TObject);
+begin
+ if MessageDlg( '¬Ì« „ÌùŒÊ«ÂÌœ ‘„«—Â »—êÂ '+ '[ '+SendTable1.FieldByName('SerialPage').AsString+' ]'
+                +'—« ⁄Êœ  œÂÌœ ', mtWarning,[mbYes,mbno],0)= MrYes Then
+  Begin
+    List_system.SystemTable1.Filtered :=False;
+    SendTable1.Edit;
+    if List_system.SystemTable1.FindKey ( [ SendTable1.FieldByName('Type_s').AsString ] ) Then
+      Begin
+        List_system.SystemTable1.Edit;
+        List_system.SystemTable1.FieldValues['Backed'] := False;
+        List_system.SystemTable1.Post;
+      End;
+    SendTable1.FieldValues[ 'Back' ] := True;
+    SendTable1.post;
+    SendTable1.Refresh;
+    List_system.SystemTable1.Refresh;
+    List_system.SystemTable1.Filtered := True;
+ End;
+end;
+
+procedure TListsend.SendTable1CalcFields(DataSet: TDataSet);
+begin
+ If SendTable1Back.AsBoolean Then
+    SendTable1TBack.Value := 'œ«œÂ ‘œÂ'
+ Else
+    SendTable1TBack.Value := 'œ«œÂ ‰‘œÂ';
+
+ If SendTable1Lrf.AsBoolean Then
+    SendTable1T_rf.Value := 'œ«—œ'
+ Else
+    SendTable1T_rf.Value := '‰œ«—œ';
+
+ If SendTable1Lcontrol.AsBoolean Then
+    SendTable1TL_Control.Value := 'œ«—œ'
+ Else
+    SendTable1TL_Control.Value := '‰œ«—œ';
+
+ If SendTable1Lpayeh.AsBoolean Then
+    SendTable1TL_payeh.Value := 'œ«—œ'
+ Else
+    SendTable1TL_payeh.Value := '‰œ«—œ';
+
+ If SendTable1Lsim.AsBoolean Then
+    SendTable1TL_sim.Value := 'œ«—œ'
+ Else
+    SendTable1TL_Sim.Value := '‰œ«—œ';
+
+ If SendTable1Ltabdel.AsBoolean Then
+     SendTable1tLtabdel.Value := 'œ«—œ'
+ Else
+    SendTable1tLtabdel.Value := '‰œ«—œ';
+
+end;
+
+procedure TListsend.N4Click(Sender: TObject);
+begin
+  if MessageDlg( '—”Ìœ ç«Å ‘Êœ.' , mtWarning,[mbYes,mbno],0)= MrYes Then
+  Begin
+  {  if ( Listsend.SendTable1.FieldValues['L-sim'] = True ) Or
+       ( Listsend.SendTable1.FieldValues['L-RF'] = True ) Or
+       ( Listsend.SendTable1.FieldValues['L-Tabdel'] = True ) Or
+       ( Listsend.SendTable1.FieldValues['L-payeh'] = True ) Or
+       ( Listsend.SendTable1.FieldValues['L-Control'] = True ) Then
+      Begin
+         If Listsend.SendTable1.FieldValues['L-Control'] = True Then Print1.QRLabel19.Caption := ' / ﬂ‰ —· / ';
+         If Listsend.SendTable1.FieldValues['L-sim'] = True Then Print1.QRLabel19.Caption := ' / ”Ì„ —«»ÿ/ ' + Print1.QRLabel19.Caption;
+         If Listsend.SendTable1.FieldValues['L-Tabdel'] = True Then Print1.QRLabel19.Caption := ' /  »œÌ· Â‰œÌﬂ„ / '+ Print1.QRLabel19.Caption;
+         If Listsend.SendTable1.FieldValues['L-Payeh'] = True Then Print1.QRLabel19.Caption := ' / Å«ÌÂ œÊ—»Ì‰ / '+Print1.QRLabel19.Caption;
+         If Listsend.SendTable1.FieldValues['L-RF'] = True Then Print1.QRLabel19.Caption := ' / RF  »œÌ· / '+Print1.QRLabel19.Caption;
+         Print1.PreviewModal;
+      End
+    Else }
+     Begin
+       Print1.QRLabel19.Caption := '»œÊ‰ ·Ê«“„ Ã«‰»Ì';
+       Print1.PreviewModal;
+     End;
+  End;
+end;
+
+procedure TListsend.FormCreate(Sender: TObject);
+begin
+  Listsend.SendTable1.Active := False;
+  Listsend.SendTable1.TableName := ExtractFilePath ( ParamStr ( 0 ) )  +
+                        'Send_resive.DB';
+  Listsend.SendTable1.Active := True;
+end;
+
+end.

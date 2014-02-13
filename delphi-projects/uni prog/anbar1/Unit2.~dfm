@@ -1,0 +1,79 @@
+object data: Tdata
+  OldCreateOrder = False
+  Left = 266
+  Top = 140
+  Height = 445
+  Width = 215
+  object DataSourcemahsool: TDataSource
+    DataSet = mahsool
+    Left = 24
+    Top = 16
+  end
+  object mahsool: TTable
+    AutoRefresh = True
+    TableName = 'mahsol.db'
+    Left = 96
+    Top = 16
+  end
+  object DataSourceforosh: TDataSource
+    DataSet = forosh
+    Left = 24
+    Top = 64
+  end
+  object forosh: TTable
+    AutoRefresh = True
+    TableName = 'frosh.db'
+    Left = 96
+    Top = 64
+  end
+  object DataSourceforoshande: TDataSource
+    DataSet = foroshande
+    Left = 24
+    Top = 112
+  end
+  object foroshande: TTable
+    AutoRefresh = True
+    TableName = 'froshande.db'
+    Left = 96
+    Top = 112
+  end
+  object DataSourceKharid: TDataSource
+    DataSet = Kharid
+    Left = 24
+    Top = 176
+  end
+  object Kharid: TTable
+    AutoRefresh = True
+    TableName = 'kharid.db'
+    Left = 96
+    Top = 176
+  end
+  object DataSourcekharidar: TDataSource
+    DataSet = kharidar
+    Left = 24
+    Top = 232
+  end
+  object kharidar: TTable
+    AutoRefresh = True
+    TableName = 'kharidar.db'
+    Left = 96
+    Top = 232
+    object kharidarCode: TAutoIncField
+      FieldName = 'Code'
+      ReadOnly = True
+    end
+    object kharidarName: TStringField
+      FieldName = 'Name'
+    end
+    object kharidarRank: TFloatField
+      FieldName = 'Rank'
+    end
+    object kharidarTel: TFloatField
+      FieldName = 'Tel'
+    end
+    object kharidarAddress: TStringField
+      FieldName = 'Address'
+      Size = 100
+    end
+  end
+end

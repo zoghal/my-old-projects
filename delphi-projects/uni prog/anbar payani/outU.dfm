@@ -1,0 +1,143 @@
+object Fout: TFout
+  Left = 335
+  Top = 267
+  BiDiMode = bdRightToLeft
+  BorderStyle = bsSingle
+  Caption = #1601#1585#1608#1588
+  ClientHeight = 82
+  ClientWidth = 451
+  Color = clBtnFace
+  Font.Charset = ARABIC_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  ParentBiDiMode = False
+  Position = poScreenCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 394
+    Top = 9
+    Width = 57
+    Height = 13
+    Caption = #1606#1575#1605' '#1601#1585#1608#1588#1606#1583#1607
+    Font.Charset = ARABIC_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 153
+    Top = 10
+    Width = 51
+    Height = 13
+    Caption = #1606#1575#1605' '#1705#1575#1585#1605#1606#1583' :'
+    Font.Charset = ARABIC_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 393
+    Top = 33
+    Width = 38
+    Height = 13
+    Caption = #1606#1575#1605' '#1705#1575#1604#1575' :'
+    Font.Charset = ARABIC_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 157
+    Top = 34
+    Width = 23
+    Height = 13
+    Caption = #1578#1593#1583#1575#1583
+    Font.Charset = ARABIC_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 212
+    Top = 4
+    Width = 173
+    Height = 21
+    DataField = 'Ccust'
+    DataSource = dm.Dinout
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    KeyField = 'Code'
+    ListField = 'Name'
+    ListSource = dm.Dcustomer
+    ParentFont = False
+    TabOrder = 0
+  end
+  object DBLookupComboBox2: TDBLookupComboBox
+    Left = 212
+    Top = 30
+    Width = 173
+    Height = 21
+    DataField = 'Ckala'
+    DataSource = dm.Dinout
+    DropDownAlign = daRight
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    KeyField = 'Code'
+    ListField = 'Name'
+    ListFieldIndex = 1
+    ListSource = dm.DSKala
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Edit1: TEdit
+    Left = 0
+    Top = 5
+    Width = 147
+    Height = 21
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 299
+    Top = 55
+    Width = 75
+    Height = 25
+    Caption = #1579#1576#1578
+    TabOrder = 3
+    OnClick = Button2Click
+  end
+  object Button1: TButton
+    Left = 83
+    Top = 55
+    Width = 75
+    Height = 25
+    Caption = #1575#1606#1589#1585#1575#1601
+    TabOrder = 4
+    OnClick = Button1Click
+  end
+  object Edit2: TEdit
+    Left = 1
+    Top = 29
+    Width = 147
+    Height = 21
+    TabOrder = 5
+  end
+end

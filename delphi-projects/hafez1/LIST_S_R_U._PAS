@@ -1,0 +1,71 @@
+unit list_S_r_u;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  Db, DBTables, Grids, DBGrids, Menus, StdCtrls, DBCtrls;
+
+type
+  TListsend = class(TForm)
+    PopupMenu1: TPopupMenu;
+    DBGrid1: TDBGrid;
+    N1: TMenuItem;
+    N2: TMenuItem;
+    N3: TMenuItem;
+    DataSource1: TDataSource;
+    Table1: TTable;
+    procedure N1Click(Sender: TObject);
+    procedure N3Click(Sender: TObject);
+    procedure N2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Listsend: TListsend;
+
+implementation
+
+uses Send_u, Main_u, list_Sestem_u;
+
+
+
+{$R *.DFM}
+
+procedure TListsend.N1Click(Sender: TObject);
+Var
+ I : Integer;
+ Temp : integer;
+ List1 : String;
+begin
+ For I := 1 To Table1.RecordCount Do
+  Begin
+    Temp := list_system.SystemTable1.FieldValues['Num'];
+    //+list_system.SystemTable1.FieldValues['Type'];
+   SendForm.DBComboBox3.Items.Add( IntToStr(Temp) );
+   list_system.SystemTable1.Next;
+  End;
+ Table1.Append;
+ Table1.FieldValues['time_out'] := TimeToStr ( Time );
+ sendform.ShowModal;
+end;
+
+procedure TListsend.N3Click(Sender: TObject);
+begin
+ Table1.Edit;
+ Table1.FieldValues['time_out'] := TimeToStr ( Time );
+ sendform.ShowModal;
+end;
+
+procedure TListsend.N2Click(Sender: TObject);
+begin
+ Table1.Edit;
+ Table1.FieldValues[ 'Back' ] := True;
+ Table1.post;
+ Table1.Refresh;
+end;
+
+end.

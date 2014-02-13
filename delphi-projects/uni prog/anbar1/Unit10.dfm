@@ -1,0 +1,132 @@
+object kharidkala: Tkharidkala
+  Left = 540
+  Top = 192
+  Width = 320
+  Height = 410
+  Caption = 'kharidkala'
+  Color = clBtnFace
+  Font.Charset = ARABIC_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label10: TLabel
+    Left = 244
+    Top = 144
+    Width = 41
+    Height = 13
+    Caption = #1601#1585#1608#1588#1606#1583#1607
+  end
+  object Label11: TLabel
+    Left = 270
+    Top = 168
+    Width = 15
+    Height = 13
+    Caption = #1705#1575#1604#1575
+  end
+  object Label12: TLabel
+    Left = 264
+    Top = 200
+    Width = 21
+    Height = 13
+    Caption = #1578#1575#1585#1610#1582
+  end
+  object Label13: TLabel
+    Left = 262
+    Top = 232
+    Width = 23
+    Height = 13
+    Caption = #1578#1593#1583#1575#1583
+  end
+  object Label20: TLabel
+    Left = 259
+    Top = 272
+    Width = 26
+    Height = 13
+    Caption = #1602#1610#1605#1578
+  end
+  object DBGrid4: TDBGrid
+    Left = 5
+    Top = 6
+    Width = 300
+    Height = 120
+    DataSource = data.DataSourceKharid
+    TabOrder = 0
+    TitleFont.Charset = ARABIC_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object DBNavigator4: TDBNavigator
+    Left = 56
+    Top = 320
+    Width = 240
+    Height = 25
+    DataSource = data.DataSourceKharid
+    TabOrder = 1
+  end
+  object Button4: TButton
+    Left = 120
+    Top = 352
+    Width = 75
+    Height = 25
+    Caption = #1576#1587#1578#1606
+    TabOrder = 2
+    OnClick = Button4Click
+  end
+  object DBLookupComboBox3: TDBLookupComboBox
+    Left = 64
+    Top = 141
+    Width = 145
+    Height = 21
+    DataField = 'Kharidarcode'
+    DataSource = data.DataSourceKharid
+    KeyField = 'Code'
+    ListField = 'Name'
+    ListSource = data.DataSourceforoshande
+    TabOrder = 3
+  end
+  object DBLookupComboBox4: TDBLookupComboBox
+    Left = 63
+    Top = 166
+    Width = 145
+    Height = 21
+    DataField = 'Codekala'
+    DataSource = data.DataSourceKharid
+    KeyField = 'Code'
+    ListField = 'Name'
+    ListSource = data.DataSourcemahsool
+    TabOrder = 4
+  end
+  object DBEdit7: TDBEdit
+    Left = 72
+    Top = 200
+    Width = 121
+    Height = 21
+    DataField = 'Date'
+    DataSource = data.DataSourceKharid
+    TabOrder = 5
+  end
+  object DBEdit8: TDBEdit
+    Left = 72
+    Top = 232
+    Width = 121
+    Height = 21
+    DataField = 'Tedad'
+    DataSource = data.DataSourceKharid
+    TabOrder = 6
+  end
+  object DBEdit14: TDBEdit
+    Left = 72
+    Top = 272
+    Width = 121
+    Height = 21
+    DataField = 'Price'
+    DataSource = data.DataSourceKharid
+    TabOrder = 7
+  end
+end

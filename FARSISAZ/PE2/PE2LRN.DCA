@@ -1,0 +1,2476 @@
+      
+                 PERSONAL EDITOR II: LEARNING 
+                                
+                            Topics 
+                                
+    
+      Introduction .......................................1
+    
+      Making a Backup Copy ...............................2
+    
+      Getting Started ....................................2
+    
+      Running the Demonstration Program ..................3
+    
+      The Screen .........................................3
+    
+      Creating a Document ................................5
+    
+        Setting Margins ..................................5
+    
+        Entering Text ....................................6
+    
+        Restoring an Erased Line Using UNDO ..............7
+    
+        Restoring Text Using the .UNNAMED File ...........8
+    
+        Using Insert and Replace Modes ...................9
+    
+        Inserting, Erasing, and Deleting Lines ..........10
+    
+      Displaying the Help Menu ..........................11
+    
+      Leaving PE II .....................................12
+    
+      Editing an Existing File ..........................12
+    
+      Displaying a File in the Current Directory ........15
+    
+      Marking Text ......................................16
+    
+        Moving Text .....................................17
+    
+        Copying and Deleting Text .......................18
+    
+        Filling and Overlaying a Block Of Text ..........19
+    
+      Splitting and Joining Lines .......................22
+    
+      Reflowing Text ....................................23
+    
+      Centering Text ....................................24
+    
+      Switching Between Active Files ....................25
+    
+      Changing Tabs .....................................26
+    
+      Naming a File .....................................27
+    
+
+
+
+      Quitting a File ...................................27
+    
+      Saving a File .....................................28
+    
+      Filing a File .....................................28
+    
+      Locating Text .....................................29
+    
+      Changing Text .....................................31
+    
+      Splitting a Screen ................................33
+    
+        Using the Same File .............................33
+    
+        Using Different Files ...........................34
+    
+      Printing Files ....................................34
+    
+        Printing the PE II Keyboard Template ............35
+    
+      Inserting Character Codes .........................36
+    
+      Inserting Page Breaks .............................36
+    
+      Customizing Your PE II Editor .....................38
+    
+        Changing Key Definitions ........................38
+    
+        Defining a Key to Print a Word ..................40
+    
+        Defining Keys to Change Your Margin Settings ....41
+    
+        Combining Several Commands On One Key ...........42
+    
+      Using the MACRO Command ...........................43
+    
+      Restoring the Original PE II Profile ..............45
+    
+    
+                                 1
+
+
+Introduction~
+
+
+ _________________________________________________________
+|                                                         |
+|  You will find it easier to follow the instructions     |
+|  if you can refer to a printed copy of PE II: Learning. |
+|  If you have a printer, switch it on and align the      |
+|  paper.  Press Esc to go to the Main Menu.  Then press  |
+|  F6 (Print all).                                        |
+|_________________________________________________________|
+
+
+
+Personal Editor II (PE II) is a full-screen, command-driven
+editor.  Even if you are an inexperienced computer user, you can
+easily use PE II's built-in commands to do editing tasks.  Be
+sure to go through this Learning section which will introduce you
+to many of PE II's functions.  As you become more experienced,
+you may want to use more of its capabilities.  For example, you
+may want to redefine your keys and execute a string of commands
+with one keystroke. PE II allows you to redefine up to 238 keys
+and key combinations, plus 76 pseudo keys (user shift keys,
+rather than actual keys or key combinations).  You can assign any
+command to a key, and you can type commands directly on the
+command line.
+
+PE II also allows you to split a screen into as many as four
+"windows" so you can look at parts of four different files at
+once or four parts of the same file.  You can cycle through up to
+20 active files, with each retaining the contents of its command
+line and the position of the cursor.
+
+When you have finished the Learning section, you will know how
+to:
+
+o  Create a simple document and name it
+o  Edit the document using PE II commands
+   - Set margins and tabs
+   - Mark text
+   - Move, copy, overlay, and delete text
+   - Reflow (reformat) a paragraph
+o  Erase text and restore it
+o  Display and page through the Help menu
+o  Split a screen into four windows
+o  Switch between active files
+o  Save a file on your diskette
+o  Quit a file without saving it
+o  Change key definitions
+o  Use the MACRO command
+
+The Reference section contains explanations of all commands, as
+well as information about restoring erased or changed text,
+storage and memory considerations, defining keys, and key
+abbreviations.
+
+
+                                2
+
+
+Making a Backup Copy~
+
+
+It is important to make a backup copy of your PE II program
+diskette in case your original diskette is lost or damaged.  If
+necessary, refer to your DOS book for information about using the
+DISKCOPY command.
+
+After making the copy, put the original in a safe place.  Then
+use the backup copy when going through this tutorial and for your
+own work.
+
+
+
+Getting Started~
+
+
+You will use one drive for following the steps in the Learning
+section.
+
+ ___________________________________________________
+|                                                   |
+|   For your own work, if you have two drives,      |
+|   you should insert the PE II diskette in drive   |
+|   A and your data diskette in drive B.            |
+|   Documents or programs that you write would be   |
+|   on drive B.                                     |
+|                                                   |
+|   If you have only one drive, you should load     |
+|   the program, and then replace the program       |
+|   diskette with the data diskette.  To display    |
+|   the Help menu, insert the PE II program         |
+|   diskette in drive A or copy the file PE2.HLP    |
+|   onto your data diskette by using the DOS COPY   |
+|   command.  Then press F1 to see the menu when    |
+|   in PE II.                                       |
+|                                                   |
+|   If you have a fixed disk, you may want to copy  |
+|   PE II to a separate subdirectory where you keep |
+|   your documents.  To copy PE II, you must be in  |
+|   the drive or subdirectory to which you want     |
+|   to copy the program.  Then, insert the          |
+|   program diskette in drive A and enter:          |
+|                                                   |
+|     a:install.bat                                 |
+|___________________________________________________|
+
+
+                                3
+
+
+To start PE II after your computer is switched on and DOS is
+loaded:
+
+1.  Insert the backup copy of the PE II diskette in drive A.
+
+2.  At the DOS prompt A>, type:  pe2
+
+3.  Press Enter.
+
+       Note:  From now on, when you are asked to enter
+       information, type the information and press the
+       Enter key.  When you do not need to press Enter,
+       you will be instructed just to type the information.
+
+    The logo screen is displayed.
+
+    The red light on the diskette drive comes on for a moment,
+    and then the PE II screen displays an empty file, ready
+    for you to insert text.  Always leave the PE II diskette in
+    drive A until the PE II screen appears as the computer needs
+    to read information from the diskette.
+
+
+
+Running the Demonstration Program~
+
+
+A short demonstration program is provided on your PE II diskette.
+Running this program will familiarize you with some of the
+capabilities of PE II.  Because the program is a macro (built
+from a series of commands), it is noninteractive. Do not press
+any keys after it has started.  If, however, you want to stop the
+demonstration at anytime, press Ctrl-Break (press and hold the
+Ctrl key as you press the Break key).
+
+You can run the demo only when you are in PE II.  To run the
+demo, enter:  macro demo
+
+
+
+The Screen~
+
+
+The Top of file and Bottom of file markers are on the first and
+third lines of your screen each time you start a new file.  You
+insert blank lines between these markers to make room for your
+text, and then you type your text between the two markers.
+
+The highlighted line at the bottom of your screen is called the
+"command line."  On this line you type all PE II commands.
+
+The cursor always first appears on the command line.  When the
+cursor is blinking, it means it is "active."  That is, the
+computer is ready for you to type information at the cursor
+location.  When the cursor is on the command line, its previous
+position in the text area is highlighted.
+
+
+                                4
+
+ ___________________________________________________
+|                                                   |
+|  To move the cursor to the command line from      |
+|  the text area--and vice versa--use the Esc key.  |
+|___________________________________________________|
+
+l. Press Esc.
+
+   The cursor moves from the command line to the blank line in
+   the text area.
+
+2. Press Esc again.
+
+   The cursor moves back to the command line.
+
+   If you have both a monochrome and a color display and would
+   like to use PE II on the latter (or if you have a PCjr and
+   would like to use PE II in its color mode) you can switch
+   over to it now.  Be sure the color display is switched on.
+
+3. Enter:  set display color 80
+
+   This is only one of the many commands used by PE II.
+
+        Note: If you make a typing mistake, use the Backspace
+        key to erase.  Then type your correction.
+
+On the command line, you will name the blank file "practice"
+using the PE II NAME command.
+
+4. Enter:  name practice
+
+   (Don't forget to press Enter.)
+
+The line below the command line is the status line.  It shows:
+
+o  The drive (and path) containing the current file
+
+o  The name of the current file
+
+o  The line and column numbers indicating the cursor
+   position
+
+o  Whether the program is in Replace or Insert mode
+
+ ___________________________________________________
+|                                                   |
+|  The words Replace and Insert indicate which      |
+|  mode PE II is currently in.  In Replace mode,    |
+|  characters you type replace any existing         |
+|  characters.  In Insert mode, characters you      |
+|  type are inserted in existing text.  When you    |
+|  start PE II, you are in Replace mode.            |
+|                                                   |
+|  Use the Ins key to switch between Insert and     |
+|  Replace mode.                                    |
+|___________________________________________________|
+
+
+                                5
+
+
+When you move the cursor around in the text, the line and column
+numbers change.
+
+5.  Press Esc to move the cursor to the text area.
+
+6.  Press the Spacebar three times.
+
+    The column number changes from 1 to 4.
+
+7.  Press the Home key to move the cursor back to column 1.
+
+You should be in Replace mode now.
+
+
+
+Creating a Document~
+
+
+You will create a small document to use for practice.
+
+
+
+Setting Margins~
+
+
+If you do not change the margin settings, your text would start
+in column 1 and go out to column 79 before wrapping around to the
+next line.  You will set margins to have your text wrap around at
+column 45.
+
+If you wanted to indent the first line of each paragraph, you
+would specify a third number for the paragraph margin. Otherwise,
+PE II uses the same value as that for the left margin.
+
+1.  Press Esc.
+
+    The cursor moves to the Command line.  You will use the
+    SET MARGINS command to set your margins.
+
+2.  Enter:  set margins 1 45 1
+
+    The new margins are set. Your text will start in the first
+    column and wrap around when it reaches column 45.  You do not
+    need to press Enter until you finish typing the paragraph.
+
+    Any existing text on the screen is not affected by the new
+    margin settings.  Later you will learn how to change the
+    margins for existing text.
+
+3.  Press Esc to move the cursor back to the text area.
+
+
+                                6
+
+
+Entering Text~
+
+
+You will type a few lines in your document.
+
+1.  Type:
+
+       I am learning to use Personal Editor II.  This is
+       a practice document.
+
+    To start a new paragraph, you need to insert two blank lines.
+    You can either press F9 (Insert Line) twice or press and hold
+    down the Ctrl key while you press F2 once.  This is the key
+    combination of Ctrl-F2.
+
+ ____________________________________________
+|                                            |
+|  Use Ctrl with a function key (F1 to F10)  |
+|  to insert from 1 to 10 blank lines.  For  |
+|  example, use Ctrl-F5 to insert 5 lines.   |
+|____________________________________________|
+
+
+2.  Press Ctrl-F2 to insert two blank lines.
+
+    Type:
+
+       I have set new margins.  Next, I will learn how
+       to bring back a line that was erased by mistake.
+
+3.  Press Ctrl-F2.
+
+4.  Type:
+
+        This is the first page of my document.
+
+ _____________________________________________________
+|                                                     |
+|  If you have changed a file and have not saved the  |
+|  changes on disk, PE II highlights the filename in  |
+|  red on a color display and underlines it on a      |
+|  monochrome display.                                |
+|_____________________________________________________|
+
+
+5.  Press F2 (Save).
+
+    "Save" appears on the command line.
+
+6.  Press Enter to save your document on diskette.
+
+    Note that the name is no longer highlighted.
+
+
+                                7
+
+ _____________________________________________________
+|                                                     |
+|  If you save the file under the same name on disk,  |
+|  PE II removes the highlighting of the filename to  |
+|  tell the user his current file has been saved to   |
+|  the current filename on disk.                      |
+|_____________________________________________________|
+
+
+7.  Press Esc.
+
+    The cursor is now blinking on the last line of text in the
+    text area.  Do not move the cursor off this line.
+
+
+
+Restoring an Erased Line Using UNDO~
+
+
+If you accidentally erase a line using F5, F6, or the Del key, or
+change the line by inserting or replacing characters, you can
+restore the text if you have not yet moved your cursor off the
+line. UNDO restores the current line to what was there the last
+time the cursor moved onto the line.
+
+1.  Press F5 (Erase Line).
+
+    The line is erased.  You will restore the line by holding
+    down the Shift key as you press F4.
+
+2.  Press Shift-F4 (Undo).
+
+    The line reappears.
+
+3.  Press F5 again.
+
+4.  Press F9 (Insert Line) to insert a line.
+
+5.  Press Cursor Up to return to the location of the erased line.
+
+6.  Press Shift-F4.
+
+    This time the line is not restored because you moved the
+    cursor off the line.
+ ___________________________________________
+|                                           |
+|  Use Shift-F4 (Undo) to restore a line    |
+|  you erased using F5 or F6.               |
+|___________________________________________|
+
+
+                                8
+
+
+Restoring Text Using the .UNNAMED File~
+
+
+If you delete, erase, or change a line by mistake and have moved
+the cursor off the line, you can still restore the text by using
+the .UNNAMED file.  The .UNNAMED file is an internal file on your
+diskette which holds the last five changes you make to a file.
+
+1.  Press Esc.
+
+2.  On the command line, enter:  edit .unnamed
+
+    You see the line that you erased.  You can now either type
+    the text again or mark the line and then move it to your
+    document.  You will learn how to mark and move text later in
+    this Learning section.
+
+3.  Press F4 (Quit).
+
+    Quitting the .UNNAMED file erases its contents.  If you
+    wanted to keep the contents, you would use F8 (Switch Files).
+    You will learn about switching files later, also.
+
+4.  Press Esc.
+
+5.  Type:  This is the first page of my document.
+
+        Note:  See "Marking Text" for information about
+        marking and moving text.  See "Internal Files"
+        in the Reference section for information about
+        the .UNNAMED file.
+
+ __________________________________________
+|                                          |
+|  Edit the .UNNAMED file to see the last  |
+|  five changes you have made to a file.   |
+|__________________________________________|
+
+
+                                9
+
+
+Using Insert and Replace Modes~
+
+
+When you start PE II, it is in Replace mode. The word "Replace"
+is at the bottom right of your screen.
+
+1.  Use Cursor Left to move the cursor to the "p" in page.
+
+2.  Type:  line
+
+    The new word replaces the old word.
+
+3.  Press the Ins key.
+
+    The computer is now in Insert mode.  The cursor changes from
+    a blinking underline to a blinking rectangle and the word
+    "Insert" appears on the status line.  Words you type are
+    inserted in existing text.
+
+
+4.  Use Cursor Right to move the cursor to the "d" in document.
+
+5.  Type:  practice
+
+    The word is inserted in the line.
+
+6.  Press the Spacebar.
+
+    Pressing the Spacebar types a space which is considered to be
+    a character.
+
+7.  Press Esc to move the cursor to the command line.
+
+    You will enter a word here.
+
+8.  Enter:  message
+
+    When you press Enter, "Unknown command" is displayed at
+    the bottom of your screen.  "Message" is not a command.
+
+When the cursor is on the command line, you can type only
+commands.  Pressing Enter tells PE II to carry out the command
+you typed.  Since only commands can be typed on the command line,
+the word "message" results in an error message.
+
+
+                               10
+
+
+Inserting, Erasing, and Deleting Lines~
+
+
+Next you will practice inserting and erasing lines.
+
+1. Press F5 (Erase Line).
+
+    The command line is cleared and the error message is removed.
+
+    As you saw earlier, F5 can also erase a line of text,
+    leaving a blank line in your document.
+
+2.  Press Esc.
+
+3.  Press F9 (Insert Line).
+
+4.  Type:  Use Ctrl-Backspace to delete a line.
+
+    When you delete a line, the text is erased and the line
+    itself is removed.
+
+5.  With the cursor still on the line, press and hold down the
+    Ctrl key as you press the Backspace key.
+
+    The line is deleted (removed).
+
+    You can also erase from the cursor to the end of a line
+    using F6.
+
+6.  Press Home.
+
+7.  Type:  F6 erases part of a line.
+
+8.  Press the Home key.
+
+9.  Press the Ins key to change to Replace mode.
+
+10. Type:  I am typing over
+
+11. Press F6.
+
+    The rest of the line is erased.  You may find that this
+    function is one you use frequently.
+
+    Do you remember how to delete the line?
+
+12. Press Ctrl-Backspace to delete the line.
+
+
+                               11
+
+
+Displaying the Help Menu~
+
+
+PE II provides online help while you are using the program.
+
+1.  Press F1.
+
+    The first page of the Help Menu appears.
+
+2.  Hold down the Shift key while you press the F1 key once.
+
+    Instructions from now on s ow this as Shift-F1.  The screen
+    shows it as s-F1.
+
+    Page 2 is displayed.
+
+3.  Continue to press Shift-F1 until you are on page 11.
+
+4.  Press Shift-F2 to move back through the Help menu.
+
+ _____________________________________________
+|                                             |
+|  You can display the Help Menu anytime the  |
+|  PE II program diskette is in the default   |
+|  drive by pressing F1.                      |
+|_____________________________________________|
+
+
+5.  Press F4 (Quit) to leave the Help Menu and display the
+    file PRACTICE.
+
+
+                               12
+
+
+Leaving PE II~
+
+
+You can leave PE II by pressing either F3 (File) or F4 (Quit).
+
+o   F3 saves the file you are currently working with on your
+    diskette or fixed disk and returns you to DOS.
+
+o   F4 quits the program and returns you to DOS without saving
+    any of your changes to the file.
+
+    If you use F4 to exit a file that you have changed, you will
+    be asked if you are sure you want to quit the file.  If you
+    pressed F4 by mistake or have changed your mind, type N (for
+    No).  The QUIT command will be erased so you can continue
+    working with the file.
+
+
+
+
+Editing an Existing File~
+
+
+To edit an existing file, you type EDIT or E on the command line,
+followed by the filename.  If you want to edit a file in another
+subdirectory, include the drive, path, and the name of the file
+(for example, e c:\word\doc\letter3.doc).
+
+ _______________________________________________
+|                                               |
+|  You can abbreviate most commands.  That is,  |
+|  you can type just e for edit, l for locate,  |
+|  c for change, and so on.                     |
+|_______________________________________________|
+
+
+You can work with (use or create) up to 20 files each time you
+start PE II by using the EDIT command and entering a different
+filename.
+
+ ______________________________________
+|                                      |
+|  PE II can hold up to 20 files in    |
+|  memory.                             |
+|______________________________________|
+
+
+You will be editing a file on your diskette named SPEECH.ABE.  As
+you edit the file, you will use different keys and key
+combinations to move the cursor to various parts of the screen.
+
+
+                               13
+
+
+1.  If the cursor is not on the command line, press Esc.
+
+2.  Enter:  e speech.abe
+
+    The file SPEECH.ABE appears.  It contains The Gettysburg
+    Address by Abraham Lincoln.
+
+3.  Press Esc to move the cursor to the text area.
+
+4.  Press Cursor Right five times to move the cursor to
+    column 6.
+
+    The number 6 is displayed next to Replace on the status line
+    to show you the column location of the cursor.
+
+5.  Press C rl-Right.  (Press and hold the Ctrl key as you press
+    Cursor Right.)
+
+    The cursor is now in column 46. Ctrl-Right moves the cursor
+    40 columns to the right.
+
+6.  Press Ctrl-Left.
+
+    Ctrl-Left moves the cursor 40 columns to the left.
+
+ __________________________________________________
+|                                                  |
+|  Ctrl-Cursor Right moves the cursor 40 columns   |
+|  to the right.                                   |
+|  Ctrl-Cursor Left moves the cursor 40 columns    |
+|  to the left.                                    |
+|__________________________________________________|
+
+
+7.  Press the Home key.
+
+    The Home key moves the cursor to the beginning of the line.
+
+8.  Press the End key.
+
+    The End key moves the cursor to the end of the line. It is
+    in position for you to type the next word.
+
+ ______________________________________________________
+|                                                      |
+| Home moves the cursor to the beginning of the line.  |
+| End moves the cursor to the end of the line.         |
+|______________________________________________________|
+
+
+                               14
+
+
+9.  Press Ctrl-Right six times.
+
+    The text moves left off the screen.  The cursor moves
+    to column 255--the maximum length of a PE II line of
+    text.  Moving the cursor along a line to display new
+    screens is known as "scrolling left and right."
+
+    You will learn to set lines to different lengths in a
+    later lesson.
+
+10. Press Home to move the cursor back to column one.
+
+11. Press PgDn to display the next window of text.
+
+12. Press Cursor Down five times.
+
+13. Press Ctrl-PgUp to move to the first line in the current
+    window.
+
+14. Press Ctrl-PgDn to move to the last line in the current
+    window.
+
+ ____________________________________________
+|                                            |
+|  Ctrl-PgUp and Ctrl-PgDn move the cursor   |
+|  to the top and bottom lines of the window.|
+|____________________________________________|
+
+15. Press Ctrl-Home to go to the beginning of the file.
+
+    The Top of file marker appears.
+
+16. Press Ctrl- End to go to the end of the file.
+
+    The Bottom of file marker appears.  When the cursor is
+    on the last line of the file, the line indicator tells
+    you how many lines are in your document.
+
+ -------------------------------------------
+|                                           |
+|  Ctrl-Home and Ctrl-End move the cursor   |
+|  to the top and bottom lines of the file. |
+|                                           |
+ -------------------------------------------
+
+17.  Press F4 (Quit).
+
+
+                               15
+
+
+Displaying a File in the Current Directory~
+
+
+PE II allows you to display the names of the files in your
+current directory when you are working with a file.  You can then
+select a different file to edit from the list.
+
+1.  On the command line, enter:   e text.doc
+
+    The new file TEXT.DOC is displayed.  You will bring up
+    another file to edit.
+
+2.  On the command line, enter:  dir
+
+    You see the directory listing of the files in your current
+    drive and subdirectory.  You will select the file
+    PROGRAM.BAS.
+
+3.  Move the cursor to PROGRAM.BAS
+
+4.  Press Shift-F10 (Edit File).
+
+    The file PROGRAM.BAS is displayed.
+
+5.  Press F4 to quit the file PROGRAM.BAS.
+
+6.  Press F4 to remove the directory list from PE II.
+
+7.  Press F4 to quit the file TEXT.DOC.
+
+    The file PRACTICE is now on your screen.
+
+
+
+                               16
+
+
+Marking Text~
+
+
+With PE II you can mark (highlight) text--from a character to a
+complete document--and move, copy, overlay, and delete the marked
+sections.
+
+You can also move or copy text between documents.  You will
+practice marking text using the file PRACTICE.
+
+1.  Press Ctrl-Home.
+
+2.  Press Cursor Down.
+
+3.  Move the cursor to the "p" in "practice."
+
+    You will first mark this one character.
+
+4.  Press Alt-C (Mark Character).
+
+5.  Move the cursor to the space following the word "practice."
+
+    You need to delete this space to close up the spacing in
+    the sentence.
+
+6.  Press Alt-C.
+
+    The word "practice" and the space are highlighted.  You can
+    move, copy, or erase marked text.  You will delete the word.
+
+7.  Press Alt-D (Delete Marked Area).
+
+
+                               17
+
+
+Moving Text~
+
+
+You can move marked text within a document or between files.
+
+1.  Press Ctrl-Home.
+
+    The cursor moves to the first line.  You will mark this line
+    using Alt-L (Mark Line).
+
+2.  Press Alt-L.
+
+    The line is highlighted.  If you change your mind after
+    marking text, you can "unmark" the text.
+
+3.  Press Alt-U (Unmark).
+
+    The text is no longer highlighted.
+
+4.  Press Alt-L to mark the line again.
+
+5.  Press Cursor Down once.
+
+6.  Press Alt-L to specify the end of the text you are marking.
+
+    The paragraph is highlighted.  You will indicate where you
+    want to move it.
+
+7.  Press Ctrl-End.
+
+8.  Press Alt-M (Move Marked Area).
+
+    The paragraph is moved to the end of the file.
+
+
+
+                               18
+
+
+Copying and Deleting Text~
+
+
+You can copy marked text to another place in your document--or to
+another file.  When you copy text, you make a copy of text you
+have marked and move it to another place in the file currently on
+your screen.
+
+When you delete text, you erase the marked text (a character,
+word, or larger block of text).  If you erase a large amount of
+text by mistake, you can restore it either by retrieving it from
+the .UNNAMED file or quitting the file, that is, not saving your
+changes. However, any other changes you have made since you last
+saved the file are also lost.  For this reason, it is a good
+habit to save the file you are working with frequently.
+
+1.  Press Ctrl-End.
+
+2.  Press Alt-L (Mark Line).
+
+3.  Press F9 (Insert Line).
+
+    You will copy the marked line after the inserted line.
+
+4.  Press Alt-Z (Copy Mark).
+
+    The text is copied to the line below the cursor.  You can
+    copy it as many times as you want as long as the original
+    text remains marked.
+
+5.  Press Alt-Z three times.
+
+    Next, you will copy the marked line to the file SPEECH.ABE.
+
+6.  Press Esc to move the cursor to the command line.
+
+    You use the EDIT command to display the file.
+
+7.  Enter:  e speech.abe
+
+    The file SPEECH.ABE is displayed when you press Enter.
+
+8.  Press Ctrl-End.
+
+9.  Press Alt-Z.
+
+    The marked line is copied to the end of the file.
+
+10. Press F4 (Quit).
+
+    You are asked to confirm that you want to quit the file,
+    leaving it the way it was before you copied the line.
+11. Type:  Y
+
+    You are back at the file PRACTICE.
+
+
+                               19
+
+
+12. Press Alt-U.
+
+    Remember to remove the highlighting when you have finished
+    working with the marked text.
+
+ ______________________________________________________
+|                                                      |
+|  You can mark only one section of text at a time.    |
+|  To mark a different section, you must first unmark  |
+|  the first block using Alt-U.                        |
+|______________________________________________________|
+
+
+    Now you will mark the block of four copied lines (and
+    then delete (erase) them.
+
+13. Move the cursor to the first of the four lines.
+
+14. Press Alt-L.
+
+15. Move the cursor to the last of the four lines.
+
+16. Press Alt-L.
+
+17. Press Alt-D (Delete).
+
+    The four lines are deleted.
+
+ ___________________________________________________
+|                                                   |
+|  Ctrl-Backspace deletes only one line at a time.  |
+|  Alt-D can delete many marked lines.              |
+|___________________________________________________|
+
+
+
+Filling and Overlaying a Block Of Text~
+
+
+You have moved, copied, and deleted marked text.  Next you will
+"fill" a block using the FILL command and then overlay it.  This
+command is useful for making borders around text.
+
+    The cursor is at the end of the PRACTICE file.
+
+1.  Press Alt-L.
+
+2.  Press F9.
+
+3.  Press Alt-L again.
+
+    Two lines are highlighted.
+
+
+                               20
+
+4.  Press Alt-F (Fill).
+
+    You can fill the block with any character.  The message asks
+    you to type a character.
+
+5.  Type:  X
+
+    The block is filled with Xs.
+
+6.  Press Alt-U (Unmark) to turn off the highlighting.
+
+    Next you will mark a part of this block.  You highlight a
+    block by marking alternate corners, either the top left and
+    the bottom right corners, or the top right and bottom left
+    corners.
+
+       Note:  You can also use block marks to mark two
+       points on a horizontal or vertical line.
+
+7.  Move the cursor to the first X in the first line.
+
+8.  Press Alt-B (Mark Block) to mark the top left corner of
+    the block.
+
+9.  Move the cursor to the second line.
+
+10. Press Ctrl-Right.
+
+    The cursor moves right 40 spaces.
+
+11. Press Alt-B to mark the bottom right corner of the block.
+
+    Now you will copy the two lines of Xs.
+
+12. Press Ctrl-F2 to insert two lines.
+
+13. Press Alt-Z.
+
+    The marked area is copied.  Now you will change the
+    highlighted block of Xs to hyphens and overlay them in
+    another part of the lines.
+
+14. Press Alt-F (Fill Marked Area).
+
+15. Type a hyphen (-).
+
+    Hyphens replace the Xs in the highlighted area.
+
+
+                               21
+
+ _________________________________________________________
+|                                                         |
+|  You can overlay an area only when you have used Alt-B  |
+|  to mark blocks.  Overlay places a marked block on top  |
+|  of another area, erasing the original text.            |
+|_________________________________________________________|
+
+
+    You will overlay Xs with the marked block of hyphens.
+
+16. Press Alt-O (Overlay).
+
+    When you overlay text, the text is replaced, whereas when you
+    move and copy text, the text is inserted.
+
+17. Press Alt-U.
+
+ ____________________________________
+|                                    |
+|   Alt-C      Marks a character     |
+|   Alt-L      Marks a line          |
+|   Alt-B      Marks a block         |
+|   Alt-U      Removes marking       |
+|   Alt-M      Moves marked text     |
+|   Alt-Z      Copies marked text    |
+|   Alt-D      Deletes marked text   |
+|____________________________________|
+
+
+Refer to the Reference documentation for more information about
+using text markers.
+
+
+                               22
+
+
+Splitting and Joining Lines~
+
+
+SPLIT and JOIN are two commands that do just as their names
+suggest.  SPLIT splits a line at the cursor position and JOIN
+joins two lines at the cursor position.
+
+1.  Press Esc.
+
+2.  Enter:  e speech.abe
+
+    The file SPEECH.ABE is displayed.
+
+3.  Press Esc.
+
+4.  Move the cursor to the "y" in "years" in the first line.
+
+5.  Press Alt-S (Split Line).
+
+    The sentence is split and the word "years" is moved to the
+    next line.  You will join the lines again.
+
+6.  Press Alt-J (Join Line).
+
+    The lines are joined at the cursor position.
+
+7.  Press End.
+
+8.  Press the Spacebar.
+
+9.  Press Alt-J.
+
+10. Press Enter.
+
+11. Press End.
+
+12. Press the Spacebar.
+
+13. Press Alt-J.
+
+    Your margins are no longer even.  You will now learn how to
+    adjust the margins.
+
+
+
+                               23
+
+
+Reflowing Text~
+
+
+You can change the margins of existing text without having to
+retype the text by using the REFLOW command.  You can either type
+the command on the command line, if lines have already been
+marked, or use Alt-P with the cursor on the line of the
+paragraph.
+
+ ___________________________________________________
+|                                                   |
+|  After editing text, remember to use the REFLOW   |
+|  (Alt-P - Paragraph Reflow) to even your margins. |
+|___________________________________________________|
+
+
+To see what the current margin settings are, you can use the ?
+MARGINS command.
+
+1.  Press Esc.
+
+2.  Enter:  ? margins
+
+    Your margin settings of 1 45 1 are displayed.
+
+3.  Type over the settings to change them to 5 40 5.
+
+4.  Press Enter.
+
+5.  Enter:  ? margins
+
+    You have just changed the left margin to 5 and the right
+    margin to 40.  The third number is for a paragraph
+    indentation of 5.
+
+ -----------------------------------------------------
+|                                                     |
+| Margin settings apply to the file in which they are |
+| set.  Anytime you change margin settings, the new   |
+| settings apply to the new file and any file edited  |
+| after that.                                         |
+|                                                     |
+ -----------------------------------------------------
+
+6.  Move the cursor to the word "Fourscore" in the first
+    paragraph.
+
+7.  Press Alt-P.
+
+    The paragraph is reflowed (reformatted) from the cursor
+    position to the next blank line.  The cursor moves down to
+    the next paragraph, anticipating that you will want to
+    continue reflowing text.
+
+
+                               24
+
+ ---------------------------------------------------------
+|                                                         |
+|  Text will be reflowed from the cursor position to the  |
+|  next blank line.  Therefore, be sure to check that     |
+|  a blank line exists after the text you want to reflow. |
+|  It is time consuming to have to go in and use the      |
+|  SPLIT and JOIN commands to "fix" text that has been    |
+|  run together by mistake.                               |
+|                                                         |
+ ---------------------------------------------------------
+
+
+8.  Press Alt-P to reflow the second paragraph.
+
+9.  Press Alt-P to reflow the last paragraph.
+
+
+
+Centering Text~
+
+
+You can center any line of text between your margins by using
+Ctrl-C.
+
+1.  Press Ctrl-Home.
+
+2.  Press Ctrl-C (Center Text) to center the title.
+
+3.  Press Enter twice.
+
+4.  Press Ctrl-C to center the author's name.
+
+5.  Press Esc.
+
+
+                               25
+
+
+Switching Between Active Files~
+
+
+When you display a file using the EDIT command, the file remains
+active until you issue a FILE or QUIT command.  PE II allows you
+to have up to 20 active files at one time.  You can easily switch
+between these files by using the F8 key (Switch Files).
+
+You have been working with the files SPEECH.ABE and PRACTICE.
+These files are still active, (that is, they are still in
+memory).
+
+1.  Press F5 (Erase Line).
+
+2.  On the command line, type the following but do NOT press
+    Enter.
+
+         e program.bas
+
+3.  Press Esc to move the cursor to the text area.
+
+ _____________________________________________________
+|                                                     |
+|  The cursor does not have to be on the command      |
+|  line to carry out a command.  If the cursor is in  |
+|  the text area, you can press Ctrl-Enter to carry   |
+|  out a command on the command line.                 |
+|_____________________________________________________|
+
+
+4.  Press Ctrl-Enter.
+
+    The file PROGRAM.BAS is displayed.
+
+    Now you have three active files.  You can look at
+    each in turn by pressing F8 (Switch Files).
+
+ ____________________________________________________
+|                                                    |
+|  Use F8 to switch from one active file to another. |
+|____________________________________________________|
+
+
+5.  Press F8 three times.
+
+    The PROGRAM.BAS file is displayed again.
+
+Switching files with the F8 function key is like looking at
+photographs in your hand.  You slide the top picture to the
+bottom of the stack.  Eventually, if you look through all the
+pictures, the first one returns to the top.
+
+
+                               26
+
+
+Changing Tabs~
+
+
+Another PE II SET command is SET TABS.  You can set a maximum of
+20 tabs between 1 and 255.  The format for the SET TABS command
+is similar to the SET MARGINS command, except that you type
+"tabs" instead of "margins."
+
+As with margins, you can see what tabs you've set for a current
+file.
+
+1.  On the command line, enter:  ? tabs
+
+    Your current tab settings are displayed.
+
+2.  Press F5 (Erase Line).
+
+3.  Enter:  s tabs 5 10 15 30 50
+
+         Note: You can type either the word "set" or only
+         the first letter "s" for any SET command.
+
+4.  Press Esc to move the cursor to the text area.
+
+5.  Press the Tab key.
+
+    The cursor moves to the fifth column.  Watch the column
+    number change on the status line.
+
+6.  Press Tab four more times.
+
+    The cursor moves to column 10, then to 15, 30 and 50.
+
+    When you start PE II, the tab settings are in columns 9, 17,
+    25, and so on, the cursor moving 8 columns to the right each
+    time you press the Tab key.
+
+
+ ______________________________________________________
+|                                                      |
+| Like the margin settings which apply to the file in  |
+| which they are set, anytime you change the tab       |
+| settings, these new tab settings apply to the new    |
+| file and any file edited after that.                 |
+|______________________________________________________|
+
+
+                               27
+
+
+Naming a File~
+
+
+In this section, you learn how to use PE II commands. You will
+rename the file PRACTICE and then save it on your data diskette.
+
+1.  Press F8 to display PRACTICE.
+
+2.  If the cursor is not on the command line, press Esc.
+
+3.  Type:
+
+       name a:newname
+
+          Note:  Filenames follow the rules for DOS
+          filenames.  That is, they can be up to 8
+          characters, followed by a period and a
+          three-character extension.
+
+4.  Press Enter.
+
+    "a:\newname" appears on the status line.
+
+
+
+
+Quitting a File~
+
+
+When you quit a new file, you erase the file from the computer's
+memory.  When you quit an existing file you have made changes to,
+the changes are not saved.
+
+1.  Press F4 (Quit).
+
+    Since you have made changes to the file since the last
+    time you saved it, you are asked to confirm that you
+    want to quit so that data is not lost.
+
+    You can type either Y (for Yes) or N for (No).
+
+2.  Type:  N
+
+If you had typed Y, all text in the PRACTICE file, as well as the
+file itself, would have been removed from memory.
+
+In the next lesson, you will learn how to save your files.
+
+
+                               28
+
+
+Saving a File~
+
+
+Rather than quitting the practice file, you will save it using
+the SAVE command.  However, this time, instead of pressing the
+Save function key (F2), you will type the command on the command
+line.  Although it is always faster to use the function keys, it
+is useful to know that you can type the command if you forget the
+function key to use.
+
+1.  Type:  save
+
+2.  Press Enter.
+
+    When the red light of the drive comes on, your file (with
+    the old name of PRACTICE) is being saved on the diskette
+    in drive A under the name NEWNAME.
+
+3.  Press F4 (Quit) to remove the file from memory.
+
+ _____________________________________________
+|                                             |
+|  You can use a function key to issue a      |
+|  command, or you can type the command on    |
+|  the command line.                          |
+|____________________________________________ |
+
+
+It's a good idea to save your files frequently.  You update a
+file each time you save it.  You save a file in case something
+goes wrong, such as a power failure.
+
+
+
+Filing a File~
+
+
+To save a file to disk and remove the file from memory in one
+step, use F3 (File). Think of the FILE command as filing a piece
+of information away for later use.
+
+1.  Press F3 (File).
+
+    "File" is displayed on the status line.
+
+2.  Press Enter.
+
+    The file PROGRAM.BAS is saved on disk and is removed from
+    memory.
+
+Although there is much more to learn, you now know enough to use
+PE II to create, edit, and save your documents.
+
+
+                               29
+
+
+Locating Text~
+
+
+If you have a long program or document, and you want to see a
+particular section of that file quickly, you can use either the
+PgDn or PgUp keys, or you can use the LOCATE command.  For long
+programs, you might want to locate a line number or specific
+information.
+
+You will use the LOCATE command to find the word "people" in the
+Gettysburg Address.  The file SPEECH.ABE should be on your
+screen.
+
+1.  Press Ctrl-Home to move the cursor to the first line.
+
+ __________________________________________
+|                                          |
+|  The cursor must always be before the    |
+|  text, if you are searching forward.     |
+|__________________________________________|
+
+
+2.  Press Esc to move to the command line.
+
+    You will have PE II locate the word "people."
+
+3.  Enter:  locate/people/
+
+    The text cursor moves to the first occurrence of "people."
+
+If a word appears more than once in a file, you can quickly and
+easily search for each occurrence.
+
+4.  Press Esc.
+
+    The cursor moves to the command line.
+
+5.  Press Enter.
+
+    PE II locates the next occurrence of the word "people."
+
+    As you learned earlier, there is a quicker way to repeat a
+    command when your cursor is in the text area.  You can press
+    Ctrl-Enter.  Regardless of the cursor position, the command
+    on the command line is carried out.
+
+6.  Press Ctrl-Enter.
+
+    The cursor moves to the next occurrence of "People."
+
+You can also search backwards by typing a minus sign (hyphen)
+after the second slash.
+
+                               30
+
+
+7.  Press Esc.
+
+8.  Press F5 (Erase Line).
+
+9.  Enter:  /note/-
+
+ _______________________________________________________
+|                                                       |
+|  When using the LOCATE command, you can type just L,  |
+|  or omit the word entirely.  You can even omit the    |
+|  second slash, although it is needed as a delimiter   |
+|  when an option is used or when locating a word with  |
+|  a space following it.                                |
+|_______________________________________________________|
+
+    After you press Enter, the search begins to the left
+    of the cursor and continues toward the top of the file
+    until the word "note" is found.
+
+You can search through an entire file or you can restrict the
+search to marked text.  You will mark a paragraph in the
+Gettysburg Address and then search for occurrences of a word
+within it.
+
+10. Press PgUp.
+
+11. Move the cursor to the first line of the last paragraph
+    (which begins with the word "But").
+
+12. Press Alt-L (Mark Line).
+
+13. Move the cursor to the last line of the paragraph.
+
+14. Press Alt-L again.
+
+15. Press Ctrl-Home.
+
+    The cursor moves to the beginning of the document.  You will
+    search for the word "task" but only in the section of text
+    which you marked.
+
+16. Press Esc.
+
+17. Press F5.
+
+18. On the command line, type:   /task/m
+
+    The single m tells PE II to search only the marked text.
+
+19. Press Enter.
+
+    The cursor moves to the word "task" in the marked text.
+
+20. Press Alt-U (Unmark).
+
+From now on we'll use the term "string" instead of "word."  Not
+all characters that you may want to look for are words.  You can
+look for numbers or special characters such as parentheses or
+exclamation points. These are called "character strings."
+
+
+                               31
+
+
+Changing Text~
+
+
+The command related to LOCATE is the CHANGE command. It finds
+strings in the same way that the LOCATE command does, but it also
+replaces the found string with a new one if you request it.
+
+    The file SPEECH.ABE should still be displayed.
+
+1.  Press Ctrl-Home.
+
+2.  Press Home.
+
+3.  Press Esc.
+
+4.  Press F5.
+
+5.  Type:  change/the/THE/
+
+          Note: You can type either the word "change" or only
+          the first letter "c" for any CHANGE command.
+
+    You are asking for the first occurrence of the string
+    "the" that is found, whether it is in uppercase or
+    lowercase, to be changed to uppercase.
+
+6.  Press Enter.
+
+    The cursor moves to the first occurrence of the word
+    "the."  It is in the title.  The message "Confirm
+    Change" appears on the message line.  PE II waits for
+    you to tell it to replace the string it found with the
+    new string.  You do this by pressing Shift-F5.  The
+    string will be changed to exactly the way you typed it.
+
+7.  Press Shift-F5.
+
+    PE II replaces the found string.
+
+    If you had typed any other character and then pressed
+    Shift-F5, you would have seen a message saying that no
+    change was going to be made to that string ("No change
+    pending").  You can use Shift-F5 only right after the
+    "Confirm Change" message is displayed.  The message is
+    removed as soon as you press a key other than Shift-F5.
+
+8.  Press Ctrl-Enter.
+
+    The cursor moves to the second occurrence of the word.  It
+    found the word "the" within the word "fathers." For this
+    reason, it is important to specify delimiters for words that
+    might be part of others.
+
+    The message "CONFIRM CHANGE" is displayed again.  You will
+    not confirm this change.
+
+                               32
+
+
+9.  Press Esc.
+
+    Next you will correct the command so there can be no mistake
+    about what word you want to change.
+
+10. If INSERT is not displayed on the status line, press the
+    Ins key.
+
+11. Insert spaces to change the command to:
+
+         change/ the / THE /
+
+12. Press Enter.
+
+    The cursor has located a word "the." You see the message
+    "CONFIRM CHANGE."
+
+13. Press Shift-F5.
+
+    One string replaces the other.
+
+14. Press Ctrl-Enter.
+
+    The cursor moves to another occurrence of the word.
+
+    You can choose to change text or to leave it as it is
+    throughout the file as long as the string is in the file.
+    Otherwise, a message is displayed that  he string was not
+    found.
+
+15. Press Esc to move the cursor to the command line.
+
+    There is a way to change all occurrences of a string to a new
+    string.  You type an asterisk after the slash, for example:
+    c/old/new/* This kind of a change is known as a "global
+    change."
+
+16. Press End.
+
+17. Type an asterisk (*).
+
+18. Press Enter.
+
+    PE II finds all occurrences of the word "the" from the
+    current cursor position to the end of the file and changes
+    each to "THE."
+
+    Now you will change them all back to "the."  This time,
+    however, PE II will search from the end of the file to the
+    beginning.
+
+19. Press Ctrl-End.
+
+20. Press Esc.
+
+
+                               33
+
+21. Press F5.
+
+22. Enter:  c/ THE / the /-*
+
+    PE II changes all occurrences of "THE" and "The" back to
+    "the."
+
+    Look at the title.  PE II did not capitalize "the." However,
+    it did just as you asked it to do.
+
+ _____________________________________________________
+|                                                     |
+|  Care should be taken when making global changes.   |
+|  They are fine for changing proper names (for       |
+|  example, DiLorenzo to DeLorenzo) but, otherwise,   |
+|  unwanted changes could occur.                      |
+|_____________________________________________________|
+
+
+23. Press Esc.
+
+24. Press F5.
+
+
+
+Splitting a Screen~
+
+
+PE2 lets you split a screen into as many as four windows.  Each
+window displays part of a file.  You can look at several files at
+once, or you can display different parts of the same file in
+different windows.
+
+If you display the same file, each time you make a change using
+one window, the file in all windows is updated.  You can move or
+copy text from one window to another.
+
+
+
+Using the Same File~
+
+
+The file SPEECH.ABE should be on your screen.
+
+1.  Press Esc to move the cursor to the text area.
+
+2.  Press Ctrl-S (Split Screen).
+
+    The screen is split into two windows.  Your cursor is in
+    the left window.  You can use Ctrl-Cursor Right to display
+    text to the right of this window.
+
+3.  Press Ctrl-Right.
+
+4.  Press Home.
+
+
+                               34
+
+5.  Press Ctrl-Home to move the cursor to the beginning of the
+    file.
+
+6.  Press Alt-S (Split Line).
+
+7.  Enter:  Both windows are being updated.
+
+    As you can see, the line has also been entered in the right
+    window.  To move the cursor to the right window, use
+    Ctrl-W (Next Window).
+
+8.  Press Ctrl-W.
+
+    You can split the screen into two more windows.
+
+9.  Press Ctrl-S.
+
+    To move to each window in turn, in a clockwise direction, you
+    use Ctrl-W.
+
+10. Press Ctrl-W three times.
+
+    You can split the screen into a lower and upper half.
+
+11. Press Ctrl-S.
+
+12. Press Ctrl-S to return to a single screen.
+
+
+
+Using Different Files~
+
+
+You can work with more than one file and display parts of these
+files in up to four windows.
+
+1.  Press Ctrl-S.
+
+2.  Press Esc.
+
+3.  On the command line, enter:  e practice
+
+    You now have parts of two different files displayed on your
+    screen.
+
+4.  Move the cursor to the first line of text in the left window.
+
+5.  Press Alt-L (Mark Line).
+
+6.  Press Ctrl-W (Next Window).
+
+7.  Press Ctrl-End.
+
+8.  Press Alt-M (Move Mark).
+
+    The line has been moved from one file to the other.
+
+                               35
+
+
+9.  Press Ctrl-Home.
+
+10. Press Ctrl-Z (Zoom Window).
+
+    The current window expands to fill the screen.
+
+Printing Files~
+
+
+     Note: If you don't have a printer connected to your
+     computer, skip this section.
+
+Using the PRINT command, you will print out two files. The file
+SPEECH.ABE should be on your screen.
+
+1.  Check that your printer is connected, that paper is
+    aligned, and that the printer is ready to print.
+
+2.  Press F7 (Print).
+
+    The command PRINT appears on the command line.
+
+3.  Press Enter to carry out the command.
+
+    The file is printed without the Top of file and Bottom of
+    file indicators, and without status line information.
+
+4.  Press F8 (Switch Files).
+
+5.  Press F7 to print the PRACTICE file.
+
+6.  Press Enter to carry out the command.
+
+7.  Press F3 (File).
+
+8.  Press Enter.
+
+    The file SPEECH.ABE is displayed.
+
+
+
+Printing the PE II Keyboard Template~
+
+
+Your PE II diskette contains templates with PE II key
+definitions. One template is for the PC and PC XT, and the other
+template is for the PC AT.
+
+If you have a graphics printer, you can print the templates. Then
+cut out the appropriate template for your computer and tape it to
+your keyboard for a quick reference to the keys used in PE II.
+
+
+                               36
+
+
+Do NOT edit the template file.  Although the templates are
+misaligned on the screen, they will print correctly.
+
+To print the template:
+
+1.  Make sure paper is aligned and the printer is ready.
+
+2.  On the command line, enter:  e template
+
+    The TEMPLATE file is displayed.
+
+3.  Press F7 to print the template.
+
+4.  Press Enter.
+
+    The template is printed.
+
+5.  Press F4 (Quit).
+
+
+
+Inserting Character Codes~
+
+
+PE II lets you type any numbers up to 255 from the numeric keypad
+to insert characters codes in your documents. For example, to
+insert a form feed in your document, you can use Alt-X-1-2.  To
+do this, you press and hold down the Alt key while typing X, 1,
+and 2 in order.  Then release the Alt key. The form feed
+character (a circle above a cross) is then inserted in your
+document.
+
+You can also type [012] on the command line (using the number
+keys at the top of your keyboard) or use Alt-N (Page Eject).
+Alt-N inserts a line in your document for the form feed
+character.
+
+
+
+Inserting Page Breaks~
+
+
+PE II lets you insert page breaks in your document.
+
+Up to 66 lines can fit on one page.  Use Ctrl-N to move the
+cursor 60 lines from its current position.  This allows room for
+top and bottom margins. If you want fewer lines on a page, you
+can do one of the following:
+
+o  Change the number for the Ctrl-N function in the file
+   PE2.PRO.
+
+o  Move the cursor up a few lines before using Ctrl-P.
+
+
+                               37
+
+
+You will use the file SPEECH.ABE to practice inserting page
+breaks.
+
+1.  Press Ctrl-Home to go to the top of the file.
+
+2.  Press Alt-L (Mark Line).
+
+3.  Press Ctrl-End to go to the end of the file.
+
+4.  Press Alt-L.
+
+5.  Press Alt-Z (Copy Mark).
+
+6.  Press Alt-U (Unmark).
+
+    You now have enough text with which to practice inserting
+    page breaks.
+
+7.  Press Ctrl-Home.
+
+8.  Press Ctrl-N (Next Page).
+
+    The cursor moves down 60 lines.  This is the last line after
+    which you can insert a page eject in order for the preceding
+    text to be all on one page.
+
+9.  Press Alt-N (Page Eject).
+
+    PE II inserts a line with a page eject symbol.  When you
+    print your document, the printer ejects the paper and starts
+    printing on a new page when it comes to this symbol.
+
+10. Press F7 (Print).
+
+11. Press Enter.
+ ___________________________________________
+|                                           |
+|  Use Ctrl-N to move the cursor down 60    |
+|  lines.  (You can change this number in   |
+|  the file PE2.PRO.)                       |
+|                                           |
+|  Use Alt-N to insert a page eject symbol. |
+|___________________________________________|
+
+
+
+                               38
+
+
+Customizing Your PE II Editor~
+
+
+The DEFINE command and the MACRO command allow you to customize
+PE II.
+
+
+
+Changing Key Definitions~
+
+
+The DEFINE command is the most powerful command of PE II.  It
+allows you to change the definition of a key. That is, you can
+change what the key does when pressed.
+
+For example, when you press Enter, the cursor moves to the
+beginning of the next line, if there is a line available.  You
+will change the definition of the Enter key next.
+
+1.  On the command line, type:
+
+       define enter = [insert line]
+
+ _________________________________________
+|                                         |
+|  Commands assigned to a key must be     |
+|  in brackets.                           |
+|_________________________________________|
+
+
+2.  Press Enter.
+
+    The command line clears.  You have just redefined the Enter
+    key to insert a new blank line below the current line, moving
+    the cursor to the new line.  This is similar to what happens
+    when you press the carriage return key on a typewriter.
+
+3.  Press Esc.
+
+4.  Press Ctrl-End.
+
+5.  Press Enter.
+
+    A blank line is inserted after the cursor and the Bottom of
+    file marker moves down one line, just as it does when you
+    use F9.
+
+6.  Press Esc.
+
+
+When you redefine a key, the command must include the word
+"define" or abbreviation "def" or "d,"  the name of the key to be
+redefined, an equals sign, and one or more of the commands within
+square brackets, as listed in the Reference document.
+
+
+                               39
+
+
+By being able to redefine keys, you can reduce repetitive editing
+tasks to a few keystrokes.  You do this by assigning a series of
+PE II commands to one key or a combination of keys.
+
+For example, when you typed Alt-P earlier to reformat the
+paragraph within the new margins, you used 20 different PE II
+commands at one time, but you pressed only two keys.
+
+7.  On the command line, enter:  e .keydefs
+
+    The word ".keydefs" stands for KEY DEFINITIONS.  It is one of
+    the three internal files of PE II (which is why the red
+    light on the drive did not come on).  Internal files are
+    explained in the Reference section.
+
+    The .KEYDEFS file gives you the current key definitions.
+
+ _____________________________________________
+|                                             |
+|  You can display the list of key commands   |
+|  at anytime by editing the .KEYDEFS file.   |
+|                                             |
+|  You can display a specific key definition  |
+|  by entering a question mark followed by a  |
+|  space, the word "key," and the keyname,    |
+|  for example: ? key F4                      |
+|_____________________________________________|
+
+
+Look at the .KEYDEFS file.  It shows the change that you made to
+the Enter key.  You will change the Enter key definition back to
+the way it was.
+
+8.  On the command line, enter:
+
+       define enter = [begin line] [down] [indent]
+
+    The definition of the Enter key is changed.  However, this is
+    only a temporary change.  To save the definition to use it
+    later, you must save it in the PE2.PRO file.
+
+    To see the change to the original definition, you need to
+    edit the .KEYDEFS file again.
+
+9.  On the command line, enter:  e .keydefs
+
+
+
+                               40
+
+
+Defining a Key to Print a Word~
+
+
+Next you will define a key to print a word whenever the key is
+pressed.  You will define Alt-I to print "CONFIDENTIAL." The
+.KEYDEFS internal file should be on your screen.
+
+    Note:  PE II uses lowercase "a" for the Alt key, "c" for
+    the Ctrl key, and "s" for the Shift key.  (The letter "u"
+    stands for user shift keys.  For information on user shift
+    keys, see the Reference document.)
+
+1.  Press PgDn nine times.
+
+2.  Move the cursor one space following the end of the line:
+    def a-i =
+
+3.  Enter the following definition:  'CONFIDENTIAL'
+
+    Always include single quotes or double quotes around any
+    words you want to print, but the type of quotes must be
+    consistent for each string.
+
+    The line should look like this:
+
+         def a-i = 'CONFIDENTIAL'
+
+4.  Press Esc.
+
+         Note:  Be sure you are using a backup copy of PE II
+         as the following will change your original profile.
+         If not, replace your diskette with a backup copy now.
+         Later you will learn how to restore the profile.
+
+5.  Type:  save pe2.pro
+
+6.  Press Enter.
+
+    The new definition has been saved to the profile called
+    PE2.PRO.  You will use the changed profile.
+
+7.  Enter:  macro pe2.pro
+
+8.  Press F8 to display the SPEECH.ABE file.
+
+9.  Press Ctrl-Home.
+
+10. Press Alt-S (Split Line) to insert a blank line at the top
+    of the file.
+
+11. Press Alt-I.
+
+    CONFIDENTIAL is printed at the cursor position.  Each time
+    you press the key combination of Alt-I, the word CONFIDENTIAL
+    will print.
+
+    You can use the above procedure to define any of your keys to
+    print the text you choose.
+
+
+                               41
+
+
+Defining Keys to Change Your Margin Settings~
+
+
+Next you will define keys to change your margin settings.  This
+is very useful if you often switch between settings when typing
+documents.  You will redefine Alt-6 to [set margins 5 65 5].
+
+1.  Press Esc.
+
+2.  Press F8 to display the .KEYDEFS internal file.
+
+3.  Press PgDn twice.
+
+4.  Move the cursor to the line: def a-6 =
+
+5.  Change the margin settings to
+
+         [set margins 5 65 5]
+
+    Remember: Commands must be in brackets.
+
+6.  Press Esc.
+
+7.  Type:  save pe2.pro
+
+8.  Press Enter.
+
+    The new definition has been saved.  Now you will use the
+    changed profile.
+
+9.  Enter:   macro pe2.pro
+
+10. Press F8 to display the file SPEECH.ABE.
+
+11. Press Alt-6 (the 6 at the top of the keyboard).
+
+12. On the command line, enter:  ? margins
+
+    You see that your margin setting have been changed.
+
+13. Move the cursor to the beginning of the first paragraph.
+
+14. Press Alt-P.
+
+    The paragraph is reflowed to the current margin settings.
+
+    Alt-4 is already defined as 1 and 40.
+
+15. Press Alt-4.
+
+16. Move the cursor back to the beginning of the first paragraph.
+
+17. Press Alt-P.
+
+    The paragraph is reflowed to the original margin settings.
+
+This example shows you how easily you can switch between margin
+settings when reformatting text.
+
+
+                               42
+
+
+ ______________________________________________________
+|                                                      |
+|  You use the DEFINE command to temporarily change    |
+|  key definitions.  You can see these temporary       |
+|  changes by editing the .KEYDEFS file.  You save     |
+|  the .KEYDEFS file to the PE2.PRO profile to make    |
+|  the change permanent.                               |
+|                                                      |
+|  You might want to make a temporary change to see    |
+|  how a command or a series of commands work before   |
+|  you decide to make a permanent change.              |
+|______________________________________________________|
+
+
+
+
+Combining Several Commands On One Key~
+
+
+Alt-P combines several commands.  You can see these commands in
+the .KEYDEFS file.
+
+1.  Press F8 to display the .KEYDEFS internal file.
+
+2.  Move the cursor to the definition of the a-p key combination.
+
+    The definitions are off the screen.  To see the last commands
+    assigned to that combination of keys, use the End key.
+
+3.  Press End.
+
+4.  Press Home.
+
+Each one of the bracketed words or group of words is a "command."
+Combining commands is like gathering people with different
+talents to do one job more efficiently.
+
+Next you will learn about a simpler list of combined commands
+assigned to a key.  You will use the LOCATE command to find the
+F1 key.
+
+5.  Press Ctrl-Home.
+
+6.  Press Esc.
+
+7.  Enter:  /def f1
+
+The F1 key is assigned to display the Help Menu. The command
+string consists of the abbreviated form of the EDIT command and
+the name of the Help Menu file.
+
+Pressing F1 is just like entering the following on the command
+line:  edit pe2.hlp
+
+                               43
+
+
+8.  Press F1.
+
+ _______________________________________________
+|                                               |
+|  You can change the Help Menu.  You can move  |
+|  the cursor around inside the file and change |
+|  any or all of the information.  This allows  |
+|  you to design your own Help Menu, if you     |
+|  decide to change the definitions of keys.    |
+|_______________________________________________|
+
+9. Press F4 to quit the help file.
+
+
+
+Using the MACRO Command~
+
+
+The MACRO command takes the DEFINE commands one step further.
+The MACRO command executes a list of commands that appear in a
+separate file called a "macro file."
+
+You can use all the commands in a macro file, but must use
+brackets to separate the commands.  An example of commands that
+can be in a macro file are:
+
+    [edit program.bas]
+    [print]
+    [quit]
+    [edit newname]
+    [print]
+    [quit]
+
+
+This short command file with its six commands brings the
+PROGRAM.BAS file into memory, prints it, removes it from memory,
+and then does the same with the NEWNAME file.
+
+To create a command file from these six commands, you would:
+
+   a.  Use the EDIT command to create a new file
+
+   b.  Type the six commands in the text area of the new file
+       (one command per line or all on the same line).
+
+   c.  Save it
+
+   d.  Execute it.
+
+
+                               44
+
+
+If you have a printer, you can try that now.
+
+1.  Press Esc.
+
+2.  Press F5 (Erase Line).
+
+3.  On the command line, enter the edit command, followed by a
+    new filename (for example, e print2).
+
+4.  Press Esc to move the cursor to the text area.
+
+5.  Press Ctrl-F5 to insert five lines.
+
+6.  Press Ctrl-Home.
+
+7.  Type the six lines of the above macro file.
+
+8.  Press F2 (Save).
+
+9.  Press Enter to save the file.
+
+    Next, you will use the macro file.
+
+10. Check that the printer is ready and paper is aligned.
+
+11. On the command line, enter:  macro print2
+
+    The MACRO command tells PE II to go into the macro file and
+    execute the commands one at a time in the order they were
+    typed.
+
+The two files print out one after the other.  When you use a
+macro file, you don't have to wait for the first file to print
+before requesting another to be printed.
+
+Whenever you want to print these two files again, type the MACRO
+command and the macro filename on the command line again.
+
+There is another way you can execute a macro file.
+
+You can assign the MACRO command and the macro filename to a key.
+
+12. Check that the printer is ready and paper is aligned.
+
+13. On the command line, enter the following:
+
+        define a-5 = [macro print2]
+
+14. Press Alt-5.
+
+                               45
+
+ ____________________________________________________
+|                                                    |
+|  If you assign the MACRO command and the filename  |
+|  to two keys, you reduce 53 keystrokes to 2.       |
+|____________________________________________________|
+
+
+Refer to the Reference section for more information on the PE II
+profile, changing key definitions, and defining macros.
+
+15. Use F4 (Quit) three times to quit the current files without
+    saving them.
+
+16. Type y to the prompt to confirm the quit and return to DOS.
+
+
+
+
+Restoring the Original PE II Profile~
+
+
+When you saved the .KEYDEFS file to your disk as PE2.PRO,
+the .KEYDEFS file with the long definitions replaced the orginal
+abbreviated definitions in PE2.PRO.  Because the abbreviated
+PE2.PRO profile starts PE II much faster, you may want to
+restore the original PE II profile.  To do this:
+
+1.  Remove your backup PE II diskette from drive A.
+
+2.  Do one of the following:
+
+    o  If you have a one-drive system, insert your orginal PE II
+       diskette in drive A.
+
+    o  If you have a two-drive system, insert your original PE II
+       diskette in drive A and your backup PE II diskette in
+       drive B.
+
+3.  At the DOS prompt A>, enter:  copy a:pe2.pro b:
+
+    You have restored the original profile for PE II.
+
+
+Congratulations.  You have completed the Learning section.
+
+Enjoy your new text editor!
+
+                                                                                                                       

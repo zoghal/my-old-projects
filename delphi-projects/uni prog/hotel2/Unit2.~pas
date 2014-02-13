@@ -1,0 +1,33 @@
+unit Unit2;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, DB, ADODB, QuickRpt, QRCtrls, ExtCtrls;
+
+type
+  TForm2 = class(TForm)
+    QuickRep1: TQuickRep;
+    QRBand1: TQRBand;
+    QRLabel1: TQRLabel;
+    QRBand2: TQRBand;
+    ADODataSet1: TADODataSet;
+    DataSource1: TDataSource;
+    QRDBText1: TQRDBText;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+uses Unit1;
+
+{$R *.dfm}
+
+end.

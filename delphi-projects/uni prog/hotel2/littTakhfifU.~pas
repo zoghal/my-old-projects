@@ -1,0 +1,36 @@
+unit littTakhfifU;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Buttons, StdCtrls, Mask;
+
+type
+  TlisttakhfifForm = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    MaskEdit1: TMaskEdit;
+    MaskEdit2: TMaskEdit;
+    procedure SpeedButton2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  listtakhfifForm: TlisttakhfifForm;
+
+implementation
+
+{$R *.dfm}
+
+procedure TlisttakhfifForm.SpeedButton2Click(Sender: TObject);
+begin
+  listtakhfifForm.Close;
+end;
+
+end.

@@ -1,0 +1,57 @@
+unit list_Sestem_u;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  Db, DBTables, Grids, DBGrids, Menus;
+
+type
+  TList_system = class(TForm)
+    DBGrid1: TDBGrid;
+    DataSource1: TDataSource;
+    SystemTable1: TTable;
+    ListSystemPopupMenu1: TPopupMenu;
+    N1: TMenuItem;
+    N2: TMenuItem;
+    N3: TMenuItem;
+    procedure N1Click(Sender: TObject);
+    procedure N3Click(Sender: TObject);
+    procedure N2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  List_system: TList_system;
+
+implementation
+
+uses system_u;
+
+
+
+{$R *.DFM}
+
+procedure TList_system.N1Click(Sender: TObject);
+begin
+ SystemTable1.Append;
+ SystemForm.ShowModal;
+end;
+
+procedure TList_system.N3Click(Sender: TObject);
+begin
+ SystemTable1.Edit;
+ SystemForm.ShowModal;
+end;
+
+procedure TList_system.N2Click(Sender: TObject);
+begin
+  if MessageDlg( '¬Ì« Ê«ﬁ⁄«‰ „ÌùŒÊ«ÂÌœ ”Ì” „ Õ–› ‘Êœ',mtWarning,[mbYes,mbno],0)= MrYes Then
+   SystemTable1.Delete;
+
+end;
+
+end.

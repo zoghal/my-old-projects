@@ -1,0 +1,107 @@
+unit mainU;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, DB, DBTables, Grids, DBGrids, StdCtrls, ADODB,Adate, ComCtrls;
+
+type
+  TForm1 = class(TForm)
+    DataSource1: TDataSource;
+    DBGrid1: TDBGrid;
+    Table1: TTable;
+    Table1PID: TFloatField;
+    Table1LASTNAME: TStringField;
+    Table1NAME: TStringField;
+    Table1FATHER: TStringField;
+    Table1SEX: TBooleanField;
+    Table1SHENAS_NO: TFloatField;
+    Table1ISSUED_AT: TStringField;
+    Table1DOB: TStringField;
+    Table1BIRTH_PLAC: TStringField;
+    Table1RELIGION: TStringField;
+    Button1: TButton;
+    ADOConnection1: TADOConnection;
+    ADOCommand1: TADOCommand;
+    Memo1: TMemo;
+    ProgressBar1: TProgressBar;
+    Edit1: TEdit;
+    Label1: TLabel;
+    procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+uses ConvUtils, Math;
+
+{$R *.dfm}
+
+procedure TForm1.FormShow(Sender: TObject);
+begin
+  Table1.Open;
+  ADOConnection1.Connected := True;
+end;
+
+procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Table1.Close;
+  ADOConnection1.Connected := False;
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  ProgressBar1.Min := 0;
+  Table1.First;
+  ProgressBar1.Max := Table1.RecordCount;
+  ADOCommand1.CommandText := 'insert into Sicks values(:SickCode,:LName,:FName,:FatherName,:Sex,:Sh_Id,null,:BirthDate,:BirthPlace,:ShPlace,''1'',null)';
+  while not Table1.Eof do
+    Begin                ;
+    // Edit1.Text := IntToStr(Table1.RecordCount - Table1.RecNo);
+     with ADOCommand1.Parameters do
+      Begin
+        Clear;
+        ADOCommand1.CommandText := 'insert into Sicks values(:SickCode,:LName,:FName,:FatherName,:Sex,:Sh_Id,null,:BirthDate,:BirthPlace,:ShPlace,''1'',null)';
+
+        ParamByName('SickCode').Value   := Trim( Table1PID.AsString );
+        ParamByName('LName').Value      := Trim( Table1NAME.AsString );
+        ParamByName('FName').Value      := Trim( Table1LASTNAME.AsString );
+        ParamByName('FatherName').Value := Trim( Table1FATHER.AsString );
+        if Table1SEX.AsBoolean = true then
+          ParamByName('Sex').Value := 0
+        else
+          ParamByName('Sex').Value := 1;
+        
+        ParamByName('Sh_Id').Value := Trim( Table1SHENAS_NO.AsString );
+        ParamByName('BirthDate').Value := ADateSToM( Trim( Table1DOB.AsString ) );
+        ParamByName('BirthPlace').Value := Trim( Table1BIRTH_PLAC.AsString );
+        ParamByName('ShPlace').Value := Trim( Table1ISSUED_AT.AsString );
+      End;
+
+      Try
+        ADOConnection1.BeginTrans;
+        ADOCommand1.Prepared := true;
+        ADOCommand1.Execute();
+        ADOConnection1.CommitTrans
+      Except
+        on E: Exception  do
+          Begin
+             ADOConnection1.RollbackTrans;
+             Memo1.Lines.Add('Eroor [ '+E.Message+' ] of Record [ '+inttostr( Table1.recno)+' ][ PID = '+ Table1PID.AsString+ ' ]');
+          End;
+      End;
+      Table1.Next;
+      ProgressBar1.Position :=       ProgressBar1.Position+1;
+    End;
+end;
+
+end.

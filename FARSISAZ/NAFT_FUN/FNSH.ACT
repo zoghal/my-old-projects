@@ -1,0 +1,59 @@
+    1  *:*****************************************************************************
+    2  *:
+    3  *: Procedure file: G:\K717168\HA\FNSH.PRG
+    4  *:
+    5  *:         System: ๘คข ฉก• ๔—จþจ
+    6  *:         Author:  ü๗๒ขค ๖จ
+    7  *:      Copyright (c) 1995,  ค๘• üจ๕ชขþ๚ช ü๓ไ ฉฅ๘๕ ฅ๎ค๕
+    8  *:  Last modified: 06/15/92     13:19
+    9  *:
+   10  *:  Procs & Fncts: FNSH()
+   11  *:
+   12  *:      Documented 01/31/95 at 08:21               FoxDoc  version 2.10f
+   13  *:*****************************************************************************
+   14      ********** GFNSH.PRG
+   15      ********************
+   16      PARAMETERS  ROW ,COL ,num ,nl ,dl
+   17      PRIVATE     i ,fnum ,fcol
+   18      tmpesc = SYS(2001,'ESCAPE')
+   19      tmpdec = SYS(2001,'DECIMALS TO')
+   20      SET TALK OFF
+   21    ฺฤIF ROW < 1 .OR. ROW > 24 .OR.;
+   22    ณ        COL < 1 .OR. COL > 80 .OR.;
+   23    ณ        dl  < 0 .OR. dl  > 15
+   24    ณ    SET ESCAPE &tmpesc
+   25    ณ    SET DECIMALS TO &tmpdec
+   26  <ออออออRETURN ""
+   27    ภฤENDIF
+   28      fcol = 81 - COL - nl
+   29    ฺฤIF fcol < 0 .OR. nl < dl + 1
+   30    ณ    SET ESCAPE &tmpesc
+   31    ณ    SET DECIMALS TO &tmpdec
+   32  <ออออออRETURN ""
+   33    ภฤENDIF
+   34      SET DECIMALS TO dl
+   35      fnum = STR(num ,nl ,dl)
+   36    ฺฤIF dl > 0
+   37    ณ    i = nl
+   38    ณ  ษอDO WHILE i > 0
+   39    ณ  บ  ฺฤIF SUBSTR(fnum ,i ,1) <> "0"
+   40    ณ  vอออออออEXIT
+   41    ณ  บ  รฤELSE
+   42    ณ  บ  ณ    i = i - 1
+   43    ณ  บ  ภฤENDIF
+   44    ณ  ศอENDDO
+   45    ณ    fnum = LEFT(fnum , i) + SPACE(nl - i)
+   46    ภฤENDIF
+   47      i = 1
+   48    ษอDO WHILE i <= nl
+   49    บ    fnum = STUFF(fnum ,i ,1 , SUBSTR(fchr_rhcf , ASC(SUBSTR(fnum ,i ,1)), 1))
+   50    บ  ฺฤIF SUBSTR(fnum ,i ,1) = "ฆ"
+   51    บ  ณ    fnum = STUFF(fnum ,i ,1 ,",")
+   52    บ  ภฤENDIF
+   53    บ    i = i + 1
+   54    ศอENDDO
+   55      @ ROW , fcol SAY fnum
+   56      SET ESCAPE &tmpesc
+   57      SET DECIMALS TO &tmpdec
+   58      RETURN "ok"
+   59      *: EOF: FNSH.ACT

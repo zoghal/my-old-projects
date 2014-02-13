@@ -1,0 +1,6 @@
+[General]
+Name=Project1
+Project=1
+[Classes]
+Count=1
+Class0="TForm1","TForm","sayehtxtconverthtml","9","H:\Compiler & Prog\Prog\DPROG\sayehtxtconverthtml.pas"

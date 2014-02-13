@@ -1,0 +1,23 @@
+program Project2;
+
+uses
+  Forms,
+  Unit1 in 'Unit1.pas' {Form1},
+  Unit2 in 'Unit2.pas' {data: TDataModule},
+  Unit3 in 'Unit3.pas' {kharidForm},
+  Unit4 in 'Unit4.pas' {froshForm},
+  Unit5 in 'Unit5.pas' {Form5},
+  Unit6 in 'Unit6.pas' {Froshkala};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TForm5, Form5);
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(Tdata, data);
+  Application.CreateForm(TkharidForm, kharidForm);
+  Application.CreateForm(TfroshForm, froshForm);
+  Application.CreateForm(TFroshkala, Froshkala);
+  Application.Run;
+end.

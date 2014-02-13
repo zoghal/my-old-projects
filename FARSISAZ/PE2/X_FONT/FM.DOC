@@ -1,0 +1,1430 @@
+
+
+
+
+
+
+                                                         ≥
+                                                         ≥
+                                                         ≥  ﬂﬂﬂﬂﬂ€ﬂﬂﬂ€
+                                                         ≥       €   €
+                                                         ≥     ‹ﬂ€   €
+                                                         ≥   ‹ﬂ  €   €
+                                                         ≥  ﬂ     ﬂﬂﬂ
+               ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ                ≥
+                 FONT MANIA USER MANUAL                  ≥  €ﬂﬂﬂﬂ€ﬂﬂﬂ€
+               ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ                ≥  €    €   €
+                                                         ≥  €    €   €
+                                                         ≥  €        €
+                                                         ≥
+                                                         ≥  €        €
+                                                         ≥   ﬂ‹    ‹ﬂ
+                                                         ≥     ﬂ‹‹ﬂ
+                                                         ≥     ‹ﬂﬂ‹
+                                                         ≥   ‹ﬂ    ﬂ‹
+                                                         ≥  €        €
+                                                         ≥
+                                                         ≥  €        €
+                                                         ≥   ﬂ‹    ‹ﬂ
+                                                         ≥     ﬂ‹‹ﬂ
+                                                         ≥     ‹ﬂﬂ‹
+                                                         ≥   ‹ﬂ    ﬂ‹
+                                                         ≥  €        €
+                                                         ≥
+                                                         ≥  ‹ﬂﬂﬂﬂﬂﬂﬂﬂ‹
+                                                         ≥  €        €
+                                                         ≥  €        €
+                                                         ≥  €        €
+                                                         ≥  ﬂ‹      ‹ﬂ
+                                                         ≥
+                                                         ≥  ‹ﬂﬂﬂﬂﬂﬂﬂﬂ‹
+                                                         ≥  €        €
+                                                         ≥  €        €
+                                                         ≥  €        €
+                                                         ≥  ﬂ‹‹‹‹‹‹‹‹ﬂ
+                      FONT MANIA                         ≥
+                Unregistered Version 2.2                 ≥  ﬂﬂﬂﬂﬂﬂﬂﬂﬂ€
+                EGA/VGA TEXT FONT EDITOR                 ≥         ‹ﬂ
+                        BY Ut...                         ≥       ‹ﬂ
+            COPYRIGHT (C) 1992 REXXCOM SYSTEMS           ≥      ﬂ‹
+                                                         ≥        ﬂ‹
+                                                         ≥          ﬂ‹
+                                                         ≥  ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ
+                                                         ≥
+                                                         ≥
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+    
+
+                      ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ
+                       T A B L E   O F   C O N T E N T S
+                      ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ
+
+
+
+         Requirements..................................................1
+         Overview......................................................1
+         Quick Tour....................................................2
+         Using FONT MANIA..............................................3
+         Editing commands..............................................4
+         Using menus...................................................6
+         Saving Fonts..................................................9
+         Loading Fonts................................................10
+         Using COM Font Files.........................................11
+         Installing a Memory Resident Font............................11
+         Using Other File Formats.....................................12
+         Creating Special Effects.....................................13
+         Letters "Running Together"...................................17
+         Automatic Mode Reset.........................................18
+         Creating Tall, Small and Wide Fonts..........................18
+         Restoring the Default Font...................................19
+         Copying, Distribution and Registration.......................19
+
+
+         Illustrations...............................6,13,14,15,16,17,18 
+
+
+
+
+                            ƒƒƒƒƒƒƒƒƒƒ * ƒƒƒƒƒƒƒƒƒ
+
+
+
+
+
+
+
+         Note:  If this document is printed on a printer which does not fully
+                support the extended character set, portions of the document 
+                will not print correctly.  These portions include the name
+                REXXCOM which appears on the right of the title page, plus the
+                illustrations.  
+
+
+
+
+
+                                       i
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+         Requirements:
+           
+           IBM computer or 100% compatible "clone"
+           DOS 2.0 or higher
+           EGA, VGA, or 100% compatible video system
+           At least 80k of free memory
+
+
+         Overview:
+
+               Are you tired of the letter style of your computer?  Are you
+         looking for a change?  Maybe you simply would like to have some fun?
+         FONT MANIA might just be the answer.
+
+               FONT MANIA is designed for editing EGA and VGA fonts with ease.
+         It incorporates a user-friendly menu-driven sytem which makes using 
+         FONT MANIA incredibly easy.  It is also packed with powerful tools for
+         easy editing of fonts.  Here are just a few examples of applications
+         and uses for FONT MANIA:
+
+               -   Edit your computer's default text font, or create a 
+                   completely new font-set.
+
+               -   Save the font in a COM file which you can easily activate 
+                   from the DOS prompt or from any BATCH file, including your 
+                   AUTOEXEC.BAT
+
+               -   If you are a programmer, you can incorporate your redesigned
+                   fonts into your programs.
+
+               -   Use custom fonts to create special effects and more
+
+         DEMO.EXE included with this package demonstrates several incredible
+         uses of FONT MANIA.  To run the DEMO, type the following:
+
+                                        DEMO
+
+         and press <ENTER>.  The demo will run and you can print this manual, 
+         or the registration form at the end of the DEMO.
+
+
+
+
+
+ 
+
+
+
+
+
+                                      1
+
+
+ 
+
+
+
+         QUICK TOUR:
+
+         Type the following at DOS prompt:
+
+                                          FM
+
+         then press <ENTER>.  FONT MANIA's editing screen should appear on the 
+         monitor.  If not, check to make sure you are in the right drive and
+         path, and the program file is there, then try again.
+
+         You will see a giant yellow 'A' in a black area on left side of the 
+         screen.  This is the editing area.  To the right of the editing area 
+         are two boxes, one labeled STATUS, and the other labeled KEY.  The 
+         STATUS box shows the current status of FONT MANIA.  The KEY box shows
+         the listing of the valid keys or key-combinations you may use.
+
+         Try moving the cursor by pressing right arrow key.  You will observe
+         the cursor moving one space to the right.  Try pressing other arrow 
+         keys.  The cursor will move according to the arrows.  Try pressing 
+         PgDn (Page Down), and you will see a huge 'B'.  Press PgUp (Page Up)
+         to return 'A' to the screen.  Now press space bar once.  The pixel un-
+         der the cursor will toggle on or off.  Notice the change in the 'A' in
+         the status box.  Now press the tab key (that's the key with right and
+         left arrows on it).  The entire character set will appear in place of
+         the editing area.  Move the cursor in various directions.  Press the
+         Enter key to return to the editing area ... it will now contain a
+         large image of the character your cursor was on when you pressed the
+         Enter key.
+
+         Now, let's try loading a font.  Press F3 and FONT MANIA will prompt 
+         you for a filename.  Type the following:
+
+                                       COM_DEMO
+
+         then press <ENTER>.  FONT MANIA will load the font.  If there is an 
+         error, make sure you have the file COM_DEMO.COM in your current di-
+         rectory.
+
+         After FONT MANIA finishes loading the font, you will notice a change
+         in the pattern of the huge 'A'.  Let's try some other tools.  Press 
+         and hold the ALT key; then press I.  The whole character will be in-
+         verted!  Again, notice the change in the 'A' in the status box.  You 
+         are encuraged to try all the commands listed in the KEY box.
+
+         Now Press and hold ALT-A to save the font in COM file format.  You 
+         will be prompted for a filename.  Type:
+
+                                        MYFONT
+
+         Press <ENTER>.  The font is saved with the name MYFONT.COM. (The COM 
+         extension is automatically added to your filename.)
+
+         Press ESC to exit the program.  Press 'Y' when asked if you really 
+         want to exit.  That's it!!!, you just learned how to use FONT 
+         MANIA!!!  Pretty painless, wasn't it?!
+
+
+
+                                       2
+
+
+
+
+
+
+
+
+         USING FONT MANIA:
+
+         To run FONT MANIA from DOS, just type the following:
+
+                                     FM [filename]
+
+         and press <ENTER>.  Where [filename] is the optional file name of a
+         font file previously made with FONT MANIA.  If the filename is inclu-
+         ded, the font will load.  If you do not specify a font filename
+         FONT MANIA will use whichever font is already active, usually your
+         computer's default ROM BIOS font.  For more information on loading 
+         a font, see LOADING FONTS.
+
+         FONT MANIA's editing screen will appear.  There are many different 
+         area of this screen which serve different functions.  It really is not
+         confusing - just extremely comprehensive!
+
+         Menu Bar:
+
+               Across the top of the screen locate the menu bar.  This menu 
+         bar shows menu titles.  To "pull down" a menu, hold down the ALT key
+         while pressing a key corresponding to one of the highlighted char-
+         acters in the menu titles.  (Functions when editing area is visible;
+         does not function when character set is visible.)
+
+         Status Box:
+
+               The box labeled STATUS provides the current status of FONT
+         MANIA.  
+               
+               LINES shows how many lines of text will fit into the current 
+         screen.  The number of lines which may be displayed on the screen  
+         at one time varies depending on the number of scanlines and the 
+         height of the font.  
+               
+               VDO shows the current video adapter in use in your system.  
+
+               SCANLINE shows how many horizontal scanlines are currently 
+         active.  On EGA systems, this SCANLINE is always 35O.  On VGA, the
+         scanline may be set to one of the following values: 2OO, 35O, or 4OO.
+
+               FILENAME shows the current font filename.  If FILENAME shows 
+         NONE, that means the font has not yet been given a filename or that
+         Font Mania has not been provided with the name of the font during the
+         current session.
+
+               At the top of the box may be seen 2 smaller boxes.  The first
+         will display the current character being edited, and the second box  
+         will show the ASCII decimal value of that character.
+
+               At the bottom of the box you will find 2 numbers separated by a
+         colon (:).  This is the current X:Y position of the cursor in the 
+         editing area.
+
+
+
+                                       3
+
+
+
+
+
+
+
+
+
+
+         Key Box:
+
+               This is the large box labeled KEY.  This always shows the 
+         valid keyboard commands.  It will show the key combination which per-
+         form each function.
+
+         Status Line:
+
+               This line is located at the bottom of the screen.  It will 
+         report what is currently happening.
+
+         Editing Area:
+
+               This is the middle left hand side of the screen.  When the 
+         program is first excuted it will display a huge 'A' in a black 
+         rectangle area with blinking cursor (yellow on red.)  This is the
+         area in which each character of the font-set will be edited.
+
+
+
+         EDITING COMMANDS:
+
+               All editing commands are displayed in the KEY box. Press F1 for
+         the "second page."
+
+        This is the list of commands and their functions:
+
+
+            Up, Down, Left and Right arrow keys will move the cursor.
+                           Hold either Shift key in combination with one of the
+                           arrow keys to "drag" the pixel. (Some computers need
+                           the Num Lock key pressed first.  If so, be certain
+                           to press Num Lock again when finished.)
+
+            PgUp, PgDn   - Change the editing character to the previous 
+                           character or the next one.
+
+            Space        - The Space Bar toggles the pixel at the 
+                           current cursor position on or off.
+
+            CTRL-H, V    - Blank the Horizontal line or Vertical line.
+
+            ALT-H, V     - Fill (turn all pixels on) the Horizontal or 
+                           Vertical line.
+             
+            TAB          - Select from the character set.  The large yellow-
+                           on-black font disappears to be replaced by the char-
+                           acter table.  Use arrow keys to move the cursor to 
+                           the character you want; then press <ENTER>.
+
+            CTRL-D       - Copy the default character, i.e.: If you have begun 
+                           to edit a character you may cancel your editing with
+                           this command.
+
+                                       4
+
+
+
+
+
+
+
+
+
+
+            CTRL-B       - Mark the beggining of block
+
+            CTRL-E       - Mark the ending of block
+
+            ALT-X, Y     - Insert a blank column or a row.
+
+            CTRL-X, Y    - Delete a column or a row.
+
+            CTRL-A, S    - Rotate the whole character Left or Right.
+
+            CTRL-W, Z    - Scroll the whole character Up or Down.
+
+            ALT-A        - Save as...  (Permits entering a [new] filename)
+
+            CTRL-C       - Clear the current character. (Blank the character)
+
+            ALT-C        - Copy a character to another location.  You must
+                           start with the character which occupies your TARGET
+                           location in the editing area.  When you press ALT-C 
+                           the character table will appear.  Use arrow keys to
+                           move the red cursor to the SOURCE character (which 
+                           you want copied to the TARGET location).  Press <EN-
+                           TER> to copy that character to your TARGET location.
+
+            ALT-I        - Invert the character.  All of the pixels are 
+                           reversed.  Pixels which are on will turn off, and 
+                           the pixels which are off will turn on.
+
+            Insert       - Insert a blank pixel at the current cursor 
+                           position.  All pixels to the right are shifted to 
+                           the right one column-space.
+
+            Delete       - Delete pixel at the current cursor position.  All 
+                           pixels to the right are shifted to the left.
+
+            F2           - Save font.  See SAVING FONTS
+    
+            F3           - Load font.  See LOADING FONT.
+
+            F5           - Flip vertical.  Directly inverts character, but
+                           does not reverse it horizontally.
+
+            F6           - Flip Horizontal.  Creates a "mirror image."
+
+            F7           - Copy row.  All pixels below the cursor are shifted 
+                           down one row. 
+
+            F8           - Copy column.  All pixels to the right of the cursor 
+                           are shifted to the right once.
+
+
+
+
+
+                                       5
+
+
+
+
+
+
+
+
+            ESC          - Exit FONT MANIA.  The font you edited will be left
+                           active.  Type, and text will appear onscreen in
+                           its altered (custom) form.  To restore the compu-
+                           ter's default font, type the following DOS command:
+
+                                       MODE CO80  (Note: 2nd character is
+                                                   letter O, last is zero.)
+
+                           then press <ENTER>. 
+
+         You are encouraged to try all these commands.  After all, it is the
+         best way to learn to use FONT MANIA.
+
+         Notice that CTRL commands will usually delete something, and ALT 
+         commands usually add something to the editing character.  CTRL-A, S, 
+         W, and Z are easy to remember.  Notice where A, S, W, and Z are 
+         placed on the keyboard.
+
+      ILLUSTRATION SHOWING HOW FONTS MAY BE EDITED TO ALTER THEIR STYLE:      
+  ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹ ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹  ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹ ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+  €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€ €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€  €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€ €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+  €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€ €≤≤≤≤≤≤  ≤≤≤≤≤≤≤≤€  €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€ €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+  €≤≤≤≤      ≤≤≤≤≤≤€ €≤≤≤≤  ≤≤  ≤≤≤≤≤≤€  €≤           ≤≤≤≤€ €≤           ≤≤≤≤€
+  €≤     ≤≤     ≤≤≤€ €≤≤  ≤≤≤≤≤≤  ≤≤≤≤€  €≤   ≤≤≤≤≤≤≤   ≤≤€ €≤≤  ≤≤≤≤≤≤≤  ≤≤≤€
+  €   ≤≤≤≤≤≤≤≤   ≤≤€ €≤  ≤≤≤≤≤≤≤≤  ≤≤≤€  €≤   ≤≤≤≤≤≤≤   ≤≤€ €≤≤  ≤≤≤≤≤≤≤  ≤≤≤€
+  €   ≤≤≤≤≤≤≤≤   ≤≤€ €≤  ≤≤≤≤≤≤≤≤  ≤≤≤€  €≤   ≤≤≤≤≤≤≤   ≤≤€ €≤≤  ≤≤≤≤≤≤≤  ≤≤≤€
+  €   ≤≤≤≤≤≤≤≤   ≤≤€ €≤  ≤≤≤≤≤≤≤≤  ≤≤≤€  €≤           ≤≤≤≤€ €≤≤  ≤≤≤≤≤≤≤  ≤≤≤€
+  €              ≤≤€ €≤            ≤≤≤€  €≤   ≤≤≤≤≤≤≤   ≤≤€ €≤≤          ≤≤≤≤€
+  €   ≤≤≤≤≤≤≤≤   ≤≤€ €≤  ≤≤≤≤≤≤≤≤  ≤≤≤€  €≤   ≤≤≤≤≤≤≤   ≤≤€ €≤≤  ≤≤≤≤≤≤≤  ≤≤≤€
+  €   ≤≤≤≤≤≤≤≤   ≤≤€ €≤  ≤≤≤≤≤≤≤≤  ≤≤≤€  €≤   ≤≤≤≤≤≤≤   ≤≤€ €≤≤  ≤≤≤≤≤≤≤  ≤≤≤€
+  €   ≤≤≤≤≤≤≤≤   ≤≤€ €≤  ≤≤≤≤≤≤≤≤  ≤≤≤€  €≤   ≤≤≤≤≤≤≤   ≤≤€ €≤≤  ≤≤≤≤≤≤≤  ≤≤≤€
+  €   ≤≤≤≤≤≤≤≤   ≤≤€ €≤  ≤≤≤≤≤≤≤≤  ≤≤≤€  €≤           ≤≤≤≤€ €≤≤  ≤≤≤≤≤≤≤  ≤≤≤€
+  €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€ €≤  ≤≤≤≤≤≤≤≤  ≤≤≤€  €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€ €≤≤  ≤≤≤≤≤≤≤  ≤≤≤€
+  €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€ €≤  ≤≤≤≤≤≤≤≤  ≤≤≤€  €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€ €≤           ≤≤≤≤€
+  €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€ €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€  €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€ €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+  €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€ €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€  €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€ €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+  ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ  ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ
+     ⁄ƒƒƒƒƒƒƒƒø          ⁄ƒƒƒƒƒƒƒø           ⁄ƒƒƒƒƒƒƒƒø          ⁄ƒƒƒƒƒƒƒø
+     ≥ORIGINAL≥          ≥ALTERED≥           ≥ORIGINAL≥          ≥ALTERED≥
+     ¿ƒƒƒƒƒƒƒƒŸ          ¿ƒƒƒƒƒƒƒŸ           ¿ƒƒƒƒƒƒƒƒŸ          ¿ƒƒƒƒƒƒƒŸ
+   Create a new font style by altering your default font to a taller, thinner 
+   font by deleting some pixels and adding others. Do the same to each letter 
+   of the alphabet.  Save, and you have a brand new letterstyle! Once you are 
+   "in the swing of it" each letter takes less than 1 minute to revise.       
+
+
+         USING MENUS:
+
+               FONT MANIA has been written as a menu-driven program to make 
+         it easier to learn and use.  FONT MANIA has 5 different menus: FILE,
+         SCAN LINE, FONT, HEIGHT, and BLOCK.  To activate a menu, make sure
+         the editing area is visible rather than the character set.  Press and 
+         hold the ALT key, then press a key corresponding to the highlighted 
+         letter in a menu title.  Use arrow keys to select the items in the 
+         menu or to change to another menu once you have accessed one of them.
+
+                                       6
+
+
+
+
+
+
+
+         FILE menu:
+
+               Contains 8 items: Save, Save As..., Save ASM, Save PAS, Save C,
+         Save BIN, Load, About, and Exit.  Selecting from among these items 
+         will permit the use of the following functions:
+
+            Save:
+               Selecting this item is the same as using F2 command.  Font 
+            Mania will save the font in COM format.  See SAVING FONTS for more 
+            information.  If 'FILE NAME' shows a name, that name will be used
+            and you will NOT be warned that the file already exists.
+
+            Save As...:
+               Selecting this item is the same as using ALT-A.  Font Mania 
+            will prompt you to enter a filename for the font. See SAVING FONTS 
+            for more information.  If you enter the name of an existing file
+            you will be warned of that fact.
+
+            Save ASM:
+               Save the font in ASSEMBLY text file format.  See SAVING FONTS 
+            for more information.
+
+            Save PAS:
+               Save the font in PASCAL format.  See SAVING FONTS for more 
+            information.
+
+            Save C:
+               Save the font in C header file format.  See SAVING FONTS for 
+            more information.
+     
+            Save BIN:
+               Save the font in raw BINARY format.  See SAVING FONTS for more 
+            information.   
+
+            Load:
+               Selecting this item is identical to using F3.  FONT MANIA 
+            loads the saved font file (COM format only) and reinitializes 
+            itself.  See LOADING FONT for more information.
+
+            About...:
+               Displays information about FONT MANIA.
+
+            Exit:
+               Selecting this item is the same as pressing ESC.  FONT MANIA
+            will ask if you really want to exit the program.  If the font
+            has been modified after the last saving of the font in COM file 
+            format, FONT MANIA then ask if you want to save the font.
+
+
+         SCAN LINE menu:
+
+               Contains 3 items: 200, 350, and 400.  Each of the numbers cor-
+         responds to the number of scan lines on your monitor screen.  This 
+         scan line changing feature is operable only on VGA systems.  If you 
+         have EGA and try to change the scan line, FONT MANIA will display an 
+         ERROR message.  EGA always has 35O scan lines.
+
+                                       7
+
+
+
+
+
+
+
+         FONT menu:
+
+               Contains 3 items: 8, 14, and 16 points.  Each of the items cor-
+         responds to your computer's ROM BIOS font.  EGA systems have only 8 or
+         14 point fonts.  16 point font is available on VGA systems. Once you
+         select a font, FONT MANIA loads the corresponding font into the edit-
+         ting buffer and resets itself.  
+
+               WARNING:    When a font is selected from the FONT menu, if
+                           you have been editing another font your changes 
+                           will be lost unless you first save your revised
+                           font for future use.
+         HEIGHT menu:
+
+               Contains 16 numbers which correspond to the height to which
+         a font may be changed.  The font being edited is NOT lost when this
+         option is used.  If the height selected from this menu is greater than
+         the height of the current font, the current font will "STRETCH" to the
+         height selected.  If the height selected is shorter than the current
+         height, one or more lines at the bottom of the block will be lost.  If
+         this occurs there is no command which will restore the missing part. 
+         If characters are moved up (block 'Move up') leaving blank lines at 
+         the bottom of the font block, a lesser height may be selected without
+         causing deletion of the lowermost pixels of the characters.
+
+               WARNING:    Selection of a short height may cause characters to 
+                           be so truncated that the program's menu will be il-
+                           legible!  Should this occur, you must immediately 
+                           press <ESC> followed by 'Y' and then type MODE CO80
+                           and <ENTER>.  If done with care rebooting is not 
+                           needed.  It is a good idea to write this on a "Post-
+                           it" note and stick it on your wall!
+
+               IMPORTANT:  SCANLINE and FONT HEIGHT must "match" in order to
+                           make a perfect 25-line display when the font is
+                           used.  The following chart indicates the corre-
+                           sponding values for SCANLINE and FONT HEIGHT:
+
+                                       SCANLINE        FONT HEIGHT
+               
+                                           200                8  
+                                           350               14
+                                           400               16
+
+               By using different combinations of HEIGHT, FONT and SCAN LINES,
+         you can create a screen which can display, almost anywhere, between 12
+         and 400 lines on a VGA system!!!
+
+         BLOCK menu:
+    
+               This menu contains some of the editing commands which are 
+         likely to be used for all characters or for a block of characters 
+         simultaneously.  Each of the functions listed in the BLOCK menu 
+         perform the same function as the editing commands, but on the 
+         set (block) of characters rather than only one character.
+
+
+                                       8
+
+
+
+
+               One unique function in this BLOCK menu is the BLOCK LOAD*
+         function.  This option is similar to LOAD in the FILE menu, but in-
+         stead of replacing the current font by loading another entire font
+         file, BLOCK loads only the character(s) in the current block.  Thus
+         it is easy to combine different portions (one or more characters) of
+         more than one font COM file.  The uses of this feature are many.  Just
+         as an example, if for some reason you wanted lowercase text to appear
+         in one style and uppercase in another style, you could "block copy"
+         lowercase from one font COM to another.  To set your block, press the
+         Tab key to bring the entire character set to the screen.  Place the
+         cursor on the first character of the desired block and press B (for
+         "Begin").  Then move the cursor to the last character of the block and
+         press E ("End").  Now Tab again and select BLOCK LOAD.  Type the name 
+         of the font COM from which you want to load the characters of the 
+         block. In an instant the job will be done!  
+
+                Similarly, you may combine 2 sets of uppercase characters, one
+         style to appear when caps lock is "on" and the other when it is "off."
+         First copy "A" to the "a" location within one COM file; continue 
+         through the alphabet and save the file as TEMP.COM. Load a COM file of
+         a different font style and mark the lowercase characters as a block.
+         Then BLOCK LOAD that block from TEMP.COM and you will have a new font
+         COM file with two sets of uppercase characters.  Another use for the
+         block load/block copy option is to move special characters from one
+         font COM file to another, as when you have a file containing a nicely
+         shaped star or skull or special logo, and you want to copy it into a
+         different font COM file.  How would you like to have a text appear on
+         the screen with your signature in script at the bottom?  Load a script
+         font COM (you'll get one with the registered version) and copy the
+         letters of your name to characters not used in your text.  If you are
+         Tom Pane, copy T to !, o to @, m to # and so forth.  Save the file as
+         TEMP.COM and then block load !@#$%^& to the COM you'll use for your 
+         text.  When you type !@# $%^& Tom Pane will appear in "handwriting!"
+
+         SAVING FONTS:
+
+               FONT MANIA offers many saving formats: COM, ASSEMBLY, PASCAL, 
+         C, and BINARY.  The standard format is COM file.  This is also the 
+         only format which FONT MANIA can load.
+
+            COM:
+               Saving in COM format is very simple.  You can press ALT-S, ALT- 
+            A, or F2 while the editing screen is visible.  If you use ALT-S or 
+            F2, and the font file already has a name, FONT MANIA will save the 
+            file using that name and overwrite the old file.  If the font has
+            not yet been named, or if you use ALT-A, FONT MANIA will ask if you
+            want to save it in 4O column mode.  If you press 'Y', the resultant
+            COM file will change the screen mode to 4O columns when executed,
+            rather than 8O columns.  Then FONT MANIA will prompt you for a file
+            name.  Enter a name, including path if desired, with no extension. 
+            If there is an existing file of the same name you will be alerted 
+            to avoid overwriting it.  The extension COM will be added automat-
+            ically.  After saving you will be returned to the editing screen.
+
+
+
+ 
+*The block load and block copy options are available in the registered version 
+ of Font Mania.
+
+
+                                       9
+ 
+
+
+
+
+
+
+
+
+            ASSEMBLY:
+               To save in ASSEMBLY format, you must select Save ASM from the 
+            FILE menu.  You will be asked for the filename.  Again, no 
+            extension is needed.  The extension ASM will be automatically 
+            added to the end of the file name.  After the name is entered you
+            will be prompted for a reference to be used.  This is the name 
+            used as the label for the font data.  You will be returned to the 
+            editing screen after FONT MANIA has completed these two saves.
+
+            PASCAL:
+               To save in PASCAL format, select Save PAS from the FILE menu. 
+            You will be asked for the filename.  Again, no extension is needed.
+            The extension PAS will be automatically added. When prompted for a 
+            reference, enter a name to be used as the label for the font data.
+            You will be returned to the editing screen after the save.
+
+            C:
+               To save in C Header format, select Save C from the FILE menu.  
+            You will be asked for the filename.  Again, no extension is 
+            needed.  Extension H will be automatically added to the end of the 
+            file name.  After the file name is entered, you will be prompted 
+            for a reference.  This is the name to be used as the label for the 
+            responding values for SCANLINE and FONT HEIGHT:
+
+                                       SCANLINE        FONT HEIGHT
+               
+                                           200                8  
+                                           350               14
+                                           400               16
+
+            BINARY:
+               To save in raw BINARY format, select Save BIN.  No extension is 
+            needed; extension BIN is automatically added to the end of the 
+            file name.  After entering the file name, you will be asked for 
+            a reference.  This is the name to be used as the label for the 
+            font data.  You will be returned to the editing screen after 
+            FONT MANIA saves the files. This format is for use with 
+            languages other than the languages above.
+
+
+         LOADING A FONT:
+
+              There are 3 ways to load a font for editing.  Because FONT 
+         MANIA will use whichever font is active at the time the program is 
+         loaded, you may first load a font (COM file) and then run FONT 
+         MANIA.  This method is somewhat unreliable, especially if the cur-
+         rent screen mode is 4O columns.  It is preferable to use the com-
+         mand line method to effect loading of the font and FONT MANIA 
+         together.  To load a font using the command line method, type the 
+         following at the DOS prompt and then press <ENTER>.
+
+                                  FM [filename]
+
+
+                                      10
+
+
+
+
+
+
+
+
+
+         In the above command "filename" is the name of a FONT MANIA COM 
+         file.  The file will be loaded automatically.  To load a different
+         font while FONT MANIA is in operation, use ALT-L or choose "Load" 
+         from the filemenu which is accessed with ALT-F.  You will be prompted
+         for a filename.  After  entering the filename FONT MANIA will load 
+         the font and reinitialize itself.
+
+
+         USING COM FONT FILES:
+
+               COM files are easiest to use.  Just type the name of the COM 
+         file at the DOS prompt; font will be loaded and the SCAN LINE will be
+         set (on VGA systems).  For example, to load the font file named 
+         COM_DEMO.COM type the following command and press <ENTER>:
+
+                                       COM_DEMO
+
+         As the file is loaded the scan line will be set to the correct scan 
+         line setting (VGA systems only).  The font will be active as long as
+         there is no change in video mode and no other font is loaded.  
+
+         INSTALLING A MEMORY RESIDENT FONT:  
+
+               If it is desired to have a particular font remain active during
+         the running of various programs, it may be loaded as a memory-resident
+         program with the use of the R or I options. For example, type this at
+         the DOS prompt followed by <ENTER>:
+
+                                      COM_DEMO I
+
+         The font will be loaded and remain resident in memory until the compu-
+         ter is reset or turned off.  Such a memory-resident font will reload 
+         whenever a change occurs in video mode, but graphics will not be af-
+         fected.  To see how much memory is used by a font file, run ZMEM.EXE 
+         (Comes with the REGISTERED VERSION of FONT MANIA).
+
+         The command line options which are available are:
+    
+                           <filename> [B#] [H|?] [I|R|U]
+
+              <filename>     - name of the COM file
+              B#             - specify character generator block to use
+                               (should be set to 0)
+              H              - display help
+              ?              - same as above
+              I              - install font in memory
+              R              - permanently install font in memory
+              U              - uninstall font from memory.
+
+         One a font is installed in memory, the following three keyboard com- 
+         mands will be available:
+
+
+
+
+                                      11
+
+
+
+
+
+
+
+
+
+              CTRL+ALT+E     - enables automatic font loading
+              CTRL+ALT+D     - disables automatic font loading
+              CTRL+ALT+F     - user-requested unconditional font loading
+
+         For example, suppose you want to load the font into the character 
+         generator block 0 and install the font in the memory.  You would 
+         use the command:
+
+                                      AMB b0 i
+
+         then press enter.  Notice the use of the 'I' option.  This option 
+         enables you to uninstall the font from memory at any time with
+         the 'U' option.   For example, to uninstall AMB.COM type the fol-
+         lowing:
+         
+                                       AMB u
+
+         If you ever encounter software compatibility problems when using
+         the I option, try the R option instead.  But be aware of the fact
+         that when the R option is employed the font COM may not be removed
+         from memory without restarting or resetting the computer.  It may, 
+         however, be temporarily disabled with keyboard commands mentioned 
+         above.
+
+
+         USING OTHER FONT FILE FORMATS:
+
+            In general a program must use the ROM BIOS interrupt 10H (16), the
+         screen control interrupt, function 11H sub-function 10H to load the 
+         font.  The following are the parameters needed to call the interrupt:
+
+                       AH = 11H
+                       AL = 10H
+                       BH = points (bytes per character)
+                       BL = block (use 0)
+                       CX = number of character defined by table (256)
+                       DX = first character code in table (use 0)
+                       ES = segment of the table
+                       BP = offset of the table
+
+         For ASSEMBLY, C, and PASCAL, see the following files for examples of 
+         the above.  These may be typed to the screen or printed:
+
+                                     PAS_DEMO.PAS
+                                     ASM_DEMO.ASM
+                                     C_DEMO.C 
+
+         For other languages, a programmer might use the COM file format by 
+         shelling out to DOS to load the COM file.  For example, in Quick Basic
+         the following command may be utilized:
+
+
+
+
+
+                                      12
+
+
+
+
+
+
+
+
+
+
+                                 SHELL "AMB.COM"
+
+         Alternately, the BINARY format may be used by loading the content of 
+         the file into a memory buffer, putting the memory address of that 
+         buffer into ES:BP, filling in the parameters, and then calling inter-
+         rupt 1OH.  Do not use the R command line when shelling out to run a
+         font COM file.  This action will generate a "fatal error" which will
+         halt the system.
+
+
+
+
+         CREATING SPECIAL EFFECTS
+
+              The spceial effects used in the DEMO program are quite easy to 
+         make with FONT MANIA.  Some effects are done by combining two or
+         more characters.  Here are several examples showing how you may
+         create special effects with FONT MANIA:
+
+            INITIALS:
+
+               In this effect, once the COM file is loaded, typing one key will
+            produce a word, name or initials in miniature letters.  It is 
+            quite easy to alter a character (or more than one, if you like) to
+            achieve this effect.  Pick any character you want to convert to its
+            new use.  You might select characters such as < and > for example, 
+            and totally change each of them:
+
+
+                            "<"                  ">"
+
+                    ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹ ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+                    €  ≤≤≤≤≤≤  ≤≤≤≤≤≤€ €  ≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+                    €  ≤≤≤≤≤≤  ≤≤≤≤≤≤€ €  ≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+                    €  ≤≤≤≤≤≤  ≤≤≤≤≤≤€ €  ≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+                    €  ≤≤≤≤≤≤  ≤≤≤≤≤≤€ €      ≤≤≤≤≤≤≤≤≤≤€
+                    €  ≤≤≤≤≤≤  ≤≤≤≤≤≤€ €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+                    €          ≤≤≤≤≤≤€ €≤≤≤≤        ≤≤≤≤€
+                    €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€ €≤≤≤≤  ≤≤≤≤  ≤≤≤≤€
+                    €≤≤≤≤≤≤          € €≤≤≤≤  ≤≤≤≤  ≤≤≤≤€
+                    €≤≤≤≤≤≤≤≤≤≤  ≤≤≤≤€ €≤≤≤≤        ≤≤≤≤€
+                    €≤≤≤≤≤≤≤≤≤≤  ≤≤≤≤€ €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+                    €≤≤≤≤≤≤≤≤≤≤  ≤≤≤≤€ €≤≤≤≤≤≤≤≤  ≤≤≤≤  €
+                    €≤≤≤≤≤≤≤≤≤≤  ≤≤≤≤€ €≤≤≤≤≤≤≤≤  ≤≤≤≤  €
+                    €≤≤≤≤≤≤≤≤≤≤  ≤≤≤≤€ €≤≤≤≤≤≤≤≤  ≤≤≤≤  €
+                    €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€ €≤≤≤≤≤≤≤≤        €
+                    ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ
+
+
+            Whenever the font containing these 2 designs is active, typing
+            "<" will create a small "UT" initial, and typing ">" will create
+            "LOU".  These are just sample letters and designs.  You may use
+            any letter, numeral or design you wish.
+
+                                      13
+
+
+
+
+
+
+
+
+
+
+            BUTTONS:
+
+               One way to create "buttons" is to modify any 4 characters to
+            the following designs:
+
+
+               "{"              "|"              "}"             "*"
+
+        ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+        €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤            ≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤            ≤≤€
+        €≤≤≤≤≤≤≤≤≤≤≤≤≤≤  €  ≤≤≤≤≤≤≤≤≤≤≤≤  €  ≤≤≤≤≤≤≤≤≤≤≤≤≤≤€  ≤≤≤≤≤≤≤≤≤≤≤≤  €
+        €≤≤≤≤≤≤≤≤≤≤≤≤  ≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤  ≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤        ≤≤≤≤€
+        €≤≤≤≤≤≤≤≤≤≤  ≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤  ≤≤≤≤≤≤≤≤≤≤€≤≤            ≤≤€
+        €≤≤≤≤≤≤≤≤≤≤  ≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤  ≤≤≤≤≤≤≤≤≤≤€                €
+        €≤≤≤≤≤≤≤≤  ≤≤≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤≤≤  ≤≤≤≤≤≤≤≤€                €
+        €≤≤≤≤≤≤≤≤  ≤≤≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤≤≤  ≤≤≤≤≤≤≤≤€                €
+        €≤≤≤≤≤≤≤≤  ≤≤≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤≤≤  ≤≤≤≤≤≤≤≤€                €
+        €≤≤≤≤≤≤≤≤≤≤  ≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤  ≤≤≤≤≤≤≤≤≤≤€                €
+        €≤≤≤≤≤≤≤≤≤≤  ≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤  ≤≤≤≤≤≤≤≤≤≤€≤≤            ≤≤€
+        €≤≤≤≤≤≤≤≤≤≤≤≤  ≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤  ≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤        ≤≤≤≤€
+        €≤≤≤≤≤≤≤≤≤≤≤≤≤≤  €  ≤≤≤≤≤≤≤≤≤≤≤≤  €  ≤≤≤≤≤≤≤≤≤≤≤≤≤≤€  ≤≤≤≤≤≤≤≤≤≤≤≤  €
+        €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤            ≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤            ≤≤€
+        €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+        ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ
+
+               For the example, use the characters shown above the designs 
+            to create the buttons.  The above is just a sample design for 14- 
+            point fonts.  You are not limited to this design, of course.
+
+               It is not difficult to see how these redesigned characters may
+            be put together to make buttons.  When the font COM file contain-
+            ing these designs is active, typing "{|}" will create an unselect 
+            button, and "{*}" will create a select button, Just as in the DEMO.
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+                                      14
+
+
+
+
+
+
+
+
+
+
+            GUIDED MISSILE:
+
+               The missile used in the demonstration was constructed of four
+            characters strung together.  Below are the designs and the char-
+            acters used to make a guided missile:
+
+
+                "="              "]"              "-"             ">"
+
+        ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+        €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+        €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€        ≤≤≤≤≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+        €≤≤  ≤≤≤≤≤≤≤≤≤≤≤≤€          ≤≤≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+        €≤≤≤≤  ≤≤  ≤≤≤≤≤≤€            ≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+        €  ≤≤    ≤≤      €                €                €    ≤≤≤≤≤≤≤≤≤≤≤≤€
+        €≤≤≤≤≤≤≤≤≤≤≤≤    €                €                €           ≤≤≤≤≤€
+        €≤≤  ≤≤          €                €                €              ≤≤€
+        €≤≤≤≤  ≤≤≤≤≤≤≤≤  €                €                €                €
+        €≤≤  ≤≤          €                €                €              ≤≤€
+        €≤≤≤≤≤≤≤≤≤≤≤≤    €                €                €           ≤≤≤≤≤€
+        €  ≤≤    ≤≤      €                €                €    ≤≤≤≤≤≤≤≤≤≤≤≤€
+        €≤≤≤≤  ≤≤  ≤≤≤≤≤≤€            ≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+        €≤≤  ≤≤≤≤≤≤≤≤≤≤≤≤€          ≤≤≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+        €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€        ≤≤≤≤≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+        ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ
+
+               In the preceding example the equals sign (=) has been rede-
+            signed to be the flame, the bracket (]) becomes the tail piece, 
+            the minus sign (-) is the body of the missile, and the greater-
+            than symbol (>) the  head of the missile.  When the font contain-
+            ing this design is active, typing (or having a program "print") 
+            this string: "=]--->" will create a missile pointing to the right.
+            Notice the use of more than one minus sign in the string.  By in-
+            cluding more than 1 body character the missile becomes as long as 
+            desired.
+
+               To create left-to-right movement, your program must print the 
+            missile with a leading space: " =]--->".  First print the string at
+            the far left edge of the screen, beginning in column 1.  Then re-
+            print the same string 1 character to the right of the first string
+            so it overlaps the original.  The leading space will automatically
+            erase the unwanted part of the first missile-image on the screen.
+
+
+
+
+
+
+
+
+
+
+
+
+                                      15
+
+
+
+
+
+
+
+
+
+
+            AN ANIMATED CHARACTER:
+
+               As in other simulated animations, the secret behind creating an
+            animated character is the display of a sequence of slightly differ-
+            ent characters at one location.  For example, you may create these 
+            hourglass designs with the 1-through-5 numeral characters:
+
+                   "1"                "2"                "3"
+           ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹ ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹ ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+           €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€ €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€ €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+           €              ≤≤€ €              ≤≤€ €              ≤≤€
+           €              ≤≤€ €  ≤≤≤≤≤≤≤≤≤≤  ≤≤€ €  ≤≤≤≤≤≤≤≤≤≤  ≤≤€
+           €              ≤≤€ €              ≤≤€ €    ≤≤≤≤≤≤    ≤≤€
+           €              ≤≤€ €              ≤≤€ €              ≤≤€
+           €≤≤          ≤≤≤≤€ €≤≤          ≤≤≤≤€ €≤≤          ≤≤≤≤€
+           €≤≤≤≤      ≤≤≤≤≤≤€ €≤≤≤≤  ≤≤  ≤≤≤≤≤≤€ €≤≤≤≤      ≤≤≤≤≤≤€
+           €≤≤≤≤  ≤≤  ≤≤≤≤≤≤€ €≤≤≤≤      ≤≤≤≤≤≤€ €≤≤≤≤  ≤≤  ≤≤≤≤≤≤€
+           €≤≤  ≤≤≤≤≤≤  ≤≤≤≤€ €≤≤  ≤≤≤≤≤≤  ≤≤≤≤€ €≤≤  ≤≤  ≤≤  ≤≤≤≤€
+           €  ≤≤≤≤≤≤≤≤≤≤  ≤≤€ €  ≤≤≤≤≤≤≤≤≤≤  ≤≤€ €  ≤≤≤≤≤≤≤≤≤≤  ≤≤€
+           €  ≤≤≤≤≤≤≤≤≤≤  ≤≤€ €  ≤≤≤≤≤≤≤≤≤≤  ≤≤€ €  ≤≤≤≤  ≤≤≤≤  ≤≤€
+           €  ≤≤≤≤≤≤≤≤≤≤  ≤≤€ €  ≤≤≤    ≤≤≤  ≤≤€ €  ≤≤      ≤≤  ≤≤€
+           €              ≤≤€ €              ≤≤€ €              ≤≤€
+           €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€ €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€ €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+           ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ
+
+                            "4"                "5"
+                    ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹ ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+                    €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€ €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+                    €              ≤≤€ €              ≤≤€
+                    €  ≤≤≤≤≤≤≤≤≤≤  ≤≤€ €  ≤≤≤≤≤≤≤≤≤≤  ≤≤€
+                    €  ≤≤≤≤≤≤≤≤≤≤  ≤≤€ €  ≤≤≤≤≤≤≤≤≤≤  ≤≤€
+                    €      ≤≤      ≤≤€ €  ≤≤≤≤≤≤≤≤≤≤  ≤≤€
+                    €≤≤          ≤≤≤≤€ €≤≤  ≤≤≤≤≤≤  ≤≤≤≤€
+                    €≤≤≤≤      ≤≤≤≤≤≤€ €≤≤≤≤  ≤≤  ≤≤≤≤≤≤€
+                    €≤≤≤≤  ≤≤  ≤≤≤≤≤≤€ €≤≤≤≤  ≤≤  ≤≤≤≤≤≤€
+                    €≤≤  ≤≤≤≤≤≤  ≤≤≤≤€ €≤≤          ≤≤≤≤€
+                    €  ≤≤≤≤  ≤≤≤≤  ≤≤€ €              ≤≤€
+                    €              ≤≤€ €              ≤≤€
+                    €              ≤≤€ €              ≤≤€
+                    €              ≤≤€ €              ≤≤€
+                    €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€ €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+                    ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ
+
+
+            Because each character differs just slightly from the first one,
+            simply create the first one "pixel by pixel" in Font Mania.  Then
+            use the ALT-C "copy" command to create 4 copies; modify the copies
+            as shown here.  By displaying these five characters in sequence at
+            one location on the screen, the illusion of an hourglass with fall-
+            ing sand is created.  With a time-delay after each character's dis-
+            play, plus a loop, the animation of a character which is no larger
+            than one uppercase letter is easily created!  
+
+
+                                      16
+
+
+
+
+
+
+
+
+
+
+               These few examples of special effects which may be made with 
+            FONT MANIA provide a mere hint of possibilities.  There is no 
+            limit to effects which may be created with altered fonts made by 
+            FONT MANIA.
+
+
+         LETTERS "RUNNING TOGETHER": 
+
+            Characters which are the full width of the block will be correct
+         when used with a VGA monitor, but the letters will "run together" on
+         an EGA monitor.  The enclosed samples, JULIE.COM and POOTER.COM are in
+         this category.  Wide fonts may be made narrower for use on EGA systems
+         by reducing their width, as we did by narrowing the POOTER font and 
+         saving it as POOTER2.COM. To make the letters and numerals narrower,
+         we used Font Mania to remove one vertical column from each character 
+         with CTRL-X.  In some cases we added a pixel or two to improve a let-
+         ter's appearance.  If we made an error, we restored the original font
+         with CTRL-D and tried again.  The conversion of POOTER to POOTER2 was
+         accomplished in less than 1O  minutes.  Try not to lose sight of the
+         possibility of your fonts being used on an EGA system.
+
+      ILLUSTRATION SHOWING HOW THE POOTER FONT WAS EDITED TO MAKE POOTER2:
+                                   ~~~~~~                         ~~~~~~~
+       ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹      ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹      ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹
+       €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€      €≤≤≤≤≤≤≤xx≤≤≤≤≤≤≤€      €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+       €≤≤≤≤          ≤≤€      €≤≤≤≤   xx     ≤≤€      €≤≤≤≤        ≤≤≤≤€
+       €≤≤≤≤   ≤≤≤≤≤    €      €≤≤≤≤   xx≤≤≤    €      €≤≤≤≤   ≤≤≤    ≤≤€
+       €≤≤≤≤   ≤≤≤≤≤    €      €≤≤≤≤   xx≤≤≤    €      €≤≤≤≤   ≤≤≤    ≤≤€
+       €≤≤≤≤   ≤≤≤≤≤    €      €≤≤≤≤   xx≤≤≤    €      €≤≤≤≤   ≤≤≤    ≤≤€
+       €≤≤     ≤≤≤≤≤    €      €≤≤     xx≤≤≤    €      €≤≤     ≤≤≤    ≤≤€
+       €                €      €       xx       €      €              ≤≤€
+       €      ≤≤≤≤≤≤    €      €      ≤xx≤≤≤    €      €      ≤≤≤≤    ≤≤€
+       €      ≤≤≤≤≤≤    €      €      ≤xx≤≤≤    €      €      ≤≤≤≤    ≤≤€
+       €      ≤≤≤≤≤≤    €      €      ≤xx≤≤≤    €      €      ≤≤≤≤    ≤≤€
+       €      ≤≤≤≤≤≤    €      €      ≤xx≤≤≤    €      €      ≤≤≤≤    ≤≤€
+       €      ≤≤≤≤≤≤    €      €      ≤xx≤≤≤    €      €      ≤≤≤≤    ≤≤€
+       €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€      €≤≤≤≤≤≤≤xx≤≤≤≤≤≤≤€      €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+       €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€      €≤≤≤≤≤≤≤xx≤≤≤≤≤≤≤€      €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+       €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€      €≤≤≤≤≤≤≤xx≤≤≤≤≤≤≤€      €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+       €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€      €≤≤≤≤≤≤≤xx≤≤≤≤≤≤≤€      €≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤≤€
+       ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ      ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ      ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ
+          ORIGINAL "A"                                     EDITED "A"
+       FILLS WIDTH OF BLOCK    ONE COLUMN REMOVED      PIXELS AUTOMATICALLY
+        (TOO WIDE FOR EGA)                            RELOCATE LEFT AS SHOWN
+
+
+
+
+
+
+
+
+
+
+                                      17
+
+
+
+
+     
+
+
+
+
+
+         AUTOMATIC MODE RESET:
+
+            In saving a font, selecting "automatic mode reset" will cause the
+         scanline of a VGA system to reset to an EGA scanline if you you have
+         chosen a scanline of 350 (font height should also be set at 14).  The
+         included file CHUNKY.COM is in this category.  There are often advan-
+         tages to using the EGA scanline.  For example, this row of extended
+         characters appears as a solid bar of dots when the EGA scanline is 
+         used:
+
+                  ∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞
+
+         The same row will appear as 50 dotted rectangles if the VGA scanline
+         is in effect.  NOTE: An EGA system can not be reset to a VGA scanline.
+
+         A font which is not saved with automatic mode reset may produce a
+         small problem when it is installed on a system other than the one on
+         which it was created.  For example, a font created on a VGA system
+         will be slightly "taller" if used with EGA, and the listing of a long
+         file directory will result in the apparent "disappearance" of the DOS
+         prompt and cursor below the bottom line of the screen.  If this occurs
+         do not panic.  Simply clear the screen with the CLS command and your
+         DOS prompt and cursor will reappear in the top left corner.  The re-
+         verse effect will occur if a font made on an EGA system is displayed 
+         on a VGA monitor.  25 lines of text will not extend to the bottom of 
+         the screen, because each line will be vertically "stunted."  To pre-
+         vent these minor annoyances when you anticipate that your font may be 
+         used on both systems, save it as a 14-point font with a scanline of 
+         350 and select automatic mode reset.  If this is done, the font height
+         will not vary  regardless of whether it is used with VGA or EGA.
+	 
+         There are times when it is advantageous not to use the automatic mode
+         reset.  For example, if you want the text on the screen to "magically"
+         change to a different font, you must have the 2nd font saved without
+         automatic mode reset.  Otherwise the screen will blank during the mode
+         set and the change will not appear as magical.
+
+
+         CREATING TALL, SMALL, AND WIDE FONTS:
+
+         Use ALT-N and ALT-O to select various combinations of scanline and 
+         point size before saving a font.  Then exit the program and check the
+         results.  Also try saving a font in 40 column mode rather than the
+         usual 80 column mode.  When this is done, you must reload the font
+         after exiting Font Mania.  Experimentation will teach you more than
+         we can provide here, and you will enjoy discovering the combinations
+         which will provide the tallest and widest fonts as well as the tiniest
+         ones.
+
+
+
+
+
+
+                                      18
+
+
+
+
+
+
+
+
+         RESTORING THE DEFAULT FONT:
+
+               The default font style is that which appears on your screen when
+         you start your computer.  Your computer has one particular font or 
+         lettering style stored in its read-only memory or ROM.  When a COM 
+         file created in Font Mania is put into use, at a later time you may
+         wish to return to the default font.  This will happen automatically
+         each time your computer is started or reset, unless your AUTOEXEC.BAT
+         file is set up to load a font COM.  However, it is not necessary to 
+         reset the computer to return the default font to the screen.  If 
+         neither the I nor R option has been used in loading the font COM file,
+         typing the following DOS command will restore the default font after 
+         the Enter key is pressed:  mode CO80
+
+         If the font COM file has been installed with the I option, it must be
+         uninstalled with the U option.  This will restore the default font. 
+         If the font COM is one which resets the video mode, restoring the 
+         default font will not restore the computer's default video mode (EGA 
+         or VGA scanline) if it has been changed.  To restore the video mode or
+         scanline run EGA.COM or VGA.COM (included with registered Font Mania).
+         VGA.COM has no effect if you are using a system with an EGA monitor.
+         If you write a batch file or program which resets the video mode, and
+         you anticipate its use on both EGA and VGA systems, you may end the 
+         file with commands which run EGA.COM followed by VGA.COM.  In this way
+         you may be assured the system will be reset to both the default font 
+         and the default video mode or scanline.
+
+         COPYING, DISTRIBUTION AND REGISTRATION:
+
+               Shareware (unregistered) Font Mania may be freely posted on 
+         BBSs, listed in shareware catalogs and copied for friends, as long as
+         the complete package of files is kept together in unaltered form. 
+         You may use the unregistered edition of Font Mania for two weeks free
+         of charge.  After that time, if you decide you want to continue using
+         it, you must become a registered user.  When you register you will
+         receive the following by return mail:
+
+            1. The registered version, with block-load/block copy functions
+            2. At least 24 ready-to-use custom fonts in the form of COM files 
+            3. CGA.COM, EGA.COM, VGA.COM video mode/scanline utilities
+            4. The program ZMEM - the "memory walker" program 
+            5. The program UFF - the file-finder program 
+            6. User support to answer your questions
+            7. Other programs and utilities which you will enjoy using 
+
+         Please complete the registration form which follows, and mail with
+    payment in full.  Thank you.
+
+    If you have questions regarding the use of Font Mania you may write to 
+    REXXCOM at the address on the registration form, or leave a message on 
+    CompuServe.  Address Email to CompuServe ID 72656,2765. 
+
+
+
+
+
+                                      19
+
+
+
+    ======================================================================
+                   FONT MANIA Version 2.2 REGISTRATION FORM
+    ======================================================================
+
+
+     NAME:    ________________________________________________________
+
+
+     ADDRESS: ________________________________________________________ 
+
+
+              ________________________________________________________ 
+
+
+              ________________________________________________________
+                         (Include ZIP code or equivalent)
+
+     PHONE: (______)- _______ - __________________
+
+     DISK SIZE (check one):
+
+
+                      [  ] 3.5"                [  ] 5.25"
+
+
+    ======================================================================
+
+     DESCRIPTION                            QTY.      EACH        Total
+
+     Registered version of FONT MANIA     _______  X $17.00  =   __________
+          Includes block-load/block-copy functions
+
+     The following will be included at no extra charge:
+          -  24 or more ready-to-use custom fonts (COM files)
+          -  The program ZMEM - the "memory walker" program 
+              (take a walk through your memory!)
+          -  VGA.COM, EGA.COM, CGA.COM utilities to emulate 
+              or reset VGA, EGA, or CGA scanlines on VGA monitors
+          -  The program UFF - the file finder program
+          -  User support by mail or CompuServe EMail
+          -  Other programs which you will enjoy using
+
+     Add $1.00 for each 3.5" diskette     _______  X  $1.00  =   __________
+
+     Shipping & handling ($2.00 US & Canada; $5.00 elsewhere)=   __________
+
+                New Jersey residents, please add 7% sale tax =   __________
+                    
+                                                  TOTAL      =   __________
+
+     Enclose cash, check or money order payable to:
+
+                                REXXCOM SYSTEMS
+
+     Always send cash by certified mail.
+
+    ----------------------------------------------------------------------
+
+      Mail this form with payment in full to:
+
+                                REXXCOM SYSTEMS
+                                  P.O. BOX 111
+                           SCHOOLEY'S MTN., NJ  07870
+     THANK YOU.
+

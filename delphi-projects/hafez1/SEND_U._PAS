@@ -1,0 +1,89 @@
+unit Send_u;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, ExtCtrls, Mask, DBCtrls, Db, DBTables, VCLBase, EPButtons,
+  Buttons;
+
+type
+  TSendForm = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    shDBEdit2: TDBEdit;
+    Label3: TLabel;
+    Label4: TLabel;
+    Shape1: TShape;
+    Shape2: TShape;
+    Shape3: TShape;
+    Shape4: TShape;
+    Label5: TLabel;
+    Label6: TLabel;
+    Shape6: TShape;
+    Label7: TLabel;
+    Shape7: TShape;
+    DBComboBox2: TDBComboBox;
+    Shape8: TShape;
+    Label8: TLabel;
+    DBEdit5: TDBEdit;
+    Shape9: TShape;
+    Label9: TLabel;
+    DBEdit7: TDBEdit;
+    DBComboBox3: TDBComboBox;
+    Shape5: TShape;
+    date_outDBEdit1: TDBEdit;
+    DBEdit3: TDBEdit;
+    DBEdit4: TDBEdit;
+    Shape10: TShape;
+    Label10: TLabel;
+    DBEdit8: TDBEdit;
+    Shape12: TShape;
+    Label12: TLabel;
+    DBComboBox4: TDBComboBox;
+    Shape11: TShape;
+    Label11: TLabel;
+    DBEdit6: TDBEdit;
+    Shape13: TShape;
+    Label13: TLabel;
+    DBEdit9: TDBEdit;
+    Shape14: TShape;
+    DBCheckBox1: TDBCheckBox;
+    DBCheckBox2: TDBCheckBox;
+    DBCheckBox3: TDBCheckBox;
+    DBCheckBox4: TDBCheckBox;
+    DBCheckBox5: TDBCheckBox;
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+    NameDBEdit10: TDBEdit;
+    procedure BitBtn1Click(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  SendForm: TSendForm;
+
+implementation
+
+uses Main_u, list_S_r_u;
+
+{$R *.DFM}
+
+procedure TSendForm.BitBtn1Click(Sender: TObject);
+begin
+ Listsend.Table1.Post;
+ SendForm.Close;
+end;
+
+procedure TSendForm.BitBtn2Click(Sender: TObject);
+begin
+  SendForm.Close;
+  Listsend.Table1.Cancel;;
+end;
+
+end.
+

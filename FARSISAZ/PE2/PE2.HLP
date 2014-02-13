@@ -1,0 +1,304 @@
+ssษออออออออออออออออออออออออออออออออออป
+  บ           Help  Menu          1  บ                PE2ฅ ý๙ฌ๒ก                                                           EPSONFX ýค“   FX1 -
+  ฬออออออออออออออออออออออออออออออออออน       ---------------------------
+  บ                                  บ          ฅ ค๐•‘ ๖ขค๎ üจค‘๊ ýค“    *                                           EPSONLQ(DRAFT) ýค“ LQDR -
+  บ         Function Keys            บ
+  บ                                  บ          EPSONFX        ýค“  FX1  -           EPSONLQ(LQ) ýค“ LQR  -
+  บ  F1  --  Help Menu               บ
+  บ  F2  --  Saves current file      บ          EPSONLQ        ýค“  LQR  -
+  บ  F3  --  Saves and quits file    บ
+  บ  F4  --  Quits current file      บ          EPSONLQ(DRAFT) ýค“  LQDR -
+  บ  F5  --  Erases contents of line บ
+  บ  F6  --  Erases to end of line   บ                    .ขþ‘๕๗ ๙ข‘๊—จ
+  บ  F7  --  Prints current file     บ
+  บ  F8  --  Switches active files   บ         ฅ   üจค‘๊  ýข๘ค๘ ๖—๊ค๐ ýค“ *
+  บ  F9  --  Inserts line            บ    .ขþ‘๕๗ ๙ข‘๊—จ FARINP.FNC ๙๕‘๗ค“
+  บ  F10 --  Change language         บ
+  บ                                  บ.ขþ๗๎ ขค๘ คคþฅ ค๘—จข ค—ชþ“ –‘þฅ ýค“
+  บ         s  =  Shift key          บ      e read.me
+  ฬออออออออออออออออออออออออออออออออออน
+  บ     s-F1 =        F4 = Exit     บ
+  ศออออออออออออออออออออออออออออออออออผ
+  ษออออออออออออออออออออออออออออออออออป
+  บ           Help  Menu          2  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ                                  บ
+  บ    Exiting Personal Editor II    บ
+  บ                                  บ
+  บ ฺฤฤฟ                             บ
+  บ ณF3ณ FILE saves file on disk and บ
+  บ ภฤฤู removes from memory         บ
+  บ ฺฤฤฟ                             บ
+  บ ณF4ณ QUIT removes file from      บ
+  บ ภฤฤู memory without saving       บ
+  บ                                  บ
+  บ   If you made changes to a file  บ
+  บ   and have not saved them, when  บ
+  บ   you press F4 (Quit), you see:  บ
+  บ   "Do you really want to quit?   บ
+  บ   Type y or n".  If you type y,  บ
+  บ   all unsaved changes are lost.  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ  s-F1 =    s-F2 =   F4 = Exit  บ
+  ศออออออออออออออออออออออออออออออออออผ
+  ษออออออออออออออออออออออออออออออออออป
+  บ           Help  Menu          3  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ                                  บ
+  บ       Cursor Movement Keys       บ
+  บ   ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ บ
+  บ   ณHome     Cursor Up      PgUpณ บ
+  บ   ณ                            ณ บ
+  บ   ณCursor Left     Cursor Rightณ บ
+  บ   ณ                            ณ บ
+  บ   ณEnd     Cursor Down     PgDnณ บ
+  บ   ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู บ
+  บ                                  บ
+  บ Cursor Up    --  Up one line     บ
+  บ Cursor Down  --  Down one line   บ
+  บ                                  บ
+  บ Cursor Left  --  Left one space  บ
+  บ Cursor Right --  Right one space บ
+  บ                                  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ  s-F1 =    s-F2 =   F4 = Exit  บ
+  ศออออออออออออออออออออออออออออออออออผ
+  ษออออออออออออออออออออออออออออออออออป
+  บ           Help  Menu          4  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ                                  บ
+  บ        Moving the Cursor         บ
+  บ                                  บ
+  บ                                  บ
+  บ Home      -- First column        บ
+  บ End       -- After last characterบ
+  บ PgUp      -- Previous page       บ
+  บ PgDn      -- Next page           บ
+  บ                                  บ
+  บ Ctrl-Home -- Top of file         บ
+  บ Ctrl-End  -- Bottom of file      บ
+  บ Ctrl-PgUp -- Top of screen       บ
+  บ Ctrl-PgDn -- Bottom of screen    บ
+  บ Ctrl-Left -- Left 40 spaces      บ
+  บ Ctrl-Right-- Right 40 spaces     บ
+  บ                                  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ  s-F1 =    s-F2 =   F4 = Exit  บ
+  ศออออออออออออออออออออออออออออออออออผ
+  ษออออออออออออออออออออออออออออออออออป
+  บ           Help  Menu          5  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ                                  บ
+  บ          Marking Text            บ
+  บ                     a = Alt key  บ
+  บ ฺฤฤฤฟ                            บ
+  บ ณa-Bณ --  Block mark for         บ
+  บ ภฤฤฤู     rectangles, vertical,  บ
+  บ ฺฤฤฤฟ     and horizontal lines   บ
+  บ ณa-Cณ --  Character mark for     บ
+  บ ภฤฤฤู     characters, words, and บ
+  บ ฺฤฤฤฟ     sentences.             บ
+  บ ณa-Lณ --  Line mark for one      บ
+  บ ภฤฤฤู     line or paragraph      บ
+  บ                                  บ
+  บ ฺฤฤฤฟ                            บ
+  บ ณa-Uณ --  Unmarks all marks      บ
+  บ ภฤฤฤู                            บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ  s-F1 =    s-F2 =   F4 = Exit  บ
+  ศออออออออออออออออออออออออออออออออออผ
+  ษออออออออออออออออออออออออออออออออออป
+  บ           Help  Menu          6  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ                                  บ
+  บ        Using Marked Text         บ
+  บ                    a = Alt key   บ
+  บ ฺฤฤฤฟ                            บ
+  บ ณa-Zณ --  Copies marked text,    บ
+  บ ภฤฤฤู     leaving original text  บ
+  บ ฺฤฤฤฟ                            บ
+  บ ณa-Mณ --  Moves marked text,     บ
+  บ ภฤฤฤู     deleting original text บ
+  บ ฺฤฤฤฟ                            บ
+  บ ณa-Oณ --  Overlays marked text,  บ
+  บ ภฤฤฤู     leaving original text  บ
+  บ ฺฤฤฤฟ                            บ
+  บ ณa-Dณ --  Deletes marked text    บ
+  บ ภฤฤฤู                            บ
+  บ                                  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ  s-F1 =    s-F2 =   F4 = Exit  บ
+  ศออออออออออออออออออออออออออออออออออผ
+  ษออออออออออออออออออออออออออออออออออป
+  บ           Help  Menu          7  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ                                  บ
+  บ          Erasing Text            บ
+  บ                   s = Shift key  บ
+  บ                                  บ
+  บ ฺฤฤฤฤฟ                           บ
+  บ ณ F5 ณ --  Erases entire line    บ
+  บ ภฤฤฤฤู     of text               บ
+  บ ฺฤฤฤฤฟ                           บ
+  บ ณ F6 ณ --  Erases text at and to บ
+  บ ภฤฤฤฤู     right of cursor       บ
+  บ ฺฤฤฤฤฟ                           บ
+  บ ณs-F6ณ --  Erases text at and to บ
+  บ ภฤฤฤฤู     left of cursor,       บ
+  บ            shifting rest of text บ
+  บ            to beginning of line  บ
+  บ                                  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ  s-F1 =    s-F2 =   F4 = Exit  บ
+  ศออออออออออออออออออออออออออออออออออผ
+  ษออออออออออออออออออออออออออออออออออป
+  บ           Help  Menu          8  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ                                  บ
+  บ         Restoring Text           บ
+  บ                   s = Shift key  บ
+  บ                                  บ
+  บ ฺฤฤฤฤฟ                           บ
+  บ ณs-F4ณ -- Restores the current   บ
+  บ ภฤฤฤฤู    line to the way it was บ
+  บ           when the cursor first  บ
+  บ           moved onto it, if the  บ
+  บ           cursor has not left it บ
+  บ                                  บ
+  บ  ฺฤฤฤฟ                           บ
+  บ  ณc-Uณ -- Displays the .UNNAMED  บ
+  บ  ภฤฤฤู    file which contains    บ
+  บ           the last five changes  บ
+  บ                                  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ  s-F1 =    s-F2 =   F4 = Exit  บ
+  ศออออออออออออออออออออออออออออออออออผ
+  ษออออออออออออออออออออออออออออออออออป
+  บ           Help  Menu          9  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ        Formatting Text           บ
+  บ                    a = Alt key   บ
+  บ                    c = Ctrl key  บ
+  บ ฺฤฤฤฟ                            บ
+  บ ณa-Sณ --  Splits line at cursor  บ
+  บ ภฤฤฤู                            บ
+  บ ฺฤฤฤฟ                            บ
+  บ ณa-Jณ --  Joins line at cursor   บ
+  บ ภฤฤฤู                            บ
+  บ ฺฤฤฤฟ                            บ
+  บ ณa-Pณ --  Reflows paragraph from บ
+  บ ภฤฤฤู     cursor to blank line   บ
+  บ ฺฤฤฤฟ                            บ
+  บ ณc-Cณ --  Centers text on        บ
+  บ ภฤฤฤู     current line           บ
+  บ                                  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ  s-F1 =    s-F2 =   F4 = Exit  บ
+  ศออออออออออออออออออออออออออออออออออผ
+  ษออออออออออออออออออออออออออออออออออป
+  บ           Help  Menu         10  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ                                  บ
+  บ      Splitting the Screen        บ
+  บ                        c = Ctrl  บ
+  บ ฺฤฤฤฟ                            บ
+  บ ณc-Sณ -- Splits the screen into  บ
+  บ ภฤฤฤู    2 or 4 windows          บ
+  บ ฺฤฤฤฟ                            บ
+  บ ณc-Vณ -- Moves cursor to the nextบ
+  บ ภฤฤฤู    window of the same file บ
+  บ ฺฤฤฤฟ                            บ
+  บ ณc-Wณ -- Moves cursor to the     บ
+  บ ภฤฤฤู    next window             บ
+  บ ฺฤฤฤฟ                            บ
+  บ ณc-Zณ -- Zooms in current window บ
+  บ ภฤฤฤู    to fill the screen      บ
+  บ                                  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ  s-F1 =    s-F2 =   F4 = Exit  บ
+  ศออออออออออออออออออออออออออออออออออผ
+  ษออออออออออออออออออออออออออออออออออป
+  บ           Help  Menu         11  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ    Locating and Changing Text    บ
+  บ                                  บ
+  บ     /text/ -- Locates first      บ
+  บ               occurrence         บ
+  บ                                  บ
+  บ c/old/new/ -- Locates first      บ
+  บ               occurrence and asksบ
+  บ               for confirmation ofบ
+  บ               change             บ
+  บ     ฺฤฤฤฤฟ                       บ
+  บ     ณs-F5ณ -- Confirms change    บ
+  บ     ภฤฤฤฤู                       บ
+  บ  ฺฤฤฤฤฤฤฤฟ                       บ
+  บ  ณc-Enterณ -- Executes command   บ
+  บ  ภฤฤฤฤฤฤฤู    from the text area บ
+  บ                                  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ  s-F1 =    s-F2 =   F4 = Exit  บ
+  ศออออออออออออออออออออออออออออออออออผ
+  ษออออออออออออออออออออออออออออออออออป
+  บ           Help  Menu         12  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ        üจค‘๊ –๓‘ ๙“ ข๘ค๘        บ
+  บ           ฺฤฤฤฤฟ                 บ
+  บ   üจค‘๊   ณ F10ณ  ‘“ ขþ๓๎ ๙๊ฌ   บ
+  บ           ภฤฤฤฤู ค‘ช๊ ‘“ .ข๘ชþ๕  บ
+  บ   ๖þ—๒ ขþ๓๎ ๙๊ฌ ๙๕๎— ๖þ ขข๕   บ
+  บ                         .ข๘ชþ๕   บ
+  บ   ้๘ค ๙๎ ขþช‘“ ๙—ชข ๙๘—   บ
+  บ .ข๗—จ๛ üข‘๕๗ ข๗ –ค๘ฌ“ üจค‘๊   บ
+  บ                                  บ
+  บ                                  บ
+  บ   ขþ๓๎ ๙๊ฌ Layout ๙ข๛‘ช๕ üค“   บ
+  บ       .ขþ๗๎ ๙ใค๕ ขใ“ ๙๊ฌ ๙“   บ
+  บ                                  บ
+  บ                                  บ
+  ฬออออออออออออออออออออออออออออออออออน
+  บ  s-F1 =    s-F2 =   F4 = Exit  บ
+  ศออออออออออออออออออออออออออออออออออผ
+ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+บ             Help  Menu         13                     s-F2 =   F4 = Exit    บ
+ฬออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออน
+บ                                                                              บ
+บ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฤฟ  บ
+บ ณ~”ณ ณ1!ณ ณ2:ณ ณ3#ณ ณ4$ณ ณ5%ณ ณ6็ณ ณ7ใณ ณ8*ณ ณ9(ณ ณ0)ณ ณ_ ณ ณ+ ณ ณ| ณ ณ   ณ  บ
+บ ณ`•ณ ณ ณ ณ ณ ณ ณ ณ ณ ณ …ณ ณ ณ ณ ณ ณ ณ ณ ณ ณ €ณ ณ-ฤณ ณ= ณ ณ\ฆณ ณ<ฤฤณ  บ
+บ ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤฤู  บ
+บ ฺฤฤฤฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฤฤฤฟ  บ
+บ ณTab<ฤณ ณQญณ ณWซณ ณEณ ณR๋ณ ณT้ณ ณYๅณ ณUแณ ณI๙ณ ณO ณ ณPณ ณ[ณ ณ]ณ ณ     ณ  บ
+บ ณ   ฤ>ณ ณ ฎณ ณ ฌณ ณ ณ ณ ์ณ ณ ๊ณ ณ ่ณ ณ ไณ ณ ๛ณ ณ กณ ณ ณ ณ ณ ณ ณ ณ  ณ  ณ  บ
+บ ภฤฤฤฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ณ  ณ  ณ  บ
+บ ฺฤฤฤฤฤฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤู  ณ  ณ  บ
+บ ณ CAPS  ณ ณAฉณ ณSงณ ณDüณ ณF’ณ ณG๑ณ ณHณ ณJ–ณ ณK๖ณ ณL๔ณ ณ:ํณ ณ"๏ณ ณ  <ฤฤู  ณ  บ
+บ ณ LOCK  ณ ณ ชณ ณ จณ ณ þณ ณ “ณ ณ ๓ณ ณ ‘ณ ณ —ณ ณ ๗ณ ณ ๕ณ ณ;๎ณ ณ'๐ณ ณ ENTER  ณ  บ
+บ ภฤฤฤฤฤฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤฤฤฤฤฤฤู  บ
+บ ฺฤฤฤฤฤฤฤฤฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฟ ฺฤฤฤฤฤฤฤฤฤฤฟ  บ
+บ ณ          ณ ณZ ณ ณXýณ ณCๆณ ณVโณ ณB๒ณ ณN ณ ณMณ ณ<ณ ณ>ณ ณ?ณ ณ          ณ  บ
+บ ณ  SHIFT   ณ ณ เณ ณ ฏณ ณ ฅณ ณ คณ ณ ฃณ ณ ขณ ณ ณ ณ,๘ณ ณ. ณ ณ/ ณ ณ  SHIFT   ณ  บ
+บ ภฤฤฤฤฤฤฤฤฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤู ภฤฤฤฤฤฤฤฤฤฤู  บ
+ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+
+               ฺฤฤฤฤฟ  ฺฤฤฤฤฟ ฺฤฤฤฤฟ
+               ณ 7  ณ  ณ 8  ณ ณ 9  ณ
+               ณ ฺ  ณ  ณ ย  ณ ณ ฟ  ณ
+               ภฤฤฤฤู  ภฤฤฤฤู ภฤฤฤฤู
+               ฺฤฤฤฤฟ  ฺฤฤฤฤฟ ฺฤฤฤฤฟ
+               ณ 4  ณ  ณ 5  ณ ณ 6  ณ
+               ณ ร  ณ  ณ ล  ณ ณ ด  ณ
+               ภฤฤฤฤู  ภฤฤฤฤู ภฤฤฤฤู
+               ฺฤฤฤฤฟ  ฺฤฤฤฤฟ ฺฤฤฤฤฟ
+               ณ 1  ณ  ณ 2  ณ ณ 3  ณ
+               ณ ภ  ณ  ณ ม  ณ ณ ู  ณ
+               ภฤฤฤฤู  ภฤฤฤฤู ภฤฤฤฤู
+               ฺฤฤฤฤฤฤฤฤฤฤฤฤฟ ฺฤฤฤฤฟ
+               ณ 0          ณ ณ .  ณ
+               ณ ณ          ณ ณ ฤ  ณ
+               ภฤฤฤฤฤฤฤฤฤฤฤฤู ภฤฤฤฤู
+
+
+
+
+

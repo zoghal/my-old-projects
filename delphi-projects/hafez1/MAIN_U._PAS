@@ -1,0 +1,50 @@
+unit Main_u;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  Menus, Db, DBTables, ExtCtrls, StdCtrls, BoxCtrls, colcombo, EPCtrls,
+  Mask, DBCtrls;
+
+type
+  TMainForm = class(TForm)
+    MainMenu1: TMainMenu;
+    N1: TMenuItem;
+    N2: TMenuItem;
+    N3: TMenuItem;
+    N4: TMenuItem;
+    N5: TMenuItem;
+    N6: TMenuItem;
+    N7: TMenuItem;
+    N8: TMenuItem;
+    procedure FormShow(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  MainForm: TMainForm;
+
+implementation
+
+uses Send_u;
+
+{$R *.DFM}
+
+procedure TMainForm.FormShow(Sender: TObject);
+begin
+ TileMode := Tbvertical;
+ Tile;
+end;
+
+procedure TMainForm.FormCreate(Sender: TObject);
+begin
+  MainForm.Height :=488;
+  MainForm.Width :=  834;
+  ActivateKeyboardLayout(HkL_Next,KLf_Reorder);
+End;
+end.

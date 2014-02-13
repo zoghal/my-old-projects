@@ -1,0 +1,65 @@
+                                     IBM PERSONAL EDITOR II COMMANDS
+                       CURSOR MOVEMENT CONTROLS                                         PRINTER FUNCTIONS
+  FUNCTION                KEY             FUNCTION                KEY               FUNCTION                KEY
+  -------------------------------------------------------------------------         ---------------------------------
+  up                      up              down                    down              print file              c-p
+  up 8                    c-f1            down 8                  c-f2              print marked area       c-m
+  page up                 pgup            page down               pgdn              interrupt printing      c-numlock
+  top                     c-home          bottom                  c-end             continue printing       ret
+  top of screen           c-pgup          bottom of screen        c-pgdn            halt printing           c-break
+                                                                                    page eject              a-f1
+  left                    left            right                   right             compressed print on     a-f3
+  left 8                  c-f3            right 8                 c-f4              compressed print off    a-f4
+  begin line              home            end line                end               double width on         a-f5
+  left 40                 c-left          right 40                c-right           double width off        a-f6
+                                                                                    emphasized print on     a-f7
+  tab word                tab             backtab word            s-tab             emphasized print off    a-f8
+  tab (1, 9, 17, ...)     c-f5            backtab                 c-f6              underline on            a-1
+  tab word above          c-f7            backtab word above      c-f8              underline off           a-2
+  begin marked area       a-w             end marked area         a-e               select character set #1 a-3
+  center line on screen   a-q             toggle cursor cmd/data  esc               select character set #2 a-4
+                                                                                    superscript on          a-5
+                       TEXT MANIPULATION CONTROLS                                   subscript on            a-6
+  FUNCTION                KEY             FUNCTION                KEY               perm dbl width on       a-7
+  -------------------------------------------------------------------------         perm dbl width off      a-8
+  insert line below cur.  f9              mark char               a-c               double strike on        a-9
+  insert line/align above f10             mark line               a-l               dbl strike/script off   a-0
+  next line/para. indent  ret             mark block              a-b            MISCELLANEOUS FUNCTIONS
+  insert char. (toggle)   ins             unmark                  a-u               FUNCTION                KEY
+  delete character        del             copy marked area        a-z               ----------------------------------
+  backspace & delete char bkspace         delete marked area      a-d               help                    f1
+  undo last function      s-f4            move marked area        a-m               save                    f2
+  enter next char as is   a-x             fill area w/next char   a-f               file                    f3
+  erase line              f5              overlay block           a-o               quit                    f4
+  erase to EOL            f6              shift marked area left  s-f7              edit next file in ring  f8
+  delete line             c-bkspace       shift marked area right s-f8              confirm change          s-f5
+  split line              a-v             reflow next paragraph   c-o               set margins 1 80 1      s-f6
+  join next line          a-j             reflow marked area      s-f3              directory listing a:    s-f9
+                                                                                    directory listing b:    s-f10
+                       COMMANDS                                                     set display mono        c-f9
+  COMMAND                      FUNCTION                                             set display color 80    c-f10
+  ---------------------------------------------------------------------------       redraw screen           c-q
+  C /pattern/newstring/[-][*]  change pattern to newstring [backward] [all]         exec cmd on cmd line    c-ret
+  dir [drive][path][filename]  list directory [?] [*]                               uppercase               a-g
+  edit [filespec [NOTABS]]     edit specified file [without tab expansion]          lowercase               a-h
+  erase filespec               erase a file from disk                               command line entry      a-k
+  file [filespec [NOTABS]]     save file [without tab compression]               SBS FUNCTIONS
+  /char string/ [-][m]         move cursor to next occurrence of char string        load  line drawing profile          A-s
+  macro filespec               execute macros in filespec                           restore  original profile           A-r
+  name filespec                rename file in memory                                indent to column 60                 A-i
+  print                        print current file on printer                        indent to column 59                 A-p
+  ? keyname                    list key definition                                  indent to column 40                 A-a
+  quit                         remove file from memory without save                 insert a "cut" line ( |Í .. ÍÍ| )   A-t
+  rename filespec1 filespec2   rename filespec1 on disk filespec2                      below the line where cursor is
+  save [filespec [NOTABS]]     save with specified name [& no compression]          insert an "equivalent" symbol       A-n
+  set margins l r p            set formatting margins [left, right, indent]            ( <=> ) in col. 51-53
+  set tabs                     set tabs stops to numbers in list                    insert an identical object code     A-e
+                                                                                       ( === )  in col. 51-53
+                       WINDOWS & DISPLAY                                            BOX Characters                   S-keypad
+  FUNCTION                KEY             FUNCTION                KEY               Mark Block (pushing prev. mark)     a-y
+  -------------------------------------------------------------------------         MUST also mark end of block with    a-y
+  split screen            a-F9,c-s        next window           F7,(a-F10,c-w)      ÚÄÄ Draw "hook"  cursor this line   c-h
+  small font              s-F10           large font               s-F9             ³|ÍÍINSERT "cut" and draw "hook"    c-i
+  Color                   c-F10           Mono                     c-F9             ÀÄ>     ( "cut" below cursor line)
+
+

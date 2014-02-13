@@ -1,0 +1,26 @@
+unit listusertU;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs;
+
+type
+  TFListuser = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FListuser: TFListuser;
+
+implementation
+
+uses Unit1;
+
+{$R *.dfm}
+
+end.

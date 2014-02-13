@@ -1,0 +1,145 @@
+object Fcustomer: TFcustomer
+  Left = 540
+  Top = 261
+  Width = 429
+  Height = 110
+  BiDiMode = bdRightToLeft
+  Caption = #1605#1593#1585#1601#1610' '#1605#1588#1578#1585#1610#1575#1606
+  Color = clBtnFace
+  Font.Charset = ARABIC_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  ParentBiDiMode = False
+  Position = poScreenCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 337
+    Top = 8
+    Width = 82
+    Height = 13
+    Caption = #1606#1575#1605' '#1608' '#1606#1575#1605' '#1582#1575#1606#1608#1575#1583#1711#1610
+    Font.Charset = ARABIC_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 253
+    Top = 9
+    Width = 10
+    Height = 13
+    Caption = 'ss'
+  end
+  object Label4: TLabel
+    Left = 391
+    Top = 32
+    Width = 28
+    Height = 13
+    Caption = #1578#1604#1601#1606' :'
+    Font.Charset = ARABIC_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 253
+    Top = 33
+    Width = 10
+    Height = 13
+    Caption = 'ss'
+  end
+  object Label6: TLabel
+    Left = 139
+    Top = 32
+    Width = 32
+    Height = 13
+    Caption = #1601#1705#1587' :'
+    Font.Charset = ARABIC_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 132
+    Top = 5
+    Width = 55
+    Height = 13
+    Caption = #1606#1608#1593' '#1605#1588#1578#1585#1610
+    Font.Charset = ARABIC_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object DBEdit1: TDBEdit
+    Left = 204
+    Top = 5
+    Width = 121
+    Height = 21
+    DataField = 'Name'
+    DataSource = dm.Dcustomer
+    TabOrder = 0
+  end
+  object DBEdit3: TDBEdit
+    Left = 204
+    Top = 29
+    Width = 121
+    Height = 21
+    DataField = 'Tel'
+    DataSource = dm.Dcustomer
+    TabOrder = 1
+  end
+  object DBEdit4: TDBEdit
+    Left = 4
+    Top = 29
+    Width = 121
+    Height = 21
+    DataField = 'Fax'
+    DataSource = dm.Dcustomer
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 147
+    Top = 55
+    Width = 75
+    Height = 25
+    Caption = #1579#1576#1578
+    TabOrder = 3
+    OnClick = Button2Click
+  end
+  object Button1: TButton
+    Left = 11
+    Top = 55
+    Width = 75
+    Height = 25
+    Caption = #1575#1606#1589#1585#1575#1601
+    TabOrder = 4
+    OnClick = Button1Click
+  end
+  object DBComboBox1: TDBComboBox
+    Left = 5
+    Top = 5
+    Width = 120
+    Height = 21
+    AutoDropDown = True
+    DataField = 'Type'
+    DataSource = dm.Dcustomer
+    ItemHeight = 13
+    Items.Strings = (
+      #1601#1585#1608#1588#1606#1583#1607
+      #1582#1585#1610#1583#1575#1585)
+    TabOrder = 5
+  end
+end

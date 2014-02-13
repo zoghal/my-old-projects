@@ -1,0 +1,87 @@
+object List_system: TList_system
+  Left = 208
+  Top = 202
+  Width = 696
+  Height = 187
+  BiDiMode = bdRightToLeft
+  Caption = '·Ì”  ”Ì” „Â«Ì „ÊÃÊœ'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  ParentBiDiMode = False
+  PopupMenu = ListSystemPopupMenu1
+  Position = poDefault
+  Visible = True
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 0
+    Width = 688
+    Height = 160
+    Align = alClient
+    DataSource = DataSource1
+    ReadOnly = True
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'Type'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Num'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Note'
+        Visible = True
+      end>
+  end
+  object DataSource1: TDataSource
+    DataSet = SystemTable1
+    Left = 32
+    Top = 56
+  end
+  object SystemTable1: TTable
+    Active = True
+    AutoRefresh = True
+    DatabaseName = 'c:\hafez'
+    Filter = 'backed = false'
+    Filtered = True
+    TableName = 'System.DB'
+    Left = 64
+    Top = 56
+  end
+  object ListSystemPopupMenu1: TPopupMenu
+    Alignment = paCenter
+    BiDiMode = bdLeftToRight
+    ParentBiDiMode = False
+    Left = 136
+    Top = 48
+    object N1: TMenuItem
+      Caption = '«÷‹«›‹Â'
+      OnClick = N1Click
+    end
+    object N2: TMenuItem
+      Caption = 'Õ‹‹‹–›'
+      OnClick = N2Click
+    end
+    object N3: TMenuItem
+      Caption = 'ÊÌ—«Ì‘'
+      OnClick = N3Click
+    end
+  end
+end

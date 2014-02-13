@@ -1,0 +1,26 @@
+unit listcustomerU;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs;
+
+type
+  TFlistcutomer = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Flistcutomer: TFlistcutomer;
+
+implementation
+
+uses Unit1;
+
+{$R *.dfm}
+
+end.

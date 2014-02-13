@@ -1,0 +1,4760 @@
+      
+                 PERSONAL EDITOR II: REFERENCE 
+                                
+                            Topics 
+                                
+    
+      Introduction .............................................1
+    
+      Internal Files ...........................................1
+    
+      Restoring Erased or Changed Text .........................2
+    
+        Using the UNDO Command .................................2
+    
+        Using the .UNNAMED File ................................2
+    
+      The Personal Editor II Profile ...........................3
+    
+      Converting PE Profiles to PE II Profiles .................3
+    
+      Changing Key Definitions .................................4
+    
+        Saving the .KEYDEFS File Under a New Name ..............4
+    
+        Changing the PE2.PRO File ..............................5
+    
+      Macros ...................................................5
+    
+      Demonstration Mode .......................................6
+    
+      DOS Path Support .........................................6
+    
+      IBM TopView Support ......................................6
+    
+      Storage and Memory Considerations ........................8
+    
+        Disk Spill .............................................8
+    
+        When Memory Is Full ...................................10
+    
+      Commands ................................................11
+    
+        Command Line Parameters ...............................12
+    
+        BACKTAB ...............................................13
+    
+        BACKTAB WORD ..........................................13
+    
+        BEEP ..................................................14
+    
+        BEGIN LINE ............................................14
+    
+        BEGIN MARK ............................................14
+    
+        BEGIN WORD ............................................15
+    
+        BOTTOM ................................................15
+    
+
+
+
+        BOTTOM EDGE ...........................................15
+    
+        CENTER IN MARGINS .....................................16
+    
+        CENTER LINE ...........................................16
+    
+        CHANGE ................................................17
+    
+        CHDIR .................................................19
+    
+        CLEAR MARKS ...........................................19
+    
+        CLEAR MESSAGE .........................................20
+    
+        COLUMN ................................................20
+    
+        COMMAND TOGGLE ........................................21
+    
+        CONFIRM CHANGE ........................................21
+    
+        COPY FROM COMMAND .....................................22
+    
+        COPY MARK .............................................22
+    
+        COPY TO COMMAND .......................................23
+    
+        CURSOR COMMAND ........................................23
+    
+        CURSOR DATA ...........................................24
+    
+        DEFINE ................................................24
+    
+        DELETE CHAR ...........................................25
+    
+        DELETE LINE ...........................................26
+    
+        DELETE MARK ...........................................26
+    
+        DEMO END ..............................................27
+    
+        DEMO FAST .............................................27
+    
+        DEMO SLOW .............................................27
+    
+        DIR ...................................................28
+    
+        DOS ...................................................29
+    
+        DOWN ..................................................30
+    
+        EDIT ..................................................30
+    
+        END LINE ..............................................32
+    
+        END MARK ..............................................32
+    
+
+
+
+        END WORD ..............................................33
+    
+        ERASE .................................................33
+    
+        ERASE BEGIN LINE ......................................34
+    
+        ERASE END LINE ........................................34
+    
+        ESCAPE ................................................35
+    
+        EXECUTE ...............................................35
+    
+        FILE ..................................................36
+    
+        FILL MARK .............................................37
+    
+        FIND BLANK LINE .......................................37
+    
+        FIRST NONBLANK ........................................38
+    
+        INDENT ................................................38
+    
+        INSERT LINE ...........................................39
+    
+        INSERT MODE ...........................................39
+    
+        INSERT TOGGLE .........................................40
+    
+        JOIN ..................................................40
+    
+        KEY ...................................................41
+    
+        LEFT ..................................................41
+    
+        LEFT EDGE .............................................42
+    
+        LEFT MARGIN ...........................................42
+    
+        LINE ..................................................43
+    
+        LOCATE ................................................43
+    
+        LOWERCASE .............................................45
+    
+        MACRO .................................................46
+    
+        MARK BLOCK ............................................48
+    
+        MARK CHAR .............................................48
+    
+        MARK LINE .............................................49
+    
+        MOVE MARK .............................................50
+    
+        NAME ..................................................50
+    
+
+
+
+        NEXT VIEW .............................................51
+    
+        NEXT WINDOW ...........................................51
+    
+        OVERLAY BLOCK .........................................52
+    
+        PAGE DOWN .............................................52
+    
+        PAGE UP ...............................................53
+    
+        PARAGRAPH MARGIN ......................................53
+    
+        POP MARK ..............................................54
+    
+        PRINT .................................................54
+    
+        PRINT MARK ............................................55
+    
+        PUSH MARK .............................................55
+    
+        QUIT ..................................................56
+    
+        REDRAW ................................................56
+    
+        REFLOW ................................................57
+    
+        RENAME ................................................58
+    
+        REPLACE MODE ..........................................58
+    
+        RIGHT .................................................59
+    
+        RIGHT EDGE ............................................59
+    
+        RIGHT MARGIN ..........................................60
+    
+        RUBOUT ................................................60
+    
+        SAVE ..................................................61
+    
+        SCROLLDOWN ............................................62
+    
+        SCROLLLEFT ............................................62
+    
+        SCROLLRIGHT ...........................................63
+    
+        SCROLLUP ..............................................63
+    
+        SET ABBREV ............................................64
+    
+        SET BACKUP ............................................64
+    
+        SET BLANKCOMPRESS .....................................65
+    
+        SET DISPLAY ...........................................66
+    
+
+
+
+        SET HSCROLL ...........................................67
+    
+        SET MARGINS ...........................................68
+    
+        SET SEARCHCASE ........................................69
+    
+        SET TABEXPAND .........................................69
+    
+        SET TABS ..............................................70
+    
+        SHIFT LEFT ............................................71
+    
+        SHIFT RIGHT ...........................................71
+    
+        SPLIT .................................................72
+    
+        SPLIT SCREEN ..........................................72
+    
+        TAB ...................................................73
+    
+        TAB WORD ..............................................73
+    
+        TOP ...................................................73
+    
+        TOP EDGE ..............................................74
+    
+        UNDO ..................................................74
+    
+        UNMARK ................................................75
+    
+        UP ....................................................75
+    
+        UPPERCASE .............................................76
+    
+        ZOOM WINDOW ...........................................76
+    
+        ? ABBREV ..............................................76
+    
+        ? BACKUP ..............................................77
+    
+        ? BLANKCOMPRESS .......................................77
+    
+        ? CHAR ................................................77
+    
+        ? DIR .................................................78
+    
+        ? DISKSPACE ...........................................78
+    
+        ? HSCROLL .............................................78
+    
+        ? KEY .................................................79
+    
+        ? MARGINS .............................................79
+    
+        ? MEMORY ..............................................80
+    
+
+
+
+        ? SEARCHCASE ..........................................80
+    
+        ? TABEXPAND ...........................................80
+    
+        ? TABS ................................................81
+    
+      Command Abbreviations ...................................81
+    
+      Default Profile Definitions .............................84
+    
+        .KEYDEFS File Order by Key ............................84
+    
+        Alphabetical Order by Function ........................86
+    
+    
+                                 1
+
+
+Introduction~
+
+
+The Reference section contains detailed information about PE II,
+including all of its commands.
+
+
+
+Internal Files~
+
+
+Personal Editor II (PE II) has three internal files: the .KEYDEFS
+file, the .UNNAMED file, and the .DIR file.  These files are
+generated inside PE II.  They provide information you can use
+when editing.
+
+o  The .KEYDEFS file holds the current key definitions.
+
+o  The .UNNAMED file holds the last five changes you made to
+   active files.  You can specify that it hold up to ten
+   changes.
+
+o  The .DIR file gives the name, byte size, date, and the time
+   the DOS files were last edited for any drive or subdirectory.
+
+You use the EDIT command to see the .KEYDEFS file and the
+.UNNAMED file.  You use the DIR command to see the .DIR file.
+
+All internal files:
+
+o  Become active files when displayed on the screen
+
+o  Use a part of available memory
+
+o  Let you mark and move text to another file where it can
+   be saved
+
+o  Require a valid filename if you use the SAVE or FILE
+   command
+
+o  Are removed from memory with the QUIT command
+
+
+                                2
+
+
+Restoring Erased or Changed Text~
+
+
+You can retrieve erased or changed text using either the UNDO
+command or the .UNNAMED file.
+
+
+
+Using the UNDO Command~
+
+
+The UNDO command recovers a lost line of text.  It is initially
+assigned to the Shift-F4 keys when you start PE II.  It restores
+a line to the way it appeared before the cursor was moved to it,
+even if it was previously blank.
+
+UNDO restores characters that were erased or changed by:
+
+o  Using the DELETE CHAR command (Del key)
+o  Inserting or replacing characters
+o  Using the ERASE END LINE command (F5 or F6)
+o  Using the ERASE BEGIN LINE command
+
+UNDO will not restore lines that were deleted with the DELETE
+LINE command (Ctrl-Backspace), the DELETE MARK command (Alt-D),
+or words that were erased by a series of commands assigned to a
+key.
+
+Once the cursor leaves the line that you have changed, you cannot
+use the UNDO to recover the original line.  The cursor must
+remain on the changed line to recover the text.
+
+
+
+Using the .UNNAMED File~
+
+
+You can also recover text by using the .UNNAMED file.  It allows
+you to recover text even though the cursor has left the current
+line.
+
+The .UNNAMED file is the PE II internal file that holds the last
+five changes you made to active files.  You can change this
+number by using the SET BACKUP command.
+
+If you change a line in one active file, then make single changes
+in four other active files, the .UNNAMED file shows all five
+changes.  If you make one more change, the first of the five
+changes is removed from the .UNNAMED file.  The five changes are
+separated by blank lines.
+
+If you move too many marked lines, you may get a memory full
+condition because of the space required in the .UNNAMED file to
+hold the change.  To avoid this, use the SET BACKUP command to
+change the number of groups of lines saved in the .UNNAMED file
+to a lower number.
+
+
+
+                                3
+
+
+The following is a list of the types of changes or deletions that
+appear in the .UNNAMED file:
+
+o  Paragraphs before you used the paragraph Reflow command
+
+o  Truncated lines that went past the right column limit of 255
+
+o  A one-space block shift (each block shift is a single change
+   to the .UNNAMED file)
+
+o  Changed sentences up until the line had to split to fit into
+   the margin settings
+
+o  Deleted lines
+
+o  All global and individual changes with the CHANGE command
+
+o  Deletions using the RUBOUT command (Backspace key)
+
+o  The same changes or deletions covered in the UNDO command
+
+Quitting the .UNNAMED file erases its contents.  To keep its
+contents, use F8 (Switch Files).
+
+
+
+The Personal Editor II Profile~
+
+
+When you start PE II, it reads a profile called PE2.PRO which
+assigns the initial key definitions to the keyboard.  These
+definitions are listed in the section "Default Profile
+Definitions" in this document.
+
+
+
+Converting PE Profiles to PE II Profiles~
+
+
+PE profiles are compatible with PE II, with three exceptions:
+
+o  The name PE.PRO must be renamed to PE2.PRO.  When you start PE
+   II, it searches only for PE2.PRO, unless you specify another
+   profile with the /p option, for example:
+
+       pe2 /ppe.pro
+
+o  Any instance of DOWN4, LEFT8, LEFT40, RIGHT8, RIGHT40, or UP4
+   must be converted to DOWN 4, LEFT 8, LEFT 40, RIGHT 8,
+   RIGHT 40, and UP 4.  This is to allow the specification of
+   any numbers up to 16,300 in these commands.
+
+o  Macros using [tab word] and [backtab word] may not work, since
+   the meanings of those commands have changed.
+
+
+
+                                4
+
+
+Changing Key Definitions~
+
+
+The .KEYDEFS file displays the current key definitions.  Because
+it is an internal file, you can only edit (display) it when you
+are in PE II.
+
+Each time you start using PE II, the PE2.PRO file and the
+.KEYDEFS file contain the same key definitions. The .KEYDEFS file
+lists all the possible key definitions in the long form.  The
+PE2.PRO file lists the PE II key definitions that are not already
+defined internally in the abbreviated form.  Both the .KEYDEFS
+and PE2.PRO file should produce the same key definitions when
+starting PE II.  You can temporarily change the definition of a
+key by entering on the command line the DEFINE command followed
+by the keyname and the new definition, (for example, def enter =
+[insert line]).
+
+You can also assign ASCII characters to keys, for example, the
+square root symbol to Alt-4.  The square root symbol is the ASCII
+character for the number 251.  See the IBM BASIC manual for a
+list of ASCII characters and the decimal numbers for each.
+
+After temporarily changing a key to a new definition, you may
+find that you want to save it.  Saving a new definition makes it
+unnecessary to retype the DEFINE command each time you start PE
+II.
+
+You can permanently change key definitions by either saving the
+.KEYDEFS file under a new name or by changing the PE2.PRO file.
+
+
+
+Saving the .KEYDEFS File Under a New Name~
+
+
+In the Learning section, you assigned the INSERT LINE command to
+the Enter key using the DEFINE command. The change was temporary
+because you didn't save it.  Temporary changes are erased when
+you exit PE II.
+
+You can change the same key definition by editing the .KEYDEFS
+file and typing the new key definition in the file.  Since the
+.KEYDEFS file is an internal file, you cannot save it. However,
+you can save a copy of the changes to another file, such as PE
+II's profile.  On the command line, for example, you can type
+SAVE PE2.PRO.  The changes are now saved to the file and can be
+activated by either exiting PE II and starting the program again,
+or by using the MACRO command on the command line (for example,
+MACRO PE2.PRO).
+
+    Note:  If you choose to activate the new definitions
+    by restarting PE II, you should save the .KEYDEFS file
+    to the filename PE2.PRO or use the /p option along with
+    the filename to which you saved the .KEYDEFS file.
+
+    If you save .KEYDEFS as PE2.PRO, you need to reenter
+    your SET commands, such as margin settings.
+
+
+                                5
+
+
+Changing the PE2.PRO File~
+
+
+You can also save a changed key definition by editing the PE2.PRO
+file and saving it. The new key definitions can be activated by
+restarting PE II or using the MACRO command along with the
+filename.
+
+     Note: You should not change the filename, PE2.PRO.
+     PE II looks for a file called PE2.PRO when it starts.
+     If you do change the profile name, you must use the
+     /p option along with the profile when restarting PE II.
+
+You can create a completely new profile for a special use.  You
+could type the special key definitions in the .KEYDEFS file,
+rename the file, and then save it.  Then, when you wanted to use
+the special profile, you would type the MACRO command and the new
+filename on the command line or use the /p option with the new
+profile when starting PE II.
+
+If you wanted the original profile of PE II, you would then type
+the MACRO command and PE2.PRO.
+
+You can make as many profiles as you need. For example, profiles
+could be designed to help you type a structured programming
+language, to keep facts and figures, or to type memos or personal
+letters.
+
+
+
+Macros~
+
+
+A macro is a command or group of commands that are assigned to do
+a task.  Pressing a key activates the macro defined to that key.
+The MACRO command activates a macro file.  As you become familiar
+with how commands work, individually or together, you can combine
+them to do the task you want.
+
+The PE2.PRO file is an example of a macro file.  Each time it is
+activated, whether it is at the start of a program or by the
+MACRO command, each command is executed line by line in the order
+it appears in the file.  This is as if you entered each command
+in the PE2.PRO file one line at a time.
+
+For more information on building macros and macro files, see the
+DEFINE and MACRO commands in the "Commands" section of this
+document.
+
+
+                                6
+
+
+Demonstration Mode~
+
+
+PE II can demonstrate the actions of each of its commands or
+macros automatically.  The DEMO FAST command allows the user to
+see the action of each keystroke of a macro immediately, without
+waiting for the entire macro or key definition to complete.
+
+The DEMO SLOW command is similar, but inserts a short delay
+between each automatic keystroke so that the operation of a macro
+can better be observed.
+
+Use the DEMO END command to tu n off demonstration mode.
+
+By using these commands, as well as the split screen feature, you
+can build demonstrations and tutorials.
+
+You can also use the demonstration mode to debug keystroke
+macros.  Suppose you have assigned a complicated key definition
+to key c-f1.  The command "[demo slow] [key c-f1] [demo end]"
+executes the actions of the key c-f1 slowly enough for you to
+understand how it works (or fails to work).
+
+
+
+DOS Path Support~
+
+
+PE II allows DOS path names (including drive letters) to be used
+in all commands requiring filenames.  A backward slash (\) is
+used as the path delimiter.
+
+PE II parses relative path names according to the current
+directory and always displays full path names in the filename
+field on the status line.  For example, if the current directory
+is \level1\level2 and the command "e ..\new" is given, the
+filename that PE II displays is "\level1\new."
+
+You can use the CHDIR (CHANGE DIRECTORY) command to change the
+current directory, as well as the default drive.
+
+
+
+IBM TopView Support~
+
+
+IBM TopView provides a multitasking and windowing environment for
+software applications that run on several of the IBM Personal
+Computers.
+
+PE II can be run in the foreground of IBM TopView in normal mode.
+To run PE II in the background, use the /b option when starting
+PE II, which forces it to use BIOS for all screen output.
+
+PE II requires a minimum of 112KB of memory.  You may want to
+
+                                7
+
+choose the Change Program Information option in TopView to
+increase the maximum bytes of memory.  This gives PE II more edit
+space before it must create a spill file.
+
+PE II does not support TopView's cut and paste options.
+
+
+                                8
+
+
+Storage and Memory Considerations~
+
+
+PE II operations make use of available memory.  You need to
+consider your IBM PC memory size when you use PE II. If you load
+more bytes of text into memory than your system can hold, these
+extra bytes "spill" back out to the disk.  However, you can still
+edit these files.
+
+The following require memory:
+
+o  The number of active files in memory at one time
+o  The number of lines in a file
+o  Bringing in new files to be edited, including internal files
+o  Using marked text
+o  Copying and shifting lines
+o  Adding or inserting lines
+o  The number of commands assigned to keys in the PE2.PRO file
+
+
+
+Disk Spill~
+
+
+When you use all the available memory, PE II uses the default
+drive as a place to store more information. Once a disk spill is
+created on a diskette drive, the diskette cannot be removed from
+the drive until the current session of PE II has ended.  At this
+time, the spill file is erased.
+
+Five important concepts about the disk spill process are:
+
+o  Disk spill occurs automatically when PE II requires more
+   memory than is available.  No text is lost.
+
+o  PE II creates a temporary file called PE2TMP.nnn on the
+   diskette to hold additional information from active files.
+   The extension .nnn is a random number.  If more than one spill
+   file is created, the names will be    unique.
+
+o  The PE2TMP.nnn file can take up to 512KB of space on your disk
+   if there is adequate space on the disk.
+
+o  PE II always requires a minimum amount of memory to operate.
+
+o  PE II performs quickest when all files are able to fit into
+   memory--retrieving from and putting information on the disk
+   requires more time than doing the same within memory.
+
+
+                                9
+
+
+PE II automatically creates the PE2TMP.nnn file when you either
+load a file that is too big for memory or when you do text
+editing that fills the available memory, such as copying lines.
+When this happens, the message "Spill file created" appears on
+the status line.  Do not remove a spill file diskette.
+
+The PE2TMP.nnn spill file can be up to 512KB long, if there is
+enough room on your disk. If you have less than 512KB free space
+on your disk, the spill file will use what is available. The
+PE2TMP.nnn file is like any other file in that it takes up space
+on the disk.
+
+PE II constantly uses memory.  When it needs more memory than is
+available, it writes a block of lines from an active file to the
+spill file. It then uses that memory space freed up by the
+transfer to operate normally.
+
+If you check your memory with the ? MEMORY command during the
+spill disk condition, you will see that memory size remains about
+the same.  It needs this minimum amount of memory to operate
+normally.
+
+When the spill file is filled, the message "Spill disk is full"
+appears.   You then have only the minimum amount of memory
+available.  When that is used up, PE II goes into a memory full
+condition where you are restricted from normal operation.  This
+is explained in the next section.
+
+
+                               10
+
+
+When Memory Is Full~
+
+
+When you have used all the available memory, PE II cannot operate
+normally.  The message "Memory is full--remove files" appears on
+the message line.  The "í" character (a circle with a line
+through it) appears on the status line.
+
+The message is removed by the next keystroke, but the special
+character remains on the status line until memory is available.
+
+PE II allows you to:
+
+o  Use the EDIT command (without a new filename) to see which
+   files you want to remove from memory
+
+o  Use the QUIT or FILE command to remove active files from
+   memory
+
+o  Use the PgUp and PgDn keys to see the file that caused the
+   memory to be full.  If that file was not entirely loaded into
+   memory, do not use the FILE command or the text that did not
+   appear on the screen will be lost.
+
+PE II does not allow you to use operations that require
+additional memory.  It gives you a message if you try to do so.
+Here are the restrictions:
+
+o  You cannot move the cursor into the text area
+
+o  You cannot use any command that requires memory
+
+
+You must remove one or more files to free memory. When memory is
+available, PE II returns to normal operation.  The special
+character goes away and the message "Memory full condition ended"
+appears on the message line.
+
+
+                               11
+
+
+Commands~
+
+
+PE II commands are listed alphabetically in this section.
+Parameters are separated from the command and from each other by
+blanks. Optional parameters are shown within angle brackets < >.
+You can type commands in uppercase or lowercase, or in a mixture
+of cases.
+
+At the end of each description are related commands.
+
+In PE II there is little distinction between functions and
+commands.  Any command can be assigned to a key with the DEFINE
+command.  For example, you can assign the memory command (?
+MEMORY) to the Alt-F1 key combination by entering the following
+on the command line:
+
+  def a-f1 = [? memory]
+
+You must include the square brackets when using the DEFINE
+command or building a macro.
+
+You can also type function names (such as Reflow) directly on the
+command line. The square brackets [ ] are optional, but it is
+recommended that you use them. If brackets are not used, any
+command beginning with a C or L will be treated as a CHANGE or
+LOCATE command.
+
+You can abbreviate all commands except for the SAVE, FILE, ERASE,
+RENAME, DIR, LINE, COLUMN, DOWN, UP, LEFT, RIGHT, SCROLLUP,
+SCROLLDOWN, SCROLLLEFT, SCROLLRIGHT, and nine SET commands.
+These must be spelled out in full, although the word "set"
+itself can be abbreviated to "s." Refer to the section "Command
+Abbreviations" in this Reference document for abbreviations.
+
+There are also a set of pseudo "keys" intended only for use
+within complex macro definitions.  In addition to the unshifted
+state, alphabetic shift (s-), control shift (c-), and alternate
+shift (a-) provided in PE II, for each of the 76 definable keys
+on the keyboard, PE II allows the user shift, indicated by the
+prefix u-.  For example, if two key definitions shared a long
+common expression, the common part could be assigned to the "key"
+u-f1 and used from within the main key definitions using [key
+u-f1].  You can invoke the user shift keys directly from the
+command line by typing [key u-f1].
+
+Some of the following command syntax shows characters between
+angle brackets, such as LINE <nnnn>, where nnnn is a number which
+you provide.  Do not type the angle brackets when using the
+command.  They are there only to show that the characters between
+them are optional.  For example, the command above could be
+specified by LINE, LINE 1, LINE 724, or LINE 4682.
+
+
+                               12
+
+
+Command Line Parameters~
+
+
+When you start PE II from DOS by entering "PE2" at the DOS
+prompt, you can also enter a series of options (command line
+parameters) beginning with a slash (/) and separated from one
+another by one or more blanks.
+
+The letter after the slash specifies which command line option is
+being set. The order of command options on the command line is
+not significant.  If a command line option appears more than
+once, PE II uses the last (rightmost) value.  The last command
+line parameter not beginning with a slash, if any, is used as the
+initial file to be read and displayed.
+
+Command line parameters are:
+
+/B
+
+    The BIOS option forces PE II to use BIOS for all screen
+    output.  This greatly slows PE II down, but BIOS
+    compatibility may be required when running in certain
+    environments.
+
+/Pprofilename
+
+    The profilename is processed as a file of PE II commands
+    during editor initialization.  The default for this parameter
+    is "/Ppe2.pro."  If PE II cannot find the named file, it uses
+    an internal table as its profile.
+
+/Rnnn
+
+    Reserves nnn thousand bytes of random access memory for
+    secondary copies of the DOS command interpreter.  Since
+    PE II compresses its storage before loading a secondary
+    command interpreter, it is hardly ever necessary to use this
+    parameter.  The default (and minimum) value for this
+    parameter is "/R2."
+
+/Sspillfilename
+
+    If PE II requires more storage than is available in random
+    access memory, it dumps some of its internal data structures
+    to the disk file named by this parameter.  The default for
+    this parameter is "/Spe2tmp."  The filename extension is
+    provided by PE II.
+
+/Q
+
+    The command line option /Q (quiet) tells PE II not to display
+    its logo screen.
+
+/W
+
+    The command line option /W tells PE II to wait for a
+    keystroke before reading the profile.  This allows you to
+    change diskettes before PE II looks for the profile.
+
+
+                               13
+
+
+BACKTAB~
+
+________________________________________
+
+BACKTAB moves the cursor left to the
+previous tab stop on the current line.
+_______________________________________
+
+Tab stops are initially set at every 8 columns beginning after
+column 1 (that is, at 9, 17, 25, 33, 41, 49, and so on).  You can
+redefine the tab settings with the SET TABS command.
+
+To see the tab settings, use the ?  TABS command on the command
+line.
+
+See also TAB, BACKTAB WORD, TAB WORD, SET TABS, SET HSCROLL,
+? TABS, and ? HSCROLL.
+
+
+
+
+
+
+
+BACKTAB WORD~
+
+________________________________________
+
+BACKTAB WORD moves the cursor backwards
+through the file to the first character
+of the previous word.
+________________________________________
+
+A word is defined to be a group of characters separated by
+blanks.
+
+The cursor skips back to a lower number line, if necessary.
+
+See also TAB WORD, BACKTAB, and TAB.
+
+
+
+
+
+                               14
+
+
+BEEP~
+
+________________________________________
+
+BEEP sounds a short tone.
+________________________________________
+
+
+
+
+
+
+
+BEGIN LINE~
+
+________________________________________
+
+BEGIN LINE moves the cursor to the first
+column of the current line.
+________________________________________
+
+See also END LINE.
+
+
+
+
+
+
+
+BEGIN MARK~
+
+________________________________________
+
+BEGIN MARK moves the cursor to the
+beginning of the current marked area, if
+any.
+________________________________________
+
+The marked area may be in a file other than the current file.
+
+For line marks, the cursor column is not changed.  For character
+and block marks, the cursor moves to the far left marked
+character on the first line of the marked area.
+
+You can use the BEGIN MARK and END MARK commands as search
+markers.  If you mark a character (line or block) in a file to
+which you often refer, you can edit other files and then return
+to the marked file by using BEGIN MARK.
+
+See also END MARK.
+
+
+                               15
+
+
+BEGIN WORD~
+
+________________________________________
+
+BEGIN WORD moves the cursor to the first
+character of the word where it is now
+located.
+________________________________________
+
+If the cursor is not within a word, the cursor moves to the first
+character of the word to the left of the cursor.
+
+If there is no word to the left of the cursor, the cursor moves
+to the first character of the first word on the current line.
+
+See also END WORD, TAB WORD, and BACKTAB WORD.
+
+
+
+
+
+
+
+BOTTOM~
+
+________________________________________
+
+BOTTOM moves the cursor to the last line
+of the current file.
+_______________________________________
+
+The column the cursor is in does not change.
+
+See also TOP and LINE.
+
+
+
+
+
+
+
+BOTTOM EDGE~
+
+________________________________________
+
+BOTTOM EDGE moves the cursor to the last
+line of the text area of the current
+window.
+________________________________________
+
+The column the cursor is in does not change.
+
+The cursor moves down and the contents of the current window do
+not change.
+
+See also TOP EDGE.
+
+
+                               16
+
+
+CENTER IN MARGINS~
+
+________________________________________
+
+CENTER IN MARGINS centers each line of
+the current marked area between the left
+and right margins.
+_______________________________________
+
+The marked area must have been marked with a line mark or marks.
+
+See also MARK LINE.
+
+
+
+
+
+
+
+CENTER LINE~
+
+________________________________________
+
+CENTER LINE redraws the current window
+so that the line containing the cursor
+lies in the middle of the text area of
+that window.
+________________________________________
+
+See also CENTER IN MARGINS.
+
+
+
+
+
+                               17
+
+
+CHANGE~
+
+________________________________________
+
+CHANGE replaces a character or string of
+characters with another string.
+_______________________________________
+
+The CHANGE command searches from the current cursor position for
+the first occurrence of a string, unless specified otherwise.
+
+Format:  change/old/new/<-><*><m>
+
+The CHANGE command consists of the keyword CHANGE (which may be
+abbreviated to C), zero or more blanks, a nonblank delimiter
+character, the search string, the delimiter, the replacement
+string, and a closing delimiter.  The closing delimiter may
+optionally be followed by the modifier characters "-", "*", and
+"m".  Any combination of the modifiers may be present, but they
+must appear in the order just given.
+
+Examples:
+
+    c!old!new!
+    c'old'new'
+    c xoldxnewx-*m
+    c /old//*
+    c/ /x/-m
+
+To selectively replace some strings, type the CHANGE command on
+the command line (without the *) and press Enter.  PE II moves to
+the first occurrence of the string past the current cursor
+position.
+
+To change that present string to the new string, you must confirm
+the change with the CONFIRM CHANGE command, which is initially
+defined to the Shift-F5 key.
+
+After you replace the first string, the CHANGE command and the
+two strings remain on the command line.  This allows you to
+search for the next string without typing the command again.
+
+You can use Ctrl-Break to stop the search of the CHANGE command.
+
+A nonblank character (a delimiter) must follow each part of the
+CHANGE command, the present string, and the new string for the
+CHANGE command to work.  The CHANGE command reads the first
+nonblank character after the "c" or "change" as the separator.
+It may be a letter, number, or a character such as a parenthesis,
+a plus sign, or a slash.  The same character must follow each
+part of the command, and the character may not be part of either
+the search string or replacement string.
+
+The options in brackets may be present in any combination, but
+must appear in the order shown.
+
+
+                               18
+
+To replace a string from the current cursor position to the end
+of the file (a global change), type the asterisk (*) following
+the second delimiter.  When you press Enter, PE II finds all
+occurrences of the present string and replaces them with the new
+string.
+
+The optional minus sign in the CHANGE command controls the
+direction of the search.  If you do not type a minus sign,
+searching begins at the cursor and continues to the end of the
+line, and then to the bottom of the file.  If you type the minus
+sign, the search begins from the cursor and continues to the
+beginning of the line and then to the top of the file.
+
+The optional modifier "m" specifies that the search is to include
+only the marked area of the current file, if any.
+
+PE II ignores whether you type the search string in uppercase,
+lowercase, or mixed case, if ? SEARCHCASE is set to ANY.  For
+example, if you type the string /MiXeD/, PE II finds any of these
+strings:  mixed, MIXED, or mIxEd.  To see the searchcase, enter
+? SEARCHCASE on the command line.
+
+You can use the SET SEARCHCASE command to control whether or not
+case is respected in the CHANGE command searches.
+
+PE II, however, does insert the replacement string exactly as you
+type it, regardless of the ? SEARCHCASE.  If the new string is
+MiXeD, it will appear in text the same way.
+
+Here are some examples of how to use the CHANGE command:
+
+Command           What It Does
+
+c(xyz(abc(        Changes xyz to abc individually with a forward
+                  search.  Use the CONFIRM CHANGE command to
+                  replace and the EXECUTE command to repeat the
+                  command.
+
+c/xyz//*          Deletes all occurrences of xyz (by changing
+                  them to the empty string) from the current
+                  file position to the end of the file.
+
+c!xyz! XYZ !-*    Capitalizes and puts spaces on both sides of
+                  all occurrences of xyz from the cursor
+                  position to the top of the file.
+
+c'/*'(*'*         Changes all occurrences of /* to  (*  from the
+                  current position to the end of the file.
+
+c/abc/xyz/*m      Changes all occurrences of abc to xyz only in
+                  the marked part of the file from the current
+                  cursor.
+
+See also CONFIRM CHANGE, LOCATE, SET SEARCHCASE, and
+? SEARCHCASE.
+
+
+                               19
+
+
+CHDIR~
+
+________________________________________
+
+CHDIR changes the directory you are
+using.
+________________________________________
+
+Format:  CHDIR <drive><path>
+
+The CHDIR command changes the working directory in the same way
+DOS does.  You can also include a drive letter to change the
+default drive, as well as the directory or subdirectory.  CHDIR
+without a drive or directory is equivalent to the ? DIR command.
+
+You can abbreviate CHDIR to CD.
+
+Examples:
+
+    cd
+    cd b:
+    cd c:\
+    chdir \new
+
+See also DIR and ? DIR.
+
+
+
+
+
+
+
+CLEAR MARKS~
+
+________________________________________
+
+CLEAR MARKS clears all marked areas in
+all files, including the stack.
+________________________________________
+
+Marked areas that have been pushed onto the saved stack of marked
+areas are cleared, leaving the stack empty.  No data in any file
+is changed.
+
+See also MARK BLOCK, MARK CHAR, MARK LINE, PUSH MARK, POP MARK,
+and UNMARK.
+
+
+
+
+
+                               20
+
+
+CLEAR MESSAGE~
+
+________________________________________
+
+CLEAR MESSAGE erases any message on the
+message line.
+_______________________________________
+
+
+
+
+
+
+
+COLUMN~
+
+________________________________________
+
+COLUMN moves the cursor to the column
+specified on the current line.
+________________________________________
+
+Format:  column <nnn>
+
+where nnn is the column number.
+
+If you do not specify a number, the cursor moves to column one of
+the current line.
+
+See also LEFT, RIGHT, LEFT MARGIN, RIGHT MARGIN, and PARAGRAPH
+MARGIN.
+
+
+
+
+
+                               21
+
+
+COMMAND TOGGLE~
+
+________________________________________
+
+COMMAND TOGGLE switches the cursor from
+the text area to the command line or
+vice versa.
+________________________________________
+
+If the cursor is on the command line, COMMAND TOGGLE moves the
+cursor to its last position in the text area of the current
+window.
+
+If the cursor is in the text area, COMMAND TOGGLE moves the
+cursor to its last position on the command line of the current
+window.
+
+If the cursor is moved from the text area to the command line, a
+mark is left in the text area to indicate the previous cursor
+position.
+
+See also CURSOR COMMAND and CURSOR DATA.
+
+
+
+
+
+
+
+CONFIRM CHANGE~
+
+________________________________________
+
+CONFIRM CHANGE replaces the search
+string with the replacement string when
+prompted by the CHANGE command.
+________________________________________
+
+This command works only when you search for individual
+occurrences of the strings with the CHANGE command, not for
+global changes.
+
+CONFIRM CHANGE can only be used immediately following a CHANGE
+command.
+
+See also CHANGE.
+
+
+
+
+
+                               22
+
+
+COPY FROM COMMAND~
+
+________________________________________
+
+COPY FROM COMMAND inserts a new line
+into the current file containing a copy
+of the current contents of the command
+line.
+________________________________________
+
+The new line is inserted after the line containing the cursor in
+the text area.
+
+See also COPY TO COMMAND.
+
+
+
+
+
+
+
+COPY MARK~
+
+________________________________________
+
+COPY MARK copies a marked area at the
+location of the cursor leaving the
+original copy marked.
+______________________________________
+
+For marked lines, COPY MARK inserts a copy of the lines below the
+line with the cursor.
+
+For block marks, the cursor position marks the top left corner of
+the inserted block.  Any text to the right of the cursor moves to
+the right of the inserted text.
+
+For character marks, COPY MARK inserts a copy of the marked area
+at the cursor location.
+
+Marked areas can be copied from other active files and windows to
+the current file and window.
+
+You cannot copy marked text onto another area of marked text.
+
+See also MARK BLOCK, MARK CHAR, MOVE MARK, and MARK LINE.
+
+
+
+
+
+                               23
+
+
+COPY TO COMMAND~
+
+________________________________________
+
+COPY TO COMMAND replaces the command
+line with the line containing the
+cursor in the text area of the current
+window.
+_______________________________________
+
+See also COPY FROM COMMAND.
+
+
+
+
+
+
+
+CURSOR COMMAND~
+
+________________________________________
+
+CURSOR COMMAND moves the cursor to its
+most recent position on the command
+line of the current window.
+_______________________________________
+
+If the cursor is in the text area, CURSOR COMMAND moves the
+cursor to the command line of the current window.  A pointer
+is left in the text area to indicate the previous cursor
+position.
+
+The cursor position is maintained separately for each window,
+even if the same file appears in multiple windows.
+
+This command works exactly the opposite of the CURSOR DATA
+command.
+
+See also COMMAND TOGGLE and CURSOR DATA.
+
+
+
+
+
+                               24
+
+
+CURSOR DATA~
+
+________________________________________
+
+CURSOR DATA moves the cursor to its most
+recent position in the text area of the
+current window.
+________________________________________
+
+The cursor position is maintained separately for each window,
+even if the same file appears in multiple windows.
+
+This command works exactly the opposite of CURSOR COMMAND.
+
+See also COMMAND TOGGLE and CURSOR COMMAND.
+
+
+
+
+
+
+
+DEFINE~
+
+________________________________________
+
+DEFINE assigns a macro to a key.
+________________________________________
+
+Format:  define keyname = macro
+
+The DEFINE command consists of the keyword DEFINE (which may be
+abbreviated DEF or just D), one or more spaces, a keyname, zero
+or more spaces, an equals sign, zero or more spaces, followed by
+a macro.  A macro is a sequence of terms, possibly empty.  Each
+term can be a PE II command enclosed in square brackets [], or a
+character string enclosed in single or double quotes, or a
+three-digit character code enclosed in square brackets, or a
+keyname enclosed in square brackets and preceded by the word
+"key."  Examples of keynames are:  ins (for Insert), s-f1 (for
+Shift-F1), and c-pgup for Ctrl-PgUp.
+
+Examples:
+
+     def f1 = [unmark]
+     d f1 = [um]
+     define f1 = 'abc'
+     def f1 = "'"
+     def f1 = [unmark] [dir a:] 'xyz' [key f2]
+     def f1 = [012] [key f2] [def f1 = [key f3]] 'asdf'
+
+You can assign commands or literal strings, or a combination of
+the two.
+
+
+                               25
+
+Commands are names from this section of the document.  The
+commands must be in brackets [] and can be abbreviated to save
+space.  Refer to the "Command Abbreviations" section of this
+document for the abbreviations.
+
+Literals are character strings enclosed in quotes that by
+themselves do not do anything except appear either in the text or
+on the command line.  When you invoke a macro, the characters in
+a literal are entered as if they were typed at the current cursor
+position.
+
+You may use either single (') or double (") quotes around a
+literal.  Single (double) quotes may not appear inside a
+character string enclosed in single (double) quotes.  (Use a
+different quote mark inside another quote mark, for example:
+"'Personal Editor II'")
+
+Once you assign a command or literal string to a key,
+typing the key performs the sequence of literals and commands.
+
+The order that you type the commands and literals is the order
+in which PE II performs them.
+
+To remove a definition assigned to a key, type the DEFINE command
+and the key without a command or literal.
+
+Example:
+
+     d a-t =
+
+See also MACRO, ? KEY, and EDIT .KEYDEFS.
+
+
+
+
+
+
+
+DELETE CHAR~
+
+________________________________________
+
+DELETE CHAR deletes the character at the
+cursor and shifts the remaining
+characters to the right of the cursor
+one position left.
+________________________________________
+
+If a character is within a character marked area, the boundaries
+of the marked area will be updated appropriately.
+
+See also RUBOUT.
+
+
+                               26
+
+
+DELETE LINE~
+
+________________________________________
+
+DELETE LINE deletes the current line.
+________________________________________
+
+DELETE LINE shifts the remaining text up one line after it
+deletes a line.
+
+If a line is within a marked area, the boundaries of the marked
+area will be updated appropriately.
+
+The command has no effect if used when the cursor is on the
+command line.
+
+See also INSERT LINE and DELETE MARK.
+
+
+
+
+
+
+
+DELETE MARK~
+
+________________________________________
+
+DELETE MARK deletes the text in the
+marked area and unmarks the file.
+________________________________________
+
+For line marks, DELETE MARK erases the marked line or group of
+lines and closes the gap.
+
+For block marks, DELETE MARK acts as if you used DELETE CHAR on
+each character inside the mark.  If any text is to the right of
+the marked block, it is shifted left by the same number of
+columns of text that were erased.  Lines of text below deleted
+marked blocks do not move up.
+
+For character marks, lines contained within the marked area are
+erased.  The marked areas on the first and last lines of the
+marked area are deleted as with the ERASE END LINE and ERASE
+BEGIN LINE commands.  If characters remain on the beginning and
+end lines of the marked area, DELETE MARK joins the two line
+fragments together.
+
+See also UNMARK, MARK BLOCK, MARK CHAR, and MARK LINE.
+
+
+                               27
+
+
+DEMO END~
+
+________________________________________
+
+DEMO END turns off demonstration mode.
+________________________________________
+
+DEMO END forces PE II to normal mode in which screen updates are
+delayed until all activity from the current keystroke or macro
+has ended.
+
+See also DEMO FAST and DEMO SLOW.
+
+
+
+
+
+
+
+DEMO FAST~
+
+________________________________________
+
+DEMO FAST turns on demonstration mode
+but does not force a delay between each
+command executed.
+________________________________________
+
+In demonstration mode, the screen is updated after each command.
+This is unlike normal mode in which screen updates are delayed
+until all activity from the current keystroke or macro has ended.
+
+See also DEMO SLOW and DEMO END.
+
+
+
+
+
+
+
+DEMO SLOW~
+
+________________________________________
+
+DEMO SLOW turns on demonstration mode
+and forces a delay between each command
+executed.
+________________________________________
+
+In demonstration mode, the screen is updated after each command.
+This is unlike normal mode in which screen updates are delayed
+until all activity from the current keystroke or macro has ended.
+
+See also DEMO FAST and DEMO END.
+
+
+                               28
+
+
+DIR~
+
+________________________________________
+
+DIR lists all files of a current
+directory or of a specified directory
+in the internal file .DIR.
+________________________________________
+
+Format:  dir <drive><path><filename<.ext>>
+
+The DIR command consists of the keyword DIR, one or more
+blanks, an optional drive, an optional path, and an optional
+filename with an optional extension.  The file specification may
+contain wild card characters.  See the DIR command in the DOS
+manual for information about wildcard characters.
+
+Examples:
+
+     dir
+     dir a:
+     dir a:\p*.*
+     dir ..\direct\abc?.?
+
+The DIR command gives a snapshot of the current files on a disk,
+just as the .keydefs file gives a snapshot of the current key
+definitions.
+
+The .DIR file is an internal file that you can rename and save.
+
+You can use the global characters ? and * in the filename and
+the extension.
+
+If you had a group of files that had similar names except for a
+few characters, you could type ? for each character where the
+filenames vary and receive those files.
+
+For example, dir c:\word\appendx? lists all the files on drive C
+in the subdirectory "word" that begin with "appendx" and end with
+a different character.
+
+An * in a filename or in a filename extension indicates that any
+character or group of characters can occupy that position and all
+the remaining positions in the filename or extension.
+
+For example, dir *.bas lists all the files on the current
+directory and subdirectory that have the extension .bas.
+
+To see a current drive and path, enter ? DIR on the command
+line.
+
+See also CHDIR and ? DIR.
+
+
+                               29
+
+
+DOS~
+
+________________________________________
+
+DOS loads another copy of the command
+interpreter into memory and allows
+execution of any DOS program or command.
+________________________________________
+
+PE II squeezes all of its dynamic memory together, releases
+any that remains to DOS, then invokes another copy of the command
+interpreter (usually COMMAND.COM).  PE II uses the COMSPEC=
+parameter of its environment to find the location of the command
+interpreter.
+
+Use the command ? MEMORY to see how much memory is available.
+That amount of memory will be available to the secondary command
+interpreter, although some of the memory will be used up to load
+COMMAND.COM.  Therefore, the PE II ? MEMORY command and the DOS
+CHKDSK commands will not give the same number for bytes of
+available memory.  The secondary command interpreter can be used
+to execute any DOS program or command.
+
+To return to PE II, leave the command interpreter using the
+special command EXIT.  PE II checksums all of its code and data
+areas before and after the command interpreter runs to protect
+itself against modification by programs run from the secondary
+command interpreter.  If you change an active PE II file while in
+DOS, you will need to reload the file to use the changed file
+because PE II will not contain the changes when you exit to it.
+
+Do not run programs in the secondary command interpreter that
+remain resident because memory will not be given back to PE II
+after returning with the EXIT command.
+
+
+
+
+
+                               30
+
+
+DOWN~
+
+________________________________________
+
+DOWN moves the cursor down the number of
+lines specified.
+________________________________________
+
+Format: down <nnnn>
+
+where nnnn is the number of lines down you want to move the
+cursor.
+
+If you do not specify a number, DOWN moves the cursor down one
+line.
+
+The column the cursor is in does not change.
+
+If the cursor is at the bottom of the window but not at the
+bottom of the file, the cursor remains stationary and the text in
+the window shifts up nnnn lines.
+
+If you use DOWN on the command line, the cursor moves to the
+bottom line of the current window in the text area.
+
+See also UP.
+
+
+
+
+
+
+
+EDIT~
+
+________________________________________
+
+EDIT switches to an active file or loads
+a file from disk.
+________________________________________
+
+Format:  edit  <<drive><path>filename> <tabs>
+         edit  <<drive><path>filename> <notabs>
+
+The EDIT command consists of the keyword EDIT (which may be
+abbreviated e), one or more blanks, an optional drive, an
+optional path, an optional filename, one or more blanks, and an
+optional TABS or NOTABS.
+
+
+                               31
+
+Examples:
+
+     edit
+     e c:\pe2\filename
+     e filename tabs
+     e filename notabs
+     e .keydefs
+     e .unnamed
+     e
+
+If you want to look at or change a file while another file is in
+the window, type the EDIT command and the name of the file on the
+command line.
+
+If the file you specify (which can contain a drive specifier
+and/or a subdirectory path) is already active, the display
+switches to that file.  Otherwise, it is brought in from the disk
+or diskette and becomes an active file in the ring of active
+files.
+
+If the file is already active, the EDIT command uses the margins
+and tab settings the file previously had.  Otherwise, the EDIT
+command assigns the file the same margins and tab settings as the
+current file.
+
+If TABS is specified, tab characters in the file are expanded to
+the proper number of blanks to bring the column number to the
+next tab stop in the sequence 1, 9, 17, 25, 33, and so on.
+
+If NOTABS is specified, no tab expansion occurs.
+
+If neither TABS nor NOTABS is specified, tab expansion occurs
+according to the current SET TABEXPAND setting.  To see the
+current setting of TABEXPAND, enter ? TABEXPAND on the command
+line.
+
+If the filename specified is the special file .KEYDEFS, PE II
+displays a file of DEFINE commands showing the current key
+definitions.  If the special file .UNNAMED is specified, PE II
+displays the internal file to which deleted and modified lines
+are saved before they are changed.
+
+If you specify EDIT without parameters, the next file in the ring
+of active files is displayed.   You can have up to 20 active
+files.
+
+See also FILE, SAVE, SET BACKUP, SET TABEXPAND, and SET
+BLANKCOMPRESS, and ? TABEXPAND.
+
+
+                               32
+
+
+END LINE~
+
+________________________________________
+
+END LINE moves the cursor one position
+after the last character on the current
+line.
+________________________________________
+
+The last character or characters may be blanks.
+
+See also BEGIN LINE.
+
+
+
+
+
+
+
+END MARK~
+
+________________________________________
+
+END MARK moves the cursor to the end
+of the current marked area, if any.
+________________________________________
+
+The marked area may be in a file other than the current file.
+
+For line marks, the cursor does not change its column location
+but jumps vertically to the row containing the last line of the
+marked area.
+
+For block and character marks, END MARK moves the cursor to the
+exact character that is at the end of the mark.
+
+
+See also BEGIN MARK.
+
+
+
+
+
+                               33
+
+
+END WORD~
+
+________________________________________
+
+END WORD moves the cursor to the last
+character of the word in which it is now
+located.
+________________________________________
+
+If the cursor is not within a word, the cursor moves to the last
+character of the word to the right of the cursor.
+
+If there is no word to the right of the cursor, the cursor moves
+to the last character of the last word on the current line.
+
+See also BEGIN WORD, TAB WORD, and BACKTAB WORD.
+
+
+
+
+
+
+
+ERASE~
+
+________________________________________
+
+ERASE deletes from disk the file
+specified by the ERASE command.
+________________________________________
+
+Format:   erase <drive><path>filename
+
+The ERASE command requires a filename to be specified.  The drive
+and path are optional.  If no drive or path is specified, the
+current ones are used.  To see the current drive and path, enter
+? DIR on the command line.
+
+Wildcard characters are not allowed in the path name.
+
+See also ? DIR.
+
+
+
+
+
+                               34
+
+
+ERASE BEGIN LINE~
+
+________________________________________
+
+ERASE BEGIN LINE erases all of the
+characters on the current line at or to
+the left of the cursor.
+________________________________________
+
+The cursor does not move.  The remaining text moves to the
+beginning of the line.
+
+See also ERASE END LINE.
+
+
+
+
+
+
+
+ERASE END LINE~
+
+________________________________________
+
+ERASE END LINE erases characters from
+the cursor to the end of the current
+line.
+________________________________________
+
+The cursor does not move.
+
+See also ERASE BEGIN LINE.
+
+
+
+
+
+                               35
+
+
+ESCAPE~
+
+
+_________________________________________
+
+ESCAPE lets you type ASCII characters at
+the current cursor position.
+________________________________________
+
+The control function of the key typed just after ESCAPE is
+ignored.  This is useful for entering literal characters into a
+file.  For example, ESCAPE followed by the Esc key will insert
+the Esc character into the file at the current cursor position
+instead of executing the command or macro associated with the
+key.
+
+You can also type in any of the 256 ASCII characters by holding
+down the Alt key and typing the three-digit ASCII number on the
+numeric keypad.  After typing in the number, release the Alt key
+and the ASCII character will appear at the current cursor
+position.
+
+See also DEFINE.
+
+
+
+
+
+
+
+EXECUTE~
+
+________________________________________
+
+EXECUTE carries out the command on the
+command line, even if the cursor is not
+currently on it.
+________________________________________
+
+The Enter key always carries out a command when the cursor is on
+the command line, even if some other command has been assigned
+to the Enter key, but the EXECUTE command lets you carry out a
+command also from the text area.
+
+EXECUTE is useful for repeating a CHANGE or LOCATE command
+because the commands are not erased from the command line after
+being carried out.
+
+See also CHANGE and LOCATE.
+
+
+                               36
+
+
+FILE~
+
+________________________________________
+
+FILE stores the current file on disk,
+then removes the file from memory.
+________________________________________
+
+Format: file <<drive><path>filename> <tabs>
+        file <<drive><path>filename> <notabs>
+
+The FILE command consists of the keyword FILE, one or more
+blanks, an optional drive, an optional path, an optional
+filename, one or more blanks, and an optional TABS or NOTABS
+specification.
+
+Example:
+
+     file c:\docs\memo1
+     file memo1 tabs
+     file memo1 notabs
+
+The FILE command is the same as the SAVE command, except that the
+file is removed from memory after being written to disk.
+
+If a filename is specified, the disk file will have the indicated
+name.  Otherwise, the current name of the active file will be
+used.
+
+If TABS is specified, runs of blank characters in the file are
+compressed to tab characters in such a way that when the file is
+read with the EDIT command and the TABS option, the tabs are
+turned back into the proper number of blanks.
+
+The NOTABS option disables compression of blanks to tabs.
+
+If neither TABS nor NOTABS is specified, compression of blanks to
+tabs occurs according to the current SET BLANKCOMPRESS setting.
+To see the current setting of BLANKCOMPRESS, enter ?
+BLANKCOMPRESS on the command line.
+
+See also EDIT, SAVE, SET BLANKCOMPRESS, and ? BLANKCOMPRESS.
+
+
+                               37
+
+
+FILL MARK~
+
+________________________________________
+
+FILL MARK fills a marked area with
+copies of the character specified.
+________________________________________
+
+When using FILL MARK, PE II asks you to specify the character to
+be used for the fill character.  PE II then copies that one
+character throughout the marked area.
+
+If you use FILL MARK and there are no marks in any active files,
+an error message is displayed.
+
+See also MARK BLOCK, MARK CHAR, and MARK LINE.
+
+
+
+
+
+
+
+FIND BLANK LINE~
+
+________________________________________
+
+FIND BLANK LINE searches forward in the
+file for a blank line.
+________________________________________
+
+If the cursor is on a blank line, PE II does not move the cursor.
+
+If the current line is not blank, PE II searches for the next
+line that is blank.  If a blank line is not found, you get a
+message indicating that the remainder of the file contains no
+blank lines.
+
+See also REFLOW.
+
+
+
+
+
+                               38
+
+
+FIRST NONBLANK~
+
+________________________________________
+
+FIRST NONBLANK moves the cursor to the
+first character of the current line that
+is not a blank.
+________________________________________
+
+If there are no nonblank characters on the current line, FIRST
+NONBLANK moves the cursor to the end of the current line.
+
+See also INDENT.
+
+
+
+
+
+
+
+INDENT~
+
+________________________________________
+
+INDENT moves the cursor to the paragraph
+margin if the current line begins a
+paragraph.
+________________________________________
+
+The cursor indents to the paragraph margin only if the line above
+the cursor is blank or the cursor is on the first line of the
+file.  Otherwise, the cursor moves to the left margin.
+
+See also FIRST NONBLANK.
+
+
+
+
+
+                               39
+
+
+INSERT LINE~
+
+________________________________________
+
+INSERT LINE inserts a new line below the
+current line.
+________________________________________
+
+INSERT LINE shifts any text below the current line down one line.
+The cursor moves to the first column of the new line.
+
+If a line is within a marked area, the boundaries of the marked
+area will be updated appropriately.
+
+You can insert a blank line above text that is at the top of the
+file by using SPLIT when the cursor is in the first column of the
+first line.
+
+See also DELETE LINE and SPLIT.
+
+
+
+
+
+
+
+INSERT MODE~
+
+________________________________________
+
+INSERT MODE forces PE II into the Insert
+mode where typed characters are inserted
+in front of the cursor.
+________________________________________
+
+Regardless of its previous setting, INSERT MODE puts PE II
+into Insert mode, expands the cursor to a rectangle, and
+displays the word "Insert" on the status line.
+
+When in Insert mode, if a character is inserted within a
+character marked area, the boundaries of the marked area will be
+updated appropriately.
+
+See also INSERT TOGGLE and REPLACE MODE.
+
+
+
+
+
+                               40
+
+
+INSERT TOGGLE~
+
+________________________________________
+
+INSERT TOGGLE switches the typing mode
+between Insert and Replace.
+________________________________________
+
+If you are currently in Replace mode, INSERT TOGGLE switches to
+Insert mode.
+
+If you are currently in Insert mode, INSERT TOGGLE switches to
+Replace mode.
+
+PE II indicates which mode you are in by the message on the
+status line and by the size of the cursor.  While in Insert
+mode, the cursor is a rectangle, whereas in Replace mode, the
+cursor is an underscore.
+
+INSERT TOGGLE controls how characters are entered.  In Replace
+mode, you type over characters to replace text.  In Insert mode,
+characters are inserted at the cursor position and characters to
+the right of the cursor are shifted right once for each inserted
+character.
+
+When in Insert mode, if a character is inserted within a
+character marked area, the boundaries of the marked area will be
+updated appropriately.
+
+See also INSERT MODE and REPLACE MODE.
+
+
+
+
+
+
+
+JOIN~
+
+________________________________________
+
+JOIN connects the line below the current
+line to the end of the current line.
+_______________________________________
+
+The cursor may be located anywhere on the current line and does
+not move after the two lines are joined.
+
+If the combined line is longer than 255 characters, JOIN erases
+any character after 255 and displays "Line(s) truncated" on the
+message line.
+
+You can recover the two original lines from the .UNNAMED internal
+file.
+
+See also SPLIT.
+
+
+                               41
+
+
+KEY~
+
+________________________________________
+
+KEY allows the direct execution of a
+macro assigned to a key.
+_______________________________________
+
+Format:  key keyname
+
+The KEY command consists of the keyword KEY followed by a blank
+and a keyname.  The keyname can be any one of the 238 keyboard or
+76 user shift keys.
+
+Examples:
+
+     [key s-a]
+     [key f1]
+     [key s-minus]
+     [key u-m]
+
+To assist in long key definitions, PE II allows one key to invoke
+another with the KEY command.  However, PE II guards against the
+possibility of an infinite loop due to keys that call themselves
+directly or indirectly by restricting the number of levels of the
+use of the same KEY command to five.
+
+For more information on the different types of redefinable keys,
+see the beginning of this section, "Commands," or the section
+"Command Abbreviations."
+
+See also DEFINE and MACRO.
+
+
+
+
+
+
+
+LEFT~
+
+_______________________________________
+
+LEFT moves the cursor left the number of
+columns specified.
+_______________________________________
+
+Format:  LEFT <nnn>
+
+where nnn is the number of columns left you want to move the
+cursor.
+
+If you do not specify a number, LEFT moves the cursor left one
+column.
+
+See also COLUMN, RIGHT, LEFT MARGIN, RIGHT MARGIN, and PARAGRAPH
+MARGIN.
+
+
+                               42
+
+
+LEFT EDGE~
+
+________________________________________
+
+LEFT EDGE moves the cursor to the far
+left column of the current window.
+________________________________________
+
+The cursor remains on the current line.
+
+Since the command line scrolls independently of the text area,
+the left edge column number of the command line may not be the
+left edge column number of the text area.
+
+See also RIGHT EDGE.
+
+
+
+
+
+
+
+LEFT MARGIN~
+
+________________________________________
+
+LEFT MARGIN moves the cursor to the
+column identified as the left margin as
+set by the SET MARGINS command.
+________________________________________
+
+The cursor remains on the current line.
+
+To see the current setting of the margins, enter ? MARGINS on
+the command line.
+
+See also RIGHT MARGIN, PARAGRAPH MARGIN, SET MARGINS, and ?
+MARGINS.
+
+
+
+
+
+                               43
+
+
+LINE~
+
+________________________________________
+
+LINE moves the cursor in the current
+file to the line number specified.
+________________________________________
+
+Format:  LINE <nnnn>
+
+where nnnn is the line number.
+
+If you do not specify a number, the cursor moves to the first
+line of the current file.
+
+The column number is not changed.
+
+See also TOP and BOTTOM.
+
+
+
+
+
+
+
+LOCATE~
+
+________________________________________
+
+LOCATE finds the next (or previous)
+occurrence of a string, searching from
+the cursor position.
+________________________________________
+
+Format:  locate /string/<-><m>
+
+The LOCATE command consists of the keyword LOCATE (which may be
+abbreviated L), zero or more blanks, a nonblank delimiter
+character, the search string, an optional closing delimiter, and,
+after the closing delimiter, the optional modifier "-" and the
+optional modifier "m".
+
+If the delimiter is a forward slash (/), the LOCATE keyword can
+be omitted.
+
+Examples:
+
+     locate "string"
+     l/string/
+     /string
+     /string/-m
+
+
+                               44
+
+PE II searches for the string and moves the cursor to the first
+place it is found, displaying a new screen if necessary.
+
+The LOCATE command and the string remain on the command line
+after the LOCATE command is executed.  This allows you to repeat
+the search for the next string without typing the command again.
+
+You can use Ctrl-Break to stop the LOCATE command.
+
+The options in brackets may be present in any combination but
+must appear only after a closing delimiter and in the order
+shown.
+
+The optional minus sign in the LOCATE command controls the
+direction of the search.  If the minus sign follows the
+delimiter, the search begins at the current file position and
+searches toward the top of the file.  If the minus sign is not
+specified, the search direction is forward, toward the bottom of
+the file.
+
+The optional modifier "m" indicates the search is only to include
+the marked area of the current file, if any.
+
+The LOCATE command, like the CHANGE command, ignores whether you
+type the string in uppercase or lowercase when it searches for
+the string if SEARCHCASE is set to ANY.  For example, if the
+string is /MiXeD/, the LOCATE command finds any of the strings:
+mixed, MIXED, or mIxEd.  To see the SEARCHCASE, enter
+? SEARCHCASE on the command line.
+
+
+
+
+Examples:
+
+Command             Comments
+-------             --------
+
+/xyz                Searches forward for xyz.
+
+/xyz/-              Searches backward for xyz.
+
+L'/xyz'             Searches forward for /xyz.
+
+l'/*'-              Searches backward for /*.
+
+/xyz abc/           Searches forward for xyz abc.
+
+l-xyz--             Searches backward for xyz.
+
+
+See also CHANGE, SET SEARCHCASE, and ? SEARCHCASE.
+
+
+                               45
+
+
+LOWERCASE~
+
+________________________________________
+
+LOWERCASE changes all uppercase letters
+within a marked area to lowercase.
+________________________________________
+
+LOWERCASE will not affect any text other than uppercase letters.
+
+If you try LOWERCASE without marking an area, a message is
+displayed.
+
+See also UPPERCASE.
+
+
+
+
+
+                               46
+
+
+MACRO~
+
+________________________________________
+
+MACRO processes a file of PE II
+commands.
+________________________________________
+
+Format:  macro <drive><path>filename
+
+The MACRO command consists of the keyword MACRO (which may be
+abbreviated m) followed by one or more blanks, an optional drive,
+an optional path, and a filename.
+
+MACRO processes the file by internally putting each line of the
+file on the command line one line at a time in the order of the
+file and executes them.  The macro file itself consists of any PE
+II commands from this section.
+
+You can use Ctrl-Break to stop the MACRO.
+
+To separate the commands in a MACRO file, use brackets ([])
+around each command.
+
+Text can be entered at the current cursor position and in the
+current mode by surrounding text by single quotes (') or double
+quotes (") in the macro file.  If a single (double) quote is
+used, none of the characters within the quotes may be a single
+(double) quote.
+
+An ASCII character can be entered by typing the three-digit ASCII
+code in brackets ([nnn]) or by using the ESCAPE command,
+surrounding it with quotes, to type the character as text.  You
+must specify all three digits when using the ASCII code in
+brackets.
+
+Lines beginning with an * in a MACRO file are treated as
+comments.  They are not processed as commands.
+
+DEMO FAST and DEMO SLOW are used to turn on demonstration mode in
+a macro file, allowing the user to see each command being
+performed as they are processed.  DEMO END turns off
+demonstration mode.
+
+The PE2.PRO file is an example of a macro.  Each time you start
+PE II, it searches for the PE2.PRO file on the default drive and
+path unless specified by a /p option (for example, PE2
+/pprofilename).  PE II reads this file to assign the keys and set
+the margins.  Any of the commands in this section can be added to
+this macro file to be executed each time you start PE II.  (The
+DEFINE and SET commands in the profile do not have brackets.  In
+fact, most commands do not need brackets, but to avoid any error
+it is recommended that you use brackets for all commands.)
+
+If PE2 finds an error in any of the commands, it will stop
+
+                               47
+
+processing the MACRO file, put the current line with the error on
+the command line, and display an error on the message line.
+
+See also DEFINE and DEMO.
+
+
+                               48
+
+
+MARK BLOCK~
+
+________________________________________
+
+MARK BLOCK defines one corner of a
+rectangular mark in the text area.
+________________________________________
+
+To mark an entire block, you need to highlight its opposite
+corners.  You can mark an area by either the top left and lower
+right corners, or the top right and lower left corners.
+
+MARK BLOCK highlights the rectangle marked by the two diagonally
+opposite corners.
+
+If there already is a marked rectangle, MARK BLOCK redraws the
+rectangle to include all of the text in the rectangle defined by
+the cursor position of the first mark and the current cursor
+position, provided that an action was not previously taken with
+the marked block.
+
+An error message appears if an action was taken with a currently
+marked block and you use the MARK BLOCK.  An error message also
+appears if you use a different second mark command, such as MARK
+LINE.
+
+See also UNMARK, DELETE MARK, COPY MARK, MOVE MARK, and OVERLAY
+BLOCK.
+
+
+
+
+
+
+
+MARK CHAR~
+
+________________________________________
+
+MARK CHAR defines the beginning or end
+of a character marked area.
+________________________________________
+
+To mark a character or the beginning or end of a sentence,
+phrase, or word in the text area, you need two marked characters
+to highlight the end points.
+
+If there are no marks in any active file, MARK CHAR highlights
+the character at the cursor.
+
+When the second character mark is placed in the current file,
+MARK CHAR highlights all characters between and including the two
+character marks.  No position after the last character of a line
+is highlighted.
+
+Contrast this with the highlighting for line marks, which extends
+to the end of the screen regardless of the line length.
+
+
+                               49
+
+Gaps appear in the marked area if a blank line is between
+character tags.  This unmarked line is included in any operation
+you do to the marked area.
+
+If there were already two marked characters, MARK CHAR redraws
+the marked characters to include all of the text between and
+including the first mark and the current cursor position,
+provided that an action was not previously taken with the marked
+character.
+
+An error message appears if an action has been taken with the
+currently marked character area and you use MARK CHAR.  An error
+message also appears if you use a second different mark command,
+such as MARK BLOCK, instead of MARK CHAR.
+
+See also UNMARK, DELETE MARK, COPY MARK, and MOVE MARK.
+
+
+
+
+
+
+
+MARK LINE~
+
+_______________________________________
+
+MARK LINE defines the beginning or
+ending line of a marked area.
+_______________________________________
+
+To mark a line or group of lines, you need to highlight the
+beginning and ending lines.
+
+If there are no marks in any active file, MARK LINE highlights
+the line of the current cursor out to column 255.
+
+If you mark a second line, MARK LINE highlights the current line
+and all lines between it and the other marked line out to column
+255.
+
+If there are already two marked lines, MARK LINE redraws the
+marked lines to include all of the lines between and including
+the first mark and the current cursor position, provided that an
+action was not previously taken with the marked lines.
+
+An error message appears if an action was taken with currently
+marked lines and you use MARK LINE.  An error message also
+appears if you use a different second mark command, such as MARK
+BLOCK or MARK CHAR.
+
+See also UNMARK, DELETE MARK, COPY MARK, and MOVE MARK.
+
+
+                               50
+
+
+MOVE MARK~
+
+________________________________________
+
+MOVE MARK copies a marked area to the
+line below the cursor position, deleting
+the original marked area.
+________________________________________
+
+For line marks, MOVE MARK inserts the marked text below the
+cursor.
+
+For block marks, MOVE MARK uses the cursor position as the top
+left corner of the area to insert.  Any text to the right of the
+cursor moves to the right of the inserted text.
+
+For character marks, MOVE MARK inserts the marked area in front
+of the cursor.
+
+Marks can be moved from other active files and windows to the
+current file and window.
+
+You cannot overlay text onto the block marked area.
+
+See also COPY BLOCK, MARK BLOCK, MARK CHAR, and MARK LINE.
+
+
+
+
+
+
+
+NAME~
+
+________________________________________
+
+NAME changes the name in memory of the
+current file to the specified filename.
+________________________________________
+
+Format:  name <drive><path>filename
+
+PE II checks to see if the name you typed is the same as another
+active filename, or if the name begins with a period.  If so, you
+get an error message.  If not, the new name becomes the current
+filename and appears on the status line.
+
+The file on the diskette or disk, however, is not updated until
+you do a SAVE or FILE.
+
+You also get a message if you try to save a file with an invalid
+DOS name.
+
+See also EDIT, FILE, and SAVE.
+
+
+                               51
+
+
+NEXT VIEW~
+
+________________________________________
+
+NEXT VIEW moves the cursor in a
+clockwise direction into the next
+window on the screen that displays the
+same file as the current window.
+________________________________________
+
+Nothing happens if there is only one window on the screen.
+
+See also NEXT WINDOW, SPLIT SCREEN, and ZOOM WINDOW.
+
+
+
+
+
+
+
+NEXT WINDOW~
+
+________________________________________
+
+NEXT WINDOW moves the cursor in a
+clockwise direction to the next window
+on the screen.
+________________________________________
+
+The file in the new current window may be either the same
+or a different file from the one in the previous current
+window.
+
+See also NEXT VIEW, SPLIT SCREEN, and ZOOM WINDOW.
+
+
+
+
+
+                               52
+
+
+OVERLAY BLOCK~
+
+________________________________________
+
+OVERLAY BLOCK puts a block marked area
+on top of any existing text at the
+cursor position in the current window.
+________________________________________
+
+OVERLAY BLOCK works only for an area that has been block marked.
+An error message appears if OVERLAY BLOCK is tried with a line or
+character marked area.
+
+OVERLAY BLOCK places the marked rectangle on top of an area of
+the same size, deleting any characters in that area.
+
+The position of the cursor marks the top left corner of the block
+to be overlaid.
+
+Lines are added to a file as necessary to accommodate the block
+marked area.
+
+Marks can be overlaid from other active files and windows to the
+current file and window.
+
+You cannot overlay text onto the block marked area.
+
+See also MARK BLOCK, COPY MARK, and MOVE MARK.
+
+
+
+
+
+
+
+PAGE DOWN~
+
+________________________________________
+
+PAGE DOWN scrolls the window down to
+the next page.
+________________________________________
+
+The number of lines scrolled equals the height of the data area,
+minus two lines.
+
+If there are less than the number of lines in the window below
+the last line of the current screen, PAGE DOWN displays the last
+page and the Bottom of file marker.
+
+See also PAGE UP.
+
+
+                               53
+
+
+PAGE UP~
+
+________________________________________
+
+PAGE UP scrolls the window up to the
+previous page.
+________________________________________
+
+The number of lines scrolled equals the height of the data area
+minus two lines.
+
+
+See also PAGE DOWN.
+
+
+
+
+
+
+
+PARAGRAPH MARGIN~
+
+________________________________________
+
+PARAGRAPH MARGIN moves the cursor to
+the column identified as the paragraph
+margin as set by the SET MARGINS command.
+________________________________________
+
+The cursor remains on the current line.
+
+To see the current setting of the margins, enter ? MARGINS on
+the command line.
+
+See also LEFT MARGIN, RIGHT MARGIN, SET MARGINS, and ? MARGINS.
+
+
+
+
+
+                               54
+
+
+POP MARK~
+
+________________________________________
+
+POP MARK unmarks the current marked area
+and pops the mark most recently saved
+on the stack with PUSH MARK.
+________________________________________
+
+The saved mark is once again highlighted and accessible to
+operations that require marked areas.
+
+An error message appears if you try to use POP MARK with no saved
+marks in the stack.
+
+See also CLEAR MARKS and PUSH MARK.
+
+
+
+
+
+
+
+PRINT~
+
+________________________________________
+
+PRINT prints the current file on the
+printer.
+________________________________________
+
+Align the paper before you use the PRINT command.  The file is
+printed as it appears on the screen, including blanks at the top
+and bottom of the file.
+
+You can use Ctrl-Break to stop printing.
+
+If the printer is turned off, out of paper, or not online, the
+following message appears:
+
+    No printer; type r or c (resume/cancel)
+
+Check for these possible conditions and correct them.
+
+If you get blank lines inserted in your printout, move the cursor
+to the end of the line that caused the inserted line and press Erase
+Right.  You may have had blank characters at the end of the line.
+
+See also PRINT MARK.
+
+
+                               55
+
+
+PRINT MARK~
+
+________________________________________
+
+PRINT MARK prints the marked area on
+the printer.
+________________________________________
+
+You can use Ctrl-Break to stop printing.
+
+If the printer is turned off, out of paper, or not online, the
+following message appears:
+
+    No printer; type r or c (resume/cancel)
+
+Check for these possible conditions and correct them.
+
+Position the paper before you use the PRINT command.  The file is
+printed as it appears on the screen, including blanks at the top
+and bottom of the file.
+
+An error message appears on the message line if you try to use
+PRINT MARK with no marked area.
+
+See also PRINT.
+
+
+
+
+
+
+
+PUSH MARK~
+
+________________________________________
+
+PUSH MARK saves the boundaries of the
+current marked area on the stack and
+removes the highlighting of the marked
+area.
+________________________________________
+
+You can have up to five marked areas in the stack.  An error
+message appears if you try to PUSH MARK more than five marks
+onto the stack.
+
+While pushed, a mark is not accessible to PE II operations that
+require marked areas, but its boundaries are adjusted by
+operations that would normally adjust these marked boundaries if
+they were active.
+
+See also CLEAR MARKS and POP MARK.
+
+
+                               56
+
+
+QUIT~
+
+________________________________________
+
+QUIT removes the current file from the
+ring of active files without writing it
+to disk.
+________________________________________
+
+QUIT can be abbreviated as Q.
+
+If the file was not changed and you use the QUIT command, PE II
+removes the copy of the current file in memory and shows another
+file in memory (if any) without using the EDIT command.
+
+If you changed the current file or have changed its name since
+the last time the file was saved, PE II displays the message:
+"Do you really want to quit?  Type y or n"
+
+If you want to start over by removing the command, type N for NO.
+Typing Y for YES erases any changes you made since the last save.
+
+When you use the QUIT command with the last active file, PE II
+returns to DOS.
+
+See also DOS and FILE.
+
+
+
+
+
+
+
+REDRAW~
+
+________________________________________
+
+REDRAW redraws the screen.
+________________________________________
+
+REDRAW erases the entire screen, then completely redraws it.
+
+This command is useful for recovering the proper screen contents
+after a message from DOS rearranges the screen format, for
+example, when a message is displayed on a one-drive system after
+switching to a different logical drive.
+
+See also EDIT.
+
+
+                               57
+
+
+REFLOW~
+
+________________________________________
+
+REFLOW reformats text to the set
+margins within a line marked area.
+________________________________________
+
+REFLOW reformats line marked areas only.  An error message
+appears if REFLOW is tried with a block or character marked area.
+
+REFLOW uses the left margin and right margin for its
+reformatting.  For the first line of the reformatted area only,
+REFLOW uses the current paragraph margin setting rather than the
+left margin setting for its left boundary.  To see the current
+left, right, and paragraph margin settings, enter ? MARGINS on
+the command line.
+
+
+REFLOW fills lines with words where possible without splitting
+them at the end of the line.  It places one blank between strings
+and two blanks after a string ending in a period, comma,
+exclamation point, or question mark.  If a word were to extend
+beyond the right margin setting, REFLOW moves the entire word
+down to the next line after it inserts a new line.
+
+If a single word is too long to fit between the left and right
+margins, REFLOW splits it at the right margin.
+
+Any line marked area is adjusted appropriately after formatting
+the text.
+
+REFLOW does not right-justify a paragraph.
+
+See also SET MARGINS and ? MARGINS.
+
+
+
+
+
+                               58
+
+
+RENAME~
+
+________________________________________
+
+RENAME changes the name of a file on
+disk to the one specified.
+________________________________________
+
+Format:  rename <drive><path>f1 f2
+
+where f1 is the specified file to be renamed to f2.
+
+The RENAME command requires two filenames.  The drive and path
+are optional.  If no drive or path is specified, the current ones
+are used.  To see the current drive and path, enter ? DIR on the
+command line.
+
+The RENAME command is different from the NAME command in that
+RENAME changes the name of a file that has already been stored on
+disk and NAME changes only the name in PE II's internal memory
+that will be used to save a file to disk if or when it is saved
+to disk.
+
+See also ? DIR.
+
+
+
+
+
+
+
+REPLACE MODE~
+
+________________________________________
+
+REPLACE MODE forces PE II into Replace
+mode where typed characters are replaced
+at the cursor.
+________________________________________
+
+Regardless of its previous setting, REPLACE MODE puts PE II into
+Replace mode, changes the cursor to a blinking underscore, and
+puts the word "Replace" on the status line.
+
+See also INSERT TOGGLE and INSERT MODE.
+
+
+                               59
+
+
+RIGHT~
+
+________________________________________
+
+RIGHT moves the cursor right the
+number of columns specified.
+________________________________________
+
+Format:  right <nnn>
+
+where nnn is the number of columns right you want to move the
+cursor.
+
+If you do not specify a number, the cursor moves right one
+column.
+
+See also COLUMN LEFT, LEFT, LEFT MARGIN, RIGHT MARGIN, and
+PARAGRAPH MARGIN.
+
+
+
+
+
+
+
+RIGHT EDGE~
+
+________________________________________
+
+RIGHT EDGE moves the cursor to the far
+right column of the current window.
+________________________________________
+
+The cursor remains on the current line.
+
+Since the command line scrolls independent of the text
+area, the right edge column number of the command line may
+not be the right edge column number of the text area.
+
+See also LEFT EDGE.
+
+
+
+
+
+                               60
+
+
+RIGHT MARGIN~
+
+________________________________________
+
+RIGHT MARGIN moves the cursor to the
+column identified as the right margin,
+as set by the SET MARGINS command.
+________________________________________
+
+The cursor remains on the current line.
+
+To see the current setting of the margins, enter ? MARGINS on the
+command line.
+
+See also LEFT MARGIN, PARAGRAPH MARGIN, SET MARGINS, and ?
+MARGINS.
+
+
+
+
+
+
+
+RUBOUT~
+
+________________________________________
+
+RUBOUT deletes the character to the left
+of the cursor and shifts the remaining
+characters at and to the right of the
+cursor one position left.
+________________________________________
+
+RUBOUT is equivalent to LEFT followed by DELETE CHAR.
+
+If a character is within a character marked area, the boundaries
+of the marked area are updated appropriately.
+
+See also DELETE CHAR.
+
+
+
+
+
+                               61
+
+
+SAVE~
+
+________________________________________
+
+SAVE writes a copy of the current file
+to the disk.
+________________________________________
+
+Format:  save <<drive><path>filename> <tabs>
+         save <<drive><path>filename> <notabs>
+
+The SAVE command consists of the keyword SAVE, one or more
+blanks, an optional drive, an optional path, an optional
+filename, one or more blanks, and an optional TABS or NOTABS.
+
+Examples:
+
+     save
+     save c:\pe2\filename
+     save filename tabs
+     save filename notabs
+
+The SAVE command is the same as the FILE command, except that the
+file remains active after being written to disk.
+
+If a filename is specified, the disk file will have the indicated
+name.  Otherwise, the current name of the active file is used.
+
+If TABS is specified, runs of blank characters in the file are
+compressed to tab characters in such a way that when the file is
+read with the EDIT command and the TABS option, the tabs are
+turned back into the proper number of blanks.
+
+The NOTABS option disables compression of blanks to tabs.
+
+If neither TABS nor NOTABS is specified, compression of blanks to
+tabs occurs according to the current SET BLANKCOMPRESS setting.
+To see the current setting of BLANKCOMPRESS, enter ?
+BLANKCOMPRESS on the command line.
+
+See also EDIT, FILE, NAME, SET BLANKCOMPRESS, and ?
+BLANKCOMPRESS.
+
+
+                               62
+
+
+SCROLLDOWN~
+
+________________________________________
+
+SCROLLDOWN moves the current file
+position down the number of lines
+specified.
+________________________________________
+
+
+Format:  scrolldown <nnnn>
+
+If nnnn is not specified, SCROLLDOWN moves the current file
+position down one line.
+
+The cursor is forced off the command line by SCROLLDOWN.
+
+The data in the window is scrolled so that the cursor remains in
+the same screen position, except when the last window of the file
+is being displayed.
+
+See also SCROLLLEFT, SCROLLRIGHT, and SCROLLUP.
+
+
+
+
+
+
+
+SCROLLLEFT~
+
+________________________________________
+
+SCROLLLEFT moves the current file
+position left the number of columns
+specified.
+________________________________________
+
+Format:  scrollleft <nnn>
+
+If nnn is not specified, SCROLLLEFT moves the current file
+position LEFT one column.
+
+The data in the window is scrolled so that the cursor remains in
+the same screen position, except when the first column of the
+file is being displayed.
+
+See also SCROLLDOWN, SCROLLRIGHT, and SCROLLUP.
+
+
+                               63
+
+
+SCROLLRIGHT~
+
+________________________________________
+
+SCROLLRIGHT moves the current file
+position right the number of columns
+specified.
+________________________________________
+
+Format:  scrollright <nnn>
+
+If nnn is not specified, SCROLLUP moves the current file position
+right one column.
+
+The data in the window is scrolled so that the cursor remains in
+the same screen position, except when the last column (255) of
+the file is being displayed.
+
+See also SCROLLDOWN, SCROLLLEFT, and SCROLLUP.
+
+
+
+
+
+
+
+SCROLLUP~
+
+________________________________________
+
+SCROLLUP moves the current file
+position up the number of lines
+specified.
+________________________________________
+
+Format:  scrollup <nnnn>
+
+If nnnn is not specified, SCROLLUP moves the current file
+position up one line.
+
+The cursor is forced off the command line by SCROLLUP.
+
+The data in the window is scrolled so that the cursor remains in
+the same screen position, except when the first line of the file
+is being displayed.
+
+See also SCROLLDOWN, SCROLLLEFT, and SCROLLRIGHT.
+
+
+                               64
+
+
+SET ABBREV~
+
+________________________________________
+
+SET ABBREV controls whether the long or
+short form of commands are produced when
+displaying a key definition with the
+? KEY or EDIT .KEYDEFS command.
+________________________________________
+
+Format:  set abbrev on
+         set abbrev off
+
+If SET ABBREV ON is in effect, short command names are used in
+all possible cases.  Also, the blanks separating each term in a
+key definition are omitted.
+
+If SET ABBREV OFF is in effect (the default), the entire command
+is used, and commands are separated by blanks.
+
+Both long and short command names are always recognized in DEFINE
+commands, regardless of the setting of SET ABBREV.
+
+See also ? ABBREV, EDIT, DEFINE, KEY, and ? KEY.
+
+
+
+
+
+
+
+SET BACKUP~
+
+________________________________________
+
+SET BACKUP sets the number of groups of
+lines saved in the .UNNAMED file.
+________________________________________
+
+Format: Set backup nn
+
+where nn stands for a number from 0 to 10.  The default value of
+nn is 5.
+
+SET BACKUP 0 disables the saving of changed or deleted lines in
+the .UNNAMED file.
+
+
+See also ? BACKUP and EDIT .UNNAMED.
+
+
+                               65
+
+
+SET BLANKCOMPRESS~
+
+________________________________________
+
+SET BLANKCOMPRESS controls whether or
+not runs of blanks are converted to
+tab characters by default in the SAVE
+and FILE commands.
+________________________________________
+
+Format:  set blankcompress on
+         set blankcompress off
+
+The default value of SET BLANKCOMPRESS is ON.  Regardless of the
+value of SET BLANKCOMPRESS, blank compression can always be
+controlled explicitly in the SAVE and FILE commands using the
+TABS or NOTABS options.
+
+See also ? BLANKCOMPRESS, EDIT, FILE, SAVE, SET TABEXPAND, and ?
+TABEXPAND.
+
+
+
+
+
+                               66
+
+
+SET DISPLAY~
+
+________________________________________
+
+The SET DISPLAY command controls which
+display and character font is used by
+PE II.
+________________________________________
+
+Format:    set display mono
+           set display color 40
+           set display color 80
+           set display b/w 40
+           set display b/w 80
+
+               (or)
+
+           set display small font
+           set display large font
+
+Each display has a set of attribute bytes for the various fields
+of the screen associated with it.  The default display and mode
+is the one that was active when PE II was loaded.
+
+If you have two displays connected to your system, PE II switches
+the current file from (to) the monochrome display to (from) a
+display attached to the color/graphics adapter.
+
+Only one display can be active at one time.  The active display
+contains the blinking cursor.
+
+SET DISPLAY does not allow you to change displays if you do not
+have the correct adapter installed on your IBM Personal Computer.
+
+The SET DISPLAY SMALL FONT and SET DISPLAY LARGE FONT commands
+are only available with the Enhanced Graphics Adapter.  These
+commands control which of the two built-in fonts are used with
+that adapter.
+
+In the EGA's enhanced color mode, the large font allows 25 lines
+to be displayed.  The small font allows for 43 lines to be
+displayed.  In the EGA's normal color mode, the large font allows
+for 14 lines to be displayed.  The small font allows for 25 lines
+to be displayed.
+
+The way PE II shows marked areas, the command line, and so on,
+depends on which display the file is active.
+
+See also EDIT.
+
+
+                               67
+
+
+SET HSCROLL~
+
+________________________________________
+
+SET HSCROLL controls how PE II scrolls
+the window when the cursor tries to
+leave the window to the left or to the
+right.
+________________________________________
+
+Format:  set hscroll on
+         set hscroll off
+
+If HSCROLL is OFF (the default), PE II shifts the data in the
+current window by half its width so that the cursor is located in
+the middle of the window.
+
+If HSCROLL is ON, PE II scrolls the window horizontally by one
+column so that the cursor remains at the edge of the window.
+Performance may be slower on some displays.
+
+See also ? HSCROLL.
+
+
+
+
+
+                               68
+
+
+SET MARGINS~
+
+________________________________________
+
+SET MARGINS controls the boundaries used
+by PE II when you enter or reflow text.
+________________________________________
+
+Format:  set margins n n <n>
+
+The three numbers in the command are the left margin number, the
+right margin, and the optional paragraph margin.  If you do not
+specify a paragraph margin, SET MARGINS uses the same value as
+the left margin.
+
+The right margin must be larger than both the left margin and the
+paragraph margin.  The paragraph margin can be less than the left
+margin.
+
+PE II starts with a left margin of 1, a right margin of 79, and
+a paragraph margin of 1.  To change the margins, type the SET
+MARGINS command and the margin numbers on the command line and
+press Enter.
+
+Example:  set margins 5 65 10
+
+To see the current margin setting, enter ? MARGINS on the
+command line.
+
+When you use the EDIT command to create a new file or get an old
+one, the margin settings for that file will be the margin
+settings for whatever file was in that window when you typed the
+EDIT command.
+
+You cannot save the margin settings of a file.  They have to be
+reset each time you start PE II.
+
+PE II uses the margins for word wrapping and formatting text.  If
+you are typing text and there is a character past the right
+margin as part of a word or the beginning of a new word, PE II
+moves that word or character to a new line.  Also, when you
+reflow a paragraph or center lines, the margin settings control
+the reformatting.
+
+See also ? MARGINS, LEFT MARGIN, RIGHT MARGIN, PARAGRAPH MARGIN,
+CENTER IN MARGINS, and REFLOW.
+
+
+                               69
+
+
+SET SEARCHCASE~
+
+________________________________________
+
+SET SEARCHCASE controls whether or not
+case is respected in LOCATE or CHANGE
+command searches.
+________________________________________
+
+Format:  set searchcase any
+         set searchcase exact
+
+If you specify ANY (the default), then a search for "xYz" finds
+the strings "xyz", "XYZ", and "xYz," among others.  If you
+specify EXACT, then only the string "xYz" is found.
+
+See also ? SEARCHCASE, CHANGE, and LOCATE.
+
+
+
+
+
+
+
+SET TABEXPAND~
+
+________________________________________
+
+SET TABEXPAND controls whether or not
+tabs are converted to runs of blanks by
+default in the EDIT command.
+________________________________________
+
+Format:  set tabexpand on
+         set tabexpand off
+
+The default value of SET TABEXPAND is ON.  Regardless of the
+value of SET TABEXPAND, tab expansion can always be controlled
+explicitly in the EDIT command using the TABS or NOTABS options.
+
+See also ? TABEXPAND, EDIT, SET BLANKCOMPRESS, and
+? BLANKCOMPRESS.
+
+
+
+
+
+                               70
+
+
+SET TABS~
+
+________________________________________
+
+SET TABS changes the tab markers from
+the current setting.
+________________________________________
+
+Format:  set tabs t1 t2 t3 t4 ... t20
+
+You can assign 20 tabs to a file between column 1 and 255.
+
+The numbers must follow in increasing order.  The second number
+has to be larger than the first, and the third larger than the
+second, and so on.
+
+PE II starts with tab settings every eight spaces, starting at 9,
+17, 25, and so on, unless reset in the profile.  To change the
+tabs, type the SET TABS command and the tab numbers on the
+command line and press Enter.
+
+Example:  set tabs 5 10 15 20
+
+To see the current tab settings, enter ? TABS on the command
+line.
+
+When you use the EDIT command to create a new file or display an
+old one, the tab settings for that file are the tab settings for
+whatever file was on the screen when you typed the EDIT command.
+
+You cannot save the tab settings of a file.  They have to be
+reset each time you start PE II.
+
+This command controls the tab settings used by the TAB and
+BACKTAB commands, but not the  ab positions used by blank
+compression and tab expansion by the EDIT, FILE, and SAVE
+commands.  The latter tab positions are fixed at every eight
+columns beginning at column 9.
+
+See also ? TABS, BACKTAB, BACKTAB WORD, and TAB.
+
+
+
+
+
+                               71
+
+
+SHIFT LEFT~
+
+________________________________________
+
+SHIFT LEFT shifts the text in a marked
+area one position to the left.
+________________________________________
+
+SHIFT LEFT deletes the first character of each line of the marked
+area, shifting the remaining characters in and to the right of
+the marked area left one column.
+
+In character marked areas, the marks are updated appropriately.
+
+See also SHIFT RIGHT.
+
+
+
+
+
+
+
+SHIFT RIGHT~
+
+________________________________________
+
+SHIFT RIGHT shifts the text in a
+marked area one position to the right.
+________________________________________
+
+SHIFT RIGHT inserts a blank before the first marked character on
+each line of the marked area, shifting the remaining characters
+in and to the right of the marked area right one column.
+
+In character marked areas, the marks are updated appropriately.
+
+Shifting a nonblank character past column 255 displays a message
+that the line has been truncated.
+
+See also SHIFT LEFT.
+
+
+
+
+
+                               72
+
+
+SPLIT~
+
+________________________________________
+
+SPLIT divides the current line at the
+cursor into two lines.
+________________________________________
+
+SPLIT divides the current line into two lines.  Text before the
+cursor on the current line remains on that line and text at or
+past the cursor is moved to a newly inserted line beginning at
+column one.
+
+The only way to insert a line before the beginning of the file is
+to use SPLIT when the cursor is in the first column of the file.
+
+See also JOIN.
+
+
+
+
+
+
+
+SPLIT SCREEN~
+
+________________________________________
+
+SPLIT SCREEN divides the screen into
+two or four windows.
+________________________________________
+
+The screen can be divided horizontally or vertically into either
+two or four windows.
+
+There are four possible divisions of the screen into windows:
+
+o  The entire screen as one window
+
+o  The screen split vertically into two windows
+
+o  The screen split vertically and horizontally into four windows
+
+o  The screen split horizontally into two windows
+
+SPLIT SCREEN cycles through these four divisions in the above
+order.
+
+See also NEXT VIEW, NEXT WINDOW, and ZOOM WINDOW.
+
+
+                               73
+
+
+TAB~
+
+________________________________________
+
+TAB moves the cursor right to the next
+tab stop.
+________________________________________
+
+Tab stops are originally set at every 8 columns beginning after
+column 1 at column 9, 17, 25, 33, 41, 49, and so on.  You can
+also redefine the tab settings with the SET TABS command.
+
+To see the tab settings, use the ? TABS command.
+
+See also BACKTAB, BACKTAB WORD, TAB WORD, SET TABS, and ? TABS.
+
+
+
+
+
+
+TAB WORD~
+
+________________________________________
+
+TAB WORD moves the cursor to the right,
+stopping at the first character in the
+next word.
+________________________________________
+
+
+A word is defined to be a group of nonblank characters separated
+by blanks.
+
+The cursor skips forward to higher numbered lines, if necessary.
+
+See also TAB, BACKTAB, and BACKTAB WORD.
+
+
+
+
+
+
+TOP~
+
+________________________________________
+
+TOP moves the cursor to the first line
+of the current file.
+________________________________________
+
+The column of the cursor does not change.
+
+See also BOTTOM and LINE.
+
+
+                               74
+
+
+TOP EDGE~
+
+________________________________________
+
+TOP EDGE moves the cursor to the top
+line of the text area of the current
+window.
+________________________________________
+
+The column of the cursor does not change.
+
+The cursor moves up, and the contents of the current window do
+not change.
+
+See also BOTTOM EDGE.
+
+
+
+
+
+
+UNDO~
+
+_______________________________________
+
+UNDO restores the current line to what
+was there the last time the cursor
+moved onto the line.
+_______________________________________
+
+UNDO recovers erased lines or words as long as the cursor had not
+left the current line before the change was made.  Once the
+cursor leaves the line or joins two lines, you cannot restore
+that line.
+
+If the cursor has left the line, you can retrieve the last five
+changes from the .UNNAMED internal file.  To see the .UNNAMED
+file, on the command line enter: e .unnamed
+
+See also EDIT.
+
+
+
+
+
+                               75
+
+
+UNMARK~
+
+________________________________________
+
+UNMARK removes the highlighting of any
+currently marked areas.
+________________________________________
+
+UNMARK removes all marks that exist in any active file.  No
+change occurs to the text inside of the marked area.
+
+UNMARK will not affect marked areas saved on the stack.
+
+Commands that operate on marked areas cannot be used after UNMARK
+until a new marked area is defined.
+
+See also CLEAR MARKS, MARK BLOCK, MARK CHAR, MARK LINE, PUSH
+MARK, and POP MARK.
+
+
+
+
+
+
+
+UP~
+
+________________________________________
+
+UP moves the cursor up the number of
+lines specified.
+________________________________________
+
+Format:  up <nnnn>
+
+where nnnn is the number of lines up you want to move the cursor.
+
+If you do not specify a number, UP moves the cursor up one line.
+
+The column of the cursor does not change.
+
+If the cursor is at the top of the window but not at the top of
+the file, the cursor remains stationary and the text in the
+window shifts down by one line, bringing a new line into view.
+
+If you use UP on the command line, the cursor moves to the bottom
+line of the current window in the text area.
+
+See also DOWN.
+
+
+                               76
+
+
+UPPERCASE~
+
+________________________________________
+
+UPPERCASE changes all lowercase
+letters within a marked area to uppercase.
+________________________________________
+
+If you try to use UPPERCASE without marking an area, a message is
+displayed.
+
+See also LOWERCASE.
+
+
+
+
+
+
+
+ZOOM WINDOW~
+
+________________________________________
+
+ZOOM WINDOW expands the current window
+to fill the screen.
+________________________________________
+
+ZOOM WINDOW can be used from any window or split screen mode.
+
+See also NEXT VIEW, NEXT WINDOW, and SPLIT SCREEN.
+
+
+
+
+
+
+
+? ABBREV~
+
+________________________________________
+
+? ABBREV displays whether or not
+abbreviations will be used for command
+names by ? KEY and EDIT .KEYDEFS  in the
+form of a SET ABBREV command on the
+command line.
+________________________________________
+
+See also SET ABBREV, EDIT, DEFINE, KEY, and ? KEY.
+
+
+                               77
+
+
+? BACKUP~
+
+________________________________________
+
+? BACKUP displays the current number of
+backup groups stored in the .UNNAMED
+file in the form of a SET BACKUP
+command on the command line.
+________________________________________
+
+See also SET BACKUP and EDIT.
+
+
+
+
+
+
+
+? BLANKCOMPRESS~
+
+
+________________________________________
+
+? BLANKCOMPRESS displays the current
+setting of blank to tab compression in
+the form of a SET BLANKCOMPRESS command
+on the command line.
+________________________________________
+
+See also SET BLANKCOMPRESS, FILE, SAVE, SET TABEXPAND, and
+? TABEXPAND.
+
+
+
+
+
+
+
+? CHAR~
+
+________________________________________
+
+? CHAR displays the character under the
+cursor in the form of an ASCII three-
+digit decimal number enclosed in square
+brackets.
+________________________________________
+
+The bracketed number is displayed on the command line.
+
+See also KEY and ? KEY.
+
+
+                               78
+
+
+? DIR~
+
+________________________________________
+
+? DIR displays the current drive and
+current directory, in the form of a
+CHDIR command on the command line.
+________________________________________
+
+See also DIR and CHDIR.
+
+
+
+
+
+
+
+? DISKSPACE~
+
+________________________________________
+
+? DISKSPACE displays on the message line
+the number of bytes of free space on a
+drive.
+________________________________________
+
+Format:  ? diskspace <drive>
+
+If a drive letter is specified, ? DISKSPACE displays the number
+of bytes of free space on that drive.  The colon after the drive
+letter is required.
+
+If no drive letter is specified, ? DISKSPACE displays the number
+of bytes of free space on the current drive.
+
+See also ? MEMORY.
+
+
+
+
+
+
+
+? HSCROLL~
+
+________________________________________
+
+? HSCROLL displays the current setting
+of the horizontal scrolling in the form
+of a SET HSCROLL command on the command
+line.
+________________________________________
+
+See also SET HSCROLL.
+
+
+                               79
+
+
+? KEY~
+
+________________________________________
+
+? KEY displays the current keystroke
+macro associated with the keyname in
+the form of a DEFINE command on the
+command line.
+________________________________________
+
+Format:  ? key <keyname>
+
+Type the keyname after the word KEY, for example:
+
+     ? key enter
+     ? key a-f4
+     ? key pgup
+
+The key and the commands assigned to it (if any) are displayed
+on the command line as they appear in the .keydefs file.  You
+can change the information with the DEFINE command.
+
+See also KEY, DEFINE, and EDIT.
+
+
+
+
+
+
+
+? MARGINS~
+
+________________________________________
+
+? MARGINS displays the current left,
+right, and paragraph margins for the
+current file in the form of a SET
+MARGINS command on the command line.
+________________________________________
+
+See also SET MARGINS.
+
+
+                               80
+
+
+? MEMORY~
+
+________________________________________
+
+? MEMORY displays on the message line
+the number of bytes of random access
+memory currently available to PE II.
+________________________________________
+
+See also ? DISKSPACE.
+
+
+
+
+
+
+
+? SEARCHCASE~
+
+________________________________________
+
+? SEARCHCASE displays the current search
+case sensitivity on the command line in
+the form of a SET SEARCHCASE command.
+________________________________________
+
+See also SET SEARCHCASE, CHANGE, and LOCATE.
+
+
+
+
+
+
+
+? TABEXPAND~
+
+________________________________________
+
+? TABEXPAND displays the current
+setting of tab to blanks expansion in
+the form of a SET TABEXPAND command on
+the command line.
+________________________________________
+
+See also SET TABEXPAND, EDIT, SET BLANKCOMPRESS, and
+? BLANKCOMPRESS.
+
+
+                               81
+
+
+? TABS~
+
+________________________________________
+
+? TABS displays the tab settings for
+the current file in the form of a SET
+TABS command on the command line.
+________________________________________
+
+See also SET TABS.
+
+
+
+
+
+
+
+
+
+
+
+
+Command Abbreviations~
+
+
+This section lists the possible abbreviations of all the PE II
+commands.  Commands that do not accept parameters can be
+abbreviated to two letters enclosed in square brackets.  Some
+commands that take parameters can be abbreviated by a single
+letter, as described below.
+
+Macros and profiles that use abbreviations execute faster.  The
+default profile PE2.PRO that you received with PE II uses
+abbreviations and eliminates keys internally defined by PE II.
+This abbreviated profile starts PE II many times quicker than a
+profile such as PE2LONG.PRO that contains nonabbreviated and
+redundant key definitions.
+
+See the section "Commands" for a description of the meanings of
+the commands.
+
+[bt] BACKTAB
+[bw] BACKTAB WORD
+[bp] BEEP
+[bl] BEGIN LINE
+[bm] BEGIN MARK
+[wb] BEGIN WORD
+[bo] BOTTOM
+[be] BOTTOM EDGE
+
+
+                               82
+
+[ci] CENTER IN MARGINS
+[cl] CENTER LINE
+ c   CHANGE
+[cd] CHDIR
+[ck] CLEAR MARKS
+[ce] CLEAR MESSAGE
+     COLUMN
+[cg] COMMAND TOGGLE
+[co] CONFIRM CHANGE
+[cf] COPY FROM COMMAND
+[cm] COPY MARK
+[ct] COPY TO COMMAND
+[cc] CURSOR COMMAND
+[ca] CURSOR DATA
+ d   DEFINE
+[dc] DELETE CHAR
+[dl] DELETE LINE
+[dm] DELETE MARK
+[de] DEMO END
+[df] DEMO FAST
+[ds] DEMO SLOW
+     DIR
+     DOS
+     DOWN
+ e   EDIT
+[el] END LINE
+[em] END MARK
+[we] END WORD
+     ERASE
+[eb] ERASE BEGIN LINE
+[ee] ERASE END LINE
+[es] ESCAPE
+[ex] EXECUTE
+     FILE
+[fm] FILL MARK
+[fb] FIND BLANK LINE
+[fn] FIRST NONBLANK
+[in] INDENT
+[il] INSERT LINE
+[im] INSERT MODE
+[it] INSERT TOGGLE
+[jo] JOIN
+     KEY
+     LEFT
+[le] LEFT EDGE
+[lg] LEFT MARGIN
+     LINE
+ l   LOCATE
+[lc] LOWERCASE
+ m   MACRO
+[mb] MARK BLOCK
+[mc] MARK CHAR
+[ml] MARK LINE
+[mm] MOVE MARK
+
+
+                               83
+
+ n   NAME
+[nv] NEXT VIEW
+[nw] NEXT WINDOW
+[nu] NULL
+[ob] OVERLAY BLOCK
+[pd] PAGE DOWN
+[pu] PAGE UP
+[pg] PARAGRAPH MARGIN
+[po] POP MARK
+[pr] PRINT
+[pm] PRINT MARK
+[ps] PUSH MARK
+     QUIT
+[rd] REDRAW
+[rf] REFLOW
+     RENAME
+[rm] REPLACE MODE
+     RIGHT
+[re] RIGHT EDGE
+[rg] RIGHT MARGIN
+[ro] RUBOUT
+     SAVE
+     SCROLLDOWN
+     SCROLLLEFT
+     SCROLLRIGHT
+     SCROLLUP
+ s   SET  (All SET commands)
+[sl] SHIFT LEFT
+[sr] SHIFT RIGHT
+[sp] SPLIT
+[ss] SPLIT SCREEN
+[tb] TAB
+[tw] TAB WORD
+[to] TOP
+[te] TOP EDGE
+[ud] UNDO
+[um] UNMARK
+     UP
+[uc] UPPERCASE
+[zw] ZOOM WINDOW
+[?a] ? ABBREV
+[?k] ? BACKUP
+[?b] ? BLANKCOMPRESS
+[?c] ? CHAR
+     ? DIR
+     ? DISKSPACE
+[?h] ? HSCROLL
+     ? KEY
+[?m] ? MARGINS
+[?y] ? MEMORY
+[?s] ? SEARCHCASE
+[?e] ? TABEXPAND
+[?t] ? TABS
+
+
+                               84
+
+
+Default Profile Definitions~
+
+
+This section includes the profile definitions that are in your PE
+II program and template when you receive it.  These definitions
+can be changed, either temporarily or permanently.  See the
+section "Changing Key Definitions" for more information on
+changing key definitions.
+
+
+
+
+
+.KEYDEFS File Order by Key~
+
+
+up       = cursor up
+down     = cursor down
+left     = cursor left
+right    = cursor right
+pgup     = page up
+pgdn     = page down
+home     = beginning of line
+end      = end of line
+ins      = insert toggle
+del      = delete character
+enter    = next line
+bcksp    = backspace
+esc      = command toggle
+tab      = tab
+f1       = help
+f2       = save
+f3       = file
+f4       = quit
+f5       = erase line
+f6       = erase to end of line
+f7       = print
+f8       = switch files
+f9       = insert line
+f10      = insert line and tab
+c-left   = cursor left 40
+c-right  = cursor right 40
+c-pgup   = top edge of screen
+c-pgdn   = bottom edge of screen
+c-home   = top of file
+c-end    = bottom of file
+c-enter  = execute command
+c-bcksp  = delete line
+c-b      = beginning of word
+c-c      = center a line of text
+c-d      = display DOS prompt
+c-e      = end of word
+c-f      = copy from command line
+c-j      = join lines and delete blanks
+c-k      = edit .KEYDEFS file
+
+
+                               85
+
+c-l      = center line on screen
+c-n      = down 60 lines
+c-p      = print marked area
+c-r      = repeat current line
+c-s      = split screen
+c-t      = copy to command line
+c-u      = edit .UNNAMED file
+c-v      = next window of same file
+c-w      = next window
+c-z      = zoom in window
+c-f1     = insert 1 line
+c-f2     = insert 2 lines
+c-f3     = insert 3 lines
+c-f4     = insert 4 lines
+c-f5     = insert 5 lines
+c-f6     = insert 6 lines
+c-f7     = insert 7 lines
+c-f8     = insert 8 lines
+c-f9     = insert 9 lines
+c-f10    = insert 10 lines
+s-tab    = backtab
+s-f1     = scroll down
+s-f2     = scroll up
+s-f3     = reflow
+s-f4     = undo (restore original line)
+s-f5     = confirm change
+s-f6     = erase to beginning of line
+s-f7     = shift left
+s-f8     = shift right
+s-f9     = directory
+s-f10    = edit file in .DIR
+a-b      = mark a text block
+a-c      = mark a character
+a-d      = delete marked text
+a-e      = end of marked area
+a-f      = fill marked area with character
+a-j      = join lines
+a-l      = mark a line
+a-m      = move marked text
+a-n      = page eject
+a-o      = overlay a block of text
+a-p      = reflow a paragraph
+a-r      = redraw screen
+a-s      = split a line
+a-u      = unmark marked text
+a-w      = mark next word
+a-x      = escape
+a-y      = beginning of marked area
+a-z      = copy marked text
+
+
+                               86
+
+a-f1     = ? memory
+a-f2     = ? diskspace
+a-f3     = ? directory
+a-f4     = ? hscroll
+a-f5     = ? tabs
+a-f6     = ? margins
+a-f7     = ? tabexpand
+a-f8     = ? blankcompress
+a-f9     = ? searchcase
+a-f10    = ? character
+a-1      = set margins to 1 10 1
+a-2      = set margins to 1 20 1
+a-3      = set margins to 1 30 1
+a-4      = set margins to 1 40 1
+a-5      = set margins to 1 50 1
+a-6      = set margins to 1 60 1
+a-7      = set margins to 1 70 1
+a-8      = set margins to 1 80 1
+a-9      = set margins to 1 90 1
+a-0      = set margins to 1 100 1
+a-minus  = previous word
+a-equal  = next word
+
+
+
+
+
+Alphabetical Order by Function~
+
+
+backspace                    = bcksp
+backtab                      = s-tab
+beginning of line            = home
+beginning of marked area     = a-y
+beginning of word            = c-b
+bottom edge of screen        = c-pgdn
+bottom of file               = c-end
+center line                  = c-c
+center line on screen        = c-l
+command toggle               = esc
+confirm change               = s-f5
+copy marked text             = a-z
+copy from command line       = c-f
+copy to command line         = c-t
+cursor down                  = down
+cursor left                  = left
+cursor left 40               = c-left
+cursor right                 = right
+cursor right 40              = c-right
+cursor up                    = up
+
+
+                               87
+
+delete character             = del
+delete line                  = c-bcksp
+delete marked text           = a-d
+directory                    = s-f9
+display DOS prompt           = c-d
+edit file in .DIR            = s-f10
+edit .KEYDEFS file           = c-k
+edit .UNNAMED file           = c-u
+end of line                  = end
+end of marked area           = a-e
+end of word                  = c-e
+erase a line                 = f5
+erase to beginning of line   = s-f6
+erase to end of line         = f6
+escape                       = a-x
+execute command              = c-enter
+file                         = f3
+fill marked area             = a-f
+  with character
+help                         = f1
+insert line                  = f9
+insert line and tab          = f10
+insert toggle                = ins
+insert 1 line                = c-f1
+insert 2 lines               = c-f2
+insert 3 lines               = c-f3
+insert 4 lines               = c-f4
+insert 5 lines               = c-f5
+insert 6 lines               = c-f6
+insert 7 lines               = c-f7
+insert 8 lines               = c-f8
+insert 9 lines               = c-f9
+insert 10 lines              = c-f10
+join a line                  = a-j
+join a line and              = c-j
+  delete blanks
+mark a text block            = a-b
+mark a character             = a-c
+mark a line                  = a-l
+mark next word               = a-w
+move marked text             = a-m
+next line                    = enter
+next window                  = c-w
+next window of same file     = c-v
+next word                    = a-equal
+overlay a block of text      = a-o
+
+
+                               88
+
+page down                    = pgdn
+page eject                   = a-n
+page up                      = pgup
+previous word                = a-minus
+print                        = f7
+print marked area            = c-p
+printer page down            = c-n
+quit                         = f4
+? blankcompress              = a-f8
+? character                  = a-f10
+? directory                  = a-f3
+? diskspace                  = a-f2
+? hscroll                    = a-f4
+? margins                    = a-f6
+? memory                     = a-f1
+? tabexpand                  = a-f7
+? tabs                       = a-f5
+? searchcase                 = a-f9
+redraw screen                = a-r
+reflow                       = s-f3
+reflow paragraph             = a-p
+repeat current line          = c-r
+save                         = f2
+scroll down                  = s-f1
+scroll up                    = s-f2
+set margins to 1 10 1        = a-1
+set margins to 1 20 1        = a-2
+set margins to 1 30 1        = a-3
+set margins to 1 40 1        = a-4
+set margins to 1 50 1        = a-5
+set margins to 1 60 1        = a-6
+set margins to 1 70 1        = a-7
+set margins to 1 80 1        = a-8
+set margins to 1 90 1        = a-9
+set margins to 1 100 1       = a-0
+shift left                   = s-f7
+shift right                  = s-f8
+split line                   = a-s
+split screen                 = c-s
+switch files                 = f8
+tab                          = tab
+top edge of screen           = c-pgup
+top of file                  = c-home
+undo (restore original line) = s-f4
+unmark marked text           = a-u
+zoom in window               = c-z
+
+
+                                

@@ -1,0 +1,210 @@
+object Listsend: TListsend
+  Left = 235
+  Top = 136
+  Width = 696
+  Height = 190
+  BiDiMode = bdRightToLeft
+  Caption = 'ﬂ—«ÌÂ Ê ⁄Êœ '
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  ParentBiDiMode = False
+  Position = poDefault
+  Visible = True
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 0
+    Width = 688
+    Height = 163
+    Align = alClient
+    DataSource = DataSource1
+    PopupMenu = PopupMenu1
+    ReadOnly = True
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'SerialPage'
+        Title.Alignment = taCenter
+        Title.Caption = '‘„«—Â »—êÂ'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Name'
+        Title.Alignment = taCenter
+        Title.Caption = '‰«„ Ê ‰«„ Œ«‰Ê«œêÌ'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'S.s'
+        Title.Alignment = taCenter
+        Title.Caption = '‘„«—Â ‘‰«”‰«„Â'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Type_s'
+        Title.Alignment = taCenter
+        Title.Caption = '‰«„ œ” ê«Â'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Date_out'
+        Title.Alignment = taCenter
+        Title.Caption = ' «—ÌŒ Œ—ÊÃ'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Date_in'
+        Title.Alignment = taCenter
+        Title.Caption = ' «—ÌŒ »—ê‘ '
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Total_Time'
+        Title.Alignment = taCenter
+        Title.Caption = '„œ  ﬂ—«ÌÂ'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Time_out'
+        Title.Alignment = taCenter
+        Title.Caption = '”«⁄  Œ—ÊÃ'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'N_film'
+        Title.Alignment = taCenter
+        Title.Caption = '‘„«—Â ›Ì·„ùÂ«'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Vadeyah'
+        Title.Alignment = taCenter
+        Title.Caption = 'ÊœÌ⁄Â'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Totol_m'
+        Title.Alignment = taCenter
+        Title.Caption = '„»·€ ﬂ·'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Free_m'
+        Title.Alignment = taCenter
+        Title.Caption = '«·»«ﬁÌ'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Tel'
+        Title.Alignment = taCenter
+        Title.Caption = '‘„«—Â  ·›‰'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Adress'
+        Title.Alignment = taCenter
+        Title.Caption = '¬œ—”'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'L-sim'
+        Title.Alignment = taCenter
+        Title.Caption = '”Ì„ —«»ÿ'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'L-rf'
+        Title.Alignment = taCenter
+        Title.Caption = ' »œÌ· RF'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'L-payeh'
+        Title.Alignment = taCenter
+        Title.Caption = 'Å«ÌÂ œÊ—»Ì‰'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'L-tabdel'
+        Title.Alignment = taCenter
+        Title.Caption = ' »œÌ· Â‰œÌùﬂ„'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'L-control'
+        Title.Alignment = taCenter
+        Title.Caption = 'ﬂ‰ —·'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Back'
+        Title.Alignment = taCenter
+        Visible = True
+      end>
+  end
+  object PopupMenu1: TPopupMenu
+    Alignment = paCenter
+    BiDiMode = bdLeftToRight
+    ParentBiDiMode = False
+    Left = 48
+    Top = 80
+    object N1: TMenuItem
+      Caption = 'ﬂ‹—«Ì‹Â'
+      OnClick = N1Click
+    end
+    object N2: TMenuItem
+      Caption = '⁄‹‹Êœ '
+      OnClick = N2Click
+    end
+    object N3: TMenuItem
+      Caption = 'ÊÌ—«Ì‘'
+      OnClick = N3Click
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = Table1
+    Left = 24
+    Top = 48
+  end
+  object Table1: TTable
+    Active = True
+    DatabaseName = 'c:\hafez'
+    Filter = 'Back = False'
+    Filtered = True
+    TableName = 'Send_resive.DB'
+    Left = 54
+    Top = 48
+  end
+end

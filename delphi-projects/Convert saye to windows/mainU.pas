@@ -1,0 +1,267 @@
+unit mainU;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, DB, DBTables, Grids, DBGrids, StdCtrls, Mask, DBCtrls, Buttons,
+  CheckLst, ComCtrls, ADODB;
+
+type
+  TForm1 = class(TForm)
+    OpenDialog1: TOpenDialog;
+    BitBtn1: TBitBtn;
+    Table1: TTable;
+    DataSource1: TDataSource;
+    DBGrid1: TDBGrid;
+    Button1: TButton;
+    CheckListBox1: TCheckListBox;
+    Memo1: TMemo;
+    ProgressBar1: TProgressBar;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    DBGrid2: TDBGrid;
+    DataSource2: TDataSource;
+    Query1: TQuery;
+    Memo2: TMemo;
+    Table2: TTable;
+    Button5: TButton;
+    procedure BitBtn1Click(Sender: TObject);
+    procedure Convert;
+    procedure Button1Click(Sender: TObject);
+    procedure CheckListBox1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure DBGrid2CellClick(Column: TColumn);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+
+Const
+  No=69;
+  CodeWin : array[1..No] of Byte = (194,199,199,200,200,129,129,202,202,203,203,
+                                    204,204,141,141,205,205,206,206,207,208,209,
+                                    210,142,211,211,212,212,213,213,214,214,216,
+                                    217,218,218,218,218,219,219,219,219,221,222,
+                                    222,223,144,225,225,225,227,227,228,228,230,
+                                    0229,0229,0229,0229,237,237,237,237,32,198,32
+                                    ,32,32,32);
+
+  CodeDos : array[1..No] of byte = (137,139,140,146,147,148,149,150,151,152,153,
+                                    154,155,156,157,158,159,161,162,163,164,165,
+                                    166,167,168,169,170,171,172,173,174,175,224,
+                                    225,226,227,228,229,230,231,232,233,234,235,
+                                    236,237,238,239,240,241,242,243,244,245,246,
+                                    247,248,249,250,251,252,253,254,160,145,144
+                                    ,041,042,32);
+
+
+var
+  Form1: TForm1;
+   addChar : boolean;
+  space : Boolean;
+  ListFileName : array [0..500] of String;
+implementation
+
+uses Math, TypInfo, ConvUtils;
+{$R *.DFM}
+
+Function Dos2Win (Ch : AnsiChar):AnsiChar;
+Var
+ II :  Byte;
+Begin
+
+   if ord(ch) in [144,160,248,248,244,247,251,252,242] then space := True;
+   if ord(ch) =240 then addChar := True;
+  For II:= 1 To No Do
+   If Ord(ch) = CodeDos[II] then
+    Begin
+     ch := ansichar(codeWin[II]) ;
+     Break;
+    End;
+   Dos2Win := Ch;
+End;
+
+Function converting(WinStr:AnsiString):string;
+var
+  NoChar : Integer;
+  temp,eng : string;
+  qq : ansichar;
+begin
+   temp:='';
+   eng :='';
+//   QQ:='';
+   WinStr := Trim(WinStr);
+  For NoChar := Length(WinStr) downto 1 Do
+   begin
+    space := false;
+    qq := Dos2Win(WinStr[nochar]);
+    if qq in ['A'..'Z','a'..'z','0'..'9',' ']  then
+    Begin
+        eng := qq+eng;
+        Continue;
+    End;
+
+    if eng <> '' then
+    begin
+      temp := temp + eng;
+      eng :='';
+
+    end;
+    
+
+    if (space = true) and (WinStr[NoChar-1] <> ' ') then
+       temp :=  temp+qq+' '    // for strin convert
+//       temp :=  ' '+qq+temp   // for table convert
+     Else
+       temp := temp+qq;        // for strin convert
+//       temp := qq+temp;       // for table convert
+
+    IF addChar= TRUE THEN
+      BEGIN
+       temp:= TEMP +'«';
+       ADDCHAR := FALSE;
+      end;
+   converting := TRIM(temp);
+end;
+eND;
+
+{
+Function converting(WinStr:string):String;
+var
+  NoChar : Integer;
+  temp,qq : String;
+begin
+   temp:='';
+   WinStr := Trim(WinStr);
+  For NoChar := 1 to Length(WinStr) Do
+   begin
+      space := false;
+    qq := Dos2Win(WinStr[nochar]);
+      if space = true Then
+        temp :=  TEMP+' '+qq
+      Else
+        temp := temp+qq;
+   end;
+   converting := temp;
+
+end;
+         }
+
+
+
+
+
+
+procedure TForm1.BitBtn1Click(Sender: TObject);
+var
+  i : Integer;
+begin
+ Table1.Active := false;
+ CheckListBox1.Items.Clear;
+ if OpenDialog1.Execute then
+  Begin
+    For i := 0 to OpenDialog1.Files.Count-1 do
+    begin
+     ListFileName[i] := OpenDialog1.Files.Strings[i];
+     CheckListBox1.Items.Add(ExtractFileName( OpenDialog1.Files.Strings[i]));
+    end;
+  End;
+end;
+
+
+
+
+procedure TForm1.Convert;
+var  i: Integer;
+begin
+  Table1.First;
+  ProgressBar1.Max := Table1.RecordCount;
+  while not Table1.Eof do
+  Begin
+    Table1.Edit;
+    for i:= 0 to Table1.FieldCount-1 Do
+      if (Table1.Fields.Fields[i].ClassName = 'TStringField') and ( Table1.Fields.Fields[i].AsString <> '') then
+       Table1.FieldByName(Table1.Fields.Fields[i].DisplayLabel).AsString := converting( Table1.FieldValues[ Table1.Fields.Fields[i].DisplayLabel]);
+       Table1.Post;
+       Table1.Next;
+       ProgressBar1.Position  :=  ProgressBar1.Position +1;
+  End;
+
+end;
+
+procedure TForm1.DBGrid2CellClick(Column: TColumn);
+begin
+  Memo2.Lines.Add( converting( DBGrid2.SelectedField.DisplayText) );
+
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+var i : Integer;
+begin
+  for i := 0 to CheckListBox1.Items.Count -1 do
+     if (CheckListBox1.Checked[i] = true) then
+       begin
+         Table1.Active := False;
+         Table1.TableName := ListFileName[i];
+         Try
+            Table1.Active  := True;
+            Memo1.Lines.Add('¬€«“  »œÌ· ÃœÊ· ['+ExtractFileName( OpenDialog1.Files.Strings[i])+']');
+            Convert;
+            Memo1.Lines.Add('« „«„  »œÌ· ['+ExtractFileName( OpenDialog1.Files.Strings[i])+']');
+         except
+            on  E: exception do
+            begin
+              Memo1.Lines.Add('Œÿ«  ['+e.Message+']');
+            end;
+
+         end;
+         Memo1.Lines.Add('---------------------------------------------------------');
+         Table1.Active :=  false;
+       End;
+
+end;
+
+procedure TForm1.CheckListBox1Click(Sender: TObject);
+begin
+  Table1.Active := False;
+  Table1.TableName := ListFileName[CheckListBox1.ItemIndex];
+  Table1.Active :=  true
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+  var i :  Integer;
+begin
+  for i := 0 to CheckListBox1.Items.Count -1 do
+    CheckListBox1.Checked[i] :=  True;
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+  var i :  Integer;
+begin
+  for i := 0 to CheckListBox1.Items.Count -1 do
+    CheckListBox1.Checked[i] :=  False;
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+var
+  ss : string;
+  i : Integer;
+begin
+  Memo1.Lines.LoadFromFile('saleh.txt');
+  Memo2.Lines.Add(converting (Memo1.Lines.Text) );
+//  converting(ss);
+//   Query1.Active := False;
+  // Query1.SQL.Clear;
+  // Query1.SQL.Text := Memo2.Lines.Text;
+  // Query1.ParamByName('SelTable').AsString :=ListFileName[   CheckListBox1.ItemIndex];
+  //  Memo1.Lines.Add(Query1.SQL.Text)
+   //Query1.Active := True;
+end;
+
+end.

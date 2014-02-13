@@ -1,0 +1,21 @@
+program Project1;
+
+uses
+  Forms,
+  Main_u in 'Main_u.pas' {MainForm},
+  list_S_r_u in 'list_S_r_u.pas' {Listsend},
+  list_Sestem_u in 'list_Sestem_u.pas' {List_system},
+  Send_u in 'Send_u.pas' {SendForm};
+
+{$R *.RES}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TMainForm, MainForm);
+  Application.CreateForm(TList_system, List_system);
+  Application.CreateForm(TListsend, Listsend);
+  Application.CreateForm(TSendForm, SendForm);
+  MainForm.TileMode := Tbhorizontal;
+ MainForm.Tile;
+  Application.Run;
+end.

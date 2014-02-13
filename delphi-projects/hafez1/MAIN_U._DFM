@@ -1,0 +1,53 @@
+object MainForm: TMainForm
+  Left = 307
+  Top = 225
+  BiDiMode = bdRightToLeft
+  BorderStyle = bsToolWindow
+  Caption = '»—‰«„Â ﬂ—«ÌÂ ”Ì” „ ‰”ŒÂ 1.0'
+  ClientHeight = 167
+  ClientWidth = 438
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsMDIForm
+  Menu = MainMenu1
+  OldCreateOrder = False
+  ParentBiDiMode = False
+  Position = poScreenCenter
+  Visible = True
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object MainMenu1: TMainMenu
+    Left = 24
+    Top = 48
+    object N1: TMenuItem
+      Caption = '⁄„·Ì« '
+      object N2: TMenuItem
+        Caption = 'ﬂ—«ÌÂ'
+      end
+      object N3: TMenuItem
+        Caption = '-'
+      end
+      object N4: TMenuItem
+        Caption = '⁄Êœ '
+      end
+      object N5: TMenuItem
+        Caption = '-'
+      end
+      object N6: TMenuItem
+        Caption = 'Œ—ÊÃ'
+      end
+    end
+    object N7: TMenuItem
+      Caption = 'ê“«—‘'
+    end
+    object N8: TMenuItem
+      Caption = '«„ﬂ«‰« '
+    end
+  end
+end

@@ -1,0 +1,43 @@
+unit U;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  ExtCtrls, StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Timer1: TTimer;
+    Edit1: TEdit;
+    procedure Timer1Timer(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.DFM}
+
+procedure TForm1.Timer1Timer(Sender: TObject);
+var
+ OH, NH, EH : Hwnd;
+ S      : String;
+begin
+ SetLength ( S, 255 );
+ OH := FindWindow ( '#32770', 'Dial-up Connection' );
+ NH := GetWindow ( OH, gw_Child);
+ EN := GetWindow ( NH, gw_HwndLast );
+ GetWindowText ( NH, PChar(S), 255 );
+ While StrComp(PChar(S), 'Password') <> 0 Do
+  Begin
+  End;
+ edit1.text := inttostr(oh);
+end;
+
+end.

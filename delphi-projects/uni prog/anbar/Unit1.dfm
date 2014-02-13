@@ -1,0 +1,246 @@
+object Form1: TForm1
+  Left = 261
+  Top = 206
+  Width = 842
+  Height = 453
+  BiDiMode = bdRightToLeft
+  Caption = #1575#1606#1576#1575#1585
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  ParentBiDiMode = False
+  Position = poScreenCenter
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 28
+    Width = 834
+    Height = 379
+    Align = alClient
+    DataSource = DataSource1
+    Font.Charset = ARABIC_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Alignment = taLeftJustify
+        Expanded = False
+        FieldName = 'code'
+        Title.Caption = #1705#1583' '#1605#1581#1589#1608#1604
+        Title.Font.Charset = ARABIC_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'name'
+        Title.Caption = #1606#1575#1605' '#1605#1581#1589#1608#1604
+        Title.Font.Charset = ARABIC_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Alignment = taLeftJustify
+        Expanded = False
+        FieldName = 'tedad'
+        Title.Caption = #1578#1593#1583#1575#1583
+        Title.Font.Charset = ARABIC_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Alignment = taLeftJustify
+        Expanded = False
+        FieldName = 'geymat'
+        Title.Caption = #1602#1610#1605#1578
+        Title.Font.Charset = ARABIC_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end>
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 834
+    Height = 28
+    Align = alTop
+    Font.Charset = ARABIC_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 761
+      Top = 5
+      Width = 29
+      Height = 13
+      Caption = #1705#1583' '#1705#1575#1604#1575
+    end
+    object Label2: TLabel
+      Left = 595
+      Top = 6
+      Width = 31
+      Height = 13
+      Caption = #1606#1575#1605' '#1705#1575#1604#1575
+    end
+    object SpeedButton1: TSpeedButton
+      Left = 392
+      Top = 3
+      Width = 23
+      Height = 22
+      Hint = #1582#1585#1608#1580
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000120B0000120B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        333333333333333333FF3333333333333744333333333333F773333333333337
+        44473333333333F777F3333333333744444333333333F7733733333333374444
+        4433333333F77333733333333744444447333333F7733337F333333744444444
+        433333F77333333733333744444444443333377FFFFFFF7FFFFF999999999999
+        9999733777777777777333CCCCCCCCCC33333773FF333373F3333333CCCCCCCC
+        C333333773FF3337F333333333CCCCCCC33333333773FF373F3333333333CCCC
+        CC333333333773FF73F33333333333CCCCC3333333333773F7F3333333333333
+        CCC333333333333777FF33333333333333CC3333333333333773}
+      NumGlyphs = 2
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = SpeedButton1Click
+    end
+    object SpeedButton2: TSpeedButton
+      Left = 419
+      Top = 3
+      Width = 23
+      Height = 22
+      Hint = #1608#1585#1608#1583
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000120B0000120B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333393333
+        333333333337F3333333333333397333333333333337FF333333333333C94333
+        3333333333737F333333333333C9473333333333337373F3333333333CC94433
+        3333333337F7F7F3333333333CC94473333333333737F73F33333333CCC94443
+        333333337F37F37F33333333CCC94447333333337337F373F333333CCCC94444
+        33333337F337F337F333333CCCC94444733333373337F3373F3333CCCCC94444
+        4333337F3337FF337F3333CCCCC94444473333733F7773FF73F33CCCCC393444
+        443337F37737F773F7F33CCC33393374447337F73337F33737FFCCC333393333
+        444377733337F333777FC3333339333337437333333733333373}
+      NumGlyphs = 2
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = SpeedButton2Click
+    end
+    object Edit1: TEdit
+      Left = 632
+      Top = 3
+      Width = 121
+      Height = 21
+      TabOrder = 0
+      OnChange = Edit1Change
+    end
+    object Edit2: TEdit
+      Left = 470
+      Top = 3
+      Width = 121
+      Height = 21
+      TabOrder = 1
+      OnChange = Edit2Change
+    end
+  end
+  object MainMenu1: TMainMenu
+    Left = 176
+    Top = 88
+    object File1: TMenuItem
+      Caption = #1575#1606#1576#1575#1585
+      object input1: TMenuItem
+        Caption = #1605#1593#1585#1601#1610' '#1576#1607' '#1575#1606#1576#1575#1585
+        OnClick = input1Click
+      end
+      object Output1: TMenuItem
+        Caption = #1608#1585#1608#1583' '#1576#1607' '#1575#1606#1576#1575#1585
+        OnClick = Output1Click
+      end
+      object Exit1: TMenuItem
+        Caption = #1582#1585#1608#1580' '#1575#1586' '#1575#1606#1576#1575#1585
+        OnClick = Exit1Click
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object N2: TMenuItem
+        Caption = #1582#1585#1608#1580' '#1575#1586' '#1576#1585#1606#1575#1605#1607
+        OnClick = N2Click
+      end
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = Query1
+    Left = 40
+    Top = 72
+  end
+  object Query1: TQuery
+    Active = True
+    SQL.Strings = (
+      
+        'select anbar.tedad,anbar.geymat,anbar.code,jens.name from anbar,' +
+        'jens where anbar.code=jens.code')
+    Left = 72
+    Top = 72
+    object Query1code: TFloatField
+      FieldName = 'code'
+    end
+    object Query1name: TStringField
+      FieldName = 'name'
+      Size = 100
+    end
+    object Query1tedad: TFloatField
+      FieldName = 'tedad'
+    end
+    object Query1geymat: TFloatField
+      FieldName = 'geymat'
+    end
+  end
+  object Table1: TTable
+    Active = True
+    TableName = 'anbar.db'
+    Left = 72
+    Top = 104
+  end
+  object DataSource2: TDataSource
+    DataSet = Table1
+    Left = 40
+    Top = 104
+  end
+end
